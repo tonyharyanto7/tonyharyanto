@@ -1,0 +1,16 @@
+{
+  "siteMetadata": {
+    "title": "Portfolio - Maxim",
+    "description": "Portfolio page by max1mde"
+  },
+  "pages": {
+    "home": {
+      "enabled": true,
+      "header": "Welcome to My Portfolio"
+    },
+    "projects": {
+      "enabled": true,
+      "header": "Projects"
+    }
+  }
+}
