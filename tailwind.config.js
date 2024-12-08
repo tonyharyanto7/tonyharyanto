@@ -11,6 +11,51 @@ module.exports = {
   ],
   theme: {
     extend: {
+      animation: {
+        shine_anim: "shine_anim .7s ease-in-out 1",
+        move_in: "move_in 5s ease-in-out 1",
+        pop_in: "pop_in 2s ease-in-out 1",
+      },
+      keyframes: {
+        shine_anim: {
+          "100%": { left: "125%" },
+        },
+        move_in: {
+          "0%": {
+            transform: "translateY(-20%) scale(0.9)",
+            opacity: "0",
+          },
+          "40%": {
+            transform: "translateY(5%) scale(0.99)",
+            opacity: "1",
+            filter: "brightness(1.6)",
+          },
+          "100%": {
+            transform: "translateX(0) scale(1)",
+          },
+        },
+        pop_in: {
+          "0%": {
+            transform: "scale(0.9)",
+            opacity: "0.1",
+          },
+          "20%": {
+            transform: "scale(1.05)",
+            opacity: "1",
+          },
+          "40%": {
+            transform: "scale(0.99)",
+            opacity: "0.8",
+          },
+          "60%": {
+            transform: "scale(1.01)",
+            opacity: "0.9",
+          },
+          "100%": {
+            transform: "scale(1)",
+          },
+        },
+      },
       fontFamily: {
         sans: ["var(--font-delius)", ...fontFamily.sans],
       },
@@ -25,14 +70,6 @@ module.exports = {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",
         },
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
         muted: {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
@@ -41,12 +78,20 @@ module.exports = {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
         },
+        primary: {
+          DEFAULT: "var(--primary)",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+        secondary: {
+          DEFAULT: "var(--secondary)",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
         },
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
+        border: "var(--border)",
+        input: "var(--input)",
         ring: "hsl(var(--ring))",
         chart: {
           1: "hsl(var(--chart-1))",

@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  cursor: none;
+}
+
+body {
+  @apply font-sans bg-background text-foreground;
+}
+
+@layer base {
+  :root {
+    --radius: 10px;
+
+    /* Color Palette */
+    --color-1: #876aca;
+    --color-2: #d969ba;
+    --color-3: #ff779a;
+    --color-4: #ff9a77;
+    --color-5: #ffc962;
+    --color-6: #f9f871;
+
+    /* Background and Foreground */
+    --background: 224 71.4% 4.1%;
+    --foreground: 210 20% 98%;
+    --card: var(--background);
+    --card-foreground: var(--foreground);
+    --popover: var(--background);
+    --popover-foreground: var(--foreground);
+
+    --primary: var(--color-1);
+    --secondary: var(--color-2);
+
+    --primary-foreground: var(--foreground);
+    --secondary-foreground: var(--foreground);
+
+    /* Muted & Accent */
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+
+    /* Destructive */
+    --destructive: 0 62.8% 50.6%;
+    --destructive-foreground: var(--foreground);
+
+    /* Border & Input */
+    --border: var(--secondary);
+    --input: var(--secondary);
+    --ring: 216 12.2% 83.9%;
+
+    /* Charts */
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+
+  * {
+    @apply border-border box-border;
+  }
+
+  input:focus,
+  textarea:focus,
+  select:focus {
+    @apply ring-2 ring-ring;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}

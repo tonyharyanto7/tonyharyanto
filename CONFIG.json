@@ -3,14 +3,72 @@
     "title": "Portfolio - Maxim",
     "description": "Portfolio page by max1mde"
   },
+  "global": {
+    "font": "delius"
+  },
   "pages": {
     "home": {
       "enabled": true,
-      "header": "Welcome to My Portfolio"
+      "header": "Welcome to My Portfolio",
+      "route": "/home"
     },
     "projects": {
       "enabled": true,
-      "header": "Projects"
+      "header": "My Projects",
+      "route": "/projects"
+    },
+    "contact": {
+      "enabled": true,
+      "header": "Contact Me",
+      "route": "/contact"
     }
-  }
+  },
+  "cards": [
+    {
+      "title": "Fancy Physics",
+      "description": "Tree fall animation, hit particles, realistic explosions, 3D particles & more",
+      "imageSRC": "/images/projects/fancyphysics.png",
+      "buttonText": "View on GitHub",
+      "buttonURL": "https://github.com/max1mde/FancyPhysics",
+      "badges": [
+        "https://img.shields.io/spiget/downloads/110500?label=Spigot%20downloads"
+      ]
+    },
+    {
+      "title": "Better Chat Bubbles",
+      "description": "Packet based chat bubbles above players head, with an extensive API",
+      "imageSRC": "/images/projects/betterchatbubbles.png",
+      "buttonText": "Buy on SpigotMC",
+      "buttonURL": "https://www.spigotmc.org/resources/115811/",
+      "badges": [
+        "https://img.shields.io/spiget/downloads/115811?label=Spigot%20downloads"
+      ]
+    },
+    {
+      "title": "FIX- Autocorrect",
+      "description": "AI text correction, translation, and improvement with hotkeys, voice control, & more.",
+      "imageSRC": "/images/projects/fix.png",
+      "buttonText": "View on GitHub",
+      "buttonURL": "https://github.com/max1mde/FIX",
+      "badges": ["https://img.shields.io/github/stars/max1mde/FIX.svg"]
+    },
+    {
+      "title": "Fancy Readme Stats",
+      "description": "Animated Readme Cards - For your GitHub profile or repository readme",
+      "imageSRC": "/images/projects/readmestats.png",
+      "buttonText": "View on GitHub",
+      "buttonURL": "https://github.com/max1mde/fancy-readme-stats",
+      "badges": [
+        "https://img.shields.io/github/stars/max1mde/fancy-readme-stats.svg"
+      ]
+    },
+    {
+      "title": "HologramAPI",
+      "description": "Packet based text display hologram api with minimessage and emoji support",
+      "imageSRC": "/images/projects/hologramapi.png",
+      "buttonText": "View on GitHub",
+      "buttonURL": "https://github.com/max1mde/HologramAPI",
+      "badges": ["https://img.shields.io/github/stars/max1mde/HologramAPI.svg"]
+    }
+  ]
 }
