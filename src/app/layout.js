@@ -1,4 +1,5 @@
 import localFont from "next/font/local";
+import Navbar from "@/app/components/Navbar";
 import "./globals.css";
 
 const delius = localFont({
@@ -15,7 +16,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${delius.variable} antialiased`}>{children}</body>
+      <body className={`${delius.variable} antialiased`}>
+        <Navbar />
+        <main className="p-4">{children}</main>
+      </body>
     </html>
   );
 }
