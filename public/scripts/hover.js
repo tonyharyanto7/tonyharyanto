@@ -39,7 +39,7 @@ function rotateToMouse(e) {
       circle at
       ${center.x * 2 + bounds.width / 2}px
       ${center.y * 2 + bounds.height / 2}px,
-      ${hexToRGB(color2, 0.2)},
+      ${hexToRGB(color2, 0.1)},
       #0000000f
     )
   `;

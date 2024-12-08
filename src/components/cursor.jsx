@@ -141,8 +141,8 @@ const CustomCursor = () => {
 
   const cursorStyle = {
     position: "fixed",
-    width: `${cursorSize}px`,
-    height: `${cursorSize}px`,
+    width: isInitialized ? `${cursorSize}px` : `0`,
+    height: isInitialized ? `${cursorSize}px` : `0`,
     pointerEvents: "none",
     zIndex: 9999,
     transform: `translate(${position.x - cursorSize / 2}px, ${
@@ -152,9 +152,8 @@ const CustomCursor = () => {
     backgroundSize: "contain",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
-    transition: "all 0.1s ease-out",
+    transition: "all 0.07s ease-out",
     animation: isHovering ? "cursorBounce 0.4s ease" : "none",
-    opacity: isInitialized ? 1 : 0,
   };
 
   const keyframes = `
@@ -167,7 +166,7 @@ const CustomCursor = () => {
       50% { 
         transform: translate(${position.x - cursorSize / 2}px, ${
     position.y - cursorSize / 2
-  }px) scale(1.3); 
+  }px) scale(1.3) rotate(5deg); 
       }
     }
   `;
