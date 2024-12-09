@@ -13,6 +13,7 @@ import "@/app/styles/card.css";
 import "@/app/styles/blurred-img.css";
 import config from "/CONFIG.json";
 import Script from "next/script";
+
 import CustomCursor from "@/components/cursor";
 
 const deliusFont = localFont({
@@ -43,6 +44,7 @@ export const metadata = {
   title: config.siteMetadata.title,
   description: config.siteMetadata.description,
 };
+
 
 export default function RootLayout({ children }) {
   const selectedFont = fonts[config.global.font] || deliusFont;

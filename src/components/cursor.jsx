@@ -15,6 +15,7 @@ const CustomCursor = () => {
   const [cursorType, setCursorType] = useState("default");
   const [isHovering, setIsHovering] = useState(false);
   const [cursorSize, setCursorSize] = useState(10);
+  const isMobile = useRef(false);
   const mousePositionRef = useRef({ x: 0, y: 0 });
   const lastPositionRef = useRef({ x: 0, y: 0 });
   const lastTimeRef = useRef(Date.now());
@@ -38,6 +39,21 @@ const CustomCursor = () => {
   const sparkleRef = useRef(null);
 
   useEffect(() => {
+    const checkScreenSize = () => {
+      if (typeof window !== "undefined") {
+        isMobile.current = window.innerWidth <= 768;
+      }
+    };
+
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+
+    return () => {
+      window.removeEventListener("resize", checkScreenSize);
+    };
+  }, []);
+
+  useEffect(() => {
     const handleMouseMove = (e) => {
       const newPosition = { x: e.clientX, y: e.clientY };
       const currentTime = Date.now();
@@ -57,8 +73,8 @@ const CustomCursor = () => {
         minSize,
         Math.min(
           maxSize,
-          baseSize + Math.min(speed * speedMultiplier, maxSize - baseSize)
-        )
+          baseSize + Math.min(speed * speedMultiplier, maxSize - baseSize),
+        ),
       );
 
       setCursorSize(newSize);
@@ -91,7 +107,7 @@ const CustomCursor = () => {
 
             allElements.forEach((el) => {
               const cursorClass = Object.keys(cursorClasses).find((cls) =>
-                el.classList.contains(cls)
+                el.classList.contains(cls),
               );
 
               if (cursorClass) {
@@ -130,7 +146,7 @@ const CustomCursor = () => {
       observerRef.current = observer;
     };
 
-    if (typeof window !== "undefined") {
+    if (typeof window !== "undefined" && !isMobile.current) {
       const initialPosition = {
         x: window.innerWidth / 2,
         y: window.innerHeight / 2,
