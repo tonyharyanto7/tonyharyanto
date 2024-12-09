@@ -37,7 +37,7 @@ export default function Navbar() {
   return (
     <nav
       className={cn(
-        "p-4 sticky top-0 backdrop-blur-lg transition-all duration-200 ease-in-out",
+        "p-4 sticky top-0 backdrop-blur-sm transition-all duration-200 ease-in-out",
         isScrolled ? "shadow-xl text-base" : "text-sm",
         "z-50",
       )}
@@ -57,7 +57,7 @@ export default function Navbar() {
                     "text-white font-medium",
                     isActive
                       ? "hover:bg-gray-700 shadow-md hover:border-white opacity-50 border-gray-700"
-                      : "hover:border-white hover:bg-secondary hover:shadow-2xl",
+                      : "hover:border-white active:bg-primary hover:shadow-2xl",
                   )}
                 >
                   {pageName.charAt(0).toUpperCase() + pageName.slice(1)}

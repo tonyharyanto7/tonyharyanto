@@ -1,7 +1,7 @@
 /**
  * Portfolio
  * Copyright (C) 2024 Maxim (https://github.com/max1mde)
- * 
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published
  * by the Free Software Foundation.
@@ -25,9 +25,12 @@ export default function Projects() {
     if (!hasMounted.current) {
       hasMounted.current = true;
       config.cards.forEach((card, index) => {
-        setTimeout(() => {
-          setVisibleCards((prevCards) => [...prevCards, card]);
-        }, index * 100);
+        setTimeout(
+          () => {
+            setVisibleCards((prevCards) => [...prevCards, card]);
+          },
+          config.card.pop_in ? index * 100 : 0,
+        );
       });
     }
 
@@ -43,7 +46,7 @@ export default function Projects() {
       <div className="cards-container">
         {visibleCards.map((card, index) => (
           <Card
-            className="animate-pop_in"
+            className={config.card.pop_in ? "animate-pop_in" : ""}
             key={index}
             title={card.title}
             description={card.description}

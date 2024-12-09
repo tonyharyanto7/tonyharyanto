@@ -42,6 +42,11 @@
       "route": "/contact"
     }
   },
+  "card": {
+    "pop_in": false,
+    "hover_effect": true,
+    "hover_glow": true
+  },
   "cards": [
     {
       "title": "Fancy Physics",
@@ -62,14 +67,6 @@
       "badges": [
         "https://img.shields.io/spiget/downloads/115811?label=Spigot%20downloads"
       ]
-    },
-    {
-      "title": "FIX- Autocorrect",
-      "description": "AI text correction, translation, and improvement with hotkeys, voice control, & more.",
-      "imageSRC": "/images/projects/fix.png",
-      "buttonText": "View on GitHub",
-      "buttonURL": "https://github.com/max1mde/FIX",
-      "badges": ["https://img.shields.io/github/stars/max1mde/FIX.svg"]
     },
     {
       "title": "Fancy Readme Stats",

@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+body::before {
+  content: "";
+  position: fixed;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140vw;
+  height: 140vh;
+  z-index: -1;
+  background-image: url("/images/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  filter: blur(5px);
+}
+
 body {
   @apply font-sans bg-background text-foreground;
 }
