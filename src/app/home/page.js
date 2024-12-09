@@ -8,6 +8,7 @@
  */
 "use client";
 
+import Timeline from "@/components/ui/timeline";
 import config from "/CONFIG.json";
 import Link from "next/link";
 
@@ -22,7 +23,7 @@ export default function Home() {
 
       <div className="flex flex-col md:flex-row items-center justify-center gap-8">
         {homeConfig.profile_image && (
-          <div className="w-48 h-48 rounded-full overflow-hidden shadow-lg">
+          <div className="w-24 h-24 rounded-full overflow-hidden shadow-lg">
             <img
               src={homeConfig.profile_image}
               alt="Profile"
@@ -77,6 +78,10 @@ export default function Home() {
           ))}
         </div>
       )}
+
+      <div className="container mx-auto px-4 py-8">
+        <Timeline />
+      </div>
     </div>
   );
 }

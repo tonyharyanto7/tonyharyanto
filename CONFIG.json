@@ -54,7 +54,33 @@
           "route": "/contact", 
           "style": "secondary"
         }
-      ]
+      ],
+      "experience": {
+      "title": "My Experience",
+      "list": [
+        {
+          "title": "Software Developer",
+          "company": "India Solutions",
+          "date": "2022 - Present",
+          "description": "Developing random web applications and creating innovative callcenter software solutions using modern technologies.",
+          "side": "left"
+        },
+        {
+          "title": "In-Situ Resource Utilization Specialist",
+          "company": "NASA",
+          "date": "2020 - 2022",
+          "description": "Developed and implemented innovative technologies for extracting and utilizing resources such as water, oxygen, and metals from extraterrestrial environments, including the Moon and Mars. Collaborated with cross-disciplinary teams to design systems for sustainable space exploration and minimize reliance on Earth-based resupply.",
+          "side": "right"
+        },
+        {
+          "title": "Junior Data Entry Specialist",
+          "company": "Paper Pushers Inc.",
+          "date": "2016 - 2020",
+          "description": "Ensured the accuracy of critical documents by entering data with impeccable precision and speed. Frequently tasked with deciphering illegible handwriting, earning the unofficial title of 'Document Whisperer.' Maintained a 100% survival rate through office printer malfunctions.",
+          "side": "left"
+        }
+        ]
+        }
     },
     "projects": {
       "enabled": true,
