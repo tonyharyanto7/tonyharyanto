@@ -1,7 +1,7 @@
 /**
  * Portfolio
  * Copyright (C) 2024 Maxim (https://github.com/max1mde)
- * 
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published
  * by the Free Software Foundation.
@@ -11,7 +11,6 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
-import config from "/CONFIG.json";
 
 const Card = React.forwardRef(
   (
@@ -27,7 +26,7 @@ const Card = React.forwardRef(
       badges = [],
       ...props
     },
-    ref
+    ref,
   ) => {
     const [loaded, setLoaded] = useState(false);
     const [isHovered, setIsHovered] = useState(false);
@@ -54,7 +53,7 @@ const Card = React.forwardRef(
     const cardClassName = cn(
       "rounded-xl border bg-card text-card-foreground shadow hover-card project-card",
       !isHovered && allHovered ? "blurred" : "",
-      className
+      className,
     );
 
     const imageStyle = {
@@ -69,7 +68,8 @@ const Card = React.forwardRef(
         style={{ width: "18rem" }}
         onMouseEnter={() => handleCardHover(true)}
         onMouseLeave={() => handleCardHover(false)}
-        {...props}>
+        {...props}
+      >
         {imageSRC && (
           <div className="shine column">
             <figure className="hover:before:animate-shine_anim">
@@ -83,7 +83,7 @@ const Card = React.forwardRef(
                     loading="lazy"
                     className={cn(
                       "absolute top-0 left-0 w-full h-full card-img-top rounded-t-xl z-2 transition-filter duration-1000 ease",
-                      loaded ? "filter-none animate-move_in" : "filter blur-sm"
+                      loaded ? "filter-none animate-move_in" : "filter blur-sm",
                     )}
                     style={imageStyle}
                     alt="banner"
@@ -125,14 +125,15 @@ const Card = React.forwardRef(
               href={buttonURL}
               target="_blank"
               rel="noopener noreferrer"
-              className="c-cursor-pointer btn btn-primary primary-button card-button inline-block rounded-md bg-primary text-primary-foreground hover:bg-primary/90 px-4 py-2">
+              className="c-cursor-pointer btn btn-primary primary-button card-button inline-block rounded-md bg-primary text-primary-foreground hover:bg-primary/90 px-4 py-2"
+            >
               {buttonText}
             </a>
           )}
         </div>
       </div>
     );
-  }
+  },
 );
 Card.displayName = "Card";
 

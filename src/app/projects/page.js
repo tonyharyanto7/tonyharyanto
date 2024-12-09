@@ -25,12 +25,13 @@ export default function Projects() {
     if (!hasMounted.current) {
       hasMounted.current = true;
       config.cards.forEach((card, index) => {
-        setTimeout(
-          () => {
+        if (config.card.pop_in) {
+          setTimeout(() => {
             setVisibleCards((prevCards) => [...prevCards, card]);
-          },
-          config.card.pop_in ? index * 100 : 0,
-        );
+          }, index * 200);
+        } else {
+          setVisibleCards((prevCards) => [...prevCards, card]);
+        }
       });
     }
 

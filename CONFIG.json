@@ -5,6 +5,7 @@
   },
   "global": {
     "font": "roboto",
+    "home_route": "/home",
     "custom_cursor": {
       "enabled": true,
       "sparkles": true,
@@ -43,9 +44,10 @@
     }
   },
   "card": {
-    "pop_in": false,
+    "pop_in": true,
     "hover_effect": true,
-    "hover_glow": true
+    "hover_glow": true,
+    "image_shine": true
   },
   "cards": [
     {

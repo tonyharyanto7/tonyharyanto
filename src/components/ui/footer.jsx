@@ -1,7 +1,7 @@
 /**
  * Portfolio
  * Copyright (C) 2024 Maxim (https://github.com/max1mde)
- * 
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published
  * by the Free Software Foundation.
@@ -11,7 +11,7 @@ import React from "react";
 
 const Footer = ({ config }) => {
   return (
-    <footer className="animate-pop_in bg-black/10 shadow-xl text-white py-4">
+    <footer className="bg-black/10 shadow-xl text-white py-4">
       <div className="container mx-auto text-center">
         {config.footer && (
           <>

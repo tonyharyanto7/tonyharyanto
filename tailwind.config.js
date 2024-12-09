@@ -1,7 +1,7 @@
 /**
  * Portfolio
  * Copyright (C) 2024 Maxim (https://github.com/max1mde)
- * 
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published
  * by the Free Software Foundation.
@@ -24,6 +24,11 @@ module.exports = {
         shine_anim: "shine_anim .7s ease-in-out 1",
         move_in: "move_in 5s ease-in-out 1",
         pop_in: "pop_in 2s ease-in-out 1",
+      },
+      pulse: {
+        "0%": { opacity: "0" },
+        "50%": { opacity: "0.1" },
+        "100%": { opacity: "0" },
       },
       keyframes: {
         shine_anim: {

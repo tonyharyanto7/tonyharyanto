@@ -14,6 +14,7 @@ import config from "/CONFIG.json";
 const CustomCursor = () => {
   const [cursorType, setCursorType] = useState("default");
   const [isHovering, setIsHovering] = useState(false);
+  const [isClicking, setIsClicking] = useState(false);
   const [cursorSize, setCursorSize] = useState(10);
   const isMobile = useRef(false);
   const mousePositionRef = useRef({ x: 0, y: 0 });
@@ -209,9 +210,15 @@ const CustomCursor = () => {
   const handleMouseClick = (e) => {
     if (config.global.custom_cursor.sparkles)
       createSparkle(e.clientX, e.clientY);
+
+    setIsClicking(true);
+
+    setTimeout(() => {
+      setIsClicking(false);
+    }, 100);
   };
 
-  const cursorStyle = {
+  let cursorStyle = {
     position: "fixed",
     width: `${cursorSize}px`,
     height: `${cursorSize}px`,
@@ -231,10 +238,11 @@ const CustomCursor = () => {
           config.global.custom_cursor.move_speed +
           "s ease-out, opacity 0.3s ease-in"
         : "",
-    animation:
-      isHovering && config.global.custom_cursor.transitions
-        ? "cursorBounce 0.4s ease"
-        : "none",
+    animation: isClicking
+      ? "cursorClick 0.3s ease"
+      : isHovering && config.global.custom_cursor.transitions
+      ? "cursorBounce 0.4s ease"
+      : "none",
   };
 
   const keyframes = `
@@ -251,6 +259,18 @@ const CustomCursor = () => {
       }
     }
 
+    @keyframes cursorClick {
+      0% { 
+        transform: translate(${positionRef.current.x - cursorSize / 2}px, ${
+    positionRef.current.y - cursorSize / 2
+  }px) scale(1, 0.5)
+      }
+      100% { 
+        transform: translate(${positionRef.current.x - cursorSize / 2}px, ${
+    positionRef.current.y - cursorSize / 2
+  }px) scale(1)
+      }
+    }
 
   @keyframes sparkleEffect {
   0% {
