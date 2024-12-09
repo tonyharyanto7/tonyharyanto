@@ -15,6 +15,7 @@ import config from "/CONFIG.json";
 import Script from "next/script";
 
 import CustomCursor from "@/components/cursor";
+import Footer from "@/components/ui/footer";
 
 const deliusFont = localFont({
   src: "./fonts/DeliusSwashCaps-Regular.ttf",
@@ -45,16 +46,18 @@ export const metadata = {
   description: config.siteMetadata.description,
 };
 
-
 export default function RootLayout({ children }) {
   const selectedFont = fonts[config.global.font] || deliusFont;
 
   return (
     <html lang="en">
-      <body className={`${selectedFont.variable} antialiased`}>
+      <body
+        className={`${selectedFont.variable} antialiased flex flex-col min-h-screen`}
+      >
         {config.global.custom_cursor.enabled && <CustomCursor />}
         <Navbar />
-        <main className="p-4">{children}</main>
+        <main className="flex-1 p-4">{children}</main>
+        <Footer config={config} />
         <Script src="scripts/hover.js" strategy="afterInteractive" />
       </body>
     </html>

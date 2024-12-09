@@ -12,10 +12,23 @@
       "move_speed": 0.05
     }
   },
+    "footer": {
+    "text": "© 2024 Maxim - All rights reserved.",
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/max1mde/portfolio"
+      },
+      {
+        "label": "YouTube",
+        "url": "https://www.youtube.com/@max1mde"
+      }
+    ]
+  },
   "pages": {
     "home": {
       "enabled": true,
-      "header": "Welcome to My Portfolio",
+      "header": "Hello, my name is Maxim ✨",
       "route": "/home"
     },
     "projects": {
