@@ -1,3 +1,12 @@
+/**
+ * Portfolio
+ * Copyright (C) 2024 Maxim (https://github.com/max1mde)
+ * 
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published
+ * by the Free Software Foundation.
+ */
+
 const fs = require("fs").promises;
 const path = require("path");
 
@@ -11,8 +20,7 @@ function createLicenseHeader(year) {
  * 
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published
- * by the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
+ * by the Free Software Foundation.
  */
 
 `;
