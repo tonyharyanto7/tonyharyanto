@@ -6,7 +6,6 @@
  * it under the terms of the GNU Affero General Public License as published
  * by the Free Software Foundation.
  */
-
 import { clsx } from "clsx";
 import { twMerge } from "tailwind-merge"
 
