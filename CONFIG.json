@@ -30,7 +30,31 @@
     "home": {
       "enabled": true,
       "header": "Hello, my name is Maxim ✨",
-      "route": "/home"
+      "route": "/home",
+      "profile_image": "https://avatars.githubusercontent.com/u/114857048?v=4",
+      "about_me": "About Me",
+      "description": "Here is some boring text no one wants to read",
+      "tools_languages_title": "Tools & Languages",
+      "tools_and_languages": [
+        "Java", 
+        "JavaScript", 
+        "Next.js", 
+        "Python", 
+        "MongoDB", 
+        "Git"
+      ],
+      "action_buttons": [
+        {
+          "label": "View Projects",
+          "route": "/projects",
+          "style": "primary"
+        },
+        {
+          "label": "Contact Me",
+          "route": "/contact", 
+          "style": "secondary"
+        }
+      ]
     },
     "projects": {
       "enabled": true,
