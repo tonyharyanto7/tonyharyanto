@@ -9,12 +9,26 @@ import CustomCursor from "@/components/cursor";
 
 const deliusFont = localFont({
   src: "./fonts/DeliusSwashCaps-Regular.ttf",
-  variable: "--font-delius",
+  variable: "--font-custom",
+  weight: "100 900",
+});
+
+const robotoFont = localFont({
+  src: "./fonts/Roboto-Medium.ttf",
+  variable: "--font-custom",
+  weight: "100 900",
+});
+
+const audiowideFont = localFont({
+  src: "./fonts/Audiowide-Regular.ttf",
+  variable: "--font-custom",
   weight: "100 900",
 });
 
 const fonts = {
   delius: deliusFont,
+  roboto: robotoFont,
+  audiowide: audiowideFont,
 };
 
 export const metadata = {

@@ -57,7 +57,7 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ["var(--font-delius)", ...fontFamily.sans],
+        sans: ["var(--font-custom)", ...fontFamily.sans],
       },
       colors: {
         background: "hsl(var(--background))",
