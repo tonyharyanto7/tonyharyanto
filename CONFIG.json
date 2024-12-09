@@ -87,11 +87,52 @@
       "header": "My Projects",
       "route": "/projects"
     },
-    "contact": {
+  "contact": {
       "enabled": true,
       "header": "Contact Me",
-      "route": "/contact"
+      "route": "/contact",
+      "email": "maxim@nextfight.net",
+      "social_links": [
+      {
+        "name": "GitHub",
+        "url": "https://github.com/max1mde",
+        "icon": "github"
+      },
+      {
+        "name": "Twitter",
+        "url": "https://x.com/elonmusk",
+        "icon": "twitter"
+      },
+      {
+        "name": "YouTube",
+        "url": "https://www.youtube.com/@max1mde",
+        "icon": "youtube"
+      }
+      ],
+      "contact_form": {
+      "enabled": true,
+      "fields": [
+        {
+          "name": "name",
+          "label": "Your Name",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "email",
+          "label": "Your Email",
+          "type": "email",
+          "required": true
+        },
+        {
+          "name": "message",
+          "label": "Your Message",
+          "type": "textarea",
+          "required": true
+        }
+      ]
     }
+  }
   },
   "card": {
     "pop_in": true,
