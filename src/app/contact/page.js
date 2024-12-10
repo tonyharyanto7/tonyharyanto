@@ -152,10 +152,7 @@ export default function Contact() {
 
       <div className="mt-12 text-center">
         <h2 className="text-2xl font-semibold mb-4">Reach Me Directly</h2>
-        <a
-          href={`mailto:${config.pages.contact.email}`}
-          className="text-primary hover:underline flex items-center justify-center gap-2"
-        >
+        <a className="c-cursor-text text-primary flex items-center justify-center gap-2">
           <FaEnvelope className="inline-block" />
           {config.pages.contact.email}
         </a>

@@ -50,7 +50,7 @@ export default function Home() {
           {homeConfig.tools_and_languages.map((tool, index) => (
             <span
               key={index}
-              className="px-4 py-2 bg-black/50 rounded-full text-sm"
+              className="px-4 py-2 bg-highlight rounded-full text-sm"
             >
               {tool}
             </span>

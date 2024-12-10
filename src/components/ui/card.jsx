@@ -74,7 +74,7 @@ const Card = React.forwardRef(
           <div className="shine column">
             <figure className="hover:before:animate-shine_anim">
               <div className="relative h-40">
-                <span className="c-cursor-text absolute top-0 left-0 w-full h-full card-img-top rounded-t-xl bg-gradient-to-br from-gray-800 to-pink-400 flex items-center justify-center text-white text-lg z-1">
+                <span className="c-cursor-text absolute top-0 left-0 w-full h-full card-img-top rounded-t-xl bg-gradient-to-br from-background to-secondary flex items-center justify-center text-white text-lg z-1">
                   {title}
                 </span>
                 {loaded && (

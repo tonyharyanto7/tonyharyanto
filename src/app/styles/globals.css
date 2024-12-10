@@ -11,7 +11,7 @@ body::before {
   width: 140vw;
   height: 140vh;
   z-index: -1;
-  background-image: url("/images/background.png");
+  background-image: url("/images/background.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -53,8 +53,8 @@ body {
     --popover: var(--background);
     --popover-foreground: var(--foreground);
 
-    --primary: var(--color-1);
-    --secondary: var(--color-2);
+    --primary: var(--color-2);
+    --secondary: var(--color-1);
 
     --primary-foreground: var(--foreground);
     --secondary-foreground: var(--foreground);

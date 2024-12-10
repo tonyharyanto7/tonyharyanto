@@ -57,7 +57,7 @@ export default function Navbar() {
                     "text-white font-medium",
                     isActive
                       ? "hover:bg-gray-700 shadow-md hover:border-white opacity-50 border-gray-700"
-                      : "hover:border-white active:bg-primary hover:shadow-2xl",
+                      : "hover:border-white active:bg-secondary hover:shadow-2xl",
                   )}
                 >
                   {pageName.charAt(0).toUpperCase() + pageName.slice(1)}
