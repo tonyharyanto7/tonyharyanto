@@ -1,7 +1,7 @@
 /**
  * Portfolio
  * Copyright (C) 2024 Maxim (https://github.com/max1mde)
- * 
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published
  * by the Free Software Foundation.
@@ -17,6 +17,12 @@ import {
   FaYoutube,
   FaEnvelope,
   FaTwitter,
+  FaTiktok,
+  FaInstagram,
+  FaDiscord,
+  FaSpotify,
+  FaXbox,
+  FaFacebook,
 } from "react-icons/fa";
 
 const SocialIcon = ({ name }) => {
@@ -26,6 +32,12 @@ const SocialIcon = ({ name }) => {
     youtube: FaYoutube,
     email: FaEnvelope,
     twitter: FaTwitter,
+    tiktok: FaTiktok,
+    instagram: FaInstagram,
+    discord: FaDiscord,
+    spotify: FaSpotify,
+    xbox: FaXbox,
+    facebook: FaFacebook,
   };
 
   const Icon = iconMap[name.toLowerCase()] || FaEnvelope;
@@ -84,7 +96,7 @@ export default function Contact() {
             href={social.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-600 hover:text-primary transition-colors"
+            className="c-cursor-pointer text-gray-600 hover:text-primary transition-colors"
             title={social.name}
           >
             <SocialIcon name={social.icon} />
