@@ -60,11 +60,12 @@ export default function RootLayout({ children }) {
       <body
         className={`${selectedFont.variable} antialiased flex flex-col min-h-screen`}
       >
+        <link rel="preconnect" href="https://img.shields.io"></link>
+
         {config.global.custom_cursor.enabled && <CustomCursor />}
         <Navbar />
         <main className="flex-1 p-4">{children}</main>
         <Footer config={config} />
-
       </body>
     </html>
   );

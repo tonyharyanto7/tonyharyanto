@@ -23,6 +23,10 @@
          {
             "label":"YouTube",
             "url":"https://www.youtube.com/@max1mde"
+         },
+         {
+            "label":"Privacy",
+            "url":"/privacy"
          }
       ]
    },
@@ -33,7 +37,7 @@
          "route":"/home",
          "profile_image":"https://avatars.githubusercontent.com/u/114857048?v=4",
          "about_me":"About Me",
-         "description":"Here is some boring text no one wants to read",
+         "description":"I like to bring random ideas to reality",
          "tools_languages_title":"Tools & Languages",
          "languages":[
             "Java",
@@ -156,7 +160,7 @@
          }
       },
       "privacy":{
-         "enabled":true,
+         "enabled":false,
          "header":"Privacy Policy",
          "route":"/privacy",
          "content":{
