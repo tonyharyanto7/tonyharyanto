@@ -35,12 +35,19 @@
          "about_me":"About Me",
          "description":"Here is some boring text no one wants to read",
          "tools_languages_title":"Tools & Languages",
-         "tools_and_languages":[
+         "languages":[
             "Java",
             "JavaScript",
+            "TypeScript",
+            "Python"
+         ],
+         "tools":[
             "Next.js",
-            "Python",
             "MongoDB",
+            "Intellij",
+            "MariaDB",
+            "Pycharm",
+            "FIX",
             "Git"
          ],
          "action_buttons":[

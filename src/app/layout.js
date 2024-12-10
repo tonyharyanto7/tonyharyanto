@@ -17,6 +17,8 @@ import Script from "next/script";
 import CustomCursor from "@/components/cursor";
 import Footer from "@/components/ui/footer";
 
+import Head from "next/head";
+
 const deliusFont = localFont({
   src: "./fonts/DeliusSwashCaps-Regular.ttf",
   variable: "--font-custom",
@@ -51,6 +53,10 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
+      <Head>
+        <Script src="scripts/scroll.js" strategy="afterInteractive" />
+      </Head>
+
       <body
         className={`${selectedFont.variable} antialiased flex flex-col min-h-screen`}
       >
@@ -58,7 +64,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         <main className="flex-1 p-4">{children}</main>
         <Footer config={config} />
-        <Script src="scripts/hover.js" strategy="afterInteractive" />
+
       </body>
     </html>
   );

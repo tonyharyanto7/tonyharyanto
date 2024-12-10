@@ -51,6 +51,8 @@ export default function Contact() {
     message: "",
   });
 
+  const [statusMessage, setStatusMessage] = useState("");
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -61,6 +63,7 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setStatusMessage("");
 
     try {
       const response = await fetch("/api/contact", {
@@ -70,16 +73,24 @@ export default function Contact() {
         },
         body: JSON.stringify(formData),
       });
+      const result = await response.json();
 
       if (response.ok) {
-        alert(config.pages.contact.contact_form.success_message);
+        alert(
+          result.message || config.pages.contact.contact_form.success_message,
+        );
         setFormData({ name: "", email: "", message: "" });
       } else {
-        alert(config.pages.contact.contact_form.failure_message);
+        setStatusMessage(
+          result.message || config.pages.contact.contact_form.failure_message,
+        );
       }
     } catch (error) {
       console.error("Submission error:", error);
-      alert(config.pages.contact.contact_form.error_message);
+      setStatusMessage(
+        config.pages.contact.contact_form.error_message ||
+          "An unexpected error occurred.",
+      );
     }
   };
 
@@ -148,6 +159,10 @@ export default function Contact() {
             {config.pages.contact.contact_form.send_button}
           </button>
         </form>
+      )}
+
+      {statusMessage && (
+        <div className="mt-4 text-center text-red-500">{statusMessage}</div>
       )}
 
       <div className="mt-12 text-center">

@@ -14,7 +14,7 @@ export function middleware(req) {
 
   if (pathname === "/") {
     return NextResponse.redirect(
-      new URL(configuration.global.home_route, req.url),
+      new URL(configuration.global.home_route || "/home", req.url),
     );
   }
 
