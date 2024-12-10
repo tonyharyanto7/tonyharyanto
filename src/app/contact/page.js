@@ -72,21 +72,21 @@ export default function Contact() {
       });
 
       if (response.ok) {
-        alert("Message sent successfully!");
+        alert(config.pages.contact.contact_form.success_message);
         setFormData({ name: "", email: "", message: "" });
       } else {
-        alert("Failed to send message. Please try again.");
+        alert(config.pages.contact.contact_form.failure_message);
       }
     } catch (error) {
       console.error("Submission error:", error);
-      alert("An error occurred. Please try again.");
+      alert(config.pages.contact.contact_form.error_message);
     }
   };
 
   return (
     <div className="container mx-auto px-4 py-8 max-w-2xl">
       <h1 className="c-cursor-text text-3xl font-bold text-center mb-10">
-        Contact Me
+        {config.pages.contact.header}
       </h1>
 
       <div className="flex justify-center space-x-6 mb-12">
@@ -145,13 +145,15 @@ export default function Contact() {
             type="submit"
             className="c-cursor-pointer w-full bg-primary text-white py-3 rounded-md hover:bg-primary/90 transition-colors"
           >
-            Send Message
+            {config.pages.contact.contact_form.send_button}
           </button>
         </form>
       )}
 
       <div className="mt-12 text-center">
-        <h2 className="text-2xl font-semibold mb-4">Reach Me Directly</h2>
+        <h2 className="text-2xl font-semibold mb-4">
+          {config.pages.contact.direct_contact}
+        </h2>
         <a className="c-cursor-text text-primary flex items-center justify-center gap-2">
           <FaEnvelope className="inline-block" />
           {config.pages.contact.email}

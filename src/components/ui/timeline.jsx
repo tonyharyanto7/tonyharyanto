@@ -22,7 +22,6 @@ const TimelineItem = ({ experience, animationDelay, isInView }) => {
         isLeft ? "md:flex-row" : "md:flex-row-reverse"
       }`}
     >
-
       <motion.div
         initial={{ opacity: 0, x: isLeft ? 50 : -50 }}
         animate={
@@ -62,7 +61,6 @@ const TimelineItem = ({ experience, animationDelay, isInView }) => {
           !isLeft ? "left-1/2" : "right-1/2"
         }`}
       />
-
 
       <motion.div
         initial={{ opacity: 0 }}
@@ -123,7 +121,7 @@ const Timeline = () => {
             initial={{ height: 0 }}
             animate={{
               height: "calc(100% + 100px)",
-              transition: { duration: 3, delay: 0 },
+              transition: { duration: 2, delay: 0 },
             }}
             className="
               absolute left-1/2 transform -translate-x-1/2 w-1 
@@ -142,7 +140,7 @@ const Timeline = () => {
             <TimelineItem
               key={index}
               experience={experience}
-              animationDelay={index * 0.8}
+              animationDelay={index * 0.3}
               isInView={isInView}
             />
           ))}
