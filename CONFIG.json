@@ -101,6 +101,15 @@
          "route":"/contact",
          "email":"maxim@nextfight.net",
          "direct_contact":"Reach Me Directly",
+         "legal":{
+            "enabled":true,
+            "name":"Maxim",
+            "address":"Vaitape - Bora Bora",
+            "email":"maxim@nextfight.net",
+            "phone":"911",
+            "tax_id":"Not Applicable",
+            "legal_disclaimer":"This is a personal portfolio website for informational purposes."
+         },
          "social_links":[
             {
                "name":"GitHub",
@@ -120,7 +129,7 @@
          ],
          "contact_form":{
             "enabled":true,
-            "send_button": "Send Message",
+            "send_button":"Send Message",
             "success_message":"Message sent successfully!",
             "failure_message":"Failed to send message. Please try again.",
             "error_message":"An error occurred. Please try again.",
@@ -142,6 +151,62 @@
                   "label":"Your Message",
                   "type":"textarea",
                   "required":true
+               }
+            ]
+         }
+      },
+      "privacy":{
+         "enabled":true,
+         "header":"Privacy Policy",
+         "route":"/privacy",
+         "content":{
+            "contact_title": "Contact",
+            "contact": "maxim@netfight.net",
+            "introduction":"This portfolio website is designed with minimal data collection and maximum user privacy in mind.",
+            "sections":[
+               {
+                  "title":"Information Collection",
+                  "description":"We collect the following types of information:",
+                  "details":[
+                     "Name, email, and message content submitted through the contact form",
+                     "IP address for rate limiting and security purposes",
+                     "Potential tracking of client-side interactions for website functionality"
+                  ]
+               },
+               {
+                  "title":"Data Processing and Storage",
+                  "description":"Data collection and processing details:",
+                  "details":[
+                     "Contact form submissions are processed in-memory and not permanently stored",
+                     "IP addresses are temporarily tracked for rate limiting (maximum 30 minutes)",
+                     "No persistent user data is saved or stored long-term"
+                  ]
+               },
+               {
+                  "title":"Third-Party Services",
+                  "description":"Potential data collection by third-party services:",
+                  "details":[
+                     "Image hosting services (e.g., shields.io) may collect IP address during image requests",
+                     "Standard browser and server logs may capture additional metadata"
+                  ]
+               },
+               {
+                  "title":"Data Protection",
+                  "description":"We implement the following protection measures:",
+                  "details":[
+                     "Rate limiting to prevent abuse of contact form",
+                     "Validation of submitted form data",
+                     "No storage of sensitive personal information"
+                  ]
+               },
+               {
+                  "title":"User Rights",
+                  "description":"Users have the right to:",
+                  "details":[
+                     "Request information about data collection",
+                     "Request deletion of any potential stored information",
+                     "Opt-out of non-essential data collection"
+                  ]
                }
             ]
          }

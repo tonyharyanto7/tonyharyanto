@@ -23,6 +23,8 @@ import {
   FaSpotify,
   FaXbox,
   FaFacebook,
+  FaMapMarkerAlt,
+  FaPhone,
 } from "react-icons/fa";
 
 const SocialIcon = ({ name }) => {
@@ -177,6 +179,45 @@ export default function Contact() {
           }`}
         >
           {submitStatus.message}
+        </div>
+      )}
+
+      {config.pages.contact.legal.enabled && (
+        <div className="mt-12 bg-black/50 rounded-lg p-6">
+          <h2 className="text-2xl font-semibold mb-4 text-center">
+            Legal Disclosure
+          </h2>
+          <div className="space-y-2 text-center">
+            {config.pages.contact.legal.name && (
+              <p className="flex items-center justify-center gap-2">
+                <FaMapMarkerAlt className="inline-block" />
+                {config.pages.contact.legal.name}
+              </p>
+            )}
+            {config.pages.contact.legal.address && (
+              <p className="flex items-center justify-center gap-2">
+                <FaMapMarkerAlt className="inline-block" />
+                {config.pages.contact.legal.address}
+              </p>
+            )}
+            {config.pages.contact.legal.email && (
+              <p className="flex items-center justify-center gap-2">
+                <FaEnvelope className="inline-block" />
+                {config.pages.contact.legal.email}
+              </p>
+            )}
+            {config.pages.contact.legal.phone && (
+              <p className="flex items-center justify-center gap-2">
+                <FaPhone className="inline-block" />
+                {config.pages.contact.legal.phone}
+              </p>
+            )}
+            {config.pages.contact.legal.legal_disclaimer && (
+              <p className="text-sm text-gray-400 mt-4">
+                {config.pages.contact.legal.legal_disclaimer}
+              </p>
+            )}
+          </div>
         </div>
       )}
 
