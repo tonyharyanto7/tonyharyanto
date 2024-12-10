@@ -1,7 +1,7 @@
 /**
  * Portfolio
  * Copyright (C) 2024 Maxim (https://github.com/max1mde)
- * 
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published
  * by the Free Software Foundation.
@@ -13,35 +13,76 @@ import { motion } from "framer-motion";
 import config from "/CONFIG.json";
 import { useRef, useEffect, useState } from "react";
 
-const TimelineItem = ({ experience, isInView }) => {
+const TimelineItem = ({ experience, animationDelay, isInView }) => {
   const isLeft = experience.side === "left";
 
   return (
-    <motion.div
-      initial={{ opacity: 0, x: isLeft ? -50 : 50 }}
-      animate={
-        isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: isLeft ? -50 : 50 }
-      }
-      transition={{ duration: 4 }}
-      className={`flex items-center w-full ${
-        isLeft ? "justify-start" : "justify-end"
+    <div
+      className={`flex items-center w-full relative md:flex-row flex-col ${
+        isLeft ? "md:flex-row" : "md:flex-row-reverse"
       }`}
     >
-      <div className={`w-1/2 ${isLeft ? "pr-8" : "pl-8"}`}>
+
+      <motion.div
+        initial={{ opacity: 0, x: isLeft ? 50 : -50 }}
+        animate={
+          isInView
+            ? { opacity: 1, x: 0, transition: { delay: animationDelay + 1 } }
+            : {}
+        }
+        className={`w-full md:w-1/2 z-20 relative ${
+          isLeft ? "md:pr-8 md:text-left" : "md:pl-8 md:text-right"
+        } mb-8 md:mb-0`}
+      >
         <div
-          className={`
-          bg-black/45 p-6 rounded-lg shadow-md border border-primary/10
-          ${isLeft ? "text-right" : "text-left"}
-          hover:shadow-xl transition-shadow duration-300
-        `}
+          className="
+            bg-black/45 p-6 rounded-lg shadow-md border border-primary/10
+            hover:shadow-xl transition-shadow duration-300
+          "
         >
           <h3 className="text-xl font-bold mb-2">{experience.title}</h3>
           <h4 className="text-lg text-gray-600 mb-2">{experience.company}</h4>
           <p className="text-sm text-gray-500 mb-3">{experience.date}</p>
           <p className="text-gray-700">{experience.description}</p>
         </div>
-      </div>
-    </motion.div>
+      </motion.div>
+
+      <motion.div
+        initial={{ width: 0 }}
+        animate={
+          isInView
+            ? {
+                width: "2rem",
+                transition: { duration: 0.5, delay: animationDelay + 0.5 },
+              }
+            : {}
+        }
+        style={{ boxShadow: "0 0 20px var(--secondary)" }}
+        className={`absolute z-0 h-1 bg-white/50 hidden md:block ${
+          !isLeft ? "left-1/2" : "right-1/2"
+        }`}
+      />
+
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={
+          isInView
+            ? {
+                opacity: 1,
+                transition: { duration: 0.5, delay: animationDelay },
+              }
+            : {}
+        }
+        className="absolute z-10 w-4 h-4 bg-white rounded-full hidden md:block"
+        style={{
+          left: "50%",
+          top: "50%",
+          transform: "translate(-50%, -50%)",
+          boxShadow: "0 0 40px var(--secondary)",
+        }}
+      />
+    </div>
   );
 };
 
@@ -76,14 +117,18 @@ const Timeline = () => {
       <h2 className="text-3xl font-bold text-center mb-20">
         {config.pages.home.experience.title}
       </h2>
-      <div ref={ref} className="relative max-w-4xl mx-auto">
+      <div ref={ref} className="relative max-w-4xl mx-auto px-4">
         {isInView && (
           <motion.div
             initial={{ height: 0 }}
-            animate={{ height: "calc(100% + 100px)" }}
-            transition={{ duration: 2, delay: 0.5 }}
-            className="absolute left-1/2 transform -translate-x-1/2 w-1 
-            rounded-full bg-white"
+            animate={{
+              height: "calc(100% + 100px)",
+              transition: { duration: 3, delay: 0 },
+            }}
+            className="
+              absolute left-1/2 transform -translate-x-1/2 w-1 
+              rounded-full bg-white hidden md:block
+            "
             style={{
               height: "calc(100% + 100px)",
               top: "-50px",
@@ -97,6 +142,7 @@ const Timeline = () => {
             <TimelineItem
               key={index}
               experience={experience}
+              animationDelay={index * 0.8}
               isInView={isInView}
             />
           ))}

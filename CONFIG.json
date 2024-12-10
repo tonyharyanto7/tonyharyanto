@@ -1,183 +1,186 @@
 {
-  "siteMetadata": {
-    "title": "Portfolio - Maxim",
-    "description": "Portfolio page by max1mde"
-  },
-  "global": {
-    "font": "roboto",
-    "home_route": "/home",
-    "custom_cursor": {
-      "enabled": true,
-      "sparkles": true,
-      "transitions": true,
-      "move_speed": 0.05
-    }
-  },
-    "footer": {
-    "text": "© 2024 Maxim - All rights reserved.",
-    "links": [
-      {
-        "label": "GitHub",
-        "url": "https://github.com/max1mde/portfolio"
-      },
-      {
-        "label": "YouTube",
-        "url": "https://www.youtube.com/@max1mde"
+   "siteMetadata":{
+      "title":"Portfolio - Maxim",
+      "description":"Portfolio page by max1mde"
+   },
+   "global":{
+      "font":"roboto",
+      "home_route":"/home",
+      "custom_cursor":{
+         "enabled":true,
+         "sparkles":true,
+         "transitions":true,
+         "move_speed":0.05
       }
-    ]
-  },
-  "pages": {
-    "home": {
-      "enabled": true,
-      "header": "Hello, my name is Maxim ✨",
-      "route": "/home",
-      "profile_image": "https://avatars.githubusercontent.com/u/114857048?v=4",
-      "about_me": "About Me",
-      "description": "Here is some boring text no one wants to read",
-      "tools_languages_title": "Tools & Languages",
-      "tools_and_languages": [
-        "Java", 
-        "JavaScript", 
-        "Next.js", 
-        "Python", 
-        "MongoDB", 
-        "Git"
-      ],
-      "action_buttons": [
-        {
-          "label": "View Projects",
-          "route": "/projects",
-          "style": "primary"
-        },
-        {
-          "label": "Contact Me",
-          "route": "/contact", 
-          "style": "secondary"
-        }
-      ],
-      "experience": {
-      "title": "My Experience",
-      "list": [
-        {
-          "title": "Software Developer",
-          "company": "India Solutions",
-          "date": "2022 - Present",
-          "description": "Developing random web applications and creating innovative callcenter software solutions using modern technologies.",
-          "side": "left"
-        },
-        {
-          "title": "In-Situ Resource Utilization Specialist",
-          "company": "NASA",
-          "date": "2020 - 2022",
-          "description": "Developed and implemented innovative technologies for extracting and utilizing resources such as water, oxygen, and metals from extraterrestrial environments, including the Moon and Mars. Collaborated with cross-disciplinary teams to design systems for sustainable space exploration and minimize reliance on Earth-based resupply.",
-          "side": "right"
-        },
-        {
-          "title": "Junior Data Entry Specialist",
-          "company": "Paper Pushers Inc.",
-          "date": "2016 - 2020",
-          "description": "Ensured the accuracy of critical documents by entering data with impeccable precision and speed. Frequently tasked with deciphering illegible handwriting, earning the unofficial title of 'Document Whisperer.' Maintained a 100% survival rate through office printer malfunctions.",
-          "side": "left"
-        }
-        ]
-        }
-    },
-    "projects": {
-      "enabled": true,
-      "header": "My Projects",
-      "route": "/projects"
-    },
-  "contact": {
-      "enabled": true,
-      "header": "Contact Me",
-      "route": "/contact",
-      "email": "maxim@nextfight.net",
-      "social_links": [
-      {
-        "name": "GitHub",
-        "url": "https://github.com/max1mde",
-        "icon": "github"
+   },
+   "footer":{
+      "text":"© 2024 Maxim - All rights reserved.",
+      "links":[
+         {
+            "label":"GitHub",
+            "url":"https://github.com/max1mde/portfolio"
+         },
+         {
+            "label":"YouTube",
+            "url":"https://www.youtube.com/@max1mde"
+         }
+      ]
+   },
+   "pages":{
+      "home":{
+         "enabled":true,
+         "header":"Hello, my name is Maxim ✨",
+         "route":"/home",
+         "profile_image":"https://avatars.githubusercontent.com/u/114857048?v=4",
+         "about_me":"About Me",
+         "description":"Here is some boring text no one wants to read",
+         "tools_languages_title":"Tools & Languages",
+         "tools_and_languages":[
+            "Java",
+            "JavaScript",
+            "Next.js",
+            "Python",
+            "MongoDB",
+            "Git"
+         ],
+         "action_buttons":[
+            {
+               "label":"View Projects",
+               "route":"/projects",
+               "style":"primary"
+            },
+            {
+               "label":"Contact Me",
+               "route":"/contact",
+               "style":"secondary"
+            }
+         ],
+         "experience":{
+            "enabled":true,
+            "title":"My Experience",
+            "list":[
+               {
+                  "title":"Software Developer",
+                  "company":"India Solutions",
+                  "date":"2022 - Present",
+                  "description":"Developing random web applications and creating innovative callcenter software solutions using modern technologies.",
+                  "side":"left"
+               },
+               {
+                  "title":"In-Situ Resource Utilization Specialist",
+                  "company":"NASA",
+                  "date":"2020 - 2022",
+                  "description":"Developed and implemented innovative technologies for extracting and utilizing resources such as water, oxygen, and metals from extraterrestrial environments, including the Moon and Mars. Collaborated with cross-disciplinary teams to design systems for sustainable space exploration and minimize reliance on Earth-based resupply.",
+                  "side":"right"
+               },
+               {
+                  "title":"Junior Data Entry Specialist",
+                  "company":"Paper Pushers Inc.",
+                  "date":"2016 - 2020",
+                  "description":"Ensured the accuracy of critical documents by entering data with impeccable precision and speed. Frequently tasked with deciphering illegible handwriting, earning the unofficial title of 'Document Whisperer.' Maintained a 100% survival rate through office printer malfunctions.",
+                  "side":"left"
+               }
+            ]
+         }
       },
-      {
-        "name": "Twitter",
-        "url": "https://x.com/elonmusk",
-        "icon": "twitter"
+      "projects":{
+         "enabled":true,
+         "header":"My Projects",
+         "route":"/projects"
       },
-      {
-        "name": "YouTube",
-        "url": "https://www.youtube.com/@max1mde",
-        "icon": "youtube"
+      "contact":{
+         "enabled":true,
+         "header":"Contact Me",
+         "route":"/contact",
+         "email":"maxim@nextfight.net",
+         "social_links":[
+            {
+               "name":"GitHub",
+               "url":"https://github.com/max1mde",
+               "icon":"github"
+            },
+            {
+               "name":"Twitter",
+               "url":"https://x.com/elonmusk",
+               "icon":"twitter"
+            },
+            {
+               "name":"YouTube",
+               "url":"https://www.youtube.com/@max1mde",
+               "icon":"youtube"
+            }
+         ],
+         "contact_form":{
+            "enabled":true,
+            "fields":[
+               {
+                  "name":"name",
+                  "label":"Your Name",
+                  "type":"text",
+                  "required":true
+               },
+               {
+                  "name":"email",
+                  "label":"Your Email",
+                  "type":"email",
+                  "required":true
+               },
+               {
+                  "name":"message",
+                  "label":"Your Message",
+                  "type":"textarea",
+                  "required":true
+               }
+            ]
+         }
       }
-      ],
-      "contact_form": {
-      "enabled": true,
-      "fields": [
-        {
-          "name": "name",
-          "label": "Your Name",
-          "type": "text",
-          "required": true
-        },
-        {
-          "name": "email",
-          "label": "Your Email",
-          "type": "email",
-          "required": true
-        },
-        {
-          "name": "message",
-          "label": "Your Message",
-          "type": "textarea",
-          "required": true
-        }
-      ]
-    }
-  }
-  },
-  "card": {
-    "pop_in": true,
-    "hover_effect": true,
-    "hover_glow": true,
-    "image_shine": true
-  },
-  "cards": [
-    {
-      "title": "Fancy Physics",
-      "description": "Tree fall animation, hit particles, realistic explosions, 3D particles & more",
-      "imageSRC": "/images/projects/fancyphysics.png",
-      "buttonText": "View on GitHub",
-      "buttonURL": "https://github.com/max1mde/FancyPhysics",
-      "badges": [
-        "https://img.shields.io/spiget/downloads/110500?label=Spigot%20downloads"
-      ]
-    },
-    {
-      "title": "Better Chat Bubbles",
-      "description": "Packet based chat bubbles above players head, with an extensive API",
-      "imageSRC": "/images/projects/betterchatbubbles.png",
-      "buttonText": "Buy on SpigotMC",
-      "buttonURL": "https://www.spigotmc.org/resources/115811/",
-      "badges": [
-        "https://img.shields.io/spiget/downloads/115811?label=Spigot%20downloads"
-      ]
-    },
-    {
-      "title": "Fancy Readme Stats",
-      "description": "Animated Readme Cards - For your GitHub profile or repository readme",
-      "imageSRC": "/images/projects/readmestats.png",
-      "buttonText": "View on GitHub",
-      "buttonURL": "https://github.com/max1mde/fancy-readme-stats",
-      "badges": [
-        "https://img.shields.io/github/stars/max1mde/fancy-readme-stats.svg"
-      ]
-    },
-    {
-      "title": "HologramAPI",
-      "description": "Packet based text display hologram api with minimessage and emoji support",
-      "imageSRC": "/images/projects/hologramapi.png",
-      "buttonText": "View on GitHub",
-      "buttonURL": "https://github.com/max1mde/HologramAPI",
-      "badges": ["https://img.shields.io/github/stars/max1mde/HologramAPI.svg"]
-    }
-  ]
+   },
+   "card":{
+      "pop_in":true,
+      "hover_effect":true,
+      "hover_glow":true,
+      "image_shine":true
+   },
+   "cards":[
+      {
+         "title":"Fancy Physics",
+         "description":"Tree fall animation, hit particles, realistic explosions, 3D particles & more",
+         "imageSRC":"/images/projects/fancyphysics.png",
+         "buttonText":"View on GitHub",
+         "buttonURL":"https://github.com/max1mde/FancyPhysics",
+         "badges":[
+            "https://img.shields.io/spiget/downloads/110500?label=Spigot%20downloads"
+         ]
+      },
+      {
+         "title":"Better Chat Bubbles",
+         "description":"Packet based chat bubbles above players head, with an extensive API",
+         "imageSRC":"/images/projects/betterchatbubbles.png",
+         "buttonText":"Buy on SpigotMC",
+         "buttonURL":"https://www.spigotmc.org/resources/115811/",
+         "badges":[
+            "https://img.shields.io/spiget/downloads/115811?label=Spigot%20downloads"
+         ]
+      },
+      {
+         "title":"Fancy Readme Stats",
+         "description":"Animated Readme Cards - For your GitHub profile or repository readme",
+         "imageSRC":"/images/projects/readmestats.png",
+         "buttonText":"View on GitHub",
+         "buttonURL":"https://github.com/max1mde/fancy-readme-stats",
+         "badges":[
+            "https://img.shields.io/github/stars/max1mde/fancy-readme-stats.svg"
+         ]
+      },
+      {
+         "title":"HologramAPI",
+         "description":"Packet based text display hologram api with minimessage and emoji support",
+         "imageSRC":"/images/projects/hologramapi.png",
+         "buttonText":"View on GitHub",
+         "buttonURL":"https://github.com/max1mde/HologramAPI",
+         "badges":[
+            "https://img.shields.io/github/stars/max1mde/HologramAPI.svg"
+         ]
+      }
+   ]
 }
