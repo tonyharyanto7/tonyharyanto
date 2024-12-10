@@ -10,4 +10,4 @@ The **custom cursor** is based on [these cursors](https://www.michieldb.nl/other
 
 The **card hover effect** is based on https://codepen.io/markmiro/pen/wbqMPa by Mark Miro licensed under the MIT license
 
-Infinity scrolling effect for tools & languages by Kevin (https://codepen.io/kevinpowell/pen/BavVLra)
+Infinity scrolling effect for tools & languages by Kevin https://codepen.io/kevinpowell/pen/BavVLra

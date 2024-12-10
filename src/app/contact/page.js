@@ -51,7 +51,10 @@ export default function Contact() {
     message: "",
   });
 
-  const [statusMessage, setStatusMessage] = useState("");
+  const [submitStatus, setSubmitStatus] = useState({
+    message: "",
+    type: "",
+  });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -63,7 +66,7 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatusMessage("");
+    setSubmitStatus({ message: "", type: "" });
 
     try {
       const response = await fetch("/api/contact", {
@@ -76,21 +79,27 @@ export default function Contact() {
       const result = await response.json();
 
       if (response.ok) {
-        alert(
-          result.message || config.pages.contact.contact_form.success_message,
-        );
+        setSubmitStatus({
+          message:
+            result.message || config.pages.contact.contact_form.success_message,
+          type: "success",
+        });
         setFormData({ name: "", email: "", message: "" });
       } else {
-        setStatusMessage(
-          result.message || config.pages.contact.contact_form.failure_message,
-        );
+        setSubmitStatus({
+          message:
+            result.message || config.pages.contact.contact_form.failure_message,
+          type: "error",
+        });
       }
     } catch (error) {
       console.error("Submission error:", error);
-      setStatusMessage(
-        config.pages.contact.contact_form.error_message ||
+      setSubmitStatus({
+        message:
+          config.pages.contact.contact_form.error_message ||
           "An unexpected error occurred.",
-      );
+        type: "error",
+      });
     }
   };
 
@@ -161,8 +170,14 @@ export default function Contact() {
         </form>
       )}
 
-      {statusMessage && (
-        <div className="mt-4 text-center text-red-500">{statusMessage}</div>
+      {submitStatus.message && (
+        <div
+          className={`mt-4 text-center ${
+            submitStatus.type === "success" ? "text-green-500" : "text-red-500"
+          }`}
+        >
+          {submitStatus.message}
+        </div>
       )}
 
       <div className="mt-12 text-center">
