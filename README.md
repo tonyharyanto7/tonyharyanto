@@ -30,7 +30,7 @@
 - [Customization](#-customization)  
 - [Deployment](#-deployment)  
 - [Contributions](#-contributions)  
-- [Important Notes](#-important-notes)  
+- [Important Notes](#%EF%B8%8F-important-notes)  
 - [License](#-license)  
 - [Credits](#-credits)  
 
