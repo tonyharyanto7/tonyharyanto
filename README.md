@@ -1,4 +1,12 @@
-[![Card](https://fancy-readme-stats.vercel.app/api/pin-wide/?username=max1mde&repo=portfolio&dark_bg=3&theme=red_rain&footer=Easy%20to%20Deploy%20Portfolio%20Template&title=Next.js%20Portfolio%20Template&description=Free%20open-source%20portfolio%20with%20customizable%20design%2C%0AResponsive%20layout%2C%20animated%20components%2C%20and%20easy%20setup&height=200)](https://github.com/max1mde/fancy-readme-stats)
+<div align="center">
+  <a href="https://github.com/max1mde/fancy-readme-stats">
+    <img 
+      src="https://fancy-readme-stats.vercel.app/api/pin-wide/?username=max1mde&repo=portfolio&dark_bg=3&theme=red_rain&footer=Easy%20to%20Deploy%20Portfolio%20Template&title=Next.js%20Portfolio%20Template&description=Free%20open-source%20portfolio%20with%20customizable%20design%2C%0AResponsive%20layout%2C%20animated%20components%2C%20and%20easy%20setup&height=200" 
+      alt="Card"
+    />
+  </a>
+</div>
+
 
 ## 🚀 Quick Setup (5 Minutes)
 
@@ -7,6 +15,12 @@
 3. Deploy to Vercel with one click
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/max1mde/portfolio)
+
+<div align="center">
+  <a href="preview.png">
+    <img src="preview.png" alt="Preview" />
+  </a>
+</div>
 
 ## 📋 Table of Contents
 
