@@ -73,9 +73,9 @@ Change global font in [CONFIG.json](CONFIG.json):
 ## 🌐 Deployment
 
 ### Vercel (Recommended)
-1. Fork the repository
-2. Connect to Vercel
-3. Deploy with one click
+[How to deploy with Vercel](#-quick-setup-5-minutes)
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/max1mde/portfolio)
 
 ### Other Platforms
 - Ensure Node.js is installed
