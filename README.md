@@ -24,14 +24,15 @@
 
 ## 📋 Table of Contents
 
-- [Quick Setup](#-quick-setup-5-minutes)
-- [Features](#-features)
-- [Local Development](#-local-development)
-- [Customization](#-customization)
-- [Deployment](#-deployment)
-- [Important Notes](#-important-notes)
-- [License](#-license)
-- [Credits](#-credits)
+- [Quick Setup](#-quick-setup-5-minutes)  
+- [Features](#-features)  
+- [Local Development](#-local-development)  
+- [Customization](#-customization)  
+- [Deployment](#-deployment)  
+- [Contributions](#-contributions)  
+- [Important Notes](#-important-notes)  
+- [License](#-license)  
+- [Credits](#-credits)  
 
 ## ✨ Features
 
@@ -73,8 +74,6 @@ Change global font in [CONFIG.json](CONFIG.json):
 ## 🌐 Deployment
 
 ### Vercel (Recommended)
-[How to deploy with Vercel](#-quick-setup-5-minutes)
-
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/max1mde/portfolio)
 
 ### Other Platforms
@@ -104,6 +103,19 @@ This template is provided as-is. You are responsible for:
 ## 📜 License
 
 This project is licensed under the [GNU Affero General Public License v3.0](LICENSE)
+
+## 🤝 Contributions
+
+Contributions are welcome!  
+Here's how you can help:
+
+- **Report Issues:** [Open an issue](https://github.com/max1mde/portfolio/issues) for bugs or feature requests.  
+- **Contribute Code:**  
+  1. Fork the repository.  
+  2. Create a branch: `git checkout -b feature/your-feature`.  
+  3. Commit using the same message style (e.g., `feat: card hover effect`).  
+  4. Push changes and submit a pull request.  
+- **Improve Docs:** Update the README or add missing info.  
 
 ## 🏆 Credits
 
