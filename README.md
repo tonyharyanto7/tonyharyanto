@@ -47,8 +47,10 @@
 
 ## 💻 Local Development
 
+1. [Fork the repository](https://github.com/max1mde/portfolio/fork)
+2. Execute the following commands:
 ```bash
-git clone https://github.com/your-username/portfolio.git
+git clone https://github.com/<your_username>/portfolio.git
 cd portfolio
 npm install
 npm run dev
