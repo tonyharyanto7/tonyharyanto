@@ -49,7 +49,7 @@ export const SocialLinks = ({ links, className = "" }) => {
           href={social.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="cursor-pointer text-gray-600 hover:text-primary transition-colors"
+          className="c-cursor-pointer text-gray-600 hover:text-primary transition-colors"
           title={social.name}
         >
           <SocialIcon name={social.icon} />
