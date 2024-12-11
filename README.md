@@ -123,7 +123,7 @@ Here's how you can help:
 Font licenses available in [here](src/app/fonts/licenses/)
 
 ### Inspiration & Components
-- [Custom Cursor](https://www.michieldb.nl/other/cursors/) by Michiel de Boer (Posy) [(CC BY-NC 4.0)]((https://creativecommons.org/licenses/by-nc/4.0/deed.en))
+- [Custom Cursor](https://www.michieldb.nl/other/cursors/) by Michiel de Boer (Posy) [License](https://creativecommons.org/licenses/by-nc/4.0/deed.en)
 - [Card Hover Effect](https://codepen.io/markmiro/pen/wbqMPa) by Mark Miro (MIT License)
 - [Infinity Scrolling](https://codepen.io/kevinpowell/pen/BavVLra) by Kevin (MIT License)
 
