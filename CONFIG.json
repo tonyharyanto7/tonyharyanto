@@ -224,8 +224,8 @@
    },
    "cards":[
       {
-      "title":"Portfolio - (This website)",
-         "description":"Customizable, free portfolio website built with Next.js",
+      "title":"Portfolio (This website)",
+         "description":"Customizable, responsive, portfolio website built with Next.js",
          "imageSRC":"/images/projects/portfolio.webp",
          "buttonText":"View on GitHub",
          "buttonURL":"https://github.com/max1mde/portfolio",
