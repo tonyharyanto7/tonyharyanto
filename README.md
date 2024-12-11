@@ -122,7 +122,7 @@ This project is licensed under the [GNU Affero General Public License v3.0](LICE
 Contributions are welcome!  
 Here's how you can help:
 
-- **Report Issues:** [Open an issue](https://github.com/max1mde/portfolio/issues) for bugs or feature requests.  
+- **Report Issues:** [Open an issue](https://github.com/max1mde/portfolio/issues/new?title=Please%20describe%20your%20issue%20or%20feature%20request&body=What%27s%20your%20problem%3F%0AOr%20do%20you%20maybe%20want%20a%20new%20feature%3F%0A%0ATell%20us%21) for bugs or feature requests.  
 - **Contribute Code:**  
   1. Fork the repository.  
   2. Create a branch: `git checkout -b feature/your-feature`.  
