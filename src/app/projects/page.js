@@ -8,7 +8,7 @@
  */
 "use client";
 
-import { Card } from "@/components/ui/card";
+import { Card } from "@/components/custom/card";
 import { useState, useEffect, useRef } from "react";
 import config from "/CONFIG.json";
 

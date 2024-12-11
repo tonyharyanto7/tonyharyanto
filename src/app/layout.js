@@ -7,15 +7,15 @@
  * by the Free Software Foundation.
  */
 import localFont from "next/font/local";
-import Navbar from "@/components/ui/navbar";
+import Navbar from "@/components/custom/navbar";
 import "@/app/styles/globals.css";
 import "@/app/styles/card.css";
 import "@/app/styles/blurred-img.css";
 import config from "/CONFIG.json";
 import Script from "next/script";
 
-import CustomCursor from "@/components/cursor";
-import Footer from "@/components/ui/footer";
+import CustomCursor from "@/components/custom/cursor";
+import Footer from "@/components/custom/footer";
 
 import Head from "next/head";
 

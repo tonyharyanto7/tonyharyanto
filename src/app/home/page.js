@@ -8,12 +8,12 @@
  */
 "use client";
 
-import Timeline from "@/components/ui/timeline";
+import Timeline from "@/components/custom/timeline";
 import config from "/CONFIG.json";
 import Link from "next/link";
 
 import { useEffect } from "react";
-import Scroller from "@/components/ui/scroller";
+import Scroller from "@/components/custom/scroller";
 
 function useScript(url) {
   useEffect(() => {
@@ -70,7 +70,8 @@ export default function Home() {
             items={homeConfig.languages}
             direction="left"
             speed="fast"
-            className="max-w-md"
+            className="max-w-xs"
+            itemClasses="bg-primary"
           />
         </div>
 
@@ -79,7 +80,7 @@ export default function Home() {
             items={homeConfig.tools}
             direction="right"
             speed="fast"
-            className="max-w-xl"
+            className="max-w-lg"
           />
         </div>
       </div>
