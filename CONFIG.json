@@ -61,8 +61,8 @@
                "style":"primary"
             },
             {
-               "label":"Contact Me",
-               "route":"/contact",
+               "label":"View on Github",
+               "route":"https://github.com/max1mde/portfolio",
                "style":"secondary"
             }
          ],
