@@ -1,7 +1,7 @@
 <div align="center">
   <a href="https://github.com/max1mde/fancy-readme-stats">
     <img 
-      src="https://fancy-readme-stats.vercel.app/api/pin-wide/?username=max1mde&repo=portfolio&dark_bg=3&theme=red_rain&footer=Easy%20to%20Deploy%20Portfolio%20Template&title=Next.js%20Portfolio%20Template&description=Free%20open-source%20portfolio%20with%20customizable%20design%2C%0AResponsive%20layout%2C%20animated%20components%2C%20and%20easy%20setup&height=200" 
+      src="https://fancy-readme-stats.vercel.app/api/pin-wide/?username=max1mde&repo=portfolio&dark_bg=3&theme=red_rain&footer=Easy%20to%20Deploy%20Portfolio%20Template&title=Next.js%20Portfolio%20Template&description=Free%20open-source%20portfolio%20with%20customizable%20design%2C%0AResponsive%20layout%2C%20animated%20components%2C%20and%20easy%20setup&height=210" 
       alt="Card"
     />
   </a>
