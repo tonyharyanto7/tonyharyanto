@@ -1,7 +1,7 @@
 /**
  * Portfolio
- * Copyright (C) 2024 Maxim (https://github.com/max1mde)
- * 
+ * Copyright (C) 2024 Maxim (https://github.com/max1mde/portfolio)
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published
  * by the Free Software Foundation.
@@ -36,7 +36,6 @@ export default function Navbar() {
     };
   }, []);
 
-  
   useEffect(() => {
     setIsMobileMenuOpen(false);
   }, [pathname]);
@@ -84,9 +83,7 @@ export default function Navbar() {
         {renderNavLinks()}
       </ul>
 
-
       <div className="md:hidden">
-
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           className="absolute top-2 left-4 z-50 flex flex-col justify-center items-center w-8 h-8 space-y-1.5"
@@ -115,7 +112,6 @@ export default function Navbar() {
           />
         </button>
 
- 
         {isMobileMenuOpen && (
           <ul
             className="fixed top-0 left-0 w-full h-screen bg-black/90 flex flex-col 

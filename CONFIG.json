@@ -21,8 +21,8 @@
             "url":"https://github.com/max1mde/portfolio"
          },
          {
-            "label":"YouTube",
-            "url":"https://www.youtube.com/@max1mde"
+            "label":"Contact",
+            "url":"/contact"
          },
          {
             "label":"Privacy",
@@ -101,7 +101,7 @@
       },
       "contact":{
          "enabled":true,
-         "header":"Contact Me",
+         "header":"Socials",
          "route":"/contact",
          "email":"maxim@nextfight.net",
          "direct_contact":"Reach Me Directly",
@@ -149,7 +149,7 @@
                   "label":"Your Email",
                   "type":"email",
                   "required":true
-               },
+               }, 
                {
                   "name":"message",
                   "label":"Your Message",

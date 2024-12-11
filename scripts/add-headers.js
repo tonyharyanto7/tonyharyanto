@@ -1,7 +1,7 @@
 /**
  * Portfolio
- * Copyright (C) 2024 Maxim (https://github.com/max1mde)
- * 
+ * Copyright (C) 2024 Maxim (https://github.com/max1mde/portfolio)
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published
  * by the Free Software Foundation.
@@ -11,7 +11,7 @@ const fs = require("fs").promises;
 const path = require("path");
 
 const CURRENT_YEAR = new Date().getFullYear();
-const GITHUB_LINK = "https://github.com/max1mde";
+const GITHUB_LINK = "https://github.com/max1mde/portfolio";
 
 function createLicenseHeader(year) {
   return `/**
@@ -40,7 +40,7 @@ function hasLicenseHeader(content, licenseHeader) {
   };
 
   const contentStripped = stripYear(
-    content.split("\n").slice(0, 10).join("\n")
+    content.split("\n").slice(0, 10).join("\n"),
   );
   const headerStripped = stripYear(licenseHeader);
 
@@ -53,18 +53,15 @@ async function processFile(filePath) {
     const existingYear = extractCopyrightYear(content);
     const licenseHeader = createLicenseHeader(CURRENT_YEAR);
 
-
     if (!hasLicenseHeader(content, licenseHeader)) {
-
       if (existingYear && existingYear !== CURRENT_YEAR) {
         const updatedContent = content.replace(
           /Copyright \(C\) \d{4}/,
-          `Copyright (C) ${CURRENT_YEAR}`
+          `Copyright (C) ${CURRENT_YEAR}`,
         );
         await fs.writeFile(filePath, updatedContent);
         console.log(`Updated copyright year in: ${filePath}`);
       } else {
-
         await fs.writeFile(filePath, licenseHeader + content);
         console.log(`Added license header to: ${filePath}`);
       }
@@ -82,7 +79,6 @@ async function addLicenseHeaders(dir) {
     const stat = await fs.stat(fullPath);
 
     if (stat.isDirectory()) {
-
       const skipDirs = ["node_modules", ".next", ".git", "dist", "build"];
       if (!skipDirs.includes(file)) {
         await addLicenseHeaders(fullPath);
@@ -97,7 +93,6 @@ async function addLicenseHeaders(dir) {
     }
   }
 }
-
 
 addLicenseHeaders(process.cwd())
   .then(() => console.log("License header processing complete"))
