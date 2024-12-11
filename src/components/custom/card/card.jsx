@@ -1,16 +1,13 @@
 /**
  * Portfolio
  * Copyright (C) 2024 Maxim (https://github.com/max1mde/portfolio)
- * 
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published
  * by the Free Software Foundation.
  */
 
-"use client";
-
 import * as React from "react";
-import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { CardImage } from "@/components/custom/card/card_image";
 import { CardBadges } from "@/components/custom/card/card_badges";
@@ -24,25 +21,13 @@ const Card = React.forwardRef(
       buttonText,
       buttonURL,
       imageSRC = "/images/projects/placeholder.png",
-      setHovered,
-      allHovered = false,
       badges = [],
       ...props
     },
     ref,
   ) => {
-    const [isHovered, setIsHovered] = useState(false);
-
-    const handleCardHover = (hovered) => {
-      setIsHovered(hovered);
-      if (setHovered) {
-        setHovered(hovered);
-      }
-    };
-
     const cardClassName = cn(
       "rounded-xl border bg-card text-card-foreground shadow hover-card project-card",
-      !isHovered && allHovered ? "blurred" : "",
       className,
     );
 
@@ -51,8 +36,6 @@ const Card = React.forwardRef(
         ref={ref}
         className={cardClassName}
         style={{ width: "18rem" }}
-        onMouseEnter={() => handleCardHover(true)}
-        onMouseLeave={() => handleCardHover(false)}
         {...props}
       >
         {imageSRC && <CardImage imageSRC={imageSRC} title={title} />}

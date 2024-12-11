@@ -224,11 +224,21 @@
    },
    "cards":[
       {
+      "title":"Portfolio - (This website)",
+         "description":"Customizable, free portfolio website built with Next.js",
+         "imageSRC":"/images/projects/portfolio.webp",
+         "buttonText":"View on GitHub",
+         "buttonURL":"https://github.com/max1mde/portfolio",
+         "badges":[
+            "https://img.shields.io/github/stars/max1mde/portfolio.svg"
+         ]
+      },
+      {
          "title":"Fancy Physics",
          "description":"Tree fall animation, hit particles, realistic explosions, 3D particles & more",
-         "imageSRC":"/images/projects/fancyphysics.png",
-         "buttonText":"View on GitHub",
-         "buttonURL":"https://github.com/max1mde/FancyPhysics",
+         "imageSRC":"/images/projects/fancyphysics.webp",
+         "buttonText":"View on SpigotMC",
+         "buttonURL":"https://www.spigotmc.org/resources/110500/",
          "badges":[
             "https://img.shields.io/spiget/downloads/110500?label=Spigot%20downloads"
          ]
@@ -236,7 +246,7 @@
       {
          "title":"Better Chat Bubbles",
          "description":"Packet based chat bubbles above players head, with an extensive API",
-         "imageSRC":"/images/projects/betterchatbubbles.png",
+         "imageSRC":"/images/projects/betterchatbubbles.webp",
          "buttonText":"Buy on SpigotMC",
          "buttonURL":"https://www.spigotmc.org/resources/115811/",
          "badges":[
@@ -246,7 +256,7 @@
       {
          "title":"Fancy Readme Stats",
          "description":"Animated Readme Cards - For your GitHub profile or repository readme",
-         "imageSRC":"/images/projects/readmestats.png",
+         "imageSRC":"/images/projects/readmestats.webp",
          "buttonText":"View on GitHub",
          "buttonURL":"https://github.com/max1mde/fancy-readme-stats",
          "badges":[
@@ -256,11 +266,61 @@
       {
          "title":"HologramAPI",
          "description":"Packet based text display hologram api with minimessage and emoji support",
-         "imageSRC":"/images/projects/hologramapi.png",
+         "imageSRC":"/images/projects/hologramapi.webp",
          "buttonText":"View on GitHub",
          "buttonURL":"https://github.com/max1mde/HologramAPI",
          "badges":[
             "https://img.shields.io/github/stars/max1mde/HologramAPI.svg"
+         ]
+      },
+      {
+         "title":"NextFight",
+         "description":"Nextfight is a Minecraft minigame network focused on a Battle Royale like gamemode",
+         "imageSRC":"/images/projects/nextfight.webp",
+         "buttonText":"Join the Discord",
+         "buttonURL":"https://discord.nextfight.net/",
+         "badges":[
+            "https://img.shields.io/discord/1051758423211003951"
+         ]
+      },
+      {
+         "title":"MaximClient",
+         "description":"MaximClient was a 1.8 PVP client with many mods and free online cosmetics",
+         "imageSRC":"/images/projects/maximclient.webp",
+         "buttonText":"Join the Discord",
+         "buttonURL":"https://discord.gg/eCn8VWEGbZ",
+         "badges":[
+            "https://img.shields.io/discord/895012337793249341"
+         ]
+      },
+      {
+         "title":"FIX",
+         "description":"A Windows tool for AI text correction and translation with hotkeys & voice control.",
+         "imageSRC":"/images/projects/fix.webp",
+         "buttonText":"View on GitHub",
+         "buttonURL":"https://github.com/max1mde/FIX",
+         "badges":[
+            "https://img.shields.io/github/stars/max1mde/FIX.svg"
+         ]
+      },
+      {
+         "title":"PassengerAPI",
+         "description":"A passenger management API to make cross-plugin compatibility possible.",
+         "imageSRC":"/images/projects/passengerapi.webp",
+         "buttonText":"View on GitHub",
+         "buttonURL":"https://github.com/max1mde/PassengerAPI",
+         "badges":[
+            "https://img.shields.io/github/stars/max1mde/PassengerAPI.svg"
+         ]
+      },
+      {
+         "title":"EntitySize",
+         "description":"A Spigot plugin for modifying the scale of any entity.",
+         "imageSRC":"/images/projects/entitysize.webp",
+         "buttonText":"View on SpigotMC",
+         "buttonURL":"https://www.spigotmc.org/resources/116497/",
+         "badges":[
+            "https://img.shields.io/spiget/downloads/116497?label=Spigot%20downloads"
          ]
       }
    ]

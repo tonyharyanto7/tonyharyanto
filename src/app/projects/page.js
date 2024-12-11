@@ -13,13 +13,8 @@ import { useState, useEffect, useRef } from "react";
 import config from "/CONFIG.json";
 
 export default function Projects() {
-  const [isHovered, setIsHovered] = useState(false);
   const [visibleCards, setVisibleCards] = useState([]);
   const hasMounted = useRef(false);
-
-  const handleCardHover = (hovered) => {
-    setIsHovered(hovered);
-  };
 
   useEffect(() => {
     if (!hasMounted.current) {
@@ -54,8 +49,6 @@ export default function Projects() {
             imageSRC={card.imageSRC}
             buttonText={card.buttonText}
             buttonURL={card.buttonURL}
-            setHovered={handleCardHover}
-            allHovered={isHovered}
             badges={card.badges}
           />
         ))}
