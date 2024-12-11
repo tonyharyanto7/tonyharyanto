@@ -89,16 +89,23 @@ Change global font in [CONFIG.json](CONFIG.json):
 
 ### Personal Information
 Remove or replace **(Please replace these before deployment)**:
-- Personal email addresses
+- **Email addresses** like `maxim@nextfight.net` (Very important)
 - Social media links
 - Profile image
 - Experience details
+- Projects
 
 ### Legal Disclaimer
-This template is provided as-is. You are responsible for:
-- Implementing contact form logic
-- Ensuring GDPR/privacy compliance
-- Removing original author's personal information
+
+This template is provided as-is, and you are responsible for:
+
+- Implementing and securing contact form logic, ensuring compliance with GDPR and other privacy laws.
+- Removing the original author’s personal information and ensuring no infringement on third-party intellectual property rights.
+- Validating the functionality, ensuring security against unauthorized access or breaches, and updating for any legal changes.
+- Providing users with the necessary privacy and cookie notices as required by law.
+- Addressing any issues that may arise, including compatibility, security, and performance concerns.
+
+By using or modifying this template, you agree to assume full responsibility for any legal or technical issues, including ensuring compliance with relevant legal requirements such as the "Impressum" (if applicable) and privacy laws in your jurisdiction.
 
 ## 📜 License
 
