@@ -1,6 +1,6 @@
 /**
  * Portfolio
- * Copyright (C) 2024 Maxim (https://github.com/max1mde)
+ * Copyright (C) 2024 Maxim (https://github.com/max1mde/portfolio)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published
@@ -17,7 +17,6 @@ import Script from "next/script";
 import CustomCursor from "@/components/custom/cursor";
 import Footer from "@/components/custom/footer";
 
-import Head from "next/head";
 
 const deliusFont = localFont({
   src: "./fonts/DeliusSwashCaps-Regular.ttf",
@@ -53,10 +52,6 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <Head>
-        <Script src="scripts/scroll.js" strategy="afterInteractive" />
-      </Head>
-
       <body
         className={`${selectedFont.variable} antialiased flex flex-col min-h-screen`}
       >
@@ -66,6 +61,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         <main className="flex-1 p-4">{children}</main>
         <Footer config={config} />
+        <Script src="scripts/hover.js" strategy="afterInteractive" />
       </body>
     </html>
   );
