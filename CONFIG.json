@@ -73,22 +73,22 @@
                {
                   "title":"Software Developer",
                   "company":"India Solutions",
-                  "date":"2022 - Present",
-                  "description":"Developing random web applications and creating innovative callcenter software solutions using modern technologies.",
+                  "date":"2023 - Present",
+                  "description":"Developing highly effective phishing tools and creating innovative callcenter software solutions using cutting-edge technologies to improve the customer experience.",
                   "side":"left"
                },
                {
-                  "title":"In-Situ Resource Utilization Specialist",
+                  "title":"..... Specialist",
                   "company":"NASA",
-                  "date":"2020 - 2022",
-                  "description":"Developed and implemented innovative technologies for extracting and utilizing resources such as water, oxygen, and metals from extraterrestrial environments, including the Moon and Mars. Collaborated with cross-disciplinary teams to design systems for sustainable space exploration and minimize reliance on Earth-based resupply.",
+                  "date":"2022 - 2023",
+                  "description":"Inspected, analyzed, and cataloged strange mineral deposits discovered on Mars.",
                   "side":"right"
                },
                {
-                  "title":"Junior Data Entry Specialist",
-                  "company":"Paper Pushers Inc.",
-                  "date":"2016 - 2020",
-                  "description":"Ensured the accuracy of critical documents by entering data with impeccable precision and speed. Frequently tasked with deciphering illegible handwriting, earning the unofficial title of 'Document Whisperer.' Maintained a 100% survival rate through office printer malfunctions.",
+                  "title":"Certified Pandemic Survivor",
+                  "company":"Self-employed",
+                  "date":"2020 - 2022",
+                  "description":"Managed Zoom meetings while playing Bedwars and Among Us, effectively balancing work and gaming.",
                   "side":"left"
                }
             ]
@@ -149,7 +149,7 @@
                   "label":"Your Email",
                   "type":"email",
                   "required":true
-               }, 
+               },
                {
                   "name":"message",
                   "label":"Your Message",
@@ -164,8 +164,8 @@
          "header":"Privacy Policy",
          "route":"/privacy",
          "content":{
-            "contact_title": "Contact",
-            "contact": "maxim@netfight.net",
+            "contact_title":"Contact",
+            "contact":"maxim@netfight.net",
             "introduction":"This portfolio website is designed with minimal data collection and maximum user privacy in mind.",
             "sections":[
                {
@@ -224,7 +224,7 @@
    },
    "cards":[
       {
-      "title":"Portfolio (This website)",
+         "title":"Portfolio (This website)",
          "description":"Customizable, responsive, portfolio website built with Next.js",
          "imageSRC":"/images/projects/portfolio.webp",
          "buttonText":"View on GitHub",
@@ -295,7 +295,7 @@
       },
       {
          "title":"FIX",
-         "description":"A Windows tool for AI text correction and translation with hotkeys & voice control.",
+         "description":"A Windows tool for AI text correction and translation with hotkeys & voice control",
          "imageSRC":"/images/projects/fix.webp",
          "buttonText":"View on GitHub",
          "buttonURL":"https://github.com/max1mde/FIX",
@@ -305,7 +305,7 @@
       },
       {
          "title":"PassengerAPI",
-         "description":"A passenger management API to make cross-plugin compatibility possible.",
+         "description":"A passenger management API to make cross-plugin compatibility possible",
          "imageSRC":"/images/projects/passengerapi.webp",
          "buttonText":"View on GitHub",
          "buttonURL":"https://github.com/max1mde/PassengerAPI",
@@ -315,7 +315,7 @@
       },
       {
          "title":"EntitySize",
-         "description":"A Spigot plugin for modifying the scale of any entity.",
+         "description":"A Spigot plugin for modifying the scale of any entity",
          "imageSRC":"/images/projects/entitysize.webp",
          "buttonText":"View on SpigotMC",
          "buttonURL":"https://www.spigotmc.org/resources/116497/",
