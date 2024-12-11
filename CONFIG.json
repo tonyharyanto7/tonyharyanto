@@ -230,7 +230,7 @@
          "buttonText":"View on GitHub",
          "buttonURL":"https://github.com/max1mde/portfolio",
          "badges":[
-            "https://img.shields.io/github/stars/max1mde/portfolio.svg"
+            "https://img.shields.io/github/stars/max1mde/portfolio.svg?style=flat"
          ]
       },
       {
@@ -240,7 +240,7 @@
          "buttonText":"View on SpigotMC",
          "buttonURL":"https://www.spigotmc.org/resources/110500/",
          "badges":[
-            "https://img.shields.io/spiget/downloads/110500?label=Spigot%20downloads"
+            "https://img.shields.io/spiget/downloads/110500"
          ]
       },
       {
@@ -250,7 +250,7 @@
          "buttonText":"Buy on SpigotMC",
          "buttonURL":"https://www.spigotmc.org/resources/115811/",
          "badges":[
-            "https://img.shields.io/spiget/downloads/115811?label=Spigot%20downloads"
+            "https://img.shields.io/spiget/downloads/115811"
          ]
       },
       {
@@ -260,7 +260,7 @@
          "buttonText":"View on GitHub",
          "buttonURL":"https://github.com/max1mde/fancy-readme-stats",
          "badges":[
-            "https://img.shields.io/github/stars/max1mde/fancy-readme-stats.svg"
+            "https://img.shields.io/github/stars/max1mde/fancy-readme-stats.svg?style=flat"
          ]
       },
       {
@@ -270,7 +270,7 @@
          "buttonText":"View on GitHub",
          "buttonURL":"https://github.com/max1mde/HologramAPI",
          "badges":[
-            "https://img.shields.io/github/stars/max1mde/HologramAPI.svg"
+            "https://img.shields.io/github/stars/max1mde/HologramAPI.svg?style=flat"
          ]
       },
       {
@@ -300,7 +300,7 @@
          "buttonText":"View on GitHub",
          "buttonURL":"https://github.com/max1mde/FIX",
          "badges":[
-            "https://img.shields.io/github/stars/max1mde/FIX.svg"
+            "https://img.shields.io/github/stars/max1mde/FIX.svg?style=flat"
          ]
       },
       {
@@ -310,7 +310,7 @@
          "buttonText":"View on GitHub",
          "buttonURL":"https://github.com/max1mde/PassengerAPI",
          "badges":[
-            "https://img.shields.io/github/stars/max1mde/PassengerAPI.svg"
+            "https://img.shields.io/github/stars/max1mde/PassengerAPI.svg?style=flat"
          ]
       },
       {
@@ -320,7 +320,7 @@
          "buttonText":"View on SpigotMC",
          "buttonURL":"https://www.spigotmc.org/resources/116497/",
          "badges":[
-            "https://img.shields.io/spiget/downloads/116497?label=Spigot%20downloads"
+            "https://img.shields.io/spiget/downloads/116497"
          ]
       }
    ]
