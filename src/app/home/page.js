@@ -38,7 +38,7 @@ export default function Home() {
 
   return (
     <div className="container mx-auto px-4 py-4">
-      <h1 className="c-cursor-text text-3xl font-bold text-center mb-10">
+      <h1 className="c-cursor-text text-4xl glow font-bold text-center mb-10">
         {homeConfig.header}
       </h1>
 

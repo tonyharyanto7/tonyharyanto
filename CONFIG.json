@@ -33,7 +33,7 @@
    "pages":{
       "home":{
          "enabled":true,
-         "header":"Hello, my name is Maxim ✨",
+         "header":"Hello, my name is Maxim!",
          "route":"/home",
          "profile_image":"https://avatars.githubusercontent.com/u/114857048?v=4",
          "about_me":"About Me",
@@ -301,26 +301,6 @@
          "buttonURL":"https://github.com/max1mde/FIX",
          "badges":[
             "https://img.shields.io/github/stars/max1mde/FIX.svg?style=flat"
-         ]
-      },
-      {
-         "title":"PassengerAPI",
-         "description":"A passenger management API to make cross-plugin compatibility possible",
-         "imageSRC":"/images/projects/passengerapi.webp",
-         "buttonText":"View on GitHub",
-         "buttonURL":"https://github.com/max1mde/PassengerAPI",
-         "badges":[
-            "https://img.shields.io/github/stars/max1mde/PassengerAPI.svg?style=flat"
-         ]
-      },
-      {
-         "title":"EntitySize",
-         "description":"A Spigot plugin for modifying the scale of any entity",
-         "imageSRC":"/images/projects/entitysize.webp",
-         "buttonText":"View on SpigotMC",
-         "buttonURL":"https://www.spigotmc.org/resources/116497/",
-         "badges":[
-            "https://img.shields.io/spiget/downloads/116497"
          ]
       }
    ]
