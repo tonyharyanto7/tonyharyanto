@@ -85,46 +85,6 @@
   transform: scale(1);
 }
 
-.card-button {
-  margin: 10px;
-}
-
-.primary-button {
-  z-index: 999;
-  transition: transform 0.3s ease, background-color 0.17s;
-}
-
-.primary-button:hover {
-  transform: scale(1.2);
-}
-
-.secondary-button {
-  z-index: 999;
-  transition: transform 0.3s ease, background-color 0.17s;
-}
-
-.secondary-button:hover {
-  transform: scale(1.2);
-}
-
-.btn-primary {
-  z-index: 999;
-  transition: transform 0.3s ease, background-color 0.17s;
-}
-
-.btn-secondary {
-  z-index: 999;
-  transition: transform 0.3s ease, background-color 0.17s;
-}
-
-.btn-secondary:hover {
-  transform: scale(1.2);
-}
-
-.btn-primary:hover {
-  transform: scale(1.2);
-}
-
 .glow {
   transition: text-shadow 1s;
 }
@@ -193,3 +153,5 @@
 .scroller[data-speed="slow"] {
   --_animation-duration: 60s;
 }
+
+

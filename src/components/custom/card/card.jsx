@@ -11,6 +11,7 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 import { CardImage } from "@/components/custom/card/card_image";
 import { CardBadges } from "@/components/custom/card/card_badges";
+import Button from "../button";
 
 const Card = React.forwardRef(
   (
@@ -56,14 +57,11 @@ const Card = React.forwardRef(
           )}
 
           {buttonText && buttonURL && (
-            <a
-              href={buttonURL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="c-cursor-pointer btn btn-primary primary-button card-button inline-block rounded-md bg-primary text-primary-foreground hover:bg-primary/90 px-4 py-2"
-            >
-              {buttonText}
-            </a>
+            <div className="flex justify-center mt-4">
+              <Button href={buttonURL} variant="primary" newTab={true}>
+                {buttonText}
+              </Button>
+            </div>
           )}
         </div>
       </div>

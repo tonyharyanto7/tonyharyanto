@@ -31,6 +31,15 @@ body::before {
 
 body {
   @apply font-sans bg-background text-foreground;
+  cursor: url("/cursor/normal-64.png"), auto;
+}
+
+.c-cursor-pointer {
+  cursor: url("/cursor/pointer-64.png"), auto;
+}
+
+.c-cursor-text {
+  cursor: url("/cursor/text-64.png"), auto;
 }
 
 @layer base {
