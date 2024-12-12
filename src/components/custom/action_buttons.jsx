@@ -16,13 +16,13 @@ export default function ActionButtons() {
   if (!homeConfig.action_buttons) return null;
 
   return (
-    <div className="flex justify-center gap-4 mt-12">
+    <div className="flex justify-center gap-4">
       {homeConfig.action_buttons.map((button, index) => (
         <Button
           key={index}
           href={button.route}
           variant={button.style === "primary" ? "primary" : "secondary"}
-          className="in-anim opacity-0 translate-y-10 transition-all duration-300 hover:scale-110 c-cursor-pointer"
+          className="translate-y-10 transition-all duration-300 hover:scale-110 c-cursor-pointer"
         >
           {button.label}
         </Button>

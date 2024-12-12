@@ -19,7 +19,7 @@ export default function TechScroller() {
         {homeConfig.tools_languages_title}
       </h2>
 
-      <div className="grid place-content-center">
+      <div className="grid place-content-center h-20">
         <Scroller
           items={homeConfig.languages}
           direction="left"
@@ -29,7 +29,7 @@ export default function TechScroller() {
         />
       </div>
 
-      <div className="grid place-content-center">
+      <div className="grid place-content-center h-20">
         <Scroller
           items={homeConfig.tools}
           direction="right"
