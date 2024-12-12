@@ -7,7 +7,7 @@
  * by the Free Software Foundation.
  */
 
-import { FaMapMarkerAlt, FaEnvelope, FaPhone } from "react-icons/fa";
+import { FaMapMarkerAlt, FaUserAlt, FaEnvelope, FaPhone } from "react-icons/fa";
 
 export const LegalInfo = ({ legal }) => {
   if (!legal.enabled) return null;
@@ -20,7 +20,7 @@ export const LegalInfo = ({ legal }) => {
       <div className="space-y-2 text-center">
         {legal.name && (
           <p className="flex items-center justify-center gap-2">
-            <FaMapMarkerAlt className="inline-block" />
+            <FaUserAlt className="inline-block" />
             {legal.name}
           </p>
         )}
