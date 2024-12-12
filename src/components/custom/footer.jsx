@@ -30,7 +30,7 @@ const Footer = ({ config }) => {
                 ))}
               </div>
             )}
-            <p>{config.footer.text}</p>
+            <p className="c-cursor-text">{config.footer.text}</p>
           </>
         )}
       </div>

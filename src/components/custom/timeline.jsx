@@ -39,10 +39,16 @@ const TimelineItem = ({ experience, animationDelay, isInView }) => {
             hover:shadow-xl transition-shadow duration-300
           "
         >
-          <h3 className="text-xl font-bold mb-2">{experience.title}</h3>
-          <h4 className="text-lg text-gray-600 mb-2">{experience.company}</h4>
-          <p className="text-sm text-gray-500 mb-3">{experience.date}</p>
-          <p className="text-gray-700">{experience.description}</p>
+          <h3 className="c-cursor-text text-xl font-bold mb-2">
+            {experience.title}
+          </h3>
+          <h4 className="c-cursor-text text-lg text-gray-600 mb-2">
+            {experience.company}
+          </h4>
+          <p className="c-cursor-text text-sm text-gray-500 mb-3">
+            {experience.date}
+          </p>
+          <p className="c-cursor-text text-gray-700">{experience.description}</p>
         </div>
       </motion.div>
 
@@ -112,7 +118,7 @@ const Timeline = () => {
 
   return (
     <div className="py-12">
-      <h2 className="text-3xl font-bold text-center mb-20">
+      <h2 className="text-3xl c-cursor-text font-bold text-center mb-20">
         {config.pages.home.experience.title}
       </h2>
       <div ref={ref} className="relative max-w-4xl mx-auto px-4">
