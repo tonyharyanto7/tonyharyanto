@@ -26,10 +26,7 @@ const Card = React.forwardRef(
     },
     ref,
   ) => {
-    const cardClassName = cn(
-      "rounded-xl border bg-card text-card-foreground shadow hover-card project-card",
-      className,
-    );
+    const cardClassName = cn("rounded-xl hover-card", className);
 
     return (
       <div
@@ -38,24 +35,25 @@ const Card = React.forwardRef(
         style={{ width: "18rem" }}
         {...props}
       >
+        <div className="hover-glow absolute inset-0 pointer-events-none"></div>
+        <div className="rotating-glow absolute inset-0 pointer-events-none"></div>
+
         {imageSRC && <CardImage imageSRC={imageSRC} title={title} />}
 
         <div className="p-6">
           <CardBadges badges={badges} />
 
           {title && (
-            <h5 className="c-cursor-text text-xl font-semibold mb-2">
+            <h5 className="c-cursor-text glow text-xl font-semibold mb-2">
               {title}
             </h5>
           )}
 
           {description && (
-            <p className="c-cursor-text text-muted-foreground mb-4">
+            <p className="c-cursor-text glow text-muted-foreground mb-4">
               {description}
             </p>
           )}
-
-          <div className="glow absolute inset-0 pointer-events-none"></div>
 
           {buttonText && buttonURL && (
             <a

@@ -34,7 +34,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8 max-w-2xl">
+    <div className="container mx-auto px-4 py-4 max-w-2xl">
       <h1 className="c-cursor-text text-3xl font-bold text-center mb-10">
         {contactConfig.header}
       </h1>

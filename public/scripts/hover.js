@@ -19,6 +19,7 @@ function rotateToMouse(e) {
   const mouseX = e.clientX;
   const mouseY = e.clientY;
   const bounds = card.getBoundingClientRect();
+
   const leftX = mouseX - bounds.x;
   const topY = mouseY - bounds.y;
   const center = {
@@ -28,7 +29,7 @@ function rotateToMouse(e) {
   const distance = Math.sqrt(center.x ** 2 + center.y ** 2);
 
   card.style.transform = `
-    scale3d(1.07, 1.07, 1.07)
+    scale3d(1.03, 1.03, 1.03)
     rotate3d(
       ${center.y / 100},
       ${-center.x / 100},
@@ -37,10 +38,10 @@ function rotateToMouse(e) {
     )
   `;
 
-  const glowElement = card.querySelector(".glow");
+  const glowElement = card.querySelector(".hover-glow");
   if (glowElement) {
     const color2 = getComputedStyle(document.documentElement)
-      .getPropertyValue("--secondary")
+      .getPropertyValue("--primary")
       .trim();
 
     glowElement.style.backgroundImage = `
@@ -48,7 +49,7 @@ function rotateToMouse(e) {
       circle at
       ${center.x * 2 + bounds.width / 2}px
       ${center.y * 2 + bounds.height / 2}px,
-      ${hexToRGB(color2, 0.1)},
+      ${hexToRGB(color2, 0.2)},
       #0000000f
     )
   `;
@@ -77,7 +78,7 @@ function handleMouseLeave(e) {
   const card = e.target;
   card.removeEventListener("mousemove", rotateToMouse);
   card.style.transform = "";
-  const glowElement = card.querySelector(".glow");
+  const glowElement = card.querySelector(".hover-glow");
   if (glowElement) {
     glowElement.style.backgroundImage = "";
   }

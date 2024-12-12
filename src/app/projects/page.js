@@ -34,12 +34,12 @@ export default function Projects() {
   }, []);
 
   return (
-    <>
-      <h1 className="c-cursor-text text-2xl font-bold text-center mb-5">
+    <div className="container mx-auto px-4 py-4">
+      <h1 className="c-cursor-text text-2xl font-bold text-center mb-10">
         {config.pages.projects.header}
       </h1>
 
-      <div className="cards-container">
+      <div className="flex flex-wrap justify-center items-start gap-5 mb-10">
         {visibleCards.map((card, index) => (
           <Card
             className={config.card.pop_in ? "animate-pop_in" : ""}
@@ -53,6 +53,6 @@ export default function Projects() {
           />
         ))}
       </div>
-    </>
+    </div>
   );
 }

@@ -1,7 +1,7 @@
 /**
  * Portfolio
  * Copyright (C) 2024 Maxim (https://github.com/max1mde/portfolio)
- * 
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published
  * by the Free Software Foundation.
@@ -37,8 +37,8 @@ export default function Home() {
   useScript("scripts/scroll.js");
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="c-cursor-text text-3xl font-bold text-center mb-8">
+    <div className="container mx-auto px-4 py-4">
+      <h1 className="c-cursor-text text-3xl font-bold text-center mb-10">
         {homeConfig.header}
       </h1>
 

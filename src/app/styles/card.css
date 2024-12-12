@@ -1,39 +1,65 @@
 .hover-card {
   transition-duration: 300ms;
-  transition-property: all;
+  transition-property: transform, box-shadow;
   transition-timing-function: ease-out;
-  transform: rotate3d(0, 0, 0, 0);
+  transform: rotate3d(0);
   border-radius: 20px;
+  position: relative;
   min-height: 26rem;
+  width: 300px;
+  height: 400px;
+  box-shadow: 0 1px 5px #00000047;
+  background-image: radial-gradient(circle at 50% -20%, #ffffff22, #00000000);
 }
 
 .hover-card:hover {
   border-radius: 20px;
-  transition-duration: 150ms;
-  box-shadow: 0 5px 20px 5px #00000044;
+  box-shadow: 0 0 1px var(--color-2), 0 0 30px var(--color-1);
 }
 
-.cards-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 20px;
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
 }
 
-.hover-card .glow {
+.rotating-glow {
   position: absolute;
-  z-index: -999;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    var(--rotate),
+    var(--color-1) 50%,
+    var(--color-2)
+  );
+  opacity: 0.18;
+  transition: opacity 0.5s;
+  animation: spin 3s linear infinite;
+  border-radius: 20px;
+  will-change: opacity, transform;
+  border-radius: 20px;
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}
+
+.hover-glow {
+  position: absolute;
   width: 100%;
   height: 100%;
   left: 0;
   top: 0;
+  z-index: 99;
   border-radius: 20px;
-  background-image: radial-gradient(
-    circle at 50% -20%,
-    rgba(241, 189, 241, 0),
-    #0000000f
-  );
 }
 
 .card-badges {
@@ -100,11 +126,11 @@
 }
 
 .glow {
-  transition: text-shadow 0.2s;
+  transition: text-shadow 1s;
 }
 
 .glow:hover {
-  text-shadow: 0.1px 0.1px 10px white;
+  text-shadow: 0.1px 0.1px 10px var(--secondary);
 }
 
 .card-badges {
