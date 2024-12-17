@@ -16,6 +16,7 @@ import Script from "next/script";
 
 import CustomCursor from "@/components/custom/cursor";
 import Footer from "@/components/custom/footer";
+import Head from "next/head";
 
 
 const deliusFont = localFont({
@@ -52,6 +53,12 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
+      <Head>
+        <meta
+          name="keywords"
+          content="portfolio, max1mde, kasekuchen7340, jerome, gordon, wo bist du"
+        />
+      </Head>
       <body
         className={`${selectedFont.variable} antialiased flex flex-col min-h-screen`}
       >
