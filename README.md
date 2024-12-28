@@ -18,6 +18,7 @@
 2. Customize [CONFIG.json](CONFIG.json) with your personal information in your repository
 3. Deploy to Vercel with one click
 
+Or deploy with one click
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/max1mde/portfolio)
 
 <div align="center">
