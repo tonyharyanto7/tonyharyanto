@@ -38,13 +38,19 @@ export default function Home() {
 
   return (
     <div className="container mx-auto px-4 py-4">
-      <h1 className="c-cursor-text text-4xl glow font-bold text-center mb-10">
-        {homeConfig.header}
-      </h1>
+      <div className="flex flex-col items-center gap-12">
+        <div className="w-full max-w-4xl">
+          <ProfileSection />
+        </div>
 
-      <ProfileSection />
-      <TechScroller />
-      <ActionButtons />
+        <div className="flex gap-4 justify-center">
+          <ActionButtons />
+        </div>
+
+        <div className="w-full">
+          <TechScroller />
+        </div>
+      </div>
 
       <div className="container mx-auto px-4 py-8">
         {homeConfig.experience.enabled && <Timeline />}

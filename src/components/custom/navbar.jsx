@@ -86,7 +86,7 @@ export default function Navbar() {
       <div className="md:hidden">
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="absolute top-2 left-4 z-50 flex flex-col justify-center items-center w-8 h-8 space-y-1.5"
+          className="absolute top-2 right-4 z-50 flex flex-col justify-center items-center w-8 h-8 space-y-1.5"
         >
           <span
             className={cn(

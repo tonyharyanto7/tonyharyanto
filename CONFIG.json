@@ -33,11 +33,11 @@
    "pages":{
       "home":{
          "enabled":true,
-         "header":"Hello, my name is Maxim!",
+         "header":"Building Digital Experiences with Code & Creativity",
          "route":"/home",
          "profile_image":"https://avatars.githubusercontent.com/u/114857048?v=4",
-         "about_me":"About Me",
-         "description":"I like to bring random ideas to reality",
+         "about_me":"Hi, I'm Maxim!",
+         "description":"I like to bring random ideas to reality.",
          "tools_languages_title":"Tools & Languages",
          "languages":[
             "Java",

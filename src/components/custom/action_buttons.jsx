@@ -9,6 +9,7 @@
 
 import Button from "./button";
 import config from "/CONFIG.json";
+import { motion } from "framer-motion";
 
 export default function ActionButtons() {
   const homeConfig = config.pages.home;
@@ -18,14 +19,19 @@ export default function ActionButtons() {
   return (
     <div className="flex justify-center gap-4">
       {homeConfig.action_buttons.map((button, index) => (
-        <Button
+        <motion.div
           key={index}
-          href={button.route}
-          variant={button.style === "primary" ? "primary" : "secondary"}
-          className="translate-y-10 transition-all duration-300 hover:scale-110 c-cursor-pointer"
+          initial={{ y: 50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
         >
-          {button.label}
-        </Button>
+          <Button
+            href={button.route}
+            variant={button.style === "primary" ? "primary" : "secondary"}
+          >
+            {button.label}
+          </Button>
+        </motion.div>
       ))}
     </div>
   );

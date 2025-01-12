@@ -29,8 +29,8 @@ export default function Button(
   };
 
   const buttonClassName = cn(
-    "c-cursor-pointer inline-block px-4 py-2 rounded-md transform transition-transform duration-300 ease-in-out",
-    hoverEffect && "hover:scale-110",
+    "c-cursor-pointer inline-block px-4 py-2 rounded-xl transform active:scale-95 active:brightness-90 c-cursor-pointer transition-all duration-200 ease-in-out",
+    hoverEffect && "hover:brightness-110 hover:scale-105",
     variants[variant],
     className,
   );

@@ -8,6 +8,7 @@
  */
 
 document.addEventListener("mouseover", (e) => {
+  if (window.innerWidth <= 768) return;
   const card = e.target.closest(".hover-card");
   if (card) {
     handleMouseEnter({ target: card });
@@ -15,6 +16,7 @@ document.addEventListener("mouseover", (e) => {
 });
 
 function rotateToMouse(e) {
+  if (window.innerWidth <= 768) return;
   const card = e.currentTarget;
   const mouseX = e.clientX;
   const mouseY = e.clientY;

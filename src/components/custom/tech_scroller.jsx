@@ -9,15 +9,21 @@
 
 import config from "/CONFIG.json";
 import Scroller from "@/components/custom/scroller";
+import { motion } from "framer-motion";
 
 export default function TechScroller() {
   const homeConfig = config.pages.home;
 
   return (
-    <div className="mt-12 text-center">
-      <h2 className="c-cursor-text text-2xl font-semibold mb-6">
-        {homeConfig.tools_languages_title}
-      </h2>
+    <div className="w-full">
+      <motion.h2
+        initial={{ y: 20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.7 }}
+        className="text-2xl font-bold text-center mb-8"
+      >
+        Tools & Languages
+      </motion.h2>
 
       <div className="grid place-content-center h-20">
         <Scroller
