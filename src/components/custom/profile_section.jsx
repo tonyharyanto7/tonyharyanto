@@ -22,7 +22,7 @@ export default function ProfileSection() {
             initial={{ scale: 0, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
-            className="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden shadow-lg ring-2 ring-secondary/20"
+            className="w-24 h-24 md:w-40 md:h-40 rounded-full overflow-hidden shadow-lg ring-2 ring-secondary/20"
           >
             <img
               src={homeConfig.profile_image}
