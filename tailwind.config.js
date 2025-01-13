@@ -24,6 +24,7 @@ module.exports = {
         shine_anim: "shine_anim .7s ease-in-out 1",
         move_in: "move_in 5s ease-in-out 1",
         pop_in: "pop_in 2s ease-in-out 1",
+        "glow-pulse": "glow-pulse 2s ease-in-out infinite",
       },
       pulse: {
         "0%": { opacity: "0" },
@@ -68,6 +69,10 @@ module.exports = {
           "100%": {
             transform: "scale(1)",
           },
+        },
+        "glow-pulse": {
+          "0%, 100%": { opacity: "0.5" },
+          "50%": { opacity: "0.8" },
         },
       },
       fontFamily: {

@@ -31,7 +31,7 @@ export default function TechScroller() {
           direction="left"
           speed="fast"
           className="max-w-xs"
-          itemClasses="bg-primary"
+          itemClasses="bg-secondary"
         />
       </div>
 
