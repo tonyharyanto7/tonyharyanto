@@ -33,7 +33,6 @@
    "pages":{
       "home":{
          "enabled":true,
-         "header":"Building Digital Experiences with Code & Creativity",
          "route":"/home",
          "profile_image":"https://avatars.githubusercontent.com/u/114857048?v=4",
          "about_me":"Hi, I'm Maxim!",
