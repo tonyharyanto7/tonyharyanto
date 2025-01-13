@@ -19,7 +19,7 @@ export default function TechScroller() {
       <motion.h2
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.7 }}
+        transition={{ duration: 0.5, delay: 0 }}
         className="text-2xl font-bold text-center mb-8"
       >
         Tools & Languages

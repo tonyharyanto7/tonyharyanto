@@ -12,6 +12,7 @@
 import { motion } from "framer-motion";
 import config from "/CONFIG.json";
 import { useRef, useEffect, useState } from "react";
+import { TypeAnimation } from "react-type-animation";
 
 const TimelineItem = ({ experience, animationDelay, isInView }) => {
   const isLeft = experience.side === "left";
@@ -118,9 +119,13 @@ const Timeline = () => {
 
   return (
     <div className="py-12">
-      <h2 className="text-3xl c-cursor-text font-bold text-center mb-20">
-        {config.pages.home.experience.title}
-      </h2>
+      <TypeAnimation
+        sequence={[100, config.pages.home.experience.title]}
+        wrapper="p"
+        className="text-3xl c-cursor-text font-bold text-center mb-20"
+        cursor={false}
+        speed={20}
+      />
       <div ref={ref} className="relative max-w-4xl mx-auto px-4">
         {isInView && (
           <motion.div

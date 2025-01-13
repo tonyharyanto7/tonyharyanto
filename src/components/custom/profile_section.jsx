@@ -41,19 +41,21 @@ export default function ProfileSection() {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="flex flex-col gap-6 text-center md:text-left"
         >
-          <TypeAnimation
-            sequence={[500, homeConfig.about_me]}
-            wrapper="h2"
+          <motion.h2
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0 }}
             className="c-cursor-text text-4xl md:text-5xl font-bold"
-            cursor={false}
-            speed={50}
-          />
+          >
+            {homeConfig.about_me}
+          </motion.h2>
+
           <TypeAnimation
-            sequence={[1000, homeConfig.description]}
+            sequence={[500, homeConfig.description]}
             wrapper="p"
             className="c-cursor-text text-xl md:text-2xl w-full md:w-[500px] text-muted-foreground"
-            cursor={false}
-            speed={50}
+            cursor={true}
+            speed={60}
           />
           <div className="flex gap-4 justify-center md:justify-start mt-4">
             <ActionButtons />
