@@ -61,7 +61,7 @@
                "style":"primary"
             },
             {
-               "label":"View on Github",
+               "label":"Source Code",
                "route":"https://github.com/max1mde/portfolio",
                "style":"secondary"
             }
