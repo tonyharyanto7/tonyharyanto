@@ -40,6 +40,8 @@
   border-radius: 20px;
 }
 
+
+
 @keyframes spin {
   0% {
     --rotate: 0deg;

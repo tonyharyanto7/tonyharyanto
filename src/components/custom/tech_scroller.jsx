@@ -9,7 +9,6 @@
 
 import config from "/CONFIG.json";
 import Scroller from "@/components/custom/scroller";
-import { motion } from "framer-motion";
 
 export default function TechScroller() {
   const homeConfig = config.pages.home;

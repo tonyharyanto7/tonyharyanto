@@ -42,10 +42,10 @@ export default function Home() {
     <>
       <Parallax />
       <div className="container mx-auto px-4 py-4">
-        <div className="flex flex-col items-center gap-2 min-h-screen">
-          <div className="w-full max-w-6xl">
+        <div className="flex flex-col items-center justify-center gap-2 min-h-screen -mt-32">
+          <div className="w-full max-w-4xl">
             <ProfileSection />
-            <div className="">
+            <div>
               <TechScroller />
             </div>
             <div className="flex justify-center mt-4">
@@ -54,7 +54,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div id="tech-section" className="min-h-[80vh] flex items-center mt-24">
+        <div id="tech-section" className="min-h-[80vh] flex items-center mt-32">
           <div className="w-full">
             {homeConfig.experience.enabled && <Timeline />}
           </div>
