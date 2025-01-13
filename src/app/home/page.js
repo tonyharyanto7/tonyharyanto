@@ -39,12 +39,8 @@ export default function Home() {
   return (
     <div className="container mx-auto px-4 py-4">
       <div className="flex flex-col items-center gap-12">
-        <div className="w-full max-w-4xl">
+        <div className="w-full max-w-6xl">
           <ProfileSection />
-        </div>
-
-        <div className="flex gap-4 justify-center">
-          <ActionButtons />
         </div>
 
         <div className="w-full">
