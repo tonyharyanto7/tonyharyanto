@@ -1,3 +1,12 @@
+/**
+ * Portfolio
+ * Copyright (C) 2025 Maxim (https://github.com/max1mde/portfolio)
+ * 
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published
+ * by the Free Software Foundation.
+ */
+
 import { useEffect, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
@@ -52,7 +61,7 @@ export default function Parallax() {
               backgroundImage: "url(/images/parallax/layer_2.png)",
               backgroundSize: "100% 100%",
               backgroundPosition: "top",
-              height: "110vh",
+              height: "115vh",
               y: layer2Movement,
               zIndex: -2,
             }}
@@ -64,19 +73,19 @@ export default function Parallax() {
               backgroundImage: "url(/images/parallax/layer_1.png)",
               backgroundSize: "100% 100%",
               backgroundPosition: "top",
-              height: "120vh",
+              height: "130vh",
               y: layer1Movement,
               zIndex: -1,
             }}
           />
 
           <motion.div
-            className="absolute top-[120vh] w-full"
+            className="absolute top-[130vh] w-full"
             style={{
               backgroundImage: "url(/images/parallax/middle.png)",
               backgroundSize: "100% 100%",
               backgroundPosition: "top",
-              height: "140vh",
+              height: "150vh",
               y: middleMovement,
               zIndex: -1,
             }}
@@ -88,7 +97,7 @@ export default function Parallax() {
               backgroundImage: "url(/images/parallax/middle.png)",
               backgroundSize: "100% 100%",
               backgroundPosition: "top",
-              height: "140vh",
+              height: "150vh",
               y: middleMovement,
               zIndex: -1,
             }}

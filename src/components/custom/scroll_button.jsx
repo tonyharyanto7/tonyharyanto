@@ -1,3 +1,12 @@
+/**
+ * Portfolio
+ * Copyright (C) 2025 Maxim (https://github.com/max1mde/portfolio)
+ * 
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published
+ * by the Free Software Foundation.
+ */
+
 import { motion } from "framer-motion";
 
 export default function ScrollButton() {
