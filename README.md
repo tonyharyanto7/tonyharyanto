@@ -25,6 +25,9 @@ Or deploy with one click
   <a href="preview.png">
     <img src="preview.png" alt="Preview" />
   </a>
+    <a href="features.png">
+    <img src="features.png" alt="Features" />
+  </a>
 </div>
 
 ## 📋 Table of Contents
@@ -39,16 +42,6 @@ Or deploy with one click
 - [License](#-license)  
 - [Credits](#-credits)  
 
-## ✨ Features
-
-- Responsive Next.js portfolio template
-- Fully customizable via `CONFIG.json`
-- Custom cursor effects
-- Animated project cards
-- Experience timeline
-- Contact form
-- Multiple font options
-- Smooth animations
 
 ## 💻 Local Development
 
