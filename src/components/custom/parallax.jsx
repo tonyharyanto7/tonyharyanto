@@ -1,7 +1,7 @@
 /**
  * Portfolio
  * Copyright (C) 2025 Maxim (https://github.com/max1mde/portfolio)
- * 
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published
  * by the Free Software Foundation.
@@ -34,7 +34,7 @@ export default function Parallax() {
       <motion.div
         className="absolute inset-0 w-full"
         style={{
-          backgroundImage: "url(/images/parallax/layer_4.png)",
+          backgroundImage: "url(/images/parallax/layer_4.webp)",
           backgroundSize: "cover",
           backgroundPosition: "center",
           zIndex: -4,
@@ -46,7 +46,7 @@ export default function Parallax() {
           <motion.div
             className="absolute top-0 w-full"
             style={{
-              backgroundImage: "url(/images/parallax/layer_3.png)",
+              backgroundImage: "url(/images/parallax/layer_3.webp)",
               backgroundSize: "100% 100%",
               backgroundPosition: "top",
               height: "110vh",
@@ -58,7 +58,7 @@ export default function Parallax() {
           <motion.div
             className="absolute top-0 w-full"
             style={{
-              backgroundImage: "url(/images/parallax/layer_2.png)",
+              backgroundImage: "url(/images/parallax/layer_2.webp)",
               backgroundSize: "100% 100%",
               backgroundPosition: "top",
               height: "115vh",
@@ -70,7 +70,7 @@ export default function Parallax() {
           <motion.div
             className="absolute top-0 w-full"
             style={{
-              backgroundImage: "url(/images/parallax/layer_1.png)",
+              backgroundImage: "url(/images/parallax/layer_1.webp)",
               backgroundSize: "100% 100%",
               backgroundPosition: "top",
               height: "130vh",
@@ -82,7 +82,7 @@ export default function Parallax() {
           <motion.div
             className="absolute top-[130vh] w-full"
             style={{
-              backgroundImage: "url(/images/parallax/middle.png)",
+              backgroundImage: "url(/images/parallax/middle.webp)",
               backgroundSize: "100% 100%",
               backgroundPosition: "top",
               height: "150vh",
@@ -94,7 +94,7 @@ export default function Parallax() {
           <motion.div
             className="absolute top-[220vh] w-full"
             style={{
-              backgroundImage: "url(/images/parallax/middle.png)",
+              backgroundImage: "url(/images/parallax/middle.webp)",
               backgroundSize: "100% 100%",
               backgroundPosition: "top",
               height: "150vh",
