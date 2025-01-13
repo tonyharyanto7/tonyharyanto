@@ -52,7 +52,7 @@ module.exports = {
         pop_in: {
           "0%": {
             transform: "scale(0.9)",
-            opacity: "0.1",
+            opacity: "0",
           },
           "20%": {
             transform: "scale(1.05)",
@@ -60,14 +60,15 @@ module.exports = {
           },
           "40%": {
             transform: "scale(0.99)",
-            opacity: "0.8",
+            opacity: "1",
           },
           "60%": {
             transform: "scale(1.01)",
-            opacity: "0.9",
+            opacity: "1",
           },
           "100%": {
             transform: "scale(1)",
+            opacity: "1",
           },
         },
         "glow-pulse": {

@@ -9,28 +9,15 @@
 "use client";
 
 import { Card } from "@/components/custom/card/card";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import config from "/CONFIG.json";
 
 export default function Projects() {
-  const [visibleCards, setVisibleCards] = useState([]);
-  const hasMounted = useRef(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    if (!hasMounted.current) {
-      hasMounted.current = true;
-      config.cards.forEach((card, index) => {
-        if (config.card.pop_in) {
-          setTimeout(() => {
-            setVisibleCards((prevCards) => [...prevCards, card]);
-          }, index * 200);
-        } else {
-          setVisibleCards((prevCards) => [...prevCards, card]);
-        }
-      });
-    }
-
-    return () => {};
+    setMounted(true);
+    return () => setMounted(false);
   }, []);
 
   return (
@@ -40,17 +27,24 @@ export default function Projects() {
       </h1>
 
       <div className="flex flex-wrap justify-center items-start gap-5 mb-10">
-        {visibleCards.map((card, index) => (
-          <Card
-            className={config.card.pop_in ? "animate-pop_in" : ""}
+        {config.cards.map((card, index) => (
+          <div
             key={index}
-            title={card.title}
-            description={card.description}
-            imageSRC={card.imageSRC}
-            buttonText={card.buttonText}
-            buttonURL={card.buttonURL}
-            badges={card.badges}
-          />
+            className={`opacity-0 ${mounted ? "animate-pop_in" : ""}`}
+            style={{
+              animationDelay: `${index * 200}ms`,
+              animationFillMode: "forwards",
+            }}
+          >
+            <Card
+              title={card.title}
+              description={card.description}
+              imageSRC={card.imageSRC}
+              buttonText={card.buttonText}
+              buttonURL={card.buttonURL}
+              badges={card.badges}
+            />
+          </div>
         ))}
       </div>
     </div>

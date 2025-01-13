@@ -1,7 +1,5 @@
 .hover-card {
-  transition-duration: 300ms;
-  transition-property: transform, box-shadow;
-  transition-timing-function: ease-out;
+  transition: transform 300ms ease-in-out, box-shadow 400ms ease-out;
   transform: rotate3d(0);
   border-radius: 20px;
   position: relative;
@@ -14,7 +12,7 @@
 
 .hover-card:hover {
   border-radius: 20px;
-  box-shadow: 0 0 1px var(--color-2), 0 0 30px var(--color-1);
+  box-shadow: 0 0 15px var(--color-1);
 }
 
 @property --rotate {
