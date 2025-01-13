@@ -124,7 +124,7 @@ const Timeline = () => {
         wrapper="p"
         className="text-3xl c-cursor-text font-bold text-center mb-20"
         cursor={false}
-        speed={20}
+        speed={1}
       />
       <div ref={ref} className="relative max-w-4xl mx-auto px-4">
         {isInView && (

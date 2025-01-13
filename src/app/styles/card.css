@@ -12,7 +12,6 @@
 
 .hover-card:hover {
   border-radius: 20px;
-  box-shadow: 0 0 15px var(--color-1);
 }
 
 @property --rotate {

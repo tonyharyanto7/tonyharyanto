@@ -16,15 +16,6 @@ export default function TechScroller() {
 
   return (
     <div className="w-full">
-      <motion.h2
-        initial={{ y: 20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0 }}
-        className="text-2xl font-bold text-center mb-8"
-      >
-        Tools & Languages
-      </motion.h2>
-
       <div className="grid place-content-center h-20">
         <Scroller
           items={homeConfig.languages}

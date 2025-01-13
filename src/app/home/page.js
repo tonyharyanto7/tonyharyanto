@@ -15,6 +15,8 @@ import Timeline from "@/components/custom/timeline";
 import ProfileSection from "@/components/custom/profile_section";
 import TechScroller from "@/components/custom/tech_scroller";
 import ActionButtons from "@/components/custom/action_buttons";
+import Parallax from "@/components/custom/parallax";
+import ScrollButton from "@/components/custom/scroll_button";
 
 function useScript(url) {
   useEffect(() => {
@@ -37,20 +39,27 @@ export default function Home() {
   useScript("scripts/scroll.js");
 
   return (
-    <div className="container mx-auto px-4 py-4">
-      <div className="flex flex-col items-center gap-12">
-        <div className="w-full max-w-6xl">
-          <ProfileSection />
+    <>
+      <Parallax />
+      <div className="container mx-auto px-4 py-4">
+        <div className="flex flex-col items-center gap-2 min-h-screen">
+          <div className="w-full max-w-6xl">
+            <ProfileSection />
+            <div className="">
+              <TechScroller />
+            </div>
+            <div className="flex justify-center mt-4">
+              <ScrollButton />
+            </div>
+          </div>
         </div>
 
-        <div className="w-full">
-          <TechScroller />
+        <div id="tech-section" className="min-h-[80vh] flex items-center mt-24">
+          <div className="w-full">
+            {homeConfig.experience.enabled && <Timeline />}
+          </div>
         </div>
       </div>
-
-      <div className="container mx-auto px-4 py-8">
-        {homeConfig.experience.enabled && <Timeline />}
-      </div>
-    </div>
+    </>
   );
 }

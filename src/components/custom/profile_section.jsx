@@ -55,7 +55,7 @@ export default function ProfileSection() {
             wrapper="p"
             className="c-cursor-text text-xl md:text-2xl w-full md:w-[500px] text-muted-foreground"
             cursor={true}
-            speed={60}
+            speed={50}
           />
           <div className="flex gap-4 justify-center md:justify-start mt-4">
             <ActionButtons />

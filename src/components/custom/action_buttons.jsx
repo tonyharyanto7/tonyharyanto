@@ -28,7 +28,7 @@ export default function ActionButtons() {
           <Button
             href={button.route}
             variant={button.style === "primary" ? "primary" : "secondary"}
-            className="text-lg px-6 py-3"
+            className="text-base px-5 py-2.5 md:text-lg md:px-6 md:py-3"
           >
             {button.label}
           </Button>
