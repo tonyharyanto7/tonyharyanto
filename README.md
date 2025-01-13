@@ -15,7 +15,7 @@
 ## 🚀 Quick Setup (5 Minutes)
 
 1. [Fork the repository](https://github.com/max1mde/portfolio/fork)
-2. Customize [CONFIG.json](CONFIG.json) in your repository with your personal information 
+2. Customize [CONFIG.json](CONFIG.json) in your fork with your personal information 
 3. Deploy to Vercel
 
 Or deploy with one click  
