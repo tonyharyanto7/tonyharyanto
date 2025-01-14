@@ -12,7 +12,7 @@ import { motion } from "framer-motion";
 export default function ScrollButton() {
   const scrollToTechSection = () => {
     window.scrollTo({
-      top: window.innerHeight * 1.2,
+      top: window.innerHeight * 1.1,
       behavior: "smooth",
     });
   };
