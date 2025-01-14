@@ -42,7 +42,7 @@ export default function Home() {
     <>
       <Parallax />
       <div className="container mx-auto px-4 py-4">
-        <div className="flex flex-col items-center justify-center gap-2 min-h-screen -mt-20 md:-mt-32 lg:-mt-32">
+        <div className="flex flex-col items-center justify-center gap-2 min-h-screen -mt-16 md:-mt-32 lg:-mt-32">
           <div className="w-full max-w-4xl">
             <ProfileSection />
             <div>
