@@ -9,14 +9,14 @@
 
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import config from "/CONFIG.json";
 import Timeline from "@/components/custom/timeline";
 import ProfileSection from "@/components/custom/profile_section";
 import TechScroller from "@/components/custom/tech_scroller";
-import ActionButtons from "@/components/custom/action_buttons";
 import Parallax from "@/components/custom/parallax";
 import ScrollButton from "@/components/custom/scroll_button";
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
 function useScript(url) {
   useEffect(() => {
@@ -35,13 +35,22 @@ function useScript(url) {
 
 export default function Home() {
   const homeConfig = config.pages.home;
+  const { scrollY } = useScroll();
 
   useScript("scripts/scroll.js");
+
+  const layer1Movement = useSpring(
+    useTransform(scrollY, [0, 1500], [0, 0]),
+    { stiffness: 100, damping: 22 },
+  );
 
   return (
     <>
       <Parallax />
-      <div className="container mx-auto px-4 py-4">
+      <motion.div
+        className="container mx-auto px-4 py-4"
+        style={{ y: layer1Movement }}
+      >
         <div className="flex flex-col items-center justify-center gap-2 min-h-screen -mt-16 md:-mt-32 lg:-mt-32">
           <div className="w-full max-w-4xl">
             <ProfileSection />
@@ -59,7 +68,7 @@ export default function Home() {
             {homeConfig.experience.enabled && <Timeline />}
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }

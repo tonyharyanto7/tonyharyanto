@@ -8,7 +8,7 @@
  */
 
 import { useEffect, useState } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
 export default function Parallax() {
   const [isMobile, setIsMobile] = useState(false);
@@ -24,10 +24,22 @@ export default function Parallax() {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
-  const layer1Movement = useTransform(scrollY, [0, 1500], [0, -1500]);
-  const layer2Movement = useTransform(scrollY, [0, 1500], [0, -1200]);
-  const layer3Movement = useTransform(scrollY, [0, 1500], [0, -900]);
-  const middleMovement = useTransform(scrollY, [0, 1500], [0, -1500]);
+  const layer1Movement = useSpring(
+    useTransform(scrollY, [0, 1500], [0, -1500]),
+    { stiffness: 200, damping: 22 },
+  );
+  const layer2Movement = useSpring(
+    useTransform(scrollY, [0, 1500], [0, -1200]),
+    { stiffness: 195, damping: 20 },
+  );
+  const layer3Movement = useSpring(
+    useTransform(scrollY, [0, 1500], [0, -900]),
+    { stiffness: 180, damping: 18 },
+  );
+  const middleMovement = useSpring(
+    useTransform(scrollY, [0, 1500], [0, -1500]),
+    { stiffness: 200, damping: 22 },
+  );
 
   return (
     <div className="fixed inset-0 w-full h-full -z-10 overflow-hidden">
