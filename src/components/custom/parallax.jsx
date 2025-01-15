@@ -46,7 +46,7 @@ export default function Parallax() {
           <motion.div
             className="absolute top-0 w-full"
             style={{
-              backgroundImage: "url(/images/parallax/layer_3.webp)",
+              backgroundImage: "url(/images/parallax/layer_3.svg)",
               backgroundSize: "100% 100%",
               backgroundPosition: "top",
               height: "110vh",
@@ -58,7 +58,7 @@ export default function Parallax() {
           <motion.div
             className="absolute top-0 w-full"
             style={{
-              backgroundImage: "url(/images/parallax/layer_2.webp)",
+              backgroundImage: "url(/images/parallax/layer_2.svg)",
               backgroundSize: "100% 100%",
               backgroundPosition: "top",
               height: "115vh",
@@ -70,8 +70,8 @@ export default function Parallax() {
           <motion.div
             className="absolute top-0 w-full"
             style={{
-              backgroundImage: "url(/images/parallax/layer_1.webp)",
-              backgroundSize: "100% 100%",
+              backgroundImage: "url(/images/parallax/layer_1.svg)",
+              backgroundSize: "102% 100%",
               backgroundPosition: "top",
               height: "130vh",
               y: layer1Movement,
@@ -80,9 +80,9 @@ export default function Parallax() {
           />
 
           <motion.div
-            className="absolute top-[130vh] w-full"
+            className="absolute top-[125vh] w-full"
             style={{
-              backgroundImage: "url(/images/parallax/middle.webp)",
+              backgroundImage: "url(/images/parallax/middle.svg)",
               backgroundSize: "100% 100%",
               backgroundPosition: "top",
               height: "150vh",
@@ -94,7 +94,7 @@ export default function Parallax() {
           <motion.div
             className="absolute top-[220vh] w-full"
             style={{
-              backgroundImage: "url(/images/parallax/middle.webp)",
+              backgroundImage: "url(/images/parallax/middle.svg)",
               backgroundSize: "100% 100%",
               backgroundPosition: "top",
               height: "150vh",
