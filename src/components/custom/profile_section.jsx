@@ -14,6 +14,27 @@ import ActionButtons from "./action_buttons";
 
 export default function ProfileSection() {
   const homeConfig = config.pages.home;
+  const gradientColors = homeConfig.gradient.split(":");
+
+  const parseAboutMe = (text) => {
+    const parts = text.split("~~~");
+    return parts.map((part, index) =>
+      index % 2 === 1 ? (
+        <span
+          key={index}
+          style={{
+            background: `linear-gradient(to right, ${gradientColors[0]}, ${gradientColors[1]})`,
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+          }}
+        >
+          {part}
+        </span>
+      ) : (
+        part
+      ),
+    );
+  };
 
   return (
     <div className="flex flex-col items-center w-full gap-8">
@@ -47,7 +68,7 @@ export default function ProfileSection() {
             transition={{ duration: 0.5, delay: 0 }}
             className="c-cursor-text text-4xl md:text-5xl font-bold"
           >
-            {homeConfig.about_me}
+            {parseAboutMe(homeConfig.about_me)}
           </motion.h2>
 
           <TypeAnimation
