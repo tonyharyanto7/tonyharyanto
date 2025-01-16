@@ -4,10 +4,10 @@
       "description":"Portfolio page by max1mde"
    },
    "global":{
-      "font":"roboto",
+      "font":"delius",
       "home_route":"/home",
       "custom_cursor":{
-         "enabled":true,
+         "enabled":false,
          "sparkles":true,
          "transitions":true,
          "move_speed":0.05
