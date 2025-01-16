@@ -4,7 +4,7 @@
       "description":"Portfolio page by max1mde"
    },
    "global":{
-      "font":"delius",
+      "font":"audiowide",
       "home_route":"/home",
       "custom_cursor":{
          "enabled":false,
