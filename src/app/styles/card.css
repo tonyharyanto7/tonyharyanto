@@ -1,5 +1,5 @@
 .hover-card {
-  transition: transform 300ms ease-in-out, box-shadow 400ms ease-out;
+  transition: transform 300ms ease-out, box-shadow 400ms ease-out;
   transform: rotate3d(0);
   border-radius: 20px;
   position: relative;
