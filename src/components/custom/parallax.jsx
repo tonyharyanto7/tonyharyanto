@@ -54,6 +54,17 @@ export default function Parallax() {
               zIndex: -3,
             }}
           />
+          <motion.div
+            className="absolute top-0 w-full"
+            style={{
+              backgroundImage: "url(/images/parallax/layer_3.png)",
+              backgroundSize: "100% 100%",
+              backgroundPosition: "top",
+              height: "110vh",
+              y: layer3Movement,
+              zIndex: -3,
+            }}
+          />
 
           <motion.div
             className="absolute top-0 w-full"
@@ -66,11 +77,33 @@ export default function Parallax() {
               zIndex: -2,
             }}
           />
+          <motion.div
+            className="absolute top-0 w-full"
+            style={{
+              backgroundImage: "url(/images/parallax/layer_2.png)",
+              backgroundSize: "100% 100%",
+              backgroundPosition: "top",
+              height: "115vh",
+              y: layer2Movement,
+              zIndex: -2,
+            }}
+          />
 
           <motion.div
             className="absolute top-0 w-full"
             style={{
               backgroundImage: "url(/images/parallax/layer_1.svg)",
+              backgroundSize: "102% 100%",
+              backgroundPosition: "top",
+              height: "130vh",
+              y: layer1Movement,
+              zIndex: -1,
+            }}
+          />
+          <motion.div
+            className="absolute top-0 w-full"
+            style={{
+              backgroundImage: "url(/images/parallax/layer_1.png)",
               backgroundSize: "102% 100%",
               backgroundPosition: "top",
               height: "130vh",
