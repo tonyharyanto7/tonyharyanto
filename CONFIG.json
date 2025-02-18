@@ -1,7 +1,7 @@
 {
    "siteMetadata":{
       "title":"Portfolio",
-      "description":"Portfolio page by Maxim"
+      "description":"Portfolio by Maxim"
    },
    "global":{
       "font":"roboto",
@@ -103,16 +103,16 @@
          "enabled":true,
          "header":"Socials",
          "route":"/contact",
-         "email":"contact@maximjsx.com",
+         "email":"forking@duck.com",
          "direct_contact":"Reach Me Directly",
          "legal":{
             "enabled":true,
             "name":"Maxim",
-            "address":"Vaitape - Bora Bora",
-            "email":"forking@duck.com",
-            "phone":"911",
+            "address":"[REDACTED]",
+            "email":"legal@maximjsx.com",
+            "phone":"[REDACTED]",
             "tax_id":"Not Applicable",
-            "legal_disclaimer":"This is a personal portfolio website for informational purposes."
+            "legal_disclaimer":"This is a personal portfolio website for demonstration purposes."
          },
          "social_links":[
             {
