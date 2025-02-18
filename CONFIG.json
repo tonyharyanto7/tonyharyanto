@@ -103,13 +103,13 @@
          "enabled":true,
          "header":"Socials",
          "route":"/contact",
-         "email":"maxim@nextfight.net",
+         "email":"contact@maximjsx.com",
          "direct_contact":"Reach Me Directly",
          "legal":{
             "enabled":true,
             "name":"Maxim",
             "address":"Vaitape - Bora Bora",
-            "email":"maxim@nextfight.net",
+            "email":"forking@duck.com",
             "phone":"911",
             "tax_id":"Not Applicable",
             "legal_disclaimer":"This is a personal portfolio website for informational purposes."
@@ -165,7 +165,7 @@
          "route":"/privacy",
          "content":{
             "contact_title":"Contact",
-            "contact":"maxim@netfight.net",
+            "contact":"contact@maximjsx.com",
             "introduction":"This portfolio website is designed with minimal data collection and maximum user privacy in mind.",
             "sections":[
                {
