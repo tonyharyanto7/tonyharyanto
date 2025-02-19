@@ -109,7 +109,7 @@
             "enabled":true,
             "name":"Maxim",
             "address":"[REDACTED]",
-            "email":"legal@maximjsx.com",
+            "email":"legal@maxim.cat",
             "phone":"[REDACTED]",
             "tax_id":"Not Applicable",
             "legal_disclaimer":"This is a personal portfolio website for demonstration purposes."
@@ -165,7 +165,7 @@
          "route":"/privacy",
          "content":{
             "contact_title":"Contact",
-            "contact":"legal@maximjsx.com",
+            "contact":"legal@maxim.cat",
             "introduction":"This portfolio website is designed with minimal data collection and maximum user privacy in mind.",
             "sections":[
                {
