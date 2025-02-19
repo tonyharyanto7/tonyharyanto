@@ -264,13 +264,13 @@
          ]
       },
       {
-         "title":"HologramAPI",
-         "description":"Packet based text display hologram api with minimessage and emoji support",
+         "title":"HologramLib",
+         "description":"Packet based text display hologram library with minimessage and emoji support",
          "imageSRC":"/images/projects/hologramapi.webp",
          "buttonText":"View on GitHub",
-         "buttonURL":"https://github.com/maximjsx/HologramAPI",
+         "buttonURL":"https://github.com/maximjsx/HologramLib",
          "badges":[
-            "https://img.shields.io/github/stars/maximjsx/HologramAPI.svg?style=flat"
+            "https://img.shields.io/github/stars/maximjsx/HologramLib.svg?style=flat"
          ]
       },
       {
