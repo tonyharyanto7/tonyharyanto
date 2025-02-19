@@ -89,7 +89,7 @@ Change global font in [CONFIG.json](CONFIG.json):
 
 ### Personal Information
 Remove or replace **(Please replace these before deployment)**:
-- **Email addresses** like `maxim@nextfight.net` (Very important)
+- **Email addresses** like `legal@maxim.cat` (Very important)
 - Social media links
 - Profile image
 - Experience details
