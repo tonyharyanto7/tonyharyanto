@@ -312,6 +312,16 @@
          "badges":[
             "https://img.shields.io/github/stars/maximjsx/discord-embed-builder.svg?style=flat"
          ]
+      },
+      {
+         "title":"World Border Bypass",
+         "description":"Bypass the vanilla worldborder building & combat limitations and go beyond the furthest point of the map",
+         "imageSRC":"/images/projects/border.webp",
+         "buttonText":"View on GitHub",
+         "buttonURL":"https://github.com/maximjsx/BeyondBorderUnlocked",
+         "badges":[
+            "https://img.shields.io/github/stars/maximjsx/BeyondBorderUnlocked.svg?style=flat"
+         ]
       }
    ]
 }
