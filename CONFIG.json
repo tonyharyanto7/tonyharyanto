@@ -302,6 +302,16 @@
          "badges":[
             "https://img.shields.io/github/stars/maximjsx/FIX.svg?style=flat"
          ]
+      },
+      {
+         "title":"Discord Embed Builder",
+         "description":"A Discord embed builder for users. No bot, webhook, mod or selfbot required! Just copy paste a message",
+         "imageSRC":"/images/projects/embedbuilder.webp",
+         "buttonText":"View on GitHub",
+         "buttonURL":"https://github.com/maximjsx/discord-embed-builder",
+         "badges":[
+            "https://img.shields.io/github/stars/maximjsx/discord-embed-builder.svg?style=flat"
+         ]
       }
    ]
 }
