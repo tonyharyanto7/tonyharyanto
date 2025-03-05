@@ -305,7 +305,7 @@
       },
       {
          "title":"Discord Embed Builder",
-         "description":"A Discord embed builder for users. No bot, webhook, mod or selfbot required! Just copy paste a message",
+         "description":"A Discord embed builder for users. No bot, webhook, mod or selfbot required!",
          "imageSRC":"/images/projects/embedbuilder.webp",
          "buttonText":"View on GitHub",
          "buttonURL":"https://github.com/maximjsx/discord-embed-builder",
@@ -315,7 +315,7 @@
       },
       {
          "title":"World Border Bypass",
-         "description":"Bypass the vanilla worldborder building & combat limitations and go beyond the furthest point of the map",
+         "description":"Bypass the vanilla worldborder building & combat limitations",
          "imageSRC":"/images/projects/border.webp",
          "buttonText":"View on GitHub",
          "buttonURL":"https://github.com/maximjsx/BeyondBorderUnlocked",
