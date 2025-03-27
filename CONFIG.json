@@ -322,6 +322,16 @@
          "badges":[
             "https://img.shields.io/github/stars/maximjsx/BeyondBorderUnlocked.svg?style=flat"
          ]
+      },
+      {
+         "title":"Next.js Template",
+         "description":"A powerful Next.js template combining the best UI component libraries",
+         "imageSRC":"/images/projects/template.webp",
+         "buttonText":"View on GitHub",
+         "buttonURL":"https://github.com/maximjsx/template",
+         "badges":[
+            "https://img.shields.io/github/stars/maximjsx/template.svg?style=flat"
+         ]
       }
    ]
 }
