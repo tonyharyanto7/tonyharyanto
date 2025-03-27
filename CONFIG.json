@@ -332,6 +332,46 @@
          "badges":[
             "https://img.shields.io/github/stars/maximjsx/template.svg?style=flat"
          ]
-      }
+      },
+      {
+         "title":"EntitySize",
+         "description":"Change the size/scale of any living entity or player with an optional transition!",
+         "imageSRC":"/images/projects/entitysize.webp",
+         "buttonText":"Download on SpigotMC",
+         "buttonURL":"https://www.spigotmc.org/resources/116497/",
+         "badges":[
+            "https://img.shields.io/spiget/downloads/116497"
+         ]
+      },
+      {
+         "title":"PassengerAPI",
+         "description":"Fix passenger compatibility issues | Manage your own entity passengers",
+         "imageSRC":"/images/projects/entitysize.webp",
+         "buttonText":"Download on SpigotMC",
+         "buttonURL":"https://www.spigotmc.org/resources/117017/",
+         "badges":[
+            "https://img.shields.io/spiget/downloads/117017"
+         ]
+      },
+        {
+         "title":"Custom Score Numbers",
+         "description":"Remove/hide the red numbers in the scoreboard or change the color",
+         "imageSRC":"/images/projects/scorenumbers.webp",
+         "buttonText":"Buy on SpigotMC",
+         "buttonURL":"https://www.spigotmc.org/resources/117017/",
+         "badges":[
+            "https://img.shields.io/spiget/downloads/117017"
+         ]
+      },
+      {
+         "title":"Skin Overlay Generator",
+         "description":"Festive overlays for your Minecraft skin",
+         "imageSRC":"/images/projects/skinoverlay.webp",
+         "buttonText":"View on GitHub",
+         "buttonURL":"https://github.com/ToiletDevelopment/Skin-Overlay-Generator",
+         "badges":[
+            "https://img.shields.io/github/stars/ToiletDevelopment/Skin-Overlay-Generator.svg?style=flat"
+         ]
+      },
    ]
 }
