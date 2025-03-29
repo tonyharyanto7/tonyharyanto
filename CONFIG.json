@@ -358,9 +358,9 @@
          "description":"Remove/hide the red numbers in the scoreboard or change the color",
          "imageSRC":"/images/projects/scorenumbers.webp",
          "buttonText":"View on SpigotMC",
-         "buttonURL":"https://www.spigotmc.org/resources/117017/",
+         "buttonURL":"https://www.spigotmc.org/resources/115955/",
          "badges":[
-            "https://img.shields.io/spiget/downloads/117017"
+            "https://img.shields.io/spiget/downloads/115955"
          ]
       },
       {
