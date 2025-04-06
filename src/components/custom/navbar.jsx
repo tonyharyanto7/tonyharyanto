@@ -61,7 +61,7 @@ export default function Navbar() {
                 <Link
                   href={pageConfig.route}
                   className={cn(
-                    "block text-center font-medium transition-colors duration-300",
+                    "c-cursor-pointer block text-center font-medium transition-colors duration-300",
                     "text-white",
                     isActive
                       ? "text-secondary brightness-150"
