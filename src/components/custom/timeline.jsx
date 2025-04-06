@@ -13,7 +13,6 @@ import { motion } from "framer-motion";
 import config from "/CONFIG.json";
 import { useRef, useEffect, useState } from "react";
 import { TypeAnimation } from "react-type-animation";
-
 const TimelineItem = ({ experience, animationDelay, isInView }) => {
   const isLeft = experience.side === "left";
 
@@ -24,7 +23,7 @@ const TimelineItem = ({ experience, animationDelay, isInView }) => {
       }`}
     >
       <motion.div
-        initial={{ opacity: 0, x: isLeft ? 50 : -50 }}
+        initial={{ opacity: 0, x: isLeft ? 3.125 : -3.125 }}
         animate={
           isInView
             ? { opacity: 1, x: 0, transition: { delay: animationDelay + 1 } }
@@ -36,20 +35,22 @@ const TimelineItem = ({ experience, animationDelay, isInView }) => {
       >
         <div
           className="
-            bg-black/45 p-6 rounded-lg shadow-md border border-primary/10
+            bg-black/45 p-4 md:p-6 rounded-lg shadow-md border border-primary/10
             hover:shadow-xl transition-shadow duration-300
           "
         >
-          <h3 className="c-cursor-text text-xl font-bold mb-2">
+          <h3 className="c-cursor-text text-lg md:text-xl font-bold mb-2">
             {experience.title}
           </h3>
-          <h4 className="c-cursor-text text-lg text-gray-600 mb-2">
+          <h4 className="c-cursor-text text-base md:text-lg text-gray-600 mb-2">
             {experience.company}
           </h4>
           <p className="c-cursor-text text-sm text-gray-500 mb-3">
             {experience.date}
           </p>
-          <p className="c-cursor-text text-gray-700">{experience.description}</p>
+          <p className="c-cursor-text text-gray-700">
+            {experience.description}
+          </p>
         </div>
       </motion.div>
 

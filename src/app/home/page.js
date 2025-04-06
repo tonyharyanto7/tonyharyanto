@@ -14,9 +14,9 @@ import config from "/CONFIG.json";
 import Timeline from "@/components/custom/timeline";
 import ProfileSection from "@/components/custom/profile_section";
 import TechScroller from "@/components/custom/tech_scroller";
-import Parallax from "@/components/custom/parallax";
 import ScrollButton from "@/components/custom/scroll_button";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+import Background from "@/components/custom/parallax";
 
 function useScript(url) {
   useEffect(() => {
@@ -39,20 +39,20 @@ export default function Home() {
 
   useScript("scripts/scroll.js");
 
-  const layer1Movement = useSpring(
-    useTransform(scrollY, [0, 1500], [0, 0]),
-    { stiffness: 100, damping: 22 },
-  );
+  const layer1Movement = useSpring(useTransform(scrollY, [0, 1500], [0, 0]), {
+    stiffness: 100,
+    damping: 22,
+  });
 
   return (
     <>
-      <Parallax />
+      <Background />
       <motion.div
         className="container mx-auto px-4 py-4"
         style={{ y: layer1Movement }}
       >
         <div className="flex flex-col items-center justify-center gap-2 min-h-screen -mt-16 md:-mt-32 lg:-mt-32">
-          <div className="w-full max-w-4xl">
+          <div className="w-full max-w-7xl">
             <ProfileSection />
             <div>
               <TechScroller />
@@ -63,8 +63,11 @@ export default function Home() {
           </div>
         </div>
 
-        <div id="tech-section" className="min-h-[80vh] flex items-center mt-32">
-          <div className="w-full">
+        <div
+          id="tech-section"
+          className="min-h-[80vh] flex items-center mt-16 md:mt-24 lg:mt-32"
+        >
+          <div className="w-full max-w-7xl mx-auto">
             {homeConfig.experience.enabled && <Timeline />}
           </div>
         </div>

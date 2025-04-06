@@ -21,14 +21,14 @@ export default function ActionButtons() {
       {homeConfig.action_buttons.map((button, index) => (
         <motion.div
           key={index}
-          initial={{ y: 50, opacity: 0 }}
+          initial={{ y: 3.125, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
         >
           <Button
             href={button.route}
             variant={button.style === "primary" ? "primary" : "secondary"}
-            className="text-base px-5 py-2.5 md:text-lg md:px-6 md:py-3"
+            className="text-base px-4 py-2 md:text-lg md:px-5 md:py-2.5 xl:px-6 xl:py-3"
           >
             {button.label}
           </Button>
