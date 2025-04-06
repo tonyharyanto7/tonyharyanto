@@ -1,6 +1,6 @@
 /**
  * Portfolio
- * Copyright (C) 2025 Maxim (https://github.com/maximjsx/portfolio)
+ * Copyright (C) 2024 Maxim (https://github.com/maximjsx/portfolio)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published
@@ -46,8 +46,8 @@ export default function Navbar() {
     <nav
       className={cn(
         "sticky top-0 z-50 transition-all duration-300",
-        "md:backdrop-blur-md",
-        isScrolled ? "md:bg-black/40 md:py-2" : "md:bg-black/20 md:py-4",
+        "md:backdrop-blur-sm",
+        isScrolled ? "md:bg-black/40 md:py-4" : "md:bg-black/20 md:py-5",
         "bg-transparent py-4",
       )}
     >

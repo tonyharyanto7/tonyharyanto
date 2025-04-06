@@ -11,7 +11,7 @@ import React from "react";
 
 const Footer = ({ config }) => {
   return (
-    <footer className="bg-black/10 shadow-xl text-white py-4">
+    <footer className="bg-black/40 shadow-xl backdrop-blur-sm text-white py-4">
       <div className="container mx-auto text-center">
         {config.footer && (
           <>
@@ -23,14 +23,14 @@ const Footer = ({ config }) => {
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-primary hover:scale-110 duration-75 c-cursor-pointer"
+                    className="text-primary hover:brightness-150 duration-200 hover:-translate-y-0.5 c-cursor-pointer"
                   >
                     {link.label}
                   </a>
                 ))}
               </div>
             )}
-            <p className="c-cursor-text">{config.footer.text}</p>
+            <p className="c-cursor-text text-sm">{config.footer.text}</p>
           </>
         )}
       </div>

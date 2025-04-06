@@ -35,7 +35,7 @@ const TimelineItem = ({ experience, animationDelay, isInView }) => {
       >
         <div
           className="
-            bg-black/45 p-4 md:p-6 rounded-lg shadow-md border border-primary/10
+            bg-black/40 backdrop-blur-sm p-4 md:p-6 rounded-lg shadow-md border border-primary/10
             hover:shadow-xl transition-shadow duration-300
           "
         >
@@ -48,7 +48,9 @@ const TimelineItem = ({ experience, animationDelay, isInView }) => {
           <p className="c-cursor-text text-sm text-gray-400 mb-3">
             {experience.date}
           </p>
-          <p className="c-cursor-text text-gray-500">{experience.description}</p>
+          <p className="c-cursor-text text-gray-500">
+            {experience.description}
+          </p>
         </div>
       </motion.div>
 
