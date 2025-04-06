@@ -11,7 +11,6 @@ import config from "/CONFIG.json";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import ActionButtons from "./action_buttons";
-
 export default function ProfileSection() {
   const homeConfig = config.pages.home;
   const gradientColors = homeConfig.gradient.split(":");

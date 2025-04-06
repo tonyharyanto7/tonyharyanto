@@ -1,6 +1,6 @@
 /**
  * Portfolio
- * Copyright (C) 2024 Maxim (https://github.com/max1mde/portfolio)
+ * Copyright (C) 2024 Maxim (https://github.com/maximjsx/portfolio)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published
@@ -51,10 +51,11 @@ export default function Home() {
         className="container mx-auto px-4 py-4"
         style={{ y: layer1Movement }}
       >
-        <div className="flex flex-col items-center justify-center gap-2 min-h-screen -mt-16 md:-mt-32 lg:-mt-32">
+        {/* Profile */}
+        <div className="flex flex-col items-center justify-center min-h-[70vh] pt-16">
           <div className="w-full max-w-7xl">
             <ProfileSection />
-            <div>
+            <div className="mt-3">
               <TechScroller />
             </div>
             <div className="flex justify-center mt-4">
@@ -65,7 +66,7 @@ export default function Home() {
 
         <div
           id="tech-section"
-          className="min-h-[80vh] flex items-center mt-16 md:mt-24 lg:mt-32"
+          className="min-h-[80vh] flex items-start mt-8 md:mt-12"
         >
           <div className="w-full max-w-7xl mx-auto">
             {homeConfig.experience.enabled && <Timeline />}

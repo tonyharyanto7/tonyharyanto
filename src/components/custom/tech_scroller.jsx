@@ -1,6 +1,6 @@
 /**
  * Portfolio
- * Copyright (C) 2024 Maxim (https://github.com/max1mde/portfolio)
+ * Copyright (C) 2024 Maxim (https://github.com/maximjsx/portfolio)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published
@@ -21,7 +21,7 @@ export default function TechScroller() {
           direction="left"
           speed="fast"
           className="max-w-xs"
-          itemClasses="bg-secondary"
+          itemClasses="bg-white/30"
         />
       </div>
 
@@ -31,6 +31,7 @@ export default function TechScroller() {
           direction="right"
           speed="fast"
           className="max-w-lg"
+          itemClasses="bg-white/10"
         />
       </div>
     </div>

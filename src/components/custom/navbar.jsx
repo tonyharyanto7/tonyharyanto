@@ -1,6 +1,6 @@
 /**
  * Portfolio
- * Copyright (C) 2024 Maxim (https://github.com/max1mde/portfolio)
+ * Copyright (C) 2024 Maxim (https://github.com/maximjsx/portfolio)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published
@@ -14,7 +14,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import config from "/CONFIG.json";
 import { cn } from "@/lib/utils";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -34,35 +34,24 @@ export default function Navbar() {
     setIsMobileMenuOpen(false);
   }, [pathname]);
 
+  const toggleMenu = () => {
+    setIsMobileMenuOpen((prev) => !prev);
+  };
+
   const enabledPages = Object.entries(config.pages).filter(
     ([, pageConfig]) => pageConfig.enabled,
   );
 
-  const mobileMenuVariants = {
-    hidden: {
-      opacity: 0,
-      y: "-100%",
-      transition: {
-        duration: 0.3,
-      },
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.3,
-      },
-    },
-  };
-
   return (
     <nav
       className={cn(
-        "sticky top-0 z-50 transition-all duration-300 backdrop-blur-md",
-        isScrolled ? "bg-black/40 py-2" : "bg-black/20 py-4",
+        "sticky top-0 z-50 transition-all duration-300",
+        "md:backdrop-blur-md",
+        isScrolled ? "md:bg-black/40 md:py-2" : "md:bg-black/20 md:py-4",
+        "bg-transparent py-4",
       )}
     >
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4 relative">
         {/* Desktop menu */}
         <ul className="hidden md:flex justify-center items-center">
           {enabledPages.map(([pageName, pageConfig]) => {
@@ -74,7 +63,9 @@ export default function Navbar() {
                   className={cn(
                     "block text-center font-medium transition-colors duration-300",
                     "text-white",
-                    isActive ? "text-primary" : "hover:text-primary",
+                    isActive
+                      ? "text-secondary brightness-150"
+                      : "hover:text-secondary",
                   )}
                 >
                   <motion.span
@@ -89,7 +80,7 @@ export default function Navbar() {
                     <motion.div
                       layoutId="navbar-underline"
                       initial={false}
-                      className="absolute bottom-0 left-0 right-0 bg-primary"
+                      className="absolute bottom-0 left-0 right-0 bg-secondary"
                       style={{ height: "2px" }}
                       transition={{
                         type: "spring",
@@ -105,72 +96,68 @@ export default function Navbar() {
         </ul>
 
         {/* Mobile menu */}
-        <div className="md:hidden relative">
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="absolute top-2 right-4 flex flex-col justify-center items-center w-8 h-8 space-y-1.5"
-          >
-            <motion.span
-              animate={
-                isMobileMenuOpen ? { rotate: 45, translateY: 8 } : { rotate: 0 }
-              }
-              transition={{ duration: 0.3 }}
-              className="w-full h-0.5 bg-white origin-center"
-            />
-            <motion.span
-              animate={isMobileMenuOpen ? { opacity: 0 } : { opacity: 1 }}
-              transition={{ duration: 0.3 }}
-              className="w-full h-0.5 bg-white"
-            />
-            <motion.span
-              animate={
-                isMobileMenuOpen
-                  ? { rotate: -45, translateY: -8 }
-                  : { rotate: 0 }
-              }
-              transition={{ duration: 0.3 }}
-              className="w-full h-0.5 bg-white origin-center"
-            />
-          </button>
-
-          <AnimatePresence>
-            {isMobileMenuOpen && (
-              <motion.ul
-                initial="hidden"
-                animate="visible"
-                exit="hidden"
-                variants={mobileMenuVariants}
-                className="fixed inset-0 bg-black/80 flex flex-col justify-center items-center space-y-6 pt-16"
-              >
-                {enabledPages.map(([pageName, pageConfig]) => {
-                  const isActive = pathname === pageConfig.route;
-                  return (
-                    <motion.li
-                      key={pageName}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{
-                        delay:
-                          0.1 * enabledPages.indexOf([pageName, pageConfig]),
-                      }}
-                      className="w-full"
-                    >
-                      <Link
-                        href={pageConfig.route}
-                        className={cn(
-                          "block text-center font-medium transition-colors duration-300 py-3",
-                          "text-white",
-                          isActive ? "text-primary" : "hover:text-primary",
-                        )}
-                      >
-                        {pageName.charAt(0).toUpperCase() + pageName.slice(1)}
-                      </Link>
-                    </motion.li>
-                  );
-                })}
-              </motion.ul>
-            )}
-          </AnimatePresence>
+        <div className="md:hidden">
+          <div className="fixed top-4 right-4 z-50 rounded-lg bg-black/30 backdrop-blur-sm shadow-lg p-2">
+            <button
+              onClick={toggleMenu}
+              className="flex flex-col justify-center items-center w-6 h-6 space-y-1.5"
+            >
+              <span
+                className={cn(
+                  "w-full h-0.5 bg-white transition-all duration-300",
+                  isMobileMenuOpen
+                    ? "rotate-45 translate-y-2"
+                    : "rotate-0 translate-y-0",
+                )}
+              />
+              <span
+                className={cn(
+                  "w-full h-0.5 bg-white transition-all duration-300",
+                  isMobileMenuOpen ? "opacity-0" : "opacity-100",
+                )}
+              />
+              <span
+                className={cn(
+                  "w-full h-0.5 bg-white transition-all duration-300",
+                  isMobileMenuOpen
+                    ? "-rotate-45 -translate-y-2"
+                    : "rotate-0 translate-y-0",
+                )}
+              />
+            </button>
+          </div>
+          {isMobileMenuOpen && (
+            <div className="fixed inset-0 z-40">
+              <div
+                className="absolute inset-0 bg-black/90"
+                onClick={() => setIsMobileMenuOpen(false)}
+              />
+              <div className="relative flex flex-col justify-center items-center h-full">
+                <ul className="space-y-6">
+                  {enabledPages.map(([pageName, pageConfig]) => {
+                    const isActive = pathname === pageConfig.route;
+                    return (
+                      <li key={pageName} className="w-60">
+                        <Link
+                          href={pageConfig.route}
+                          className={cn(
+                            "c-cursor-pointer px-4 py-2 rounded-md border border-transparent transition-all duration-500 ease-in-out",
+                            "text-white font-medium block text-center",
+                            "w-60 mb-2 text-lg border-white hover:bg-gray-700",
+                            isActive
+                              ? "hover:bg-gray-700 shadow-md hover:border-white opacity-50 border-gray-700"
+                              : "",
+                          )}
+                        >
+                          {pageName.charAt(0).toUpperCase() + pageName.slice(1)}
+                        </Link>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </nav>

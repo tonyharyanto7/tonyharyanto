@@ -1,6 +1,6 @@
 /**
  * Portfolio
- * Copyright (C) 2024 Maxim (https://github.com/max1mde/portfolio)
+ * Copyright (C) 2024 Maxim (https://github.com/maximjsx/portfolio)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published
@@ -26,7 +26,7 @@ const Scroller = ({
             key={index}
             className={
               itemClasses +
-              " px-4 py-2 rounded-full text-sm shadow-sm shadow-black transition-opacity duration-1000 opacity-0"
+              " px-4 py-2 rounded-full text-sm transition-opacity duration-1000 opacity-0"
             }
           >
             {item}

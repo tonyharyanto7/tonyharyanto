@@ -4,7 +4,7 @@
       "description":"Portfolio by Maxim"
    },
    "global":{
-      "font":"delius",
+      "font":"roboto",
       "home_route":"/home",
       "custom_cursor":{
          "enabled":false,

@@ -48,9 +48,7 @@ const TimelineItem = ({ experience, animationDelay, isInView }) => {
           <p className="c-cursor-text text-sm text-gray-500 mb-3">
             {experience.date}
           </p>
-          <p className="c-cursor-text text-gray-700">
-            {experience.description}
-          </p>
+          <p className="c-cursor-text text-gray-700">{experience.description}</p>
         </div>
       </motion.div>
 

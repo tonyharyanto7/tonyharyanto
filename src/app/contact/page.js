@@ -1,6 +1,6 @@
 /**
  * Portfolio
- * Copyright (C) 2024 Maxim (https://github.com/max1mde/portfolio)
+ * Copyright (C) 2024 Maxim (https://github.com/maximjsx/portfolio)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published
@@ -14,6 +14,7 @@ import { FaEnvelope } from "react-icons/fa";
 import { SocialLinks } from "@/components/custom/social_links";
 import { ContactForm } from "@/components/custom/contact_form";
 import { LegalInfo } from "@/components/custom/legal_info";
+import { TextAnimate } from "@/components/magicui/text-animate";
 
 export default function Contact() {
   const contactConfig = config.pages.contact;
@@ -35,9 +36,13 @@ export default function Contact() {
 
   return (
     <div className="container mx-auto px-4 py-4 max-w-2xl">
-      <h1 className="c-cursor-text text-4xl uppercase glow font-bold text-center mb-10">
+      <TextAnimate
+        animation="blurInUp"
+        by="character"
+        className="c-cursor-text text-4xl uppercase glow font-bold text-center mb-10"
+      >
         {contactConfig.header}
-      </h1>
+      </TextAnimate>
 
       <SocialLinks links={contactConfig.social_links} className="mb-12" />
 

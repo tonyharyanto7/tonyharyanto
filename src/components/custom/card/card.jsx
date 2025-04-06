@@ -1,6 +1,6 @@
 /**
  * Portfolio
- * Copyright (C) 2024 Maxim (https://github.com/max1mde/portfolio)
+ * Copyright (C) 2024 Maxim (https://github.com/maximjsx/portfolio)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published
@@ -12,6 +12,7 @@ import { cn } from "@/lib/utils";
 import { CardImage } from "@/components/custom/card/card_image";
 import { CardBadges } from "@/components/custom/card/card_badges";
 import Button from "../button";
+import { TextAnimate } from "@/components/magicui/text-animate";
 
 const Card = React.forwardRef(
   (
@@ -45,9 +46,13 @@ const Card = React.forwardRef(
           <CardBadges badges={badges} />
 
           {title && (
-            <h5 className="c-cursor-text glow text-xl font-semibold mb-2">
+            <TextAnimate
+              animation="fadeIn"
+              by="word"
+              className="c-cursor-text glow text-xl font-semibold mb-2"
+            >
               {title}
-            </h5>
+            </TextAnimate>
           )}
 
           {description && (
