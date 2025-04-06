@@ -1,10 +1,10 @@
 {
    "siteMetadata":{
-      "title":"Portfolio - Maxim",
-      "description":"Portfolio page by max1mde"
+      "title":"Portfolio",
+      "description":"Portfolio by Maxim"
    },
    "global":{
-      "font":"roboto",
+      "font":"delius",
       "home_route":"/home",
       "custom_cursor":{
          "enabled":false,
@@ -14,11 +14,11 @@
       }
    },
    "footer":{
-      "text":"© 2024 Maxim - All rights reserved.",
+      "text":"© 2025 Maxim - All rights reserved.",
       "links":[
          {
             "label":"GitHub",
-            "url":"https://github.com/max1mde/portfolio"
+            "url":"https://github.com/maximjsx/portfolio"
          },
          {
             "label":"Contact",
@@ -62,7 +62,7 @@
             },
             {
                "label":"Source Code",
-               "route":"https://github.com/max1mde/portfolio",
+               "route":"https://github.com/maximjsx/portfolio",
                "style":"secondary"
             }
          ],
@@ -103,21 +103,21 @@
          "enabled":true,
          "header":"Socials",
          "route":"/contact",
-         "email":"maxim@nextfight.net",
+         "email":"forking@duck.com",
          "direct_contact":"Reach Me Directly",
          "legal":{
             "enabled":true,
             "name":"Maxim",
-            "address":"Vaitape - Bora Bora",
-            "email":"maxim@nextfight.net",
-            "phone":"911",
+            "address":"[REDACTED]",
+            "email":"legal@maxim.cat",
+            "phone":"[REDACTED]",
             "tax_id":"Not Applicable",
-            "legal_disclaimer":"This is a personal portfolio website for informational purposes."
+            "legal_disclaimer":"This is a personal portfolio website for demonstration purposes."
          },
          "social_links":[
             {
                "name":"GitHub",
-               "url":"https://github.com/max1mde",
+               "url":"https://github.com/maximjsx",
                "icon":"github"
             },
             {
@@ -127,7 +127,7 @@
             },
             {
                "name":"YouTube",
-               "url":"https://www.youtube.com/@max1mde",
+               "url":"https://www.youtube.com/@maximjsx",
                "icon":"youtube"
             }
          ],
@@ -165,7 +165,7 @@
          "route":"/privacy",
          "content":{
             "contact_title":"Contact",
-            "contact":"maxim@netfight.net",
+            "contact":"legal@maxim.cat",
             "introduction":"This portfolio website is designed with minimal data collection and maximum user privacy in mind.",
             "sections":[
                {
@@ -228,9 +228,9 @@
          "description":"Customizable, responsive, portfolio website built with Next.js",
          "imageSRC":"/images/projects/portfolio.webp",
          "buttonText":"View on GitHub",
-         "buttonURL":"https://github.com/max1mde/portfolio",
+         "buttonURL":"https://github.com/maximjsx/portfolio",
          "badges":[
-            "https://img.shields.io/github/stars/max1mde/portfolio.svg?style=flat"
+            "https://img.shields.io/github/stars/maximjsx/portfolio.svg?style=flat"
          ]
       },
       {
@@ -258,19 +258,19 @@
          "description":"Animated Readme Cards - For your GitHub profile or repository readme",
          "imageSRC":"/images/projects/readmestats.webp",
          "buttonText":"View on GitHub",
-         "buttonURL":"https://github.com/max1mde/fancy-readme-stats",
+         "buttonURL":"https://github.com/maximjsx/fancy-readme-stats",
          "badges":[
-            "https://img.shields.io/github/stars/max1mde/fancy-readme-stats.svg?style=flat"
+            "https://img.shields.io/github/stars/maximjsx/fancy-readme-stats.svg?style=flat"
          ]
       },
       {
-         "title":"HologramAPI",
-         "description":"Packet based text display hologram api with minimessage and emoji support",
+         "title":"HologramLib",
+         "description":"Packet based text display hologram library with minimessage and emoji support",
          "imageSRC":"/images/projects/hologramapi.webp",
          "buttonText":"View on GitHub",
-         "buttonURL":"https://github.com/max1mde/HologramAPI",
+         "buttonURL":"https://github.com/maximjsx/HologramLib",
          "badges":[
-            "https://img.shields.io/github/stars/max1mde/HologramAPI.svg?style=flat"
+            "https://img.shields.io/github/stars/maximjsx/HologramLib.svg?style=flat"
          ]
       },
       {
@@ -280,7 +280,7 @@
          "buttonText":"Join the Discord",
          "buttonURL":"https://discord.nextfight.net/",
          "badges":[
-            "https://img.shields.io/discord/1051758423211003951"
+            "https://dcbadge.limes.pink/api/server/https://discord.gg/sB4nh3eHGB?style=flat"
          ]
       },
       {
@@ -290,7 +290,7 @@
          "buttonText":"Join the Discord",
          "buttonURL":"https://discord.gg/eCn8VWEGbZ",
          "badges":[
-            "https://img.shields.io/discord/895012337793249341"
+            "https://dcbadge.limes.pink/api/server/https://discord.gg/eCn8VWEGbZ?style=flat"
          ]
       },
       {
@@ -298,9 +298,79 @@
          "description":"A Windows tool for AI text correction and translation with hotkeys & voice control",
          "imageSRC":"/images/projects/fix.webp",
          "buttonText":"View on GitHub",
-         "buttonURL":"https://github.com/max1mde/FIX",
+         "buttonURL":"https://github.com/maximjsx/FIX",
          "badges":[
-            "https://img.shields.io/github/stars/max1mde/FIX.svg?style=flat"
+            "https://img.shields.io/github/stars/maximjsx/FIX.svg?style=flat"
+         ]
+      },
+      {
+         "title":"Discord Embed Builder",
+         "description":"A Discord embed builder for users. No bot, webhook, mod or selfbot required!",
+         "imageSRC":"/images/projects/embedbuilder.webp",
+         "buttonText":"View on GitHub",
+         "buttonURL":"https://github.com/maximjsx/discord-embed-builder",
+         "badges":[
+            "https://img.shields.io/github/stars/maximjsx/discord-embed-builder.svg?style=flat"
+         ]
+      },
+      {
+         "title":"World Border Bypass",
+         "description":"Bypass the vanilla worldborder building & combat limitations",
+         "imageSRC":"/images/projects/border.webp",
+         "buttonText":"View on GitHub",
+         "buttonURL":"https://github.com/maximjsx/BeyondBorderUnlocked",
+         "badges":[
+            "https://img.shields.io/github/stars/maximjsx/BeyondBorderUnlocked.svg?style=flat"
+         ]
+      },
+      {
+         "title":"Next.js Template",
+         "description":"A powerful Next.js template combining the best UI component libraries",
+         "imageSRC":"/images/projects/template.webp",
+         "buttonText":"View on GitHub",
+         "buttonURL":"https://github.com/maximjsx/template",
+         "badges":[
+            "https://img.shields.io/github/stars/maximjsx/template.svg?style=flat"
+         ]
+      },
+      {
+         "title":"EntitySize",
+         "description":"Change the size/scale of any living entity or player with an optional transition!",
+         "imageSRC":"/images/projects/entitysize.webp",
+         "buttonText":"View on SpigotMC",
+         "buttonURL":"https://www.spigotmc.org/resources/116497/",
+         "badges":[
+            "https://img.shields.io/spiget/downloads/116497"
+         ]
+      },
+      {
+         "title":"PassengerAPI",
+         "description":"Fix passenger compatibility issues | Manage your own entity passengers",
+         "imageSRC":"/images/projects/entitysize.webp",
+         "buttonText":"View on SpigotMC",
+         "buttonURL":"https://www.spigotmc.org/resources/117017/",
+         "badges":[
+            "https://img.shields.io/spiget/downloads/117017"
+         ]
+      },
+        {
+         "title":"Custom Score Numbers",
+         "description":"Remove/hide the red numbers in the scoreboard or change the color",
+         "imageSRC":"/images/projects/scorenumbers.webp",
+         "buttonText":"View on SpigotMC",
+         "buttonURL":"https://www.spigotmc.org/resources/115955/",
+         "badges":[
+            "https://img.shields.io/spiget/downloads/115955"
+         ]
+      },
+      {
+         "title":"Skin Overlay Generator",
+         "description":"Festive overlays for your Minecraft skin",
+         "imageSRC":"/images/projects/skinoverlay.webp",
+         "buttonText":"View on GitHub",
+         "buttonURL":"https://github.com/ToiletDevelopment/Skin-Overlay-Generator",
+         "badges":[
+            "https://img.shields.io/github/stars/ToiletDevelopment/Skin-Overlay-Generator.svg?style=flat"
          ]
       }
    ]
