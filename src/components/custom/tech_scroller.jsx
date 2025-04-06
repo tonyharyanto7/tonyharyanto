@@ -29,7 +29,7 @@ export default function TechScroller() {
         <Scroller
           items={homeConfig.tools}
           direction="right"
-          speed="fast"
+          speed="slow"
           className="max-w-lg"
           itemClasses="bg-white/10"
         />
