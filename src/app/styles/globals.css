@@ -5,7 +5,7 @@
 /* body::before {
   content: "";
   position: fixed;
-  top: -10px;
+  top: -0.625rem;
   left: 50%;
   transform: translateX(-50%);
   width: 140vw;
@@ -15,7 +15,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  filter: blur(5px) brightness(0.6);
+  filter: blur(0.3125rem) brightness(0.6);
   opacity: 0;
   animation: fadeIn 2s ease-in-out forwards;
 } */
@@ -44,7 +44,7 @@ body {
 
 @layer base {
   :root {
-    --radius: 10px;
+    --radius: 0.625rem;
 
     /* Color Palette */
     --color-1: #876aca;
@@ -105,4 +105,3 @@ body {
     @apply bg-background text-foreground;
   }
 }
-

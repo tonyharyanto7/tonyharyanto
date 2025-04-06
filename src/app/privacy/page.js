@@ -15,7 +15,7 @@ export default function Privacy() {
   const privacy = config.pages.privacy;
 
   return (
-    <div className="container mx-auto px-4 py-4 max-w-2xl">
+    <div className="container mx-auto px-[1rem] py-[1rem] max-w-2xl">
       <h1 className="c-cursor-text text-4xl glow uppercase font-bold text-center mb-10">
         {privacy.header}
       </h1>

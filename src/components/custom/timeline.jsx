@@ -127,12 +127,12 @@ const Timeline = () => {
         cursor={false}
         speed={1}
       />
-      <div ref={ref} className="relative max-w-4xl mx-auto px-4">
+      <div ref={ref} className="relative max-w-4xl mx-auto px-[1rem]">
         {isInView && (
           <motion.div
             initial={{ height: 0 }}
             animate={{
-              height: "calc(100% + 100px)",
+              height: "calc(100% + 6.25rem)",
               transition: { duration: 2, delay: 0 },
             }}
             className="
@@ -140,8 +140,8 @@ const Timeline = () => {
               rounded-full bg-white hidden md:block
             "
             style={{
-              height: "calc(100% + 100px)",
-              top: "-50px",
+              height: "calc(100% + 6.25rem)",
+              top: "-3.125rem",
               boxShadow: "0 0 20px var(--secondary)",
             }}
           />

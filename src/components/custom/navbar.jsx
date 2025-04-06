@@ -51,7 +51,7 @@ export default function Navbar() {
         "bg-transparent py-4",
       )}
     >
-      <div className="max-w-7xl mx-auto px-4 relative">
+      <div className="max-w-7xl mx-auto px-[1rem] relative">
         {/* Desktop menu */}
         <ul className="hidden md:flex justify-center items-center">
           {enabledPages.map(([pageName, pageConfig]) => {

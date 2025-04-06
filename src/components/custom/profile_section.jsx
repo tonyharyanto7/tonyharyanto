@@ -43,7 +43,7 @@ export default function ProfileSection() {
             initial={{ scale: 0, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
-            className="relative w-32 h-32 md:w-[250px] md:h-[250px]"
+            className="relative w-32 h-32 md:w-[15.625rem] md:h-[15.625rem]"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 to-transparent rounded-[30%_70%_70%_30%/30%_30%_70%_70%] overflow-hidden shadow-lg">
               <img
@@ -73,7 +73,7 @@ export default function ProfileSection() {
           <TypeAnimation
             sequence={[500, homeConfig.description]}
             wrapper="p"
-            className="c-cursor-text text-xl md:text-2xl w-full md:w-[500px] text-muted-foreground"
+            className="c-cursor-text text-xl md:text-2xl w-full md:w-[31.25rem] text-muted-foreground"
             cursor={true}
             speed={50}
           />
