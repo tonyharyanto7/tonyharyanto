@@ -44,6 +44,22 @@ const fonts = {
 export const metadata = {
   title: config.siteMetadata.title,
   description: config.siteMetadata.description,
+  openGraph: {
+    title: config.siteMetadata.title,
+    description: config.siteMetadata.description,
+    images: [{ url: config.pages.home.profile_image }],
+  },
+  twitter: {
+    card: config.siteMetadata.embeds?.twitter_card || "summary_large_image",
+    site: config.siteMetadata.embeds?.twitter_site,
+    title: config.siteMetadata.title,
+    description: config.siteMetadata.description,
+    images: [config.pages.home.profile_image],
+  },
+  other: {
+    "theme-color": config.siteMetadata.embeds?.color || "#ce6419",
+    provider_name: config.siteMetadata.embeds?.provider_name || "Maxim.jsx",
+  },
 };
 
 export default function RootLayout({ children }) {
