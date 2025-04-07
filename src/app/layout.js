@@ -49,13 +49,13 @@ export const metadata = {
   openGraph: {
     title: config.siteMetadata.title,
     description: config.siteMetadata.description,
-    images: [{ url: config.pages.home.profile_image }],
+    images: [{ url: config.siteMetadata.embeds?.image }],
   },
   twitter: {
     card: config.siteMetadata.embeds?.twitter_card || "summary_large_image",
     title: config.siteMetadata.title,
     description: config.siteMetadata.description,
-    images: [config.pages.home.profile_image],
+    images: [config.siteMetadata.embeds?.image],
   },
   other: {
     "theme-color": config.siteMetadata.embeds?.color || "#ce6419",
