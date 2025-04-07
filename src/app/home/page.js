@@ -42,10 +42,9 @@ export default function Home() {
 
   return (
     <div className="overflow-x-hidden relative">
-      <div className="absolute inset-0 pointer-events-none">
+      <div className="fixed inset-0 pointer-events-none z-[-1]">
         <Spotlight />
       </div>
-
       <motion.div
         className="container mx-auto px-4 py-4 relative"
         style={{ y: layer1Movement }}

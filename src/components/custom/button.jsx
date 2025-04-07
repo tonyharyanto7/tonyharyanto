@@ -124,19 +124,19 @@ const Button = React.forwardRef(function Button(
   }
 
   return (
-    <a
-      ref={ref || buttonRef}
-      className={buttonClassName}
-      target={newTab ? "_blank" : "_self"}
-      rel={newTab ? "noopener noreferrer" : undefined}
-      onMouseMove={handleMouseMove}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      {...accessibleProps}
-      {...props}
-    >
-      <ButtonContent />
-    </a>
+      <a
+        ref={ref || buttonRef}
+        className={buttonClassName}
+        target={newTab ? "_blank" : "_self"}
+        rel={newTab ? "noopener noreferrer" : undefined}
+        onMouseMove={handleMouseMove}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        {...accessibleProps}
+        {...props}
+      >
+        <ButtonContent />
+      </a>
   );
 });
 

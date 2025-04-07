@@ -45,7 +45,7 @@ export default function Navbar() {
   return (
     <nav
       className={cn(
-        "sticky top-0 z-50 transition-all duration-300",
+        "z-50 sticky top-0 transition-all duration-300",
         "md:backdrop-blur-sm",
         isScrolled ? "md:bg-black/40 md:py-4" : "md:bg-black/20 md:py-5",
         "bg-transparent py-4",
@@ -97,7 +97,7 @@ export default function Navbar() {
 
         {/* Mobile menu */}
         <div className="md:hidden">
-          <div className="fixed top-4 right-4 z-50 rounded-lg bg-black/30 backdrop-blur-sm shadow-lg p-2">
+          <div className="fixed top-4 right-4 z-50 rounded-lg bg-black/30 backdrop-blur-sm p-2">
             <button
               onClick={toggleMenu}
               className="flex flex-col justify-center items-center w-6 h-6 space-y-1.5"
@@ -145,7 +145,7 @@ export default function Navbar() {
                             "text-white font-medium block text-center",
                             "w-60 mb-2 text-lg border-white hover:bg-gray-700",
                             isActive
-                              ? "hover:bg-gray-700 shadow-md hover:border-white opacity-50 border-gray-700"
+                              ? "hover:bg-gray-700 hover:border-white opacity-50 border-gray-700"
                               : "",
                           )}
                         >

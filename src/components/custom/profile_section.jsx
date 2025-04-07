@@ -11,6 +11,8 @@ import config from "/CONFIG.json";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import ActionButtons from "./action_buttons";
+import { LinkPreview } from "@/components/ui/link-preview";
+
 export default function ProfileSection() {
   const homeConfig = config.pages.home;
   const gradientColors = homeConfig.gradient.split(":");
@@ -54,7 +56,6 @@ export default function ProfileSection() {
             </div>
           </motion.div>
         )}
-
         <motion.div
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -70,13 +71,9 @@ export default function ProfileSection() {
             {parseAboutMe(homeConfig.about_me)}
           </motion.h2>
 
-          <TypeAnimation
-            sequence={[500, homeConfig.description]}
-            wrapper="p"
-            className="c-cursor-text text-xl md:text-2xl w-full md:w-[31.25rem] text-muted-foreground"
-            cursor={true}
-            speed={50}
-          />
+          <div className="c-cursor-text text-xl md:text-2xl w-full md:w-[31.25rem] text-muted-foreground">
+            {parseDescription(homeConfig.description)}
+          </div>
           <div className="flex gap-4 justify-center md:justify-start mt-4">
             <ActionButtons />
           </div>
@@ -85,3 +82,38 @@ export default function ProfileSection() {
     </div>
   );
 }
+
+const parseDescription = (text) => {
+  const regex = /\[([^\]]+)]\((https?:\/\/[^\s)]+)\)/g;
+  const result = [];
+  let lastIndex = 0;
+  let match;
+
+  while ((match = regex.exec(text)) !== null) {
+    const [fullMatch, linkText, url] = match;
+    const matchStart = match.index;
+
+    if (lastIndex < matchStart) {
+      result.push(text.slice(lastIndex, matchStart));
+    }
+
+    result.push(
+      <LinkPreview
+        key={match.index}
+        url={url}
+        className="text-white"
+        newTab={true}
+      >
+        {linkText}
+      </LinkPreview>,
+    );
+
+    lastIndex = regex.lastIndex;
+  }
+
+  if (lastIndex < text.length) {
+    result.push(text.slice(lastIndex));
+  }
+
+  return result;
+};
