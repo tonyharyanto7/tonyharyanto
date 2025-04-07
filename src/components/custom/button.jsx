@@ -95,8 +95,12 @@ const Button = React.forwardRef(function Button(
     </>
   );
 
-  const isInternalLink =
-    typeof props.href === "string" && props.href.startsWith("/");
+  const isExternalLink =
+    typeof props.href === "string" &&
+    (props.href.startsWith("http://") ||
+      props.href.startsWith("https://") ||
+      props.href.startsWith("mailto:"));
+  const isInternalLink = !isExternalLink;
 
   const accessibleProps = {
     onKeyDown: handleKeyDown,
@@ -124,19 +128,19 @@ const Button = React.forwardRef(function Button(
   }
 
   return (
-      <a
-        ref={ref || buttonRef}
-        className={buttonClassName}
-        target={newTab ? "_blank" : "_self"}
-        rel={newTab ? "noopener noreferrer" : undefined}
-        onMouseMove={handleMouseMove}
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-        {...accessibleProps}
-        {...props}
-      >
-        <ButtonContent />
-      </a>
+    <a
+      ref={ref || buttonRef}
+      className={buttonClassName}
+      target={isExternalLink || newTab ? "_blank" : "_self"}
+      rel={isExternalLink || newTab ? "noopener noreferrer" : undefined}
+      onMouseMove={handleMouseMove}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      {...accessibleProps}
+      {...props}
+    >
+      <ButtonContent />
+    </a>
   );
 });
 
