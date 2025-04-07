@@ -20,9 +20,10 @@ export default function ScrollButton() {
   return (
     <motion.button
       onClick={scrollToTechSection}
-      className="c-cursor-pointer rounded-full bg-secondary/20 hover:bg-secondary/30 transition-colors"
+      className="c-cursor-pointer rounded-full bg-secondary/20 hover:bg-secondary/30 transition-colors p-2"
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
+      aria-label="Scroll to technology section"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -34,6 +35,8 @@ export default function ScrollButton() {
         strokeWidth="3"
         strokeLinecap="round"
         strokeLinejoin="round"
+        aria-hidden="true"
+        role="img"
       >
         <path d="M12 5v14M19 12l-7 7-7-7" />
       </svg>

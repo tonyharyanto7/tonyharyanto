@@ -6,27 +6,23 @@
  * it under the terms of the GNU Affero General Public License as published
  * by the Free Software Foundation.
  */
-
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import config from "/CONFIG.json";
 import Timeline from "@/components/custom/timeline";
 import ProfileSection from "@/components/custom/profile_section";
 import TechScroller from "@/components/custom/tech_scroller";
 import ScrollButton from "@/components/custom/scroll_button";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
-import Background from "@/components/custom/parallax";
+import { Spotlight } from "@/components/ui/spotlight-new";
 
 function useScript(url) {
   useEffect(() => {
     const script = document.createElement("script");
-
     script.src = url;
     script.async = true;
-
     document.body.appendChild(script);
-
     return () => {
       document.body.removeChild(script);
     };
@@ -45,13 +41,15 @@ export default function Home() {
   });
 
   return (
-    <>
-      <Background />
+    <div className="overflow-x-hidden relative">
+      <div className="absolute inset-0 pointer-events-none">
+        <Spotlight />
+      </div>
+
       <motion.div
-        className="container mx-auto px-4 py-4"
+        className="container mx-auto px-4 py-4 relative"
         style={{ y: layer1Movement }}
       >
-        {/* Profile */}
         <div className="flex flex-col items-center justify-center min-h-[70vh] pt-16">
           <div className="w-full max-w-7xl">
             <ProfileSection />
@@ -73,6 +71,6 @@ export default function Home() {
           </div>
         </div>
       </motion.div>
-    </>
+    </div>
   );
 }

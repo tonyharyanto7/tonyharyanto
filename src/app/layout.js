@@ -16,6 +16,7 @@ import Script from "next/script";
 
 import CustomCursor from "@/components/custom/cursor";
 import Footer from "@/components/custom/footer";
+import Background from "@/components/custom/background";
 
 const deliusFont = localFont({
   src: "./fonts/DeliusSwashCaps-Regular.ttf",
@@ -69,10 +70,10 @@ export default function RootLayout({ children }) {
         className={`${selectedFont.variable} antialiased flex flex-col min-h-screen`}
       >
         <link rel="preconnect" href="https://img.shields.io"></link>
-
+        <Background />
         {config.global.custom_cursor.enabled && <CustomCursor />}
         <Navbar />
-        <main className="flex-1 p-4">{children}</main>
+        <main className="flex-1">{children}</main>
         <Footer config={config} />
         <Script src="scripts/hover.js" strategy="afterInteractive" />
       </body>

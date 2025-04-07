@@ -11,13 +11,14 @@ import * as React from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
-export default function Button(
+const Button = React.forwardRef(function Button(
   {
     className,
     children,
     variant = "primary",
     hoverEffect = true,
     newTab = false,
+    "aria-label": ariaLabel,
     ...props
   },
   ref,
@@ -35,6 +36,15 @@ export default function Button(
       x: e.clientX - rect.left,
       y: e.clientY - rect.top,
     });
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      if (props.onClick) {
+        props.onClick(e);
+      }
+    }
   };
 
   React.useEffect(() => {
@@ -88,6 +98,14 @@ export default function Button(
   const isInternalLink =
     typeof props.href === "string" && props.href.startsWith("/");
 
+  const accessibleProps = {
+    onKeyDown: handleKeyDown,
+    tabIndex: 0,
+    role: !props.href ? "button" : undefined,
+    "aria-label":
+      ariaLabel || (typeof children === "string" ? children : undefined),
+  };
+
   if (isInternalLink && !newTab) {
     return (
       <Link
@@ -97,6 +115,8 @@ export default function Button(
         onMouseMove={handleMouseMove}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
+        {...accessibleProps}
+        {...props}
       >
         <ButtonContent />
       </Link>
@@ -105,16 +125,19 @@ export default function Button(
 
   return (
     <a
-      ref={ref}
+      ref={ref || buttonRef}
       className={buttonClassName}
       target={newTab ? "_blank" : "_self"}
       rel={newTab ? "noopener noreferrer" : undefined}
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      {...accessibleProps}
       {...props}
     >
       <ButtonContent />
     </a>
   );
-}
+});
+
+export default Button;
