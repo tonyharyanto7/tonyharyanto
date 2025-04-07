@@ -16,7 +16,7 @@ const Footer = ({ config }) => {
         {config.footer && (
           <>
             {config.footer.links && (
-              <div className="flex justify-center space-x-4 mt-2 mb-2">
+              <div className="flex justify-center space-x-4 mt-[0.5rem] mb-[0.5rem]">
                 {config.footer.links.map((link, index) => (
                   <a
                     key={index}

@@ -27,12 +27,12 @@ export default function Projects() {
         animation="blurInUp"
         by="character"
         duration={1.5}
-        className="c-cursor-text text-4xl font-bold text-center uppercase glow mb-10"
+        className="c-cursor-text text-4xl font-bold text-center uppercase glow mb-[2.5rem]"
       >
         {config.pages.projects.header}
       </TextAnimate>
 
-      <div className="flex flex-wrap justify-center items-start gap-5 mb-10">
+      <div className="flex flex-wrap justify-center items-start gap-5 mb-[2.5rem]">
         {config.cards.map((card, index) => (
           <div
             key={index}

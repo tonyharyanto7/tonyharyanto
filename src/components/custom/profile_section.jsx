@@ -74,7 +74,7 @@ export default function ProfileSection() {
           <div className="c-cursor-text text-xl md:text-2xl w-full md:w-[31.25rem] text-muted-foreground">
             {parseDescription(homeConfig.description)}
           </div>
-          <div className="flex gap-4 justify-center md:justify-start mt-4">
+          <div className="flex gap-4 justify-center md:justify-start mt-[1rem]">
             <ActionButtons />
           </div>
         </motion.div>

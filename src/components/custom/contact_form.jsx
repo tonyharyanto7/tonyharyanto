@@ -107,7 +107,7 @@ export const ContactForm = ({ config, onSubmit }) => {
 
       {submitStatus.message && (
         <div
-          className={`mt-4 text-center ${
+          className={`mt-[1rem] text-center ${
             submitStatus.type === "success" ? "text-green-500" : "text-red-500"
           }`}
         >

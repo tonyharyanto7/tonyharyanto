@@ -15,7 +15,6 @@ import ProfileSection from "@/components/custom/profile_section";
 import TechScroller from "@/components/custom/tech_scroller";
 import ScrollButton from "@/components/custom/scroll_button";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
-import { Spotlight } from "@/components/ui/spotlight-new";
 
 function useScript(url) {
   useEffect(() => {
@@ -43,16 +42,16 @@ export default function Home() {
   return (
     <div className="overflow-x-hidden relative">
       <motion.div
-        className="container mx-auto px-4 py-4 relative"
+        className="container mx-auto md:py-[2rem] px-4 py-0 relative"
         style={{ y: layer1Movement }}
       >
-        <div className="flex flex-col items-center justify-center min-h-[70vh] pt-[2rem]">
+        <div className="flex flex-col items-center justify-center pt-[2rem] mb-[4rem]">
           <div className="w-full max-w-7xl">
             <ProfileSection />
-            <div className="mt-3">
+            <div className="mt-[0.75rem]">
               <TechScroller />
             </div>
-            <div className="flex justify-center mt-4">
+            <div className="flex justify-center mt-[1rem]">
               <ScrollButton />
             </div>
           </div>
@@ -60,7 +59,7 @@ export default function Home() {
 
         <div
           id="tech-section"
-          className="min-h-[80vh] flex items-start mt-8 md:mt-12"
+          className="flex items-start mb-[2rem] md:mb-[3rem]"
         >
           <div className="w-full max-w-7xl mx-auto">
             {homeConfig.experience.enabled && <Timeline />}

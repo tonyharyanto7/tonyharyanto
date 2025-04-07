@@ -13,7 +13,7 @@ export const LegalInfo = ({ legal }) => {
   if (!legal.enabled) return null;
 
   return (
-    <div className="mt-12 bg-black/50 rounded-lg p-6">
+    <div className="mt-[3rem] bg-black/50 rounded-lg p-6">
       <h2 className="c-cursor-text text-2xl font-semibold mb-4 text-center">
         Legal Disclosure
       </h2>
@@ -43,7 +43,7 @@ export const LegalInfo = ({ legal }) => {
           </p>
         )}
         {legal.legal_disclaimer && (
-          <p className="c-cursor-text text-sm text-gray-400 mt-4">
+          <p className="c-cursor-text text-sm text-gray-400 mt-[1rem]">
             {legal.legal_disclaimer}
           </p>
         )}
