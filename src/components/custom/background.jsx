@@ -12,7 +12,7 @@ import config from "/CONFIG.json";
 
 export default function Background() {
   const bgImage =
-    config.global?.background_image || "/images/parallax/layer_4.webp";
+    config.global?.background_image || "/images/background.webp";
 
   return (
     <div className="fixed inset-0 w-full h-full -z-10 overflow-hidden">

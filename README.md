@@ -22,11 +22,11 @@ Or deploy with one click
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/maximjsx/portfolio)
 
 <div align="center">
-  <a href="preview.png">
-    <img src="preview.png" alt="Preview" />
+  <a href="assets/preview.png">
+    <img src="assets/preview.png" alt="Preview" />
   </a>
-    <a href="features.png">
-    <img src="features.png" alt="Features" />
+    <a href="assets/features.png">
+    <img src="assets/features.png" alt="Features" />
   </a>
 </div>
 
