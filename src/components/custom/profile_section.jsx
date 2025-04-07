@@ -9,7 +9,6 @@
 
 import config from "/CONFIG.json";
 import { motion } from "framer-motion";
-import { TypeAnimation } from "react-type-animation";
 import ActionButtons from "./action_buttons";
 import { LinkPreview } from "@/components/ui/link-preview";
 

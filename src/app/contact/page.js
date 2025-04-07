@@ -56,7 +56,7 @@ export default function Contact() {
 
       <LegalInfo legal={contactConfig.legal} />
 
-      <div className="mt-[3rem] text-center">
+      <div className="mt-[3rem]  text-center">
         <h2 className="c-cursor-text text-2xl font-semibold mb-4">
           {contactConfig.direct_contact}
         </h2>
