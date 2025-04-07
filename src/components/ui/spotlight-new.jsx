@@ -17,12 +17,12 @@ export const Spotlight = ({
   gradientFirst = "radial-gradient(68.54% 68.72% at 55.02% 31.46%, hsla(210, 100%, 85%, .08) 0, hsla(210, 100%, 55%, .02) 50%, hsla(210, 100%, 45%, 0) 80%)",
   gradientSecond = "radial-gradient(50% 50% at 50% 50%, hsla(210, 100%, 85%, .06) 0, hsla(210, 100%, 55%, .02) 80%, transparent 100%)",
   gradientThird = "radial-gradient(50% 50% at 50% 50%, hsla(210, 100%, 85%, .04) 0, hsla(210, 100%, 45%, .02) 80%, transparent 100%)",
-  translateY = -350,
-  width = 560,
-  height = 1380,
-  smallWidth = 240,
+  translateY = -18.875, 
+  width = 50, 
+  height = 90.25, 
+  smallWidth = 25, 
   duration = 7,
-  xOffset = 100,
+  xOffset = 6.25, 
 } = {}) => {
   const pathname = usePathname();
   const homeRoute = config.global.home_route || "/home";
@@ -58,10 +58,10 @@ export const Spotlight = ({
       >
         <div
           style={{
-            transform: `translateY(${translateY}px) rotate(-45deg)`,
+            transform: `translateY(${translateY}rem) rotate(-45deg)`,
             background: gradientFirst,
-            width: `${width}px`,
-            height: `${height}px`,
+            width: `${width}rem`,
+            height: `${height}rem`,
           }}
           className={`absolute top-0 left-0`}
         />
@@ -70,8 +70,8 @@ export const Spotlight = ({
           style={{
             transform: "rotate(-45deg) translate(5%, -50%)",
             background: gradientSecond,
-            width: `${smallWidth}px`,
-            height: `${height}px`,
+            width: `${smallWidth}rem`,
+            height: `${height}rem`,
           }}
           className={`absolute top-0 left-0 origin-top-left`}
         />
@@ -80,52 +80,10 @@ export const Spotlight = ({
           style={{
             transform: "rotate(-45deg) translate(-180%, -70%)",
             background: gradientThird,
-            width: `${smallWidth}px`,
-            height: `${height}px`,
+            width: `${smallWidth}rem`,
+            height: `${height}rem`,
           }}
           className={`absolute top-0 left-0 origin-top-left`}
-        />
-      </motion.div>
-      <motion.div
-        animate={{
-          x: [0, -xOffset, 0],
-        }}
-        transition={{
-          duration,
-          repeat: Infinity,
-          repeatType: "reverse",
-          ease: "easeInOut",
-        }}
-        className="absolute top-0 right-0 w-screen h-screen z-20 pointer-events-none"
-      >
-        <div
-          style={{
-            transform: `translateY(${translateY}px) rotate(45deg)`,
-            background: gradientFirst,
-            width: `${width}px`,
-            height: `${height}px`,
-          }}
-          className={`absolute top-0 right-0`}
-        />
-
-        <div
-          style={{
-            transform: "rotate(45deg) translate(-5%, -50%)",
-            background: gradientSecond,
-            width: `${smallWidth}px`,
-            height: `${height}px`,
-          }}
-          className={`absolute top-0 right-0 origin-top-right`}
-        />
-
-        <div
-          style={{
-            transform: "rotate(45deg) translate(180%, -70%)",
-            background: gradientThird,
-            width: `${smallWidth}px`,
-            height: `${height}px`,
-          }}
-          className={`absolute top-0 right-0 origin-top-right`}
         />
       </motion.div>
     </motion.div>
