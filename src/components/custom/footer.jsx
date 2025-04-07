@@ -11,7 +11,7 @@ import React from "react";
 
 const Footer = ({ config }) => {
   return (
-    <footer className="bg-black/40 shadow-xl backdrop-blur-sm text-white py-12">
+    <footer className="bg-black/40 shadow-xl backdrop-blur-[2px] text-white py-12">
       <div className="container mx-auto text-center">
         {config.footer && (
           <>

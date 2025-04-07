@@ -35,7 +35,7 @@ const TimelineItem = ({ experience, animationDelay, isInView }) => {
       >
         <div
           className="
-            bg-black/40 backdrop-blur-sm p-4 md:p-6 rounded-lg shadow-md border border-primary/10
+            bg-black/40 backdrop-blur-[2px] p-4 md:p-6 rounded-lg shadow-md border border-primary/10
             hover:shadow-xl transition-shadow duration-300
           "
         >

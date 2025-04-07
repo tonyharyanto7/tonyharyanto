@@ -1,15 +1,17 @@
 /**
  * Portfolio
  * Copyright (C) 2025 Maxim (https://github.com/maximjsx/portfolio)
- * 
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published
  * by the Free Software Foundation.
  */
 
-"use client";;
+"use client";
 import React from "react";
 import { motion } from "motion/react";
+import config from "/CONFIG.json";
+import { usePathname } from "next/navigation";
 
 export const Spotlight = ({
   gradientFirst = "radial-gradient(68.54% 68.72% at 55.02% 31.46%, hsla(210, 100%, 85%, .08) 0, hsla(210, 100%, 55%, .02) 50%, hsla(210, 100%, 45%, 0) 80%)",
@@ -20,10 +22,17 @@ export const Spotlight = ({
   height = 1380,
   smallWidth = 240,
   duration = 7,
-  xOffset = 100
+  xOffset = 100,
 } = {}) => {
+  const pathname = usePathname();
+  const homeRoute = config.global.home_route || "/home";
+
+  if (pathname !== homeRoute) {
+    return null;
+  }
+
   return (
-    (<motion.div
+    <motion.div
       initial={{
         opacity: 0,
       }}
@@ -33,7 +42,8 @@ export const Spotlight = ({
       transition={{
         duration: 1.5,
       }}
-      className="pointer-events-none absolute inset-0 h-full w-full">
+      className="pointer-events-none absolute inset-0 h-full w-full"
+    >
       <motion.div
         animate={{
           x: [0, xOffset, 0],
@@ -44,7 +54,8 @@ export const Spotlight = ({
           repeatType: "reverse",
           ease: "easeInOut",
         }}
-        className="absolute top-0 left-0 w-screen h-screen z-40 pointer-events-none">
+        className="absolute top-0 left-0 w-screen h-screen z-20 pointer-events-none"
+      >
         <div
           style={{
             transform: `translateY(${translateY}px) rotate(-45deg)`,
@@ -52,7 +63,8 @@ export const Spotlight = ({
             width: `${width}px`,
             height: `${height}px`,
           }}
-          className={`absolute top-0 left-0`} />
+          className={`absolute top-0 left-0`}
+        />
 
         <div
           style={{
@@ -61,7 +73,8 @@ export const Spotlight = ({
             width: `${smallWidth}px`,
             height: `${height}px`,
           }}
-          className={`absolute top-0 left-0 origin-top-left`} />
+          className={`absolute top-0 left-0 origin-top-left`}
+        />
 
         <div
           style={{
@@ -70,7 +83,8 @@ export const Spotlight = ({
             width: `${smallWidth}px`,
             height: `${height}px`,
           }}
-          className={`absolute top-0 left-0 origin-top-left`} />
+          className={`absolute top-0 left-0 origin-top-left`}
+        />
       </motion.div>
       <motion.div
         animate={{
@@ -82,7 +96,8 @@ export const Spotlight = ({
           repeatType: "reverse",
           ease: "easeInOut",
         }}
-        className="absolute top-0 right-0 w-screen h-screen z-40 pointer-events-none">
+        className="absolute top-0 right-0 w-screen h-screen z-20 pointer-events-none"
+      >
         <div
           style={{
             transform: `translateY(${translateY}px) rotate(45deg)`,
@@ -90,7 +105,8 @@ export const Spotlight = ({
             width: `${width}px`,
             height: `${height}px`,
           }}
-          className={`absolute top-0 right-0`} />
+          className={`absolute top-0 right-0`}
+        />
 
         <div
           style={{
@@ -99,7 +115,8 @@ export const Spotlight = ({
             width: `${smallWidth}px`,
             height: `${height}px`,
           }}
-          className={`absolute top-0 right-0 origin-top-right`} />
+          className={`absolute top-0 right-0 origin-top-right`}
+        />
 
         <div
           style={{
@@ -108,8 +125,9 @@ export const Spotlight = ({
             width: `${smallWidth}px`,
             height: `${height}px`,
           }}
-          className={`absolute top-0 right-0 origin-top-right`} />
+          className={`absolute top-0 right-0 origin-top-right`}
+        />
       </motion.div>
-    </motion.div>)
+    </motion.div>
   );
 };

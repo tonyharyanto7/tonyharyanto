@@ -17,6 +17,7 @@ import Script from "next/script";
 import CustomCursor from "@/components/custom/cursor";
 import Footer from "@/components/custom/footer";
 import Background from "@/components/custom/background";
+import { Spotlight } from "@/components/ui/spotlight-new";
 
 const deliusFont = localFont({
   src: "./fonts/DeliusSwashCaps-Regular.ttf",
@@ -71,6 +72,9 @@ export default function RootLayout({ children }) {
       >
         <link rel="preconnect" href="https://img.shields.io"></link>
         <Background />
+        <div className="absolute top-0 left-0 right-0 mt-0 pointer-events-none">
+          <Spotlight />
+        </div>
         {config.global.custom_cursor.enabled && <CustomCursor />}
         <Navbar />
         <main className="flex-1">{children}</main>

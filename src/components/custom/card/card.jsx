@@ -28,7 +28,10 @@ const Card = React.forwardRef(
     },
     ref,
   ) => {
-    const cardClassName = cn("rounded-xl hover-card", className);
+    const cardClassName = cn(
+      "rounded-xl hover-card",
+      className,
+    );
 
     return (
       <div

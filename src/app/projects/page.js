@@ -36,7 +36,9 @@ export default function Projects() {
         {config.cards.map((card, index) => (
           <div
             key={index}
-            className={`opacity-0 ${mounted ? "animate-pop_in" : ""}`}
+            className={`backdrop-blur-[1px] opacity-0 ${
+              mounted ? "animate-pop_in" : ""
+            }`}
             style={{
               animationDelay: `${index * 200}ms`,
               animationFillMode: "forwards",

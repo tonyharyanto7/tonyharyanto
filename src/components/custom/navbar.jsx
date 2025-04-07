@@ -21,6 +21,7 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
@@ -46,7 +47,7 @@ export default function Navbar() {
     <nav
       className={cn(
         "z-50 sticky top-0 transition-all duration-300",
-        "md:backdrop-blur-sm",
+        "md:backdrop-blur-[2px]",
         isScrolled ? "md:bg-black/40 md:py-4" : "md:bg-black/20 md:py-5",
         "bg-transparent py-4",
       )}
@@ -97,10 +98,10 @@ export default function Navbar() {
 
         {/* Mobile menu */}
         <div className="md:hidden">
-          <div className="fixed top-4 right-4 z-50 rounded-lg bg-black/30 backdrop-blur-sm p-2">
+          <div className="fixed top-4 right-4 z-50 rounded-lg bg-black/30 backdrop-blur-[2px] p-2">
             <button
               onClick={toggleMenu}
-              className="flex flex-col justify-center items-center w-6 h-6 space-y-1.5"
+              className="flex flex-col justify-center items-center w-6 h-6 space-y-1.5 z-60"
             >
               <span
                 className={cn(
