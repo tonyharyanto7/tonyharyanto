@@ -72,7 +72,7 @@ export default function RootLayout({ children }) {
       >
         <link rel="preconnect" href="https://img.shields.io"></link>
         <Background />
-        <div className="absolute top-0 left-0 right-0 mt-0 pointer-events-none">
+        <div className="h-[100rem] w-full absolute overflow-hidden z-[-1] top-0 left-0 right-0 mt-0 pointer-events-none">
           <Spotlight />
         </div>
         {config.global.custom_cursor.enabled && <CustomCursor />}

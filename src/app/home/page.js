@@ -46,7 +46,7 @@ export default function Home() {
         className="container mx-auto px-4 py-4 relative"
         style={{ y: layer1Movement }}
       >
-        <div className="flex flex-col items-center justify-center min-h-[70vh] pt-16">
+        <div className="flex flex-col items-center justify-center min-h-[70vh] pt-[2rem]">
           <div className="w-full max-w-7xl">
             <ProfileSection />
             <div className="mt-3">
