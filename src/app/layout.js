@@ -68,7 +68,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${selectedFont.variable} antialiased flex flex-col min-h-screen`}
+        className={`${selectedFont.variable} antialiased flex flex-col min-h-screen overflow-x-hidden`}
       >
         <link rel="preconnect" href="https://img.shields.io"></link>
         <Background />
