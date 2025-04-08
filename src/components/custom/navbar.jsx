@@ -48,7 +48,7 @@ export default function Navbar() {
       className={cn(
         "z-50 sticky top-0 transition-all duration-300",
         "md:backdrop-blur-[2px]",
-        isScrolled ? "md:bg-black/40 md:py-4" : "md:bg-black/20 md:py-5",
+        isScrolled ? "md:bg-black/40 md:py-5" : "md:bg-black/10 md:py-5",
         "bg-transparent py-4",
       )}
     >
