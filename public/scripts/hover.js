@@ -1,87 +1,90 @@
 /**
  * Portfolio
  * Copyright (C) 2025 Maxim (https://github.com/maximjsx/portfolio)
- *
+ * 
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published
  * by the Free Software Foundation.
  */
 
-document.addEventListener("mouseover", (e) => {
-  if (window.innerWidth <= 768) return;
-  const card = e.target.closest(".hover-card");
-  if (card) {
-    handleMouseEnter({ target: card });
+(() => {
+  const isDesktop = () => window.innerWidth > 768;
+
+  const rawPrimary = getComputedStyle(document.documentElement)
+    .getPropertyValue("--primary")
+    .trim();
+  const glowColor = hexToRGBA(rawPrimary, 0.2);
+
+  document.addEventListener("mouseover", (e) => {
+    if (!isDesktop()) return;
+    const card = e.target.closest(".hover-card");
+    if (card) bindCard(card);
+  });
+
+  function bindCard(card) {
+    if (card._hoverBound) return;
+    card._hoverBound = true;
+
+    card.addEventListener("mouseenter", onEnter);
+    card.addEventListener("mouseleave", onLeave);
   }
-});
 
-function rotateToMouse(e) {
-  if (window.innerWidth <= 768) return;
-  const card = e.currentTarget;
-  const mouseX = e.clientX;
-  const mouseY = e.clientY;
-  const bounds = card.getBoundingClientRect();
-
-  const leftX = mouseX - bounds.x;
-  const topY = mouseY - bounds.y;
-  const center = {
-    x: leftX - bounds.width / 2,
-    y: topY - bounds.height / 2,
-  };
-  const distance = Math.sqrt(center.x ** 2 + center.y ** 2);
-
-  card.style.transform = `
-    scale3d(1.03, 1.03, 1.03)
-    rotate3d(
-      ${center.y / 100},
-      ${-center.x / 100},
-      0,
-      ${Math.log(distance) * 2}deg
-    )
-  `;
-
-  const glowElement = card.querySelector(".hover-glow");
-  if (glowElement) {
-    const color2 = getComputedStyle(document.documentElement)
-      .getPropertyValue("--primary")
-      .trim();
-
-    glowElement.style.backgroundImage = `
-    radial-gradient(
-      circle at
-      ${center.x * 2 + bounds.width / 2}px
-      ${center.y * 2 + bounds.height / 2}px,
-      ${hexToRGB(color2, 0.2)},
-      #0000000f
-    )
-  `;
+  function onEnter(e) {
+    this._moveHandler = (ev) => {
+      requestAnimationFrame(() => rotateToMouse(this, ev));
+    };
+    this.addEventListener("mousemove", this._moveHandler);
   }
-}
 
-function hexToRGB(hex, alpha) {
-  var r = parseInt(hex.slice(1, 3), 16),
-    g = parseInt(hex.slice(3, 5), 16),
-    b = parseInt(hex.slice(5, 7), 16);
-
-  if (alpha) {
-    return "rgba(" + r + ", " + g + ", " + b + ", " + alpha + ")";
-  } else {
-    return "rgb(" + r + ", " + g + ", " + b + ")";
+  function onLeave(e) {
+    if (this._moveHandler) {
+      this.removeEventListener("mousemove", this._moveHandler);
+      delete this._moveHandler;
+    }
+    resetCard(this);
   }
-}
 
-function handleMouseEnter(e) {
-  const card = e.target;
-  card.addEventListener("mousemove", rotateToMouse);
-  card.addEventListener("mouseleave", handleMouseLeave);
-}
+  function rotateToMouse(card, e) {
+    const { x, y, width, height } = card.getBoundingClientRect();
+    const offsetX = e.clientX - x - width * 0.5;
+    const offsetY = e.clientY - y - height * 0.5;
+    const dist = Math.hypot(offsetX, offsetY);
 
-function handleMouseLeave(e) {
-  const card = e.target;
-  card.removeEventListener("mousemove", rotateToMouse);
-  card.style.transform = "";
-  const glowElement = card.querySelector(".hover-glow");
-  if (glowElement) {
-    glowElement.style.backgroundImage = "";
+    const rotX = (offsetY / 100).toFixed(3);
+    const rotY = -(offsetX / 100).toFixed(3);
+    const rotAmt = (Math.log(dist) * 2).toFixed(2);
+
+    card.style.transform = `
+      perspective(600px)
+      scale3d(1.01, 1.01, 1.01)
+      rotate3d(${rotX}, ${rotY}, 0, ${rotAmt}deg)
+    `;
+
+    const glow = card.querySelector(".hover-glow");
+    if (glow) {
+      const cx = offsetX * 2 + width * 0.5;
+      const cy = offsetY * 2 + height * 0.5;
+      glow.style.backgroundImage = `
+        radial-gradient(
+          circle at ${cx}px ${cy}px,
+          ${glowColor},
+          rgba(0,0,0,0.06)
+        )
+      `;
+    }
   }
-}
+
+  function resetCard(card) {
+    card.style.transform = "";
+    const glow = card.querySelector(".hover-glow");
+    if (glow) glow.style.backgroundImage = "";
+  }
+
+  function hexToRGBA(hex, alpha = 1) {
+    const [r, g, b] = hex
+      .substring(1)
+      .match(/.{2}/g)
+      .map((h) => parseInt(h, 16));
+    return `rgba(${r},${g},${b},${alpha})`;
+  }
+})();

@@ -28,10 +28,7 @@ const Card = React.forwardRef(
     },
     ref,
   ) => {
-    const cardClassName = cn(
-      "rounded-xl hover-card",
-      className,
-    );
+    const cardClassName = cn("rounded-xl hover-card", className);
 
     return (
       <div
@@ -49,13 +46,9 @@ const Card = React.forwardRef(
           <CardBadges badges={badges} />
 
           {title && (
-            <TextAnimate
-              animation="fadeIn"
-              by="word"
-              className="c-cursor-text glow text-xl font-semibold mb-2"
-            >
+            <h1 className="c-cursor-text glow text-xl font-semibold mb-2">
               {title}
-            </TextAnimate>
+            </h1>
           )}
 
           {description && (
