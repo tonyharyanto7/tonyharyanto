@@ -1,11 +1,12 @@
 /**
  * Portfolio
  * Copyright (C) 2025 Maxim (https://github.com/maximjsx/portfolio)
- *
+ * 
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published
  * by the Free Software Foundation.
  */
+
 "use client";
 
 import { useEffect, useState, useRef } from "react";
@@ -13,17 +14,16 @@ import config from "/CONFIG.json";
 
 const CustomCursor = () => {
   const [cursorType, setCursorType] = useState("default");
-  const [isHovering, setIsHovering] = useState(false);
   const [isClicking, setIsClicking] = useState(false);
   const [cursorSize, setCursorSize] = useState(10);
   const isMobile = useRef(false);
-  const mousePositionRef = useRef({ x: 0, y: 0 });
-  const lastPositionRef = useRef({ x: 0, y: 0 });
+  const mousePosRef = useRef({ x: 0, y: 0 });
+  const lastPosRef = useRef({ x: 0, y: 0 });
   const lastTimeRef = useRef(Date.now());
   const observerRef = useRef(null);
-
-  const isInitializedRef = useRef(false);
+  const initRef = useRef(false);
   const positionRef = useRef({ x: 0, y: 0 });
+  const sparkleRef = useRef(null);
 
   const cursorMap = {
     default: "/cursor/normal.png",
@@ -37,269 +37,154 @@ const CustomCursor = () => {
     "c-cursor-custom": "custom",
   };
 
-  const sparkleRef = useRef(null);
-
   useEffect(() => {
-    const checkScreenSize = () => {
-      if (typeof window !== "undefined") {
-        isMobile.current = window.innerWidth <= 768;
-      }
+    const onResize = () => {
+      isMobile.current = window.innerWidth <= 768;
     };
-
-    checkScreenSize();
-    window.addEventListener("resize", checkScreenSize);
-
-    return () => {
-      window.removeEventListener("resize", checkScreenSize);
-    };
+    onResize();
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
   }, []);
 
   useEffect(() => {
-    const handleMouseMove = (e) => {
-      const newPosition = { x: e.clientX, y: e.clientY };
-      const currentTime = Date.now();
-
-      const deltaX = newPosition.x - lastPositionRef.current.x;
-      const deltaY = newPosition.y - lastPositionRef.current.y;
-      const deltaTime = currentTime - lastTimeRef.current;
-
-      const speed = Math.sqrt(deltaX * deltaX + deltaY * deltaY) / deltaTime;
-
-      const baseSize = 40;
-      const maxSize = 200;
-      const minSize = 30;
-      const speedMultiplier = 5;
-
-      const newSize = Math.max(
-        minSize,
-        Math.min(
-          maxSize,
-          baseSize + Math.min(speed * speedMultiplier, maxSize - baseSize),
-        ),
+    const handleMove = (e) => {
+      const newPos = { x: e.clientX, y: e.clientY };
+      const now = Date.now();
+      const dx = newPos.x - lastPosRef.current.x;
+      const dy = newPos.y - lastPosRef.current.y;
+      const dt = now - lastTimeRef.current;
+      const speed = Math.sqrt(dx * dx + dy * dy) / dt;
+      const base = 40,
+        max = 100,
+        min = 25,
+        mul = 8;
+      const size = Math.max(
+        min,
+        Math.min(max, base + Math.min(speed * mul, max - base)),
       );
+      setCursorSize(size);
 
-      setCursorSize(newSize);
+      mousePosRef.current = newPos;
+      lastPosRef.current = newPos;
+      positionRef.current = newPos;
+      lastTimeRef.current = now;
 
-      mousePositionRef.current = newPosition;
-      lastPositionRef.current = newPosition;
-      positionRef.current = newPosition;
-
-      lastTimeRef.current = currentTime;
-
-      setTimeout(() => {
-        if (!isInitializedRef.current) {
-          const style = document.createElement("style");
-          style.innerHTML = "* { cursor: none; }";
-          document.head.appendChild(style);
-          isInitializedRef.current = true;
-        }
-      }, 1);
+      if (!initRef.current) {
+        const style = document.createElement("style");
+        style.innerHTML = `* { cursor: none !important; }`;
+        document.head.appendChild(style);
+        initRef.current = true;
+      }
     };
 
-    const addDynamicCursorListeners = () => {
-      if (observerRef.current) {
-        observerRef.current.disconnect();
-      }
+    const handleClick = (e) => {
+      if (config.global.custom_cursor.sparkles)
+        createSparkle(e.clientX, e.clientY);
+      setIsClicking(true);
+      setTimeout(() => setIsClicking(false), 200);
+    };
 
-      const observer = new MutationObserver((mutations) => {
-        mutations.forEach((mutation) => {
-          if (mutation.type === "childList" || mutation.type === "attributes") {
-            const allElements = document.querySelectorAll("*");
-
-            allElements.forEach((el) => {
-              const cursorClass = Object.keys(cursorClasses).find((cls) =>
-                el.classList.contains(cls),
-              );
-
-              if (cursorClass) {
-                const handleEnter = () => {
-                  setCursorType(cursorClasses[cursorClass]);
-                  setIsHovering(true);
-                };
-
-                const handleLeave = () => {
-                  setCursorType("default");
-                  setIsHovering(true);
-
-                  setTimeout(() => {
-                    setIsHovering(false);
-                  }, 400);
-                };
-
-                el.removeEventListener("mouseenter", handleEnter);
-                el.removeEventListener("mouseleave", handleLeave);
-
-                el.addEventListener("mouseenter", handleEnter);
-                el.addEventListener("mouseleave", handleLeave);
-              }
-            });
+    const addListeners = () => {
+      observerRef.current?.disconnect();
+      const obs = new MutationObserver(() => {
+        document.querySelectorAll("*").forEach((el) => {
+          const cls = Object.keys(cursorClasses).find((c) =>
+            el.classList.contains(c),
+          );
+          if (cls) {
+            el.onmouseenter = () => setCursorType(cursorClasses[cls]);
+            el.onmouseleave = () => setCursorType("default");
           }
         });
       });
-
-      observer.observe(document.body, {
+      obs.observe(document.body, {
         childList: true,
         subtree: true,
         attributes: true,
         attributeFilter: ["class"],
       });
-
-      observerRef.current = observer;
+      observerRef.current = obs;
     };
 
     if (typeof window !== "undefined" && !isMobile.current) {
-      const initialPosition = {
-        x: window.innerWidth / 2,
-        y: window.innerHeight / 2,
-      };
-      mousePositionRef.current = initialPosition;
-      lastPositionRef.current = initialPosition;
-      positionRef.current = initialPosition;
+      const init = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+      mousePosRef.current = init;
+      lastPosRef.current = init;
+      positionRef.current = init;
 
-      document.addEventListener("mousemove", handleMouseMove);
-      document.addEventListener("click", handleMouseClick);
-      addDynamicCursorListeners();
+      document.addEventListener("mousemove", handleMove);
+      document.addEventListener("click", handleClick);
+      addListeners();
     }
 
     return () => {
       document.body.style.cursor = "default";
-      document.removeEventListener("mousemove", handleMouseMove);
-      document.removeEventListener("click", handleMouseClick);
-      if (observerRef.current) {
-        observerRef.current.disconnect();
-      }
+      document.removeEventListener("mousemove", handleMove);
+      document.removeEventListener("click", handleClick);
+      observerRef.current?.disconnect();
     };
   }, []);
 
   const createSparkle = (x, y) => {
     if (!sparkleRef.current) return;
-
-    const numberOfSparkles = 6 + Math.floor(Math.random() * 10);
-
-    for (let i = 0; i < numberOfSparkles; i++) {
-      const sparkle = document.createElement("div");
-      sparkle.classList.add("sparkle");
-
-      const size = 1 + Math.random() * 8;
-      sparkle.style.width = `${size}px`;
-      sparkle.style.height = `${size}px`;
-
-      const randomDirection = Math.random() * 360;
-      const randomDistance = 10 + Math.random() * 30;
-      const xOffset = randomDistance * Math.cos(randomDirection);
-      const yOffset = randomDistance * Math.sin(randomDirection);
-
-      const locModifier = 10;
-      sparkle.style.left = `${x - size / 2 - locModifier / 2}px`;
-      sparkle.style.top = `${y + window.scrollY - size / 2 - locModifier}px`;
-
-      sparkle.style.setProperty("--x-offset", `${xOffset}px`);
-      sparkle.style.setProperty("--y-offset", `${yOffset}px`);
-      sparkle.style.animation = `sparkleEffect ${
-        Math.random() * 0.5 + 0.5
-      }s ease-out forwards`;
-
-      sparkleRef.current.appendChild(sparkle);
-
-      setTimeout(() => {
-        sparkle.remove();
-      }, 1000);
+    const count = 6 + Math.floor(Math.random() * 10);
+    for (let i = 0; i < count; i++) {
+      const sp = document.createElement("div");
+      sp.classList.add("sparkle");
+      const s = 1 + Math.random() * 8;
+      sp.style.width = `${s}px`;
+      sp.style.height = `${s}px`;
+      const ang = Math.random() * 2 * Math.PI;
+      const d = 10 + Math.random() * 30;
+      sp.style.setProperty("--translate-x", `${d * Math.cos(ang)}px`);
+      sp.style.setProperty("--translate-y", `${d * Math.sin(ang)}px`);
+      sp.style.left = `${x - s / 2}px`;
+      sp.style.top = `${y - s / 2 + window.scrollY}px`;
+      sparkleRef.current.appendChild(sp);
+      setTimeout(() => sp.remove(), 1000);
     }
   };
 
-  const handleMouseClick = (e) => {
-    if (config.global.custom_cursor.sparkles)
-      createSparkle(e.clientX, e.clientY);
-
-    setIsClicking(true);
-
-    setTimeout(() => {
-      setIsClicking(false);
-    }, 100);
-  };
-
-  let cursorStyle = {
+  const wrapperStyle = {
     position: "fixed",
+    left: `${positionRef.current.x - cursorSize / 2}px`,
+    top: `${positionRef.current.y - cursorSize / 2}px`,
     width: `${cursorSize}px`,
     height: `${cursorSize}px`,
-    opacity: isInitializedRef.current ? "100%" : "0",
     pointerEvents: "none",
     zIndex: 9999,
-    transform: `translate(${positionRef.current.x - cursorSize / 2}px, ${
-      positionRef.current.y - cursorSize / 2
-    }px)`,
+    overflow: "visible",
+  };
+
+  const innerStyle = {
+    width: "100%",
+    height: "100%",
     backgroundImage: `url(${cursorMap[cursorType]})`,
     backgroundSize: "contain",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
-    transition:
-      isInitializedRef.current && config.global.custom_cursor.transitions
-        ? "all " +
-          config.global.custom_cursor.move_speed +
-          "s ease-out, opacity 0.3s ease-in"
-        : "",
-    animation: isClicking
-      ? "cursorClick 0.3s ease"
-      : isHovering && config.global.custom_cursor.transitions
-      ? "cursorBounce 0.4s ease"
-      : "none",
   };
 
   const keyframes = `
-    @keyframes cursorBounce {
-      0%, 100% { 
-        transform: translate(${positionRef.current.x - cursorSize / 2}px, ${
-    positionRef.current.y - cursorSize / 2
-  }px) scale(1); 
-      }
-      50% { 
-        transform: translate(${positionRef.current.x - cursorSize / 2}px, ${
-    positionRef.current.y - cursorSize / 2
-  }px) scale(1.3) rotate(5deg); 
-      }
+    @keyframes cursor-click { 50% { transform: scale(0.8); } }
+    @keyframes sparkle-move { to { transform: translate(var(--translate-x), var(--translate-y)); } }
+    @keyframes sparkle-fade { to { opacity: 0; } }
+
+    .cursor-inner.clicking { animation: cursor-click 0.2s ease-out; transform-origin: center; }
+    .sparkle { position: absolute; background: white; border-radius: 50%; box-shadow: 0 0 8px rgba(255,255,255,0.8);
+      animation: sparkle-move 0.6s ease-out forwards, sparkle-fade 0.6s ease-out forwards;
     }
-
-    @keyframes cursorClick {
-      0% { 
-        transform: translate(${positionRef.current.x - cursorSize / 2}px, ${
-    positionRef.current.y - cursorSize / 2
-  }px) scale(1, 0.5)
-      }
-      100% { 
-        transform: translate(${positionRef.current.x - cursorSize / 2}px, ${
-    positionRef.current.y - cursorSize / 2
-  }px) scale(1)
-      }
-    }
-
-  @keyframes sparkleEffect {
-  0% {
-    transform: scale(0.8) translate(0, 0); 
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1) translate(var(--x-offset), var(--y-offset)); 
-    opacity: 0;
-  }
-}
-
-.sparkle {
-  position: absolute;
-  background-color: white;
-  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.8);
-  z-index: 99999;
-  pointer-events: none;
-  animation: sparkleEffect 1s ease-out forwards;
-}
-
-
   `;
 
   return (
     <>
       <style>{keyframes}</style>
-      <div style={cursorStyle} />
+      <div style={wrapperStyle}>
+        <div
+          className={`cursor-inner ${isClicking ? "clicking" : ""}`}
+          style={innerStyle}
+        />
+      </div>
       <div ref={sparkleRef} className="sparkles-container" />
     </>
   );
