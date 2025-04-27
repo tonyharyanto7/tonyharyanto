@@ -85,9 +85,9 @@ const Button = React.forwardRef(function Button(
     <>
       {isHovered && variant === "primary" && (
         <div
-          className="pointer-events-none absolute -inset-px opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-80"
+          className="pointer-events-none absolute -inset-px opacity-0 transition-opacity duration-500 ease-in-out group-hover:opacity-80"
           style={{
-            background: `radial-gradient(60px circle at ${position.x}px ${position.y}px, rgba(255,255,255,0.4), rgba(255,255,255,0.15) 45%, transparent 75%)`,
+            background: `radial-gradient(80px circle at ${position.x}px ${position.y}px, rgba(255,255,255,0.5), rgba(255,255,255,0.15) 45%, transparent 75%)`,
           }}
         />
       )}

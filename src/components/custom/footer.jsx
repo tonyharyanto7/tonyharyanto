@@ -1,13 +1,5 @@
-/**
- * Portfolio
- * Copyright (C) 2025 Maxim (https://github.com/maximjsx/portfolio)
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU Affero General Public License as published
- * by the Free Software Foundation.
- */
-
 import React from "react";
+import GitHubButton from "./github_button";
 
 const Footer = ({ config }) => {
   return (
@@ -33,6 +25,10 @@ const Footer = ({ config }) => {
             <p className="c-cursor-text text-sm">{config.footer.text}</p>
           </>
         )}
+      </div>
+
+      <div className="flex justify-center mt-6">
+        <GitHubButton />
       </div>
     </footer>
   );
