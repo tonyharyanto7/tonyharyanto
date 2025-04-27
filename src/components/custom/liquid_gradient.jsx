@@ -1,3 +1,12 @@
+/**
+ * Portfolio
+ * Copyright (C) 2025 Maxim (https://github.com/maximjsx/portfolio)
+ * 
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published
+ * by the Free Software Foundation.
+ */
+
 "use client";
 import { motion, AnimatePresence } from "motion/react";
 const svgOrder = ["svg1", "svg2", "svg3", "svg4", "svg3", "svg2", "svg1"];
