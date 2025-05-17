@@ -37,10 +37,18 @@ const audiowideFont = localFont({
   weight: "100 900",
 });
 
+const geistFont = localFont({
+  src: "./fonts/Geist-VariableFont_wght.ttf",
+  variable: "--font-custom",
+  weight: "100 900",
+});
+
+
 const fonts = {
   delius: deliusFont,
   roboto: robotoFont,
   audiowide: audiowideFont,
+  geist: geistFont
 };
 
 export const metadata = {

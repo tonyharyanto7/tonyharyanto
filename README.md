@@ -70,6 +70,7 @@ Change global font in [CONFIG.json](CONFIG.json):
 - `roboto`
 - `delius`
 - `audiowide`
+- `geist`
 
 ## 🌐 Deployment
 

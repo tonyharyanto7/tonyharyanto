@@ -17,19 +17,9 @@ export default function TechScroller() {
     <div className="w-full">
       <div className="grid place-content-center h-20">
         <Scroller
-          items={homeConfig.languages}
+          items={[...homeConfig.languages, ...homeConfig.tools]}
           direction="left"
           speed="fast"
-          className="max-w-xs"
-          itemClasses="bg-white/30"
-        />
-      </div>
-
-      <div className="grid place-content-center h-20">
-        <Scroller
-          items={homeConfig.tools}
-          direction="right"
-          speed="slow"
           className="max-w-lg"
           itemClasses="bg-white/10"
         />

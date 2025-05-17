@@ -90,15 +90,15 @@ export default function ProfileSection() {
 
   return (
     <div className="flex flex-col items-center w-full gap-8">
-      <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16">
+      <div className="flex flex-col md:flex-row items-center lg:gap-8 gap-5 md:gap-16">
         {imageSrc && (
           <motion.div
             initial={{ scale: 0, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
-            className="relative w-32 h-32 md:w-60 md:h-60"
+            className="relative aspect-[5/7] w-32 md:w-60"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 to-transparent rounded-[30%_70%_70%_30%/30%_30%_70%_70%] overflow-hidden shadow-lg">
+            <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 to-transparent overflow-hidden">
               <Image
                 src={imageSrc}
                 alt="Profile"
@@ -106,7 +106,6 @@ export default function ProfileSection() {
                 sizes="100vw"
                 priority
                 style={{ objectFit: "cover" }}
-                className="rounded-[30%_70%_70%_30%/30%_30%_70%_70%]"
               />
             </div>
           </motion.div>
@@ -116,7 +115,7 @@ export default function ProfileSection() {
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="flex flex-col gap-6 text-center md:text-left"
+          className="flex flex-col gap-4 text-center md:text-left"
         >
           <motion.h2
             initial={{ opacity: 0 }}
@@ -127,7 +126,7 @@ export default function ProfileSection() {
             {aboutMeNodes}
           </motion.h2>
 
-          <div className="c-cursor-text text-xl md:text-2xl w-full md:max-w-lg text-muted-foreground">
+          <div className="c-cursor-text text-lg md:text-xl w-full md:max-w-[27rem] text-muted-foreground">
             {descriptionNodes}
           </div>
 

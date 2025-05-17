@@ -1,7 +1,7 @@
 /**
  * Portfolio
  * Copyright (C) 2025 Maxim (https://github.com/maximjsx/portfolio)
- * 
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published
  * by the Free Software Foundation.
@@ -16,7 +16,6 @@ import ProfileSection from "@/components/custom/profile_section";
 import TechScroller from "@/components/custom/tech_scroller";
 import ScrollButton from "@/components/custom/scroll_button";
 import Timeline from "@/components/custom/timeline";
-
 
 function useExternalScript(src) {
   useEffect(() => {
@@ -48,21 +47,20 @@ export default function Home() {
   return (
     <div className="overflow-x-hidden">
       <motion.div
-        className="container mx-auto px-4 md:py-8 py-0"
+        className="container mx-auto px-4 lg:px-8 py-0 md:py-7 lg:py-8"
         style={{ y: layer1Movement }}
       >
-        {/* Hero & Intro Section */}
-        <div className="max-w-7xl mx-auto pt-8 mb-16 flex flex-col items-center">
+        
+        <div className="max-w-7xl mx-auto pt-0 lg:pt-7 md:pt-12 mb-24 flex flex-col items-center">
           <ProfileSection />
-          <TechScroller className="mt-3" />
-          <ScrollButton className="mt-4" />
+          <div className="h-14 md:h-12 lg:h-7"></div>
+          <TechScroller />
         </div>
 
-        {/* Experience Timeline */}
         {enabled && (
           <section
             id="tech-section"
-            className="mb-8 md:mb-12 flex justify-center"
+            className="mb-16 md:mb-24 flex justify-center"
           >
             <div className="w-full max-w-7xl">
               <Timeline />
