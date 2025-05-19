@@ -35,20 +35,20 @@ const TimelineItem = ({ experience, animationDelay, isInView }) => {
       >
         <div
           className="
-            bg-black/40 backdrop-blur-[2px] p-4 md:p-6 rounded-lg shadow-md border border-primary/10
+            bg-black/30 backdrop-blur-[2px] p-4 md:p-6 rounded-lg shadow-md border border-primary/10
             hover:shadow-xl transition-shadow duration-300
           "
         >
+          <p className="c-cursor-text text-sm text-gray-500">
+            {experience.date}
+          </p>
+          <h4 className="c-cursor-text text-base md:text-lg text-gray-300 mb-4">
+            {experience.company}
+          </h4>
           <h3 className="c-cursor-text text-lg md:text-xl font-bold mb-2">
             {experience.title}
           </h3>
-          <h4 className="c-cursor-text text-base md:text-lg text-gray-300 mb-2">
-            {experience.company}
-          </h4>
-          <p className="c-cursor-text text-sm text-gray-400 mb-3">
-            {experience.date}
-          </p>
-          <p className="c-cursor-text text-gray-500">
+          <p className="c-cursor-text text-gray-400">
             {experience.description}
           </p>
         </div>
