@@ -235,7 +235,7 @@
          "buttonText":"View on SpigotMC",
          "buttonURL":"https://www.spigotmc.org/resources/110500/",
          "badges":[
-            "https://img.shields.io/spiget/downloads/110500"
+            "https://img.shields.io/spiget/downloads/110500?label=Downloads"
          ]
       },
       {
@@ -245,7 +245,7 @@
          "buttonText":"View on GitHub",
          "buttonURL":"https://github.com/maximjsx/portfolio",
          "badges":[
-            "https://img.shields.io/github/stars/maximjsx/portfolio.svg?style=flat"
+            "https://img.shields.io/github/stars/maximjsx/portfolio.svg?style=flat&label=Stars"
          ]
       },
       {
@@ -255,7 +255,7 @@
          "buttonText":"Buy on SpigotMC",
          "buttonURL":"https://www.spigotmc.org/resources/115811/",
          "badges":[
-            "https://img.shields.io/spiget/downloads/115811"
+            "https://img.shields.io/spiget/downloads/115811?label=Sales"
          ]
       },
       {
@@ -265,7 +265,7 @@
          "buttonText":"View on GitHub",
          "buttonURL":"https://github.com/maximjsx/HologramLib",
          "badges":[
-            "https://img.shields.io/github/stars/maximjsx/HologramLib.svg?style=flat"
+            "https://img.shields.io/github/stars/maximjsx/HologramLib.svg?style=flat&label=Stars"
          ]
       },
       {
@@ -275,7 +275,7 @@
          "buttonText":"View on GitHub",
          "buttonURL":"https://github.com/maximjsx/fancy-readme-stats",
          "badges":[
-            "https://img.shields.io/github/stars/maximjsx/fancy-readme-stats.svg?style=flat"
+            "https://img.shields.io/github/stars/maximjsx/fancy-readme-stats.svg?style=flat&label=Stars"
          ]
       },
       {
@@ -295,7 +295,7 @@
          "buttonText":"View on SpigotMC",
          "buttonURL":"https://www.spigotmc.org/resources/116497/",
          "badges":[
-            "https://img.shields.io/spiget/downloads/116497"
+            "https://img.shields.io/spiget/downloads/116497?label=Downloads"
          ]
       },
       {
@@ -305,7 +305,7 @@
          "buttonText":"View on GitHub",
          "buttonURL":"https://github.com/maximjsx/discord-embed-builder",
          "badges":[
-            "https://img.shields.io/github/stars/maximjsx/discord-embed-builder.svg?style=flat"
+            "https://img.shields.io/github/stars/maximjsx/discord-embed-builder.svg?style=flat&label=Stars"
          ]
       },
       {
@@ -325,7 +325,7 @@
          "buttonText":"View on GitHub",
          "buttonURL":"https://github.com/maximjsx/FIX",
          "badges":[
-            "https://img.shields.io/github/stars/maximjsx/FIX.svg?style=flat"
+            "https://img.shields.io/github/stars/maximjsx/FIX.svg?style=flat&label=Stars"
          ]
       },
       {
@@ -335,7 +335,7 @@
          "buttonText":"View on GitHub",
          "buttonURL":"https://github.com/maximjsx/BeyondBorderUnlocked",
          "badges":[
-            "https://img.shields.io/github/stars/maximjsx/BeyondBorderUnlocked.svg?style=flat"
+            "https://img.shields.io/github/stars/maximjsx/BeyondBorderUnlocked.svg?style=flat&label=Stars"
          ]
       },
       {
@@ -345,7 +345,7 @@
          "buttonText":"View on GitHub",
          "buttonURL":"https://github.com/maximjsx/template",
          "badges":[
-            "https://img.shields.io/github/stars/maximjsx/template.svg?style=flat"
+            "https://img.shields.io/github/stars/maximjsx/template.svg?style=flat&label=Stars"
          ]
       },
       {
@@ -355,7 +355,7 @@
          "buttonText":"View on SpigotMC",
          "buttonURL":"https://www.spigotmc.org/resources/117017/",
          "badges":[
-            "https://img.shields.io/spiget/downloads/117017"
+            "https://img.shields.io/spiget/downloads/117017?label=Downloads"
          ]
       },
         {
@@ -365,7 +365,7 @@
          "buttonText":"View on SpigotMC",
          "buttonURL":"https://www.spigotmc.org/resources/115955/",
          "badges":[
-            "https://img.shields.io/spiget/downloads/115955"
+            "https://img.shields.io/spiget/downloads/115955?label=Downloads"
          ]
       },
       {
@@ -375,7 +375,7 @@
          "buttonText":"View on GitHub",
          "buttonURL":"https://github.com/ToiletDevelopment/Skin-Overlay-Generator",
          "badges":[
-            "https://img.shields.io/github/stars/ToiletDevelopment/Skin-Overlay-Generator.svg?style=flat"
+            "https://img.shields.io/github/stars/ToiletDevelopment/Skin-Overlay-Generator.svg?style=flat&label=Stars"
          ]
       }
    ]
