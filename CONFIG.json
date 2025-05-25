@@ -229,16 +229,6 @@
    },
    "cards":[
       {
-         "title":"Portfolio (This website)",
-         "description":"Customizable, responsive, portfolio website built with Next.js",
-         "imageSRC":"/images/projects/portfolio.webp",
-         "buttonText":"View on GitHub",
-         "buttonURL":"https://github.com/maximjsx/portfolio",
-         "badges":[
-            "https://img.shields.io/github/stars/maximjsx/portfolio.svg?style=flat"
-         ]
-      },
-      {
          "title":"Fancy Physics",
          "description":"Tree fall animation, hit particles, realistic explosions, 3D particles & more",
          "imageSRC":"/images/projects/fancyphysics.webp",
@@ -246,6 +236,16 @@
          "buttonURL":"https://www.spigotmc.org/resources/110500/",
          "badges":[
             "https://img.shields.io/spiget/downloads/110500"
+         ]
+      },
+      {
+         "title":"Portfolio (This website)",
+         "description":"Customizable, responsive, portfolio website built with Next.js",
+         "imageSRC":"/images/projects/portfolio.webp",
+         "buttonText":"View on GitHub",
+         "buttonURL":"https://github.com/maximjsx/portfolio",
+         "badges":[
+            "https://img.shields.io/github/stars/maximjsx/portfolio.svg?style=flat"
          ]
       },
       {
@@ -259,16 +259,6 @@
          ]
       },
       {
-         "title":"Fancy Readme Stats",
-         "description":"Animated Readme Cards - For your GitHub profile or repository readme",
-         "imageSRC":"/images/projects/readmestats.webp",
-         "buttonText":"View on GitHub",
-         "buttonURL":"https://github.com/maximjsx/fancy-readme-stats",
-         "badges":[
-            "https://img.shields.io/github/stars/maximjsx/fancy-readme-stats.svg?style=flat"
-         ]
-      },
-      {
          "title":"HologramLib",
          "description":"Packet based text display hologram library with minimessage and emoji support",
          "imageSRC":"/images/projects/hologramapi.webp",
@@ -279,6 +269,16 @@
          ]
       },
       {
+         "title":"Fancy Readme Stats",
+         "description":"Animated Readme Cards - For your GitHub profile or repository readme",
+         "imageSRC":"/images/projects/readmestats.webp",
+         "buttonText":"View on GitHub",
+         "buttonURL":"https://github.com/maximjsx/fancy-readme-stats",
+         "badges":[
+            "https://img.shields.io/github/stars/maximjsx/fancy-readme-stats.svg?style=flat"
+         ]
+      },
+      {
          "title":"Nextfight",
          "description":"Nextfight is a Minecraft minigame network focused on a Battle Royale like gamemode",
          "imageSRC":"/images/projects/nextfight.webp",
@@ -286,6 +286,26 @@
          "buttonURL":"https://discord.nextfight.net/",
          "badges":[
             "https://dcbadge.limes.pink/api/server/https://discord.gg/sB4nh3eHGB?style=flat"
+         ]
+      },
+      {
+         "title":"EntitySize",
+         "description":"Change the size/scale of any living entity or player with an optional transition!",
+         "imageSRC":"/images/projects/entitysize.webp",
+         "buttonText":"View on SpigotMC",
+         "buttonURL":"https://www.spigotmc.org/resources/116497/",
+         "badges":[
+            "https://img.shields.io/spiget/downloads/116497"
+         ]
+      },
+      {
+         "title":"Discord Embed Builder",
+         "description":"A Discord embed builder for users. No bot, webhook, mod or selfbot required!",
+         "imageSRC":"/images/projects/embedbuilder.webp",
+         "buttonText":"View on GitHub",
+         "buttonURL":"https://github.com/maximjsx/discord-embed-builder",
+         "badges":[
+            "https://img.shields.io/github/stars/maximjsx/discord-embed-builder.svg?style=flat"
          ]
       },
       {
@@ -309,16 +329,6 @@
          ]
       },
       {
-         "title":"Discord Embed Builder",
-         "description":"A Discord embed builder for users. No bot, webhook, mod or selfbot required!",
-         "imageSRC":"/images/projects/embedbuilder.webp",
-         "buttonText":"View on GitHub",
-         "buttonURL":"https://github.com/maximjsx/discord-embed-builder",
-         "badges":[
-            "https://img.shields.io/github/stars/maximjsx/discord-embed-builder.svg?style=flat"
-         ]
-      },
-      {
          "title":"World Border Bypass",
          "description":"Bypass the vanilla worldborder building & combat limitations",
          "imageSRC":"/images/projects/border.webp",
@@ -336,16 +346,6 @@
          "buttonURL":"https://github.com/maximjsx/template",
          "badges":[
             "https://img.shields.io/github/stars/maximjsx/template.svg?style=flat"
-         ]
-      },
-      {
-         "title":"EntitySize",
-         "description":"Change the size/scale of any living entity or player with an optional transition!",
-         "imageSRC":"/images/projects/entitysize.webp",
-         "buttonText":"View on SpigotMC",
-         "buttonURL":"https://www.spigotmc.org/resources/116497/",
-         "badges":[
-            "https://img.shields.io/spiget/downloads/116497"
          ]
       },
       {
