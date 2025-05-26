@@ -229,16 +229,6 @@
    },
    "cards":[
       {
-         "title":"Fancy Physics",
-         "description":"Tree fall animation, hit particles, realistic explosions, 3D particles & more",
-         "imageSRC":"/images/projects/fancyphysics.webp",
-         "buttonText":"View on SpigotMC",
-         "buttonURL":"https://www.spigotmc.org/resources/110500/",
-         "badges":[
-            "https://img.shields.io/spiget/downloads/110500?label=Downloads"
-         ]
-      },
-      {
          "title":"Portfolio (This website)",
          "description":"Customizable, responsive, portfolio website built with Next.js",
          "imageSRC":"/images/projects/portfolio.webp",
@@ -246,6 +236,16 @@
          "buttonURL":"https://github.com/maximjsx/portfolio",
          "badges":[
             "https://img.shields.io/github/stars/maximjsx/portfolio.svg?style=flat&label=Stars"
+         ]
+      },
+      {
+         "title":"Fancy Physics",
+         "description":"Tree fall animation, hit particles, realistic explosions, 3D particles & more",
+         "imageSRC":"/images/projects/fancyphysics.webp",
+         "buttonText":"View on SpigotMC",
+         "buttonURL":"https://www.spigotmc.org/resources/110500/",
+         "badges":[
+            "https://img.shields.io/spiget/downloads/110500?label=Downloads"
          ]
       },
       {
