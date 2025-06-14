@@ -39,7 +39,7 @@
       "home":{
          "enabled":true,
          "route":"/home",
-         "profile_image":"/images/avatar.png",
+         "profile_image":"/images/avatar_2.png",
          "gradient":"#7556bf:#bd4f9e",
          "about_me":"~~~Hi, I'm Maxim!~~~",
          "description":"I’ve spent a lot of time messing around in the Spigot modding scene, mostly making plugins and libraries like [HologramLib](https://github.com/HologramLib/HologramLib)",
