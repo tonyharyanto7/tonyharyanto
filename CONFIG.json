@@ -1,12 +1,12 @@
 {
    "siteMetadata":{
       "title":"Portfolio",
-      "description": "Hi, my name is Maxim! This is my personal page where you can find out more about who I am, what I do, and the projects I'm working on.",
-        "embeds": {
-            "color": "#ce6419",
-            "twitter_card": "summary_large_image",
-            "image": "/images/embed.gif"
-        }
+      "description":"Hi, my name is Maxim! This is my personal page where you can find out more about who I am, what I do, and the projects I'm working on.",
+      "embeds":{
+         "color":"#ce6419",
+         "twitter_card":"summary_large_image",
+         "image":"/images/embed.gif"
+      }
    },
    "global":{
       "font":"geist",
@@ -39,10 +39,10 @@
       "home":{
          "enabled":true,
          "route":"/home",
-         "profile_image":"/images/avatar.png",
-         "gradient": "#7556bf:#bd4f9e",
+         "profile_image":"/images/avatar_2.png",
+         "gradient":"#7556bf:#bd4f9e",
          "about_me":"~~~Hi, I'm Maxim!~~~",
-         "description": "I’ve spent a lot of time messing around in the Spigot modding scene, mostly making plugins and libraries like [HologramLib](https://github.com/HologramLib/HologramLib)",
+         "description":"I’ve spent a lot of time messing around in the Spigot modding scene, mostly making plugins and libraries like [HologramLib](https://github.com/HologramLib/HologramLib)",
          "tools_languages_title":"Tools & Languages",
          "languages":[
             "Java",
@@ -76,25 +76,39 @@
             "title":"My Experience",
             "list":[
                {
-                  "title":"Software Developer",
-                  "company":"India Solutions",
-                  "date":"2023 - Present",
-                  "description":"Developing highly effective phishing tools and creating innovative callcenter software solutions using cutting-edge technologies to improve the customer experience.",
-                  "side":"left"
-               },
-               {
-                  "title":"Planetary Mineralogy Specialist",
-                  "company":"NASA",
-                  "date":"2022 - 2023",
-                  "description":"Led the inspection, analysis, and cataloging of unique mineral deposits found on Mars, including the discovery of the Jerome T. K. mineral.",
+                  "title":"Plugin Developer",
+                  "company":"Heldeninsel",
+                  "date":"2025 – Present",
+                  "description":"Building custom game modes using modern technologies.",
                   "side":"right"
                },
                {
-                  "title":"Certified Pandemic Survivor",
-                  "company":"Self-employed",
-                  "date":"2020 - 2022",
-                  "description":"Managed Zoom meetings while playing Bedwars and Among Us, effectively balancing work and gaming.",
+                  "title":"Software Developer",
+                  "company":"GitHub / SpigotMC",
+                  "date":"2021 – Present",
+                  "description":"Developed various tools, Discord bots, APIs, and Minecraft plugins that have accumulated over 50,000 downloads across all platforms. My plugins have been featured by well-known YouTubers including KasaiSora, Ajneb97, and others.",
                   "side":"left"
+               },
+               {
+                  "title":"Backend Developer",
+                  "company":"Uroria Network",
+                  "date":"2024",
+                  "description":"Assisted the team by designing and maintaining backend systems.",
+                  "side":"right"
+               },
+               {
+                  "title":"Minecraft Server Owner",
+                  "company":"NextFight Network",
+                  "date":"2022 – 2024",
+                  "description":"Launched and managed a Minecraft server, developing infrastructure and custom game mode plugins. Collaborated with streamers such as copeat, Brostastic, and SimplyFuse. The server welcomed guests including GommeHD, Wichtiger, Fuxelbau, and even a Mojang employee.",
+                  "side":"left"
+               },
+               {
+                  "title":"Pianist",
+                  "company":"Jugend musiziert",
+                  "date":"2015 – 2021",
+                  "description":"Participated in Jugend musiziert four times, consistently scoring 23 or 24 points. Performed solo and in a trio, and gave several recitals.",
+                  "side":"right"
                }
             ]
          }
@@ -358,7 +372,7 @@
             "https://img.shields.io/spiget/downloads/117017?label=Downloads"
          ]
       },
-        {
+      {
          "title":"Custom Score Numbers",
          "description":"Remove/hide the red numbers in the scoreboard or change the color",
          "imageSRC":"/images/projects/scorenumbers.webp",
