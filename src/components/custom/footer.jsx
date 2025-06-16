@@ -35,10 +35,6 @@ const Footer = ({ config }) => {
           </>
         )}
       </div>
-
-      <div className="flex justify-center mt-6">
-        <GitHubButton />
-      </div>
     </footer>
   );
 };
