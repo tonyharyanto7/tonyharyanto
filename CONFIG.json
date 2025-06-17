@@ -71,6 +71,11 @@
                "style":"secondary"
             }
          ],
+         "github_stats": {
+            "enabled": true,
+            "title": "GitHub Statistics",
+            "username": "maximjsx"
+         },
          "experience":{
             "enabled":true,
             "title":"My Experience",
