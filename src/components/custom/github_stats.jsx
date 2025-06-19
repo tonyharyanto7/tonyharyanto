@@ -21,12 +21,15 @@ const StatCard = ({ title, children, delay = 0 }) => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay }}
       viewport={{ once: true }}
-      className="bg-black/30 backdrop-blur-[2px] p-4 md:p-6 rounded-lg shadow-md border border-primary/10 hover:shadow-xl transition-all duration-300 hover:border-primary/20"
+      className="group relative overflow-hidden border border-white/10 bg-white/5 backdrop-blur-xl hover:bg-white/10 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-purple-500/20 p-4 md:p-6 rounded-lg"
     >
-      <h3 className="text-lg md:text-xl font-bold mb-4 text-white c-cursor-text">
-        {title}
-      </h3>
-      {children}
+      <div className="absolute inset-0 bg-gradient-to-br from-violet-500/10 via-transparent to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      <div className="relative z-10">
+        <h3 className="text-lg md:text-xl font-bold mb-4 text-white c-cursor-text">
+          {title}
+        </h3>
+        {children}
+      </div>
     </motion.div>
   );
 };
@@ -65,14 +68,13 @@ const GitHubStats = () => {
     <div className="py-12" ref={ref}>
       <TypeAnimation
         sequence={[100, github_stats.title]}
-        wrapper="p"
-        className="text-3xl c-cursor-text font-bold text-center mb-12"
+        wrapper="h2"
+        className="text-4xl md:text-5xl c-cursor-text font-bold text-center mb-12 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent"
         cursor={false}
         speed={1}
       />
 
       <div className="max-w-6xl mx-auto px-4">
-        {/* GitHub Activity Graph */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -80,14 +82,19 @@ const GitHubStats = () => {
           viewport={{ once: true }}
           className="mt-8"
         >
-          <StatCard delay={0.6}>
-            <div className="flex justify-center overflow-x-auto">
-              <img
-                src={`https://github-readme-activity-graph.vercel.app/graph?username=${github_stats.username}&theme=github-dark&bg_color=00000000&color=ffffff&line=ce6419&point=ce6419&area=true&hide_border=true`}
-                alt="GitHub Activity Graph"
-                className="w-full max-w-4xl rounded-lg"
-                loading="lazy"
-              />
+          <StatCard delay={0.6} title="GitHub Activity">
+            <div className="flex justify-center">
+              {/* Outer fixed-size wrapper with overflow hidden to avoid scrollbars */}
+              <div className="w-full max-w-4xl overflow-hidden">
+                <div className="transition-transform duration-300 group-hover:scale-105">
+                  <img
+                    src={`https://github-readme-activity-graph.vercel.app/graph?username=${github_stats.username}&theme=github-dark&bg_color=00000000&color=ffffff&line=8b5cf6&point=a855f7&area=true&hide_border=true`}
+                    alt="GitHub Activity Graph"
+                    className="w-full rounded-lg"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
             </div>
           </StatCard>
         </motion.div>

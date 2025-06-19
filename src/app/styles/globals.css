@@ -30,10 +30,9 @@
 }
 
 img {
-  -webkit-user-drag: none; 
+  -webkit-user-drag: none;
   user-drag: none;
 }
-
 
 body {
   @apply font-sans bg-background text-foreground;
@@ -55,10 +54,10 @@ body {
     --radius: 0.625rem;
 
     /* Color Palette */
-    --color-1: #7556bf;
-    --color-2: #bd4f9e;
-    --color-3: #ce5573;
-    --color-4: #ce7659;
+    --color-1: #8b69dc;
+    --color-2: #db64b9;
+    --color-3: #dc6683;
+    --color-4: #ef8c6b;
     --color-5: #ffc962;
     --color-6: #f9f871;
 

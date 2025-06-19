@@ -14,7 +14,6 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import config from "/CONFIG.json";
 import ProfileSection from "@/components/custom/profile_section";
 import TechScroller from "@/components/custom/tech_scroller";
-import ScrollButton from "@/components/custom/scroll_button";
 import Timeline from "@/components/custom/timeline";
 import GitHubStats from "@/components/custom/github_stats";
 

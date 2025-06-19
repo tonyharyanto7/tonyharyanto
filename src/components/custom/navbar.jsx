@@ -21,7 +21,6 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
@@ -48,7 +47,7 @@ export default function Navbar() {
       className={cn(
         "z-50 sticky top-0 transition-all duration-300",
         isScrolled
-          ? "md:bg-black/50 md:py-5"
+          ? "md:bg-white/5 md:backdrop-blur-md md:py-5"
           : "md:bg-transparent md:py-5",
         "bg-transparent py-4",
       )}
@@ -63,11 +62,11 @@ export default function Navbar() {
                 <Link
                   href={pageConfig.route}
                   className={cn(
-                    "c-cursor-pointer block text-center font-medium transition-colors duration-300",
+                    "c-cursor-pointer block text-center font-medium transition-all duration-300 px-4 py-2 rounded-md",
                     "text-white",
                     isActive
                       ? "text-secondary brightness-150"
-                      : "hover:text-secondary",
+                      : "hover:text-secondary hover:bg-white/5",
                   )}
                 >
                   <motion.span
@@ -143,12 +142,9 @@ export default function Navbar() {
                         <Link
                           href={pageConfig.route}
                           className={cn(
-                            "c-cursor-pointer px-4 py-2 rounded-md border border-transparent transition-all duration-500 ease-in-out",
-                            "text-white font-medium block text-center",
-                            "w-60 mb-2 text-lg border-white hover:bg-gray-700",
-                            isActive
-                              ? "hover:bg-gray-700 hover:border-white opacity-50 border-gray-700"
-                              : "",
+                            "c-cursor-pointer px-4 py-2 rounded-md border border-white/10 bg-white/5 backdrop-blur-xl transition-all duration-300",
+                            "text-white font-medium block text-center w-60 mb-2 text-lg",
+                            isActive ? "brightness-150" : "hover:bg-white/10",
                           )}
                         >
                           {pageName.charAt(0).toUpperCase() + pageName.slice(1)}
