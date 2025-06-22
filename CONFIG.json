@@ -71,10 +71,10 @@
                "style":"secondary"
             }
          ],
-         "github_stats": {
-            "enabled": true,
-            "title": "GitHub Statistics",
-            "username": "maximjsx"
+         "github_stats":{
+            "enabled":true,
+            "title":"GitHub Statistics",
+            "username":"maximjsx"
          },
          "experience":{
             "enabled":true,
@@ -182,6 +182,28 @@
                }
             ]
          }
+      },
+      "tools":{
+         "enabled":true,
+         "dropdown":true,
+         "items":[
+            {
+               "name":"Embed Builder",
+               "route":"https://embed.maxim.cat"
+            },
+            {
+               "name":"Invoice Generator",
+               "route":"https://invoice.maxim.cat"
+            },
+            {
+               "name":"Skin Overlays",
+               "route":"https://skins.maxim.cat"
+            },
+            {
+               "name":"Next.js Template",
+               "route":"https://template.maxim.cat"
+            }
+         ]
       },
       "privacy":{
          "enabled":false,
