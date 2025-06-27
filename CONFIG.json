@@ -11,6 +11,7 @@
    "global":{
       "font":"geist",
       "home_route":"/home",
+      "gradient":"#a27aff:#ff73d7",
       "custom_cursor":{
          "enabled":false,
          "sparkles":true,
@@ -40,9 +41,8 @@
          "enabled":true,
          "route":"/home",
          "profile_image":"/images/avatar_2.png",
-         "gradient":"#a27aff:#ff73d7",
-         "about_me":"~~~Hi, I'm Maxim!~~~",
-         "description":"I’ve spent a lot of time messing around in the Spigot modding scene, mostly making plugins and libraries like [HologramLib](https://github.com/HologramLib/HologramLib)",
+         "about_me":"<gradient>Hi, I'm Maxim!</gradient>",
+         "description":"I’ve spent a lot of time messing around in the **Spigot modding scene**, mostly making plugins and libraries like [HologramLib](https://github.com/HologramLib/HologramLib)",
          "tools_languages_title":"Tools & Languages",
          "languages":[
             "Java",
@@ -91,7 +91,7 @@
                   "title":"Software Developer",
                   "company":"[GitHub](https://github.com/maximjsx) / [SpigotMC](https://www.spigotmc.org/members/1620695/)",
                   "date":"2021 – Present",
-                  "description":"Developed various tools, Discord bots, APIs, and Minecraft plugins that have accumulated over 50,000 downloads across all platforms. My plugins have been featured by well-known YouTubers including [KasaiSora](https://www.youtube.com/@KasaiSora), [Ajneb97](https://www.youtube.com/@Ajneb97), and others.",
+                  "description":"Developed various tools, Discord bots, APIs, and Minecraft plugins that have accumulated over **50,000 downloads** across all platforms. My plugins have been featured by well-known YouTubers including [KasaiSora](https://www.youtube.com/@KasaiSora), [Ajneb97](https://www.youtube.com/@Ajneb97), and others.",
                   "side":"left"
                },
                {
