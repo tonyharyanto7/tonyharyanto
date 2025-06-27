@@ -38,7 +38,6 @@ function parseAboutMe(text, gradientColors) {
   });
 }
 
-
 export default function ProfileSection() {
   const {
     about_me,
@@ -47,15 +46,8 @@ export default function ProfileSection() {
     profile_image: imageSrc,
   } = config.pages.home;
 
-  const gradientColors = useMemo(() => gradient.split(":"), [gradient]);
-  const aboutMeNodes = useMemo(
-    () => parseAboutMe(about_me, gradientColors),
-    [about_me, gradientColors],
-  );
-  const descriptionNodes = useMemo(
-    () => parseText(description),
-    [description],
-  );
+  const aboutMeNodes = parseText(about_me);
+  const descriptionNodes = useMemo(() => parseText(description), [description]);
 
   return (
     <div className="flex flex-col items-center w-full gap-8">
