@@ -13,6 +13,7 @@ import { CardImage } from "@/components/custom/card/card_image";
 import { CardBadges } from "@/components/custom/card/card_badges";
 import Button from "../button";
 import { TextAnimate } from "@/components/magicui/text-animate";
+import { parseText } from "@/lib/parse_links";
 
 const Card = React.forwardRef(
   (
@@ -47,13 +48,13 @@ const Card = React.forwardRef(
 
           {title && (
             <h1 className="c-cursor-text glow text-xl font-semibold mb-2">
-              {title}
+              {parseText(title)}
             </h1>
           )}
 
           {description && (
             <p className="c-cursor-text glow text-muted-foreground mb-4">
-              {description}
+              {parseText(description)}
             </p>
           )}
 

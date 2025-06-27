@@ -13,6 +13,7 @@ import { motion } from "framer-motion";
 import config from "/CONFIG.json";
 import { useRef, useEffect, useState } from "react";
 import { TypeAnimation } from "react-type-animation";
+import { parseText } from "@/lib/parse_links";
 
 const TimelineItem = ({ experience, animationDelay, isInView }) => {
   const isLeft = experience.side === "left";
@@ -38,7 +39,7 @@ const TimelineItem = ({ experience, animationDelay, isInView }) => {
           isLeft ? "md:pr-8 md:text-left" : "md:pl-8 md:text-right"
         } mb-8 md:mb-0`}
       >
-        <div className="group relative overflow-hidden border border-white/10 bg-white/5 backdrop-blur-xl hover:bg-white/10 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-purple-500/20 p-4 md:p-6 rounded-lg">
+        <div className="group relative border border-white/10 bg-white/5 backdrop-blur-xl hover:bg-white/10 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-purple-500/20 p-4 md:p-6 rounded-lg">
           <div className="absolute inset-0 bg-gradient-to-br from-violet-500/10 via-transparent to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
           <div className="relative z-10">
@@ -46,13 +47,13 @@ const TimelineItem = ({ experience, animationDelay, isInView }) => {
               {experience.date}
             </p>
             <h4 className="c-cursor-text text-base md:text-lg text-gray-300 mb-2">
-              {experience.company}
+              {parseText(experience.company)}
             </h4>
             <h3 className="c-cursor-text text-xl md:text-2xl font-bold mb-4 text-white g">
-              {experience.title}
+              {parseText(experience.title)}
             </h3>
             <p className="c-cursor-text text-gray-300 leading-relaxed">
-              {experience.description}
+              {parseText(experience.description)}
             </p>
           </div>
         </div>

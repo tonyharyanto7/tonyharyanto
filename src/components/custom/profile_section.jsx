@@ -15,6 +15,7 @@ import Image from "next/image";
 import config from "/CONFIG.json";
 import ActionButtons from "./action_buttons";
 import { LinkPreview } from "@/components/ui/link-preview";
+import { parseText } from "@/lib/parse_links";
 
 function parseAboutMe(text, gradientColors) {
   const [start, end] = gradientColors;
@@ -37,38 +38,6 @@ function parseAboutMe(text, gradientColors) {
   });
 }
 
-function parseDescription(text) {
-  const regex = /\[([^\]]+)]\((https?:\/\/[^\s)]+)\)/g;
-  const parts = [];
-  let lastIndex = 0;
-  let match;
-
-  while ((match = regex.exec(text)) !== null) {
-    const matchIndex = match.index;
-    if (matchIndex > lastIndex) {
-      parts.push(text.substring(lastIndex, matchIndex));
-    }
-    const linkText = match[1];
-    const url = match[2];
-    parts.push(
-      <LinkPreview
-        className="text-white"
-        key={url + matchIndex}
-        url={url}
-        newTab
-      >
-        {linkText}
-      </LinkPreview>,
-    );
-    lastIndex = regex.lastIndex;
-  }
-
-  if (lastIndex < text.length) {
-    parts.push(text.substring(lastIndex));
-  }
-
-  return parts;
-}
 
 export default function ProfileSection() {
   const {
@@ -84,7 +53,7 @@ export default function ProfileSection() {
     [about_me, gradientColors],
   );
   const descriptionNodes = useMemo(
-    () => parseDescription(description),
+    () => parseText(description),
     [description],
   );
 
