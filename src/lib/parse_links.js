@@ -8,15 +8,11 @@
  */
 
 import { LinkPreview } from "@/components/ui/link-preview";
-import { useMemo } from "react";
 import config from "/CONFIG.json";
 
 export function parseText(text) {
   const defaultGradient = config?.global?.gradient || "#a27aff:#ff73d7";
-  const gradientColors = useMemo(
-    () => defaultGradient.split(":"),
-    [defaultGradient],
-  );
+  const gradientColors = defaultGradient.split(":");
 
   const createGradientStyle = (colors) => ({
     background: `linear-gradient(to right, ${colors.join(", ")})`,
@@ -73,7 +69,6 @@ export function parseText(text) {
     });
 
     filteredMatches.forEach((match, matchIdx) => {
-
       if (match.start > currentIndex) {
         const textBefore = segment.substring(currentIndex, match.start);
         if (textBefore) parts.push(textBefore);
