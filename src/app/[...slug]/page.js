@@ -44,8 +44,8 @@ export async function generateMetadata({ params }) {
     title: `${page.title} - ${config.siteMetadata.title}`,
     description: page.description,
     openGraph: {
-      title: page.title,
-      description: page.description,
+      title: page.meta_title,
+      description: page.meta_description,
       images: page.images?.[0] ? [page.images[0]] : [],
     },
   };

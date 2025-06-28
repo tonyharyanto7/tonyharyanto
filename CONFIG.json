@@ -43,6 +43,8 @@
             "route":"/projects/hologramlib",
             "navbar":false,
             "title":"HologramLib",
+            "meta_title": "HologramLib",
+            "meta_description": "Minecraft hologram library with text, item & block displays, leaderboards, and extensive customization. packet-based, modern & easy to use", 
             "description":"A powerful **<gradient>packet-based</gradient>** text display hologram library for Minecraft servers with MiniMessage support, emoji rendering, and extensive customization options.",
             "images":[
                "/images/projects/pages/hologramlib/1.png",
@@ -121,6 +123,8 @@
             "enabled":true,
             "route":"/projects/nextfight",
             "navbar":false,
+            "meta_title": "NextFight",
+            "meta_description": "Minecraft Minigames & Battle Royale", 
             "title":"NextFight",
             "description":"Your <gradient>**#1**</gradient> Server For <gradient:#fcad03:#ffeb85>**Battle Royale**</gradient> since 2022",
             "images":[
