@@ -60,7 +60,7 @@ const Card = React.forwardRef(
 
           {buttonText && buttonURL && (
             <div className="flex justify-center mt-[1rem]">
-              <Button href={buttonURL} variant="secondary" newTab={true}>
+              <Button href={buttonURL} variant="secondary">
                 {buttonText}
               </Button>
             </div>

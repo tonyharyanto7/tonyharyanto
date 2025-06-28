@@ -37,6 +37,166 @@
       ]
    },
    "pages":{
+      "custom":{
+         "HologramLib":{
+            "enabled":true,
+            "route":"/projects/hologramlib",
+            "navbar":false,
+            "title":"HologramLib",
+            "description":"A powerful **<gradient>packet-based</gradient>** text display hologram library for Minecraft servers with MiniMessage support, emoji rendering, and extensive customization options.",
+            "images":[
+               "/images/projects/pages/hologramlib/1.png",
+               "/images/projects/pages/hologramlib/2.png",
+               "/images/projects/pages/hologramlib/3.png"
+            ],
+            "content":[
+                  {
+                     "type":"text",
+                     "content":"**HologramLib** is a display entity-based hologram library for modern Minecraft servers (**1.19.4** to **1.21.5**).<br>It allows developers to create dynamic, customizable holograms using packets, with support for MiniMessage formatting, animations, and per-player visibility.<br><br>It works with Paper, Purpur, Spigot, and Folia servers, and requires PacketEvents as a dependency.<br>It __does not__ support **Bedrock** or older Minecraft versions (~~1.8 to 1.19.3~~).<br><br><white>**The library supports multiple hologram types:**</white><br> · Text with styling, scaling, background colors<br> · Blocks and Items displayed as holograms<br> · Leaderboards with live updates<br><br><white>**Advanced features include:**</white><br> · Animation support<br> · Entity attachment (e.g. hologram on a mob)<br> · View distance control<br> · Per-player visibility and interactivity (planned)<br><br>Integration is simple with a [JitPack](https://jitpack.io/#HologramLib/HologramLib) dependency and a few lines of code. Full usage examples are provided in the [Wiki](https://github.com/maximjsx/HologramLib/wiki)"
+                  },
+                  {
+                     "type":"features",
+                     "title":"Key Features",
+                     "items":[
+                        "Packet-based",
+                        "MiniMessage support",
+                        "Custom emoji and Unicode character support",
+                        "Multi-line",
+                        "Per-player visibility",
+                        "Easy to use API",
+                        "Animations",
+                        "Text, blocks, items, and leaderboards",
+                        "Entity attachment"
+                     ]
+                  },
+                  {
+                     "type":"text",
+                     "content":"<white>**__Contributors__</white>**<br>[maximjsx](https://github.com/maximjsx), [misieur](https://github.com/misieur), [WhyZerVellasskx](https://github.com/WhyZerVellasskx), [RootException](https://github.com/RootException) &  [matt11matthew](https://github.com/matt11matthew)"
+                  }
+               ],
+               "tags":[
+                  "Spigot",
+                  "Paper",
+                  "Purpur",
+                  "Folia",
+                  "Library",
+                  "Holograms",
+                  "MiniMessage",
+                  "Animations",
+                  "Leaderboards"
+               ],
+               "statistics":{
+                  "downloads": {
+                     "title": "Downloads",
+                     "description": "Total downloads across all platforms",
+                     "value":"4.000",
+                     "color": "blue"
+                  },
+                  "servers": {
+                     "title": "Servers Using",
+                     "description": "Servers currently running this plugin",
+                     "value":"70+",
+                     "color": "green"
+                  }
+               },
+               "buttons": [
+                  {
+                     "label": "Download",
+                     "route": "https://github.com/HologramLib/HologramLib/releases/download/1.7.4/HologramLib-1.7.4.jar",
+                     "style": "primary"
+                   },
+                  {
+                    "label": "View on GitHub",
+                    "route": "https://github.com/maximjsx/HologramLib",
+                    "style": "secondary"
+                  },
+                  {
+                    "label": "Wiki",
+                    "route": "https://github.com/HologramLib/HologramLib/wiki",
+                    "style": "secondary"
+                  }
+                ]
+         },
+         "NextFight":{
+            "enabled":true,
+            "route":"/projects/nextfight",
+            "navbar":false,
+            "title":"NextFight",
+            "description":"Your <gradient>**#1**</gradient> Server For <gradient:#fcad03:#ffeb85>**Battle Royale**</gradient> since 2022",
+            "images":[
+               "/images/projects/pages/nextfight/1.png",
+               "/images/projects/pages/nextfight/2.png",
+               "/images/projects/pages/nextfight/3.png",
+               "/images/projects/pages/nextfight/4.png",
+               "/images/projects/pages/nextfight/5.png",
+               "/images/projects/pages/nextfight/6.png"
+            ],
+            "content":[
+               {
+                  "type":"features",
+                  "title":"Server Highlights",
+                  "items":[
+                     "Custom plugin infrastructure built from scratch",
+                     "Professional content creator partnerships",
+                     "Custom resource packs and textures"
+                  ]
+               },
+               {
+                  "type":"text",
+                  "content":"**Notable Collaborations:** The server attracted attention from major Minecraft content creators including [Copeat](https://www.twitch.tv/copeat), [Brostastic](https://www.youtube.com/@BrostasticTV), and [SimplyFuse](https://www.twitch.tv/simplyfuse). We also had the honor of hosting special guests such as [GommeHD](https://www.youtube.com/user/GommeHD), [Wichtiger](https://www.youtube.com/wichtiger), [Fuxelbau](https://www.twitch.tv/fuxelbau), and even a Mojang employee, showcasing the server's reputation in the community."
+               },
+               {
+                  "type": "posts",
+                  "posts": [
+                     {
+                        "title": "The end?",
+                        "excerpt": "For now, further development of the network has been paused",
+                        "date": "2025-06-28",
+                        "tags": ["NextFight"]
+                     }
+                  ]
+               },
+               {
+                  "type":"text",
+                  "content":"**Legacy:** While NextFight Network concluded operations in 2024, it remains a testament to innovative Minecraft server development and successful community management. The technical solutions and creative approaches developed for NextFight continue to influence my current projects."
+               }
+            ],
+            "statistics":{
+               "registered": {
+                  "title": "Registered Players",
+                  "description": "Total amount of unique players who joined nextfight.net",
+                  "value":"2k+",
+                  "color": "orange"
+               },
+               "peak": {
+                  "title": "Most",
+                  "description": "Highest recorded concurrent players count",
+                  "value":"60",
+                  "color": "green"
+               },
+               "discord": {
+                  "title": "Discord Members",
+                  "description": "Current amount of Discord members",
+                  "value":"~800",
+                  "color": "purple"
+               }
+            },
+            "tags":[
+               "Elytra Race",
+               "Battle Royale",
+               "FFA",
+               "Cookie Clicker",
+               "Copeat Prime"
+            ],
+            "buttons": [
+               {
+                  "label": "Join the Discord server",
+                  "route": "https://discord.gg/sB4nh3eHGB",
+                  "style": "primary"
+                }
+             ]
+         }
+      },
       "home":{
          "enabled":true,
          "route":"/home",
@@ -269,7 +429,7 @@
          "buttonText":"View on GitHub",
          "buttonURL":"https://github.com/maximjsx/portfolio",
          "badges":[
-            "https://img.shields.io/github/stars/maximjsx/portfolio.svg?style=flat&label=Stars"
+            
          ]
       },
       {
@@ -296,8 +456,8 @@
          "title":"HologramLib",
          "description":"Packet based text display hologram library with minimessage and emoji support",
          "imageSRC":"/images/projects/hologramapi.webp",
-         "buttonText":"View on GitHub",
-         "buttonURL":"https://github.com/maximjsx/HologramLib",
+         "buttonText":"Learn More",
+         "buttonURL":"/projects/hologramlib",
          "badges":[
             "https://img.shields.io/github/stars/maximjsx/HologramLib.svg?style=flat&label=Stars"
          ]
@@ -316,8 +476,8 @@
          "title":"Nextfight",
          "description":"Nextfight is a Minecraft minigame network focused on a Battle Royale like gamemode",
          "imageSRC":"/images/projects/nextfight.webp",
-         "buttonText":"Join the Discord",
-         "buttonURL":"https://discord.nextfight.net/",
+         "buttonText":"Learn More",
+         "buttonURL":"/projects/hologramlib",
          "badges":[
             "https://dcbadge.limes.pink/api/server/https://discord.gg/sB4nh3eHGB?style=flat"
          ]

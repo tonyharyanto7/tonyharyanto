@@ -14,29 +14,8 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import config from "/CONFIG.json";
 import ActionButtons from "./action_buttons";
-import { LinkPreview } from "@/components/ui/link-preview";
 import { parseText } from "@/lib/parse_links";
 
-function parseAboutMe(text, gradientColors) {
-  const [start, end] = gradientColors;
-  return text.split("~~~").map((segment, idx) => {
-    if (idx % 2 === 1) {
-      return (
-        <span
-          key={idx}
-          style={{
-            background: `linear-gradient(to right, ${start}, ${end})`,
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-          }}
-        >
-          {segment}
-        </span>
-      );
-    }
-    return segment;
-  });
-}
 
 export default function ProfileSection() {
   const {

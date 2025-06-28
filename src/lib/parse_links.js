@@ -35,6 +35,8 @@ export function parseText(text) {
         type: "color",
       },
 
+      { regex: /<br\s*\/?>/g, type: "lineBreak" },
+
       { regex: /\*\*\*(.*?)\*\*\*/g, type: "boldItalic" },
       { regex: /\*\*(.*?)\*\*/g, type: "bold" },
       { regex: /\*(.*?)\*/g, type: "italic" },
@@ -88,6 +90,10 @@ export function parseText(text) {
               {match[1]}
             </LinkPreview>,
           );
+          break;
+
+        case "lineBreak":
+          parts.push(<br key={key} />);
           break;
 
         case "gradient":

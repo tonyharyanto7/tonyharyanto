@@ -65,9 +65,19 @@ export default function Navbar() {
     setOpenDropdown(null);
   };
 
-  const enabledPages = Object.entries(config.pages).filter(
-    ([, pageConfig]) => pageConfig.enabled,
-  );
+  const getCustomNavbarPages = () => {
+    const customPages = config.pages.custom || {};
+    return Object.entries(customPages)
+      .filter(([, pageConfig]) => pageConfig.enabled && pageConfig.navbar)
+      .map(([pageName, pageConfig]) => [pageName.toLowerCase(), pageConfig]);
+  };
+
+  const enabledPages = [
+    ...Object.entries(config.pages).filter(
+      ([key, pageConfig]) => key !== "custom" && pageConfig.enabled,
+    ),
+    ...getCustomNavbarPages(),
+  ];
 
   const isExternalLink = (url) => {
     return url.startsWith("http://") || url.startsWith("https://");
