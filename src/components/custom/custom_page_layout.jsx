@@ -273,7 +273,6 @@ export default function CustomPageLayout({ page }) {
                     )}
                   </div>
 
-                  {/* Subtle animated background accent */}
                   <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-white/5 to-transparent rounded-bl-full group-hover:from-white/10 transition-all duration-300" />
 
                   {/* Bottom accent line */}
