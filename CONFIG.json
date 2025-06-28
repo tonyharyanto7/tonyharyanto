@@ -481,7 +481,7 @@
          "description":"Nextfight is a Minecraft minigame network focused on a Battle Royale like gamemode",
          "imageSRC":"/images/projects/nextfight.webp",
          "buttonText":"Learn More",
-         "buttonURL":"/projects/hologramlib",
+         "buttonURL":"/projects/nextfight",
          "badges":[
             "https://dcbadge.limes.pink/api/server/https://discord.gg/sB4nh3eHGB?style=flat"
          ]
