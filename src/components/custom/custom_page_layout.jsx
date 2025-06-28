@@ -23,9 +23,12 @@ import {
   Activity,
   MessageCircle,
   TrendingUp,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react";
 import Button from "./button";
 import { TextAnimate } from "@/components/magicui/text-animate";
+import { useEffect } from "react";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -62,12 +65,12 @@ const overlayVariants = {
 };
 
 const imagePreviewVariants = {
-  hidden: { scale: 0.8, opacity: 0 },
+  hidden: { scale: 0.9, opacity: 0 },
   visible: {
     scale: 1,
     opacity: 1,
     transition: {
-      duration: 0.4,
+      duration: 0.5,
       ease: "easeOut",
     },
   },
@@ -79,6 +82,29 @@ const imagePreviewVariants = {
       ease: "easeIn",
     },
   },
+};
+
+const imageSlideVariants = {
+  enter: (direction) => ({
+    x: direction > 0 ? 300 : -300,
+    opacity: 0,
+  }),
+  center: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.2,
+      ease: "easeOut",
+    },
+  },
+  exit: (direction) => ({
+    x: direction < 0 ? 300 : -300,
+    opacity: 0,
+    transition: {
+      duration: 0.2,
+      ease: "easeIn",
+    },
+  }),
 };
 
 const statisticVariants = {
@@ -106,6 +132,24 @@ export default function CustomPageLayout({ page }) {
   } = page;
 
   const [selectedImage, setSelectedImage] = useState(null);
+  const [direction, setDirection] = useState(0);
+
+  useEffect(() => {
+    const handleKeyPress = (e) => {
+      if (!selectedImage) return;
+
+      if (e.key === "ArrowLeft") {
+        goToPreviousImage();
+      } else if (e.key === "ArrowRight") {
+        goToNextImage();
+      } else if (e.key === "Escape") {
+        closeImagePreview();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyPress);
+    return () => window.removeEventListener("keydown", handleKeyPress);
+  }, [selectedImage]);
 
   const openImagePreview = (image, index) => {
     setSelectedImage({ src: image, index });
@@ -113,6 +157,26 @@ export default function CustomPageLayout({ page }) {
 
   const closeImagePreview = () => {
     setSelectedImage(null);
+  };
+
+  const goToPreviousImage = () => {
+    if (selectedImage && selectedImage.index > 0) {
+      setDirection(-1);
+      setSelectedImage({
+        src: images[selectedImage.index - 1],
+        index: selectedImage.index - 1,
+      });
+    }
+  };
+
+  const goToNextImage = () => {
+    if (selectedImage && selectedImage.index < images.length - 1) {
+      setDirection(1);
+      setSelectedImage({
+        src: images[selectedImage.index + 1],
+        index: selectedImage.index + 1,
+      });
+    }
   };
 
   const getStatIcon = (key, iconName) => {
@@ -439,7 +503,7 @@ export default function CustomPageLayout({ page }) {
       </motion.div>
 
       {/* Image Preview Modal */}
-      <AnimatePresence>
+      <AnimatePresence mode="wait">
         {selectedImage && (
           <motion.div
             className="fixed inset-0 z-50 flex items-center justify-center p-4"
@@ -462,6 +526,38 @@ export default function CustomPageLayout({ page }) {
               <X className="w-6 h-6" />
             </button>
 
+            {/* Left Arrow */}
+            {images.length > 1 && (
+              <button
+                onClick={goToPreviousImage}
+                disabled={selectedImage.index === 0}
+                className={cn(
+                  "absolute left-4 top-1/2 transform -translate-y-1/2 z-10 p-3 rounded-full transition-all duration-200",
+                  selectedImage.index === 0
+                    ? "bg-white/5 text-white/30 c-cursor-default"
+                    : "bg-white/10 text-white hover:bg-white/20 hover:scale-110 c-cursor-pointer",
+                )}
+              >
+                <ChevronLeft className="w-6 h-6" />
+              </button>
+            )}
+
+            {/* Right Arrow */}
+            {images.length > 1 && (
+              <button
+                onClick={goToNextImage}
+                disabled={selectedImage.index === images.length - 1}
+                className={cn(
+                  "absolute right-4 top-1/2 transform -translate-y-1/2 z-10 p-3 rounded-full transition-all duration-200",
+                  selectedImage.index === images.length - 1
+                    ? "bg-white/5 text-white/30 c-cursor-default"
+                    : "bg-white/10 text-white hover:bg-white/20 hover:scale-110 c-cursor-pointer",
+                )}
+              >
+                <ChevronRight className="w-6 h-6" />
+              </button>
+            )}
+
             {/* Image Container */}
             <motion.div
               className="relative max-w-7xl max-h-full w-full h-full flex items-center justify-center"
@@ -470,15 +566,27 @@ export default function CustomPageLayout({ page }) {
               animate="visible"
               exit="exit"
             >
-              <div className="relative max-w-full max-h-full">
-                <Image
-                  src={selectedImage.src}
-                  alt={`${title} preview ${selectedImage.index + 1}`}
-                  width={1920}
-                  height={1080}
-                  className="max-w-full max-h-[90vh] object-contain rounded-lg"
-                  priority
-                />
+              <div className="relative max-w-full max-h-full overflow-hidden">
+                <AnimatePresence mode="wait" custom={direction}>
+                  <motion.div
+                    key={selectedImage.index}
+                    custom={direction}
+                    variants={imageSlideVariants}
+                    initial="enter"
+                    animate="center"
+                    exit="exit"
+                    className="relative"
+                  >
+                    <Image
+                      src={selectedImage.src}
+                      alt={`${title} preview ${selectedImage.index + 1}`}
+                      width={1920}
+                      height={1080}
+                      className="max-w-full max-h-[90vh] object-contain rounded-lg"
+                      priority
+                    />
+                  </motion.div>
+                </AnimatePresence>
               </div>
             </motion.div>
 

@@ -44,6 +44,10 @@ body {
   cursor: url("/cursor/pointer-32.png"), auto;
 }
 
+.c-cursor-default {
+  cursor: url("/cursor/normal-32.png"), auto;
+}
+
 /*Comment this out if you are using the custom javascript cursor*/
 .c-cursor-text {
   cursor: url("/cursor/text-32.png"), auto;
