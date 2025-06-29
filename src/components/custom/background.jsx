@@ -38,7 +38,16 @@ export default function Background() {
   }, []);
 
   return (
-    <div className="fixed inset-0 w-full h-full -z-10 overflow-hidden">
+    <div
+      style={{
+        position: "fixed",
+        inset: 0,
+        width: "100%",
+        height: "100%",
+        zIndex: -10,
+        overflow: "hidden",
+      }}
+    >
       <Image
         src={bgImage}
         alt="Background"
@@ -50,43 +59,88 @@ export default function Background() {
         quality={85}
       />
 
-      {/* Reduced overlay opacity to make background stronger */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900/70 via-purple-900/15 to-slate-900/70" />
+      {/* overlay */}
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          background: `linear-gradient(to bottom right, ${config.global.colors["color-1"]}10, ${config.global.colors["color-1"]}15, ${config.global.colors["color-1"]}10)`,
+        }}
+      />
 
       {/* Mouse follow gradient */}
       <div
-        className={`absolute inset-0 transition-opacity duration-300 ${
-          isHovering ? "opacity-30" : "opacity-20"
-        }`}
         style={{
-          background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(139, 92, 246, 0.15), transparent 40%)`,
+          position: "absolute",
+          inset: 0,
+          transition: "opacity 300ms",
+          opacity: isHovering ? 0.3 : 0.2,
+          background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, ${config.global.colors["color-2"]}26, transparent 40%)`,
         }}
       />
 
       {/* Floating orbs */}
-      <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-purple-500/5 rounded-full blur-3xl animate-pulse" />
       <div
-        className="absolute top-3/4 right-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl animate-pulse"
-        style={{ animationDelay: "1000ms" }}
-      />
-      <div
-        className="absolute top-1/2 left-1/2 w-64 h-64 bg-pink-500/5 rounded-full blur-3xl animate-pulse"
-        style={{ animationDelay: "500ms" }}
+        style={{
+          position: "absolute",
+          top: "25%",
+          left: "25%",
+          width: "18rem",
+          height: "18rem",
+          backgroundColor: `${config.global.colors["color-1"]}0D`,
+          borderRadius: "50%",
+          filter: "blur(48px)",
+          animation: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        }}
       />
 
-      {/* grid pattern */}
       <div
-        className={`fixed inset-0 transition-opacity duration-300 ${
-          isHovering ? "opacity-40" : "opacity-20"
-        }`}
+        style={{
+          position: "absolute",
+          top: "75%",
+          right: "25%",
+          width: "24rem",
+          height: "24rem",
+          backgroundColor: `${config.global.colors["color-1"]}0D`,
+          borderRadius: "50%",
+          filter: "blur(48px)",
+          animation: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+          animationDelay: "1000ms",
+        }}
+      />
+
+      <div
+        style={{
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          width: "16rem",
+          height: "16rem",
+          backgroundColor: `${config.global.colors["color-4"]}0D`,
+          borderRadius: "50%",
+          filter: "blur(48px)",
+          animation: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+          animationDelay: "500ms",
+        }}
+      />
+
+      {/* Grid pattern */}
+      <div
+        style={{
+          position: "fixed",
+          inset: 0,
+          transition: "opacity 300ms",
+          opacity: isHovering ? 0.4 : 0.2,
+        }}
       >
         <div
-          className="absolute inset-0"
           style={{
+            position: "absolute",
+            inset: 0,
             backgroundImage: `
-              linear-gradient(rgba(139, 92, 246, 0.15) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(139, 92, 246, 0.15) 1px, transparent 1px)
-            `,
+            linear-gradient(${config.global.colors["color-1"]}26 1px, transparent 1px),
+            linear-gradient(90deg, ${config.global.colors["color-1"]}26 1px, transparent 1px)
+          `,
             backgroundSize: "50px 50px",
           }}
         />
@@ -95,19 +149,24 @@ export default function Background() {
       {/* Flashlight grid effect */}
       {isHovering && (
         <div
-          className="fixed inset-0 pointer-events-none transition-opacity duration-200"
           style={{
+            position: "fixed",
+            inset: 0,
+            pointerEvents: "none",
+            transition: "opacity 200ms",
             mask: `radial-gradient(250px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 30%, rgba(255,255,255,0.3) 60%, transparent 100%)`,
             WebkitMask: `radial-gradient(250px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 30%, rgba(255,255,255,0.3) 60%, transparent 100%)`,
           }}
         >
           <div
-            className="absolute inset-0 opacity-40"
             style={{
+              position: "absolute",
+              inset: 0,
+              opacity: 0.4,
               backgroundImage: `
-                linear-gradient(rgba(255, 255, 255, 0.4) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 255, 255, 0.4) 1px, transparent 1px)
-              `,
+              linear-gradient(rgba(255, 255, 255, 0.4) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(255, 255, 255, 0.4) 1px, transparent 1px)
+            `,
               backgroundSize: "50px 50px",
             }}
           />
@@ -117,8 +176,11 @@ export default function Background() {
       {/* Additional spotlight effect */}
       {isHovering && (
         <div
-          className="fixed inset-0 pointer-events-none transition-opacity duration-200"
           style={{
+            position: "fixed",
+            inset: 0,
+            pointerEvents: "none",
+            transition: "opacity 200ms",
             background: `radial-gradient(200px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 40%, transparent 70%)`,
           }}
         />

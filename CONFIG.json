@@ -11,7 +11,21 @@
    "global":{
       "font":"geist",
       "home_route":"/home",
-      "gradient":"#a27aff:#ff73d7",
+      "gradient":"#F574DB:#A47AFE",
+      "colors": {
+         "color-1": "#8b69dc",
+         "color-2": "#db64b9",
+         "color-3": "#dc6683",
+         "color-4": "#ef8c6b",
+         "color-5": "#ffc962",
+         "color-6": "#f9f871",
+         "muted": "240 3.7% 15.9%",
+         "muted-foreground": "240 5% 64.9%",
+         "accent": "240 3.7% 15.9%",
+         "accent-foreground": "0 0% 98%",
+         "destructive": "0 62.8% 50.6%",
+         "destructive-foreground": "210 20% 98%" 
+      },
       "custom_cursor":{
          "enabled":false,
          "sparkles":true,
@@ -235,11 +249,6 @@
                "style":"secondary"
             }
          ],
-         "github_stats":{
-            "enabled":true,
-            "title":"GitHub Statistics",
-            "username":"maximjsx"
-         },
          "experience":{
             "enabled":true,
             "title":"My Experience",

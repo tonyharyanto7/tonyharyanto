@@ -15,7 +15,6 @@ import config from "/CONFIG.json";
 import ProfileSection from "@/components/custom/profile_section";
 import TechScroller from "@/components/custom/tech_scroller";
 import Timeline from "@/components/custom/timeline";
-import GitHubStats from "@/components/custom/github_stats";
 
 function useExternalScript(src) {
   useEffect(() => {
@@ -31,8 +30,7 @@ function useExternalScript(src) {
 
 export default function Home() {
   const {
-    experience: { enabled: experienceEnabled },
-    github_stats: { enabled: githubStatsEnabled },
+    experience: { enabled: experienceEnabled }
   } = config.pages.home;
 
   const { scrollY } = useScroll();
@@ -64,17 +62,6 @@ export default function Home() {
           >
             <div className="w-full max-w-7xl">
               <Timeline />
-            </div>
-          </section>
-        )}
-
-        {githubStatsEnabled && (
-          <section
-            id="github-stats-section"
-            className="mb-16 md:mb-24 flex justify-center"
-          >
-            <div className="w-full max-w-7xl">
-              <GitHubStats />
             </div>
           </section>
         )}

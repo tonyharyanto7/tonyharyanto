@@ -30,7 +30,7 @@ export default function Projects() {
         animation="blurInUp"
         by="character"
         duration={1.5}
-        className="c-cursor-text text-4xl font-bold text-center uppercase glow mb-[2.5rem]"
+        className="c-cursor-text text-4xl font-bold text-center uppercase mb-[2.5rem]"
       >
         {headerText}
       </TextAnimate>

@@ -47,20 +47,20 @@ const Card = React.forwardRef(
           <CardBadges badges={badges} />
 
           {title && (
-            <h1 className="c-cursor-text glow text-xl font-semibold mb-2">
+            <h1 className="c-cursor-text text-xl font-semibold mb-2">
               {parseText(title)}
             </h1>
           )}
 
           {description && (
-            <p className="c-cursor-text glow text-muted-foreground mb-4">
+            <p className="c-cursor-text text-muted-foreground mb-4">
               {parseText(description)}
             </p>
           )}
 
           {buttonText && buttonURL && (
             <div className="flex justify-center mt-[1rem]">
-              <Button href={buttonURL} variant="secondary">
+              <Button href={buttonURL} variant="primary">
                 {buttonText}
               </Button>
             </div>

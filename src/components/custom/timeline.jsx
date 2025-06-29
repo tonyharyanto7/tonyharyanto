@@ -16,13 +16,29 @@ import { TypeAnimation } from "react-type-animation";
 import { parseText } from "@/lib/parse_links";
 
 const TimelineItem = ({ experience, animationDelay, isInView }) => {
+  const [isMobile, setIsMobile] = useState(false);
   const isLeft = experience.side === "left";
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   return (
     <div
-      className={`flex items-center w-full relative md:flex-row flex-col ${
-        isLeft ? "md:flex-row" : "md:flex-row-reverse"
-      }`}
+      style={{
+        display: "flex",
+        alignItems: "center",
+        width: "100%",
+        position: "relative",
+        flexDirection: isMobile ? "column" : isLeft ? "row" : "row-reverse",
+      }}
     >
       <motion.div
         initial={{ opacity: 0, x: isLeft ? 50 : -50 }}
@@ -35,56 +51,151 @@ const TimelineItem = ({ experience, animationDelay, isInView }) => {
               }
             : {}
         }
-        className={`w-full md:w-1/2 z-20 relative ${
-          isLeft ? "md:pr-8 md:text-left" : "md:pl-8 md:text-right"
-        } mb-8 md:mb-0`}
+        style={{
+          width: isMobile ? "100%" : "50%",
+          zIndex: 20,
+          position: "relative",
+          marginBottom: isMobile ? "2rem" : 0,
+          ...(isMobile
+            ? {}
+            : isLeft
+            ? {
+                paddingRight: "2rem",
+                textAlign: "left",
+              }
+            : {
+                paddingLeft: "2rem",
+                textAlign: "right",
+              }),
+        }}
       >
-        <div className="group relative border border-white/10 bg-white/5 backdrop-blur-xl hover:bg-white/10 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-purple-500/20 p-4 md:p-6 rounded-lg">
-          <div className="absolute inset-0 bg-gradient-to-br from-violet-500/10 via-transparent to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        <div
+          className="group"
+          style={{
+            position: "relative",
+            border: "1px solid rgba(255, 255, 255, 0.1)",
+            backgroundColor: "rgba(255, 255, 255, 0.05)",
+            backdropFilter: "blur(12px)",
+            padding: isMobile ? "1rem" : "1.5rem",
+            borderRadius: "0.5rem",
+            transition: "all 500ms",
+            cursor: "pointer",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
+            e.currentTarget.style.transform = "translateY(-8px)";
+            e.currentTarget.style.boxShadow = `0 25px 50px -12px ${config.global.colors["color-1"]}33`;
+            e.currentTarget.querySelector(".hover-gradient").style.opacity =
+              "1";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.05)";
+            e.currentTarget.style.transform = "translateY(0)";
+            e.currentTarget.style.boxShadow = "none";
+            e.currentTarget.querySelector(".hover-gradient").style.opacity =
+              "0";
+          }}
+        >
+          <div
+            className="hover-gradient"
+            style={{
+              position: "absolute",
+              inset: 0,
+              background: `linear-gradient(to bottom right, ${config.global.colors["color-1"]}1A, transparent, ${config.global.colors["color-3"]}1A)`,
+              opacity: 0,
+              transition: "opacity 500ms",
+            }}
+          />
 
-          <div className="relative z-10">
-            <p className="c-cursor-text text-sm font-normal text-gray-400 tracking-wide uppercase">
+          <div style={{ position: "relative", zIndex: 10 }}>
+            <p
+              className="c-cursor-text"
+              style={{
+                fontSize: "0.875rem",
+                fontWeight: "normal",
+                color: "rgb(156 163 175)",
+                letterSpacing: "0.05em",
+                textTransform: "uppercase",
+              }}
+            >
               {experience.date}
             </p>
-            <h4 className="c-cursor-text text-base md:text-lg text-gray-300 mb-2">
+            <h4
+              className="c-cursor-text"
+              style={{
+                fontSize: isMobile ? "1rem" : "1.125rem",
+                color: "rgb(209 213 219)",
+                marginBottom: "0.5rem",
+              }}
+            >
               {parseText(experience.company)}
             </h4>
-            <h3 className="c-cursor-text text-xl md:text-2xl font-bold mb-4 text-white g">
+            <h3
+              className="c-cursor-text g"
+              style={{
+                fontSize: isMobile ? "1.25rem" : "1.5rem",
+                fontWeight: "bold",
+                marginBottom: "1rem",
+                color: "white",
+              }}
+            >
               {parseText(experience.title)}
             </h3>
-            <p className="c-cursor-text text-gray-300 leading-relaxed">
+            <p
+              className="c-cursor-text"
+              style={{
+                color: "rgb(209 213 219)",
+                lineHeight: "1.625",
+              }}
+            >
               {parseText(experience.description)}
             </p>
           </div>
         </div>
       </motion.div>
 
-      <motion.div
-        initial={{ width: 0 }}
-        animate={
-          isInView
-            ? {
-                width: "2rem",
-                transition: { duration: 0.5, delay: animationDelay + 0.5 },
-              }
-            : {}
-        }
-        className={`absolute z-0 h-1 bg-gradient-to-r  hidden md:block ${
-          !isLeft
-            ? "left-1/2 from-violet-500 to-transparent"
-            : "right-1/2 from-transparent to-violet-500"
-        }`}
-        style={{
-          boxShadow: "0 0 20px rgba(139, 92, 246, 0.5)",
-        }}
-      />
+      {!isMobile && (
+        <motion.div
+          initial={{ width: 0 }}
+          animate={
+            isInView
+              ? {
+                  width: "2rem",
+                  transition: { duration: 0.5, delay: animationDelay + 0.5 },
+                }
+              : {}
+          }
+          style={{
+            position: "absolute",
+            zIndex: 0,
+            height: "4px",
+            background: !isLeft
+              ? `linear-gradient(to right, ${config.global.colors["color-1"]}, transparent)`
+              : `linear-gradient(to right, transparent, ${config.global.colors["color-1"]})`,
+            ...(isLeft ? { right: "50%" } : { left: "50%" }),
+            boxShadow: `0 0 20px ${config.global.colors["color-1"]}80`,
+          }}
+        />
+      )}
     </div>
   );
 };
 
 const Timeline = () => {
   const [isInView, setIsInView] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const ref = useRef(null);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   useEffect(() => {
     const element = ref.current;
@@ -110,33 +221,62 @@ const Timeline = () => {
   }, []);
 
   return (
-    <div className="py-12">
+    <div style={{ paddingTop: "3rem", paddingBottom: "3rem" }}>
       <TypeAnimation
         sequence={[100, config.pages.home.experience.title]}
         wrapper="h2"
-        className="text-4xl md:text-5xl c-cursor-text font-bold text-center mb-20 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent"
+        className="c-cursor-text"
+        style={{
+          fontSize: isMobile ? "2.25rem" : "3rem",
+          fontWeight: "bold",
+          textAlign: "center",
+          marginBottom: "5rem",
+          background: "linear-gradient(to right, white, rgb(209 213 219))",
+          WebkitBackgroundClip: "text",
+          backgroundClip: "text",
+          color: "transparent",
+        }}
         cursor={false}
         speed={1}
       />
-      <div ref={ref} className="relative max-w-4xl mx-auto px-[1rem]">
-        {isInView && (
+      <div
+        ref={ref}
+        style={{
+          position: "relative",
+          maxWidth: "56rem",
+          margin: "0 auto",
+          padding: "0 1rem",
+        }}
+      >
+        {isInView && !isMobile && (
           <motion.div
             initial={{ height: 0 }}
             animate={{
               height: "calc(100% + 6.25rem)",
               transition: { duration: 2, delay: 0 },
             }}
-            className="absolute left-1/2 transform -translate-x-1/2 w-1 rounded-full bg-gradient-to-b from-violet-500 to-violet-500 hidden md:block"
             style={{
+              position: "absolute",
+              left: "50%",
+              transform: "translateX(-50%)",
+              width: "4px",
+              borderRadius: "9999px",
+              background: `linear-gradient(to bottom, ${config.global.colors["color-1"]}, ${config.global.colors["color-1"]})`,
               height: "calc(100% + 6.25rem)",
               top: "-3.125rem",
-              boxShadow:
-                "0 0 20px rgba(139, 92, 246, 0.5), 0 0 40px rgba(168, 85, 247, 0.3)",
+              boxShadow: `0 0 20px ${config.global.colors["color-1"]}80, 0 0 40px ${config.global.colors["color-3"]}4D`,
             }}
           />
         )}
 
-        <div className="relative space-y-1">
+        <div
+          style={{
+            position: "relative",
+            display: "flex",
+            flexDirection: "column",
+            gap: "0.25rem",
+          }}
+        >
           {config.pages.home.experience.list.map((experience, index) => (
             <TimelineItem
               key={index}

@@ -63,7 +63,6 @@ body {
     --color-3: #dc6683;
     --color-4: #ef8c6b;
     --color-5: #ffc962;
-    --color-6: #f9f871;
 
     /* Background and Foreground */
     --background: 224 71.4% 4.1%;
@@ -73,8 +72,8 @@ body {
     --popover: var(--background);
     --popover-foreground: var(--foreground);
 
-    --primary: var(--color-2);
-    --secondary: var(--color-1);
+    --primary: var(--color-1);
+    --secondary: var(--color-2);
 
     --primary-foreground: var(--foreground);
     --secondary-foreground: var(--foreground);
@@ -88,28 +87,6 @@ body {
     /* Destructive */
     --destructive: 0 62.8% 50.6%;
     --destructive-foreground: var(--foreground);
-
-    /* Border & Input */
-    --border: var(--secondary);
-    --input: var(--secondary);
-    --ring: 216 12.2% 83.9%;
-
-    /* Charts */
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
-  }
-
-  * {
-    @apply border-border box-border;
-  }
-
-  input:focus,
-  textarea:focus,
-  select:focus {
-    @apply ring-2 ring-ring;
   }
 
   body {

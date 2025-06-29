@@ -40,7 +40,7 @@ export default function Contact() {
         animation="blurInUp"
         by="character"
         duration={1.5}
-        className="c-cursor-text text-4xl uppercase glow font-bold text-center mb-10"
+        className="c-cursor-text text-4xl uppercase font-bold text-center mb-10"
       >
         {contactConfig.header}
       </TextAnimate>

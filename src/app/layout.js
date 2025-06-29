@@ -18,6 +18,7 @@ import CustomCursor from "@/components/custom/cursor";
 import Footer from "@/components/custom/footer";
 import Background from "@/components/custom/background";
 import { Spotlight } from "@/components/ui/spotlight-new";
+import ThemeProvider from "@/components/custom/theme_provider";
 
 const deliusFont = localFont({
   src: "./fonts/DeliusSwashCaps-Regular.ttf",
@@ -43,12 +44,11 @@ const geistFont = localFont({
   weight: "100 900",
 });
 
-
 const fonts = {
   delius: deliusFont,
   roboto: robotoFont,
   audiowide: audiowideFont,
-  geist: geistFont
+  geist: geistFont,
 };
 
 export const metadata = {
@@ -85,7 +85,9 @@ export default function RootLayout({ children }) {
         </div>
         {config.global.custom_cursor.enabled && <CustomCursor />}
         <Navbar />
-        <main className="flex-1">{children}</main>
+        <main className="flex-1">
+          <ThemeProvider>{children}</ThemeProvider>
+        </main>
         <Footer config={config} />
         <Script src="scripts/hover.js" strategy="afterInteractive" />
       </body>
