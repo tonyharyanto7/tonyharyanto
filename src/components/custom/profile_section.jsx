@@ -16,6 +16,7 @@ import config from "/CONFIG.json";
 import ActionButtons from "./action_buttons";
 import { parseText } from "@/lib/parse_links";
 
+
 export default function ProfileSection() {
   const {
     about_me,
@@ -32,9 +33,9 @@ export default function ProfileSection() {
       <div className="flex flex-col md:flex-row items-center lg:gap-8 gap-5 md:gap-16">
         {imageSrc && (
           <motion.div
-            initial={{ scale: 0.8, opacity: 0 }}
+            initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
             className="relative aspect-[5/7] w-32 md:w-60"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 to-transparent overflow-hidden">
@@ -53,13 +54,13 @@ export default function ProfileSection() {
         <motion.div
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0 }}
+          transition={{ duration: 0.8, delay: 0.1 }}
           className="flex flex-col gap-4 text-center md:text-left"
         >
           <motion.h2
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.8 }}
             className="c-cursor-text text-4xl md:text-5xl font-bold"
           >
             {aboutMeNodes}
