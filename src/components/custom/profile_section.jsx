@@ -33,9 +33,9 @@ export default function ProfileSection() {
       <div className="flex flex-col md:flex-row items-center lg:gap-8 gap-5 md:gap-16">
         {imageSrc && (
           <motion.div
-            initial={{ scale: 0, opacity: 0 }}
+            initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
+            transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
             className="relative aspect-[5/7] w-32 md:w-60"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 to-transparent overflow-hidden">
