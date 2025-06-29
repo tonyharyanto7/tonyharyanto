@@ -288,8 +288,8 @@
       },
       "projects":{
          "enabled":true,
-         "name": "Portfolio",
-         "header":"My portfolio",
+         "name": "Projects",
+         "header":"My projects",
          "route":"/projects"
       },
       "contact":{
