@@ -2,13 +2,9 @@
 <a href="https://discord.gg/2UTkYj26B4"><img src="https://img.shields.io/badge/Discord_Server-7289DA?style=flat&logo=discord&logoColor=white" alt="Join Discord Server" style="border-radius: 15px; height: 20px;"></a>  
 <a href="/" ><img src="https://wakatime.com/badge/user/018ea406-0db5-4668-8046-69289ce4a09e/project/a77fd0f2-6eee-4a71-aab3-916f96c273ec.svg" alt="Waka Time Stats" style="border-radius: 15px; height: 20px;"></a>  
 <a href="https://maxim.cat/home"><img src="https://img.shields.io/badge/Preview-4CAF50?style=flat&logo=vercel&logoColor=white" alt="Preview Website" ></a>
-
-  <a href="https://github.com/maximjsx/fancy-readme-stats">
-    <img 
-      src="https://fancy-readme-stats.vercel.app/api/pin-wide/?username=maximjsx&repo=portfolio&dark_bg=3&theme=red_rain&footer=Easy%20to%20Deploy%20Portfolio%20Template&title=Next.js%20Portfolio%20Template&description=Free%20open-source%20portfolio%20with%20customizable%20design%2C%0AResponsive%20layout%2C%20animated%20components%2C%20and%20easy%20setup&height=210" 
-      alt="Card"
-    />
-  </a>
+<br><br>  
+<img width="1000" src="https://github.com/user-attachments/assets/b3008967-1b92-4f33-9b70-e169818da491" />
+<br>
 </div>
 
 
@@ -22,9 +18,6 @@ Or deploy with one click
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/maximjsx/portfolio)
 
 <div align="center">
-  <a href="assets/preview.png">
-    <img src="assets/preview.png" alt="Preview" />
-  </a>
     <a href="assets/features.png">
     <img src="assets/features.png" alt="Features" />
   </a>
