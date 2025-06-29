@@ -13,13 +13,13 @@
       "home_route":"/home",
       "background_image": "/images/background.webp",
       "background_image_secondary": "/images/background-small.webp",
-"gradient": "#5bbec1:#3f5a70",
-"colors": {
-   "color-1": "#3f5a70",
-   "color-2": "#35959c",
-   "color-3": "#8dd2d0",
-   "color-4": "#c3da94",
-   "color-5": "#F4C6A4",
+      "gradient": "#5bbec1:#3f5a70",
+      "colors": {
+         "color-1": "#3f5a70",
+         "color-2": "#35959c",
+         "color-3": "#8dd2d0",
+         "color-4": "#c3da94",
+         "color-5": "#F4C6A4",
          "muted": "240 3.7% 15.9%",
          "muted-foreground": "240 5% 64.9%",
          "accent": "240 3.7% 15.9%",
@@ -219,6 +219,7 @@
       "home":{
          "enabled":true,
          "route":"/home",
+         "name": "Home",
          "profile_image":"/images/avatar_2.png",
          "about_me":"<gradient>Hi, I'm Maxim!</gradient>",
          "description":"I’ve spent a lot of time messing around in the Spigot modding scene, mostly making plugins and libraries like [HologramLib](https://github.com/HologramLib/HologramLib)",
@@ -277,7 +278,7 @@
                },
                {
                   "title":"Minecraft Server Owner",
-                  "company":"[NextFight Network](https://www.youtube.com/@nextfightnetwork)",
+                  "company":"[NextFight Network](https://maxim.cat/projects/nextfight)",
                   "date":"2022 – 2024",
                   "description":"Launched and managed a Minecraft server, developing infrastructure and custom game mode plugins. Collaborated with streamers such as copeat, Brostastic, and SimplyFuse. The server welcomed guests including GommeHD, Wichtiger, Fuxelbau, and even a Mojang employee.",
                   "side":"left"
@@ -287,11 +288,13 @@
       },
       "projects":{
          "enabled":true,
-         "header":"My Projects",
+         "name": "Portfolio",
+         "header":"My portfolio",
          "route":"/projects"
       },
       "contact":{
          "enabled":true,
+         "name": "Contact",
          "header":"Socials",
          "route":"/contact",
          "email":"forking@duck.com",

@@ -1,7 +1,7 @@
 /**
  * Portfolio
  * Copyright (C) 2025 Maxim (https://github.com/maximjsx/portfolio)
- * 
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published
  * by the Free Software Foundation.
@@ -257,7 +257,9 @@ export default function Navbar() {
                       }}
                       style={{ display: "inline-block" }}
                     >
-                      {pageName.charAt(0).toUpperCase() + pageName.slice(1)}
+                      {pageConfig.name
+                        ? pageConfig.name
+                        : pageName.charAt(0).toUpperCase() + pageName.slice(1)}
                     </motion.span>
                     {isActive && (
                       <motion.div
@@ -366,7 +368,7 @@ export default function Navbar() {
                       <li key={pageName} className="w-60">
                         {renderLink(
                           pageConfig.route,
-                          pageName.charAt(0).toUpperCase() + pageName.slice(1),
+                          pageConfig.name ? pageConfig.name : pageName.charAt(0).toUpperCase() + pageName.slice(1),
                           cn(
                             "c-cursor-pointer flex items-center justify-center px-4 py-2 rounded-md border border-white/10 bg-white/5 backdrop-blur-xl transition-all duration-300",
                             "text-white font-medium text-center w-60 mb-2 text-lg",

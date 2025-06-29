@@ -25,6 +25,7 @@ import {
   TrendingUp,
   ChevronLeft,
   ChevronRight,
+  Clock,
 } from "lucide-react";
 import Button from "./button";
 import { TextAnimate } from "@/components/magicui/text-animate";
@@ -191,6 +192,7 @@ export default function CustomPageLayout({ page }) {
       activity: Activity,
       users: Users,
       members: Users,
+      clock: Clock
     };
 
     const IconComponent = iconName
