@@ -16,7 +16,12 @@ import { useEffect, useState } from "react";
 export default function Background() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
+
   const bgImage = config.global?.background_image || "/images/background.webp";
+  const bgImageSecondary =
+    config.global?.background_image_secondary ||
+    "/images/background-small.webp";
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -28,14 +33,24 @@ export default function Background() {
       setIsHovering(false);
     };
 
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
     window.addEventListener("mousemove", handleMouseMove);
     window.addEventListener("mouseleave", handleMouseLeave);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
       window.removeEventListener("mouseleave", handleMouseLeave);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  // Calculate parallax offsets
+  const parallaxOffset1 = -scrollY * 0.3; // Main stars move at 30% of scroll speed
+  const parallaxOffset2 = -scrollY * 0.15; // Secondary stars move at 15% of scroll speed
 
   return (
     <div
@@ -48,16 +63,93 @@ export default function Background() {
         overflow: "hidden",
       }}
     >
-      <Image
-        src={bgImage}
-        alt="Background"
-        fill
-        priority
-        sizes="100vw"
-        className="object-cover"
-        aria-hidden="true"
-        quality={85}
-      />
+      {/* Secondary background layer (slower moving, smaller stars) */}
+      <div
+        style={{
+          position: "absolute",
+          width: "100%",
+          height: "200%", // Make it taller for seamless scrolling
+          transform: `translateY(${parallaxOffset2}px)`,
+          willChange: "transform",
+        }}
+      >
+        <Image
+          src={bgImageSecondary}
+          alt="Background Secondary"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-top"
+          aria-hidden="true"
+          quality={85}
+          style={{
+            opacity: 0.6, // Make secondary layer more subtle
+          }}
+        />
+        {/* Duplicate for seamless scrolling */}
+        <div
+          style={{
+            position: "absolute",
+            top: "100%",
+            width: "100%",
+            height: "100%",
+          }}
+        >
+          <Image
+            src={bgImageSecondary}
+            alt="Background Secondary Duplicate"
+            fill
+            sizes="100vw"
+            className="object-cover object-top"
+            aria-hidden="true"
+            quality={85}
+            style={{
+              opacity: 0.6,
+            }}
+          />
+        </div>
+      </div>
+
+      {/* Main background layer */}
+      <div
+        style={{
+          position: "absolute",
+          width: "100%",
+          height: "200%", // Make it taller for seamless scrolling
+          transform: `translateY(${parallaxOffset1}px)`,
+          willChange: "transform",
+        }}
+      >
+        <Image
+          src={bgImage}
+          alt="Background"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-top"
+          aria-hidden="true"
+          quality={85}
+        />
+        {/* Duplicate for seamless scrolling */}
+        <div
+          style={{
+            position: "absolute",
+            top: "100%",
+            width: "100%",
+            height: "100%",
+          }}
+        >
+          <Image
+            src={bgImage}
+            alt="Background Duplicate"
+            fill
+            sizes="100vw"
+            className="object-cover object-top"
+            aria-hidden="true"
+            quality={85}
+          />
+        </div>
+      </div>
 
       {/* overlay */}
       <div

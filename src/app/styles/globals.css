@@ -58,11 +58,11 @@ body {
     --radius: 0.625rem;
 
     /* Color Palette */
-    --color-1: #8b69dc;
-    --color-2: #db64b9;
-    --color-3: #dc6683;
-    --color-4: #ef8c6b;
-    --color-5: #ffc962;
+    --color-1: white;
+    --color-2: white;
+    --color-3: white;
+    --color-4: white;
+    --color-5: white;
 
     /* Background and Foreground */
     --background: 224 71.4% 4.1%;

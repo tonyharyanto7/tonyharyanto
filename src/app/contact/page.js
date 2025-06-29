@@ -60,7 +60,7 @@ export default function Contact() {
         <h2 className="c-cursor-text text-2xl font-semibold mb-4">
           {contactConfig.direct_contact}
         </h2>
-        <a className="c-cursor-text text-primary flex items-center justify-center gap-2">
+        <a className="c-cursor-text text-secondary flex items-center justify-center gap-2">
           <FaEnvelope className="inline-block" />
           {contactConfig.email}
         </a>

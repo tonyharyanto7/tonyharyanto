@@ -11,14 +11,15 @@
    "global":{
       "font":"geist",
       "home_route":"/home",
-      "gradient":"#F574DB:#A47AFE",
-      "colors": {
-         "color-1": "#8b69dc",
-         "color-2": "#db64b9",
-         "color-3": "#dc6683",
-         "color-4": "#ef8c6b",
-         "color-5": "#ffc962",
-         "color-6": "#f9f871",
+      "background_image": "/images/background.webp",
+      "background_image_secondary": "/images/background-small.webp",
+"gradient": "#5bbec1:#3f5a70",
+"colors": {
+   "color-1": "#3f5a70",
+   "color-2": "#35959c",
+   "color-3": "#8dd2d0",
+   "color-4": "#c3da94",
+   "color-5": "#F4C6A4",
          "muted": "240 3.7% 15.9%",
          "muted-foreground": "240 5% 64.9%",
          "accent": "240 3.7% 15.9%",

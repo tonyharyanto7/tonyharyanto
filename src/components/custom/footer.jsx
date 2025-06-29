@@ -23,7 +23,7 @@ const Footer = ({ config }) => {
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-primary hover:brightness-150 duration-200 hover:-translate-y-0.5 c-cursor-pointer"
+                    className="text-secondary hover:brightness-150 duration-200 hover:-translate-y-0.5 c-cursor-pointer"
                   >
                     {link.label}
                   </a>
