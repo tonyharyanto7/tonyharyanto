@@ -3,7 +3,7 @@
 <a href="/" ><img src="https://wakatime.com/badge/user/018ea406-0db5-4668-8046-69289ce4a09e/project/a77fd0f2-6eee-4a71-aab3-916f96c273ec.svg" alt="Waka Time Stats" style="border-radius: 15px; height: 20px;"></a>  
 <a href="https://maxim.cat/home"><img src="https://img.shields.io/badge/Preview-4CAF50?style=flat&logo=vercel&logoColor=white" alt="Preview Website" ></a>
 <br><br>  
-<img width="1000" src="https://github.com/user-attachments/assets/b3008967-1b92-4f33-9b70-e169818da491" />
+<img width="1000" src="assets/preview.png" />
 <br>
 </div>
 
