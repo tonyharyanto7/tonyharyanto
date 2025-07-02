@@ -135,7 +135,7 @@ export default function Navbar() {
       className={cn(
         "z-50 sticky top-0 transition-all duration-300",
         isScrolled
-          ? "md:bg-white/5 md:backdrop-blur-md md:py-5"
+          ? "md:bg-white/5 md:backdrop-blur-sm md:py-5"
           : "md:bg-transparent md:py-5",
         "bg-transparent py-4",
       )}
@@ -290,7 +290,7 @@ export default function Navbar() {
 
         {/* Mobile menu */}
         <div className="md:hidden">
-          <div className="fixed top-4 right-4 z-50 rounded-lg bg-black/30 backdrop-blur-[2px] p-2">
+          <div className="fixed top-4 right-4 z-50 rounded-lg bg-black/30 backdrop-blur-sm p-2">
             <button
               onClick={toggleMenu}
               className="flex flex-col justify-center items-center w-6 h-6 space-y-1.5 z-60"
@@ -336,7 +336,7 @@ export default function Navbar() {
                           <div className="space-y-2">
                             <div
                               className={cn(
-                                "px-4 py-2 rounded-md border border-white/10 bg-white/5 backdrop-blur-xl",
+                                "px-4 py-2 rounded-md border border-white/10 bg-white/5 backdrop-blur-sm",
                                 "text-white font-medium text-center w-60 text-lg",
                                 isActive ? "brightness-150" : "",
                               )}
@@ -350,7 +350,7 @@ export default function Navbar() {
                                   item.route,
                                   item.name,
                                   cn(
-                                    "flex items-center justify-center px-4 py-2 rounded-md border border-white/10 bg-white/5 backdrop-blur-xl transition-all duration-300",
+                                    "flex items-center justify-center px-4 py-2 rounded-md border border-white/10 bg-white/5 backdrop-blur-sm transition-all duration-300",
                                     "text-white/80 text-center w-60 text-base ml-4 font-medium",
                                     pathname === item.route
                                       ? "brightness-150 bg-white/10"
@@ -368,9 +368,12 @@ export default function Navbar() {
                       <li key={pageName} className="w-60">
                         {renderLink(
                           pageConfig.route,
-                          pageConfig.name ? pageConfig.name : pageName.charAt(0).toUpperCase() + pageName.slice(1),
+                          pageConfig.name
+                            ? pageConfig.name
+                            : pageName.charAt(0).toUpperCase() +
+                                pageName.slice(1),
                           cn(
-                            "c-cursor-pointer flex items-center justify-center px-4 py-2 rounded-md border border-white/10 bg-white/5 backdrop-blur-xl transition-all duration-300",
+                            "c-cursor-pointer flex items-center justify-center px-4 py-2 rounded-md border border-white/10 bg-white/5 backdrop-blur-sm transition-all duration-300",
                             "text-white font-medium text-center w-60 mb-2 text-lg",
                             isActive ? "brightness-150" : "hover:bg-white/10",
                           ),

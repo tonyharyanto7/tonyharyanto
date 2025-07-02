@@ -11,20 +11,78 @@
 
 import Image from "next/image";
 import config from "/CONFIG.json";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 export default function Background() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [smoothMousePosition, setSmoothMousePosition] = useState({
+    x: 0,
+    y: 0,
+  });
   const [isHovering, setIsHovering] = useState(false);
   const [scrollY, setScrollY] = useState(0);
+  const [smoothScrollY, setSmoothScrollY] = useState(0);
+
+  const animationFrameRef = useRef();
+  const targetMouseRef = useRef({ x: 0, y: 0 });
+  const targetScrollRef = useRef(0);
+  const currentMouseRef = useRef({ x: 0, y: 0 });
+  const currentScrollRef = useRef(0);
 
   const bgImage = config.global?.background_image || "/images/background.webp";
   const bgImageSecondary =
     config.global?.background_image_secondary ||
     "/images/background-small.webp";
 
+  /*Interpolation*/ 
+
+  const lerp = (start, end, factor) => {
+    return start + (end - start) * factor;
+  };
+
+
+  useEffect(() => {
+    const animate = () => {
+      const lerpFactor = 0.1;
+
+      currentMouseRef.current.x = lerp(
+        currentMouseRef.current.x,
+        targetMouseRef.current.x,
+        lerpFactor,
+      );
+      currentMouseRef.current.y = lerp(
+        currentMouseRef.current.y,
+        targetMouseRef.current.y,
+        lerpFactor,
+      );
+
+      currentScrollRef.current = lerp(
+        currentScrollRef.current,
+        targetScrollRef.current,
+        lerpFactor * 1.5, 
+      );
+
+      setSmoothMousePosition({
+        x: currentMouseRef.current.x,
+        y: currentMouseRef.current.y,
+      });
+      setSmoothScrollY(currentScrollRef.current);
+
+      animationFrameRef.current = requestAnimationFrame(animate);
+    };
+
+    animationFrameRef.current = requestAnimationFrame(animate);
+
+    return () => {
+      if (animationFrameRef.current) {
+        cancelAnimationFrame(animationFrameRef.current);
+      }
+    };
+  }, []);
+
   useEffect(() => {
     const handleMouseMove = (e) => {
+      targetMouseRef.current = { x: e.clientX, y: e.clientY };
       setMousePosition({ x: e.clientX, y: e.clientY });
       setIsHovering(true);
     };
@@ -34,12 +92,13 @@ export default function Background() {
     };
 
     const handleScroll = () => {
+      targetScrollRef.current = window.scrollY;
       setScrollY(window.scrollY);
     };
 
     window.addEventListener("mousemove", handleMouseMove);
     window.addEventListener("mouseleave", handleMouseLeave);
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
@@ -48,9 +107,8 @@ export default function Background() {
     };
   }, []);
 
-  // Calculate parallax offsets
-  const parallaxOffset1 = -scrollY * 0.3; // Main stars move at 30% of scroll speed
-  const parallaxOffset2 = -scrollY * 0.15; // Secondary stars move at 15% of scroll speed
+  const parallaxOffset1 = -smoothScrollY * 0.3; 
+  const parallaxOffset2 = -smoothScrollY * 0.15;
 
   return (
     <div
@@ -63,12 +121,12 @@ export default function Background() {
         overflow: "hidden",
       }}
     >
-      {/* Secondary background layer (slower moving, smaller stars) */}
+      {/* Secondary background layer  */}
       <div
         style={{
           position: "absolute",
           width: "100%",
-          height: "200%", // Make it taller for seamless scrolling
+          height: "200%", 
           transform: `translateY(${parallaxOffset2}px)`,
           willChange: "transform",
         }}
@@ -83,10 +141,9 @@ export default function Background() {
           aria-hidden="true"
           quality={85}
           style={{
-            opacity: 0.6, // Make secondary layer more subtle
+            opacity: 0.5, 
           }}
         />
-        {/* Duplicate for seamless scrolling */}
         <div
           style={{
             position: "absolute",
@@ -115,7 +172,7 @@ export default function Background() {
         style={{
           position: "absolute",
           width: "100%",
-          height: "200%", // Make it taller for seamless scrolling
+          height: "200%", 
           transform: `translateY(${parallaxOffset1}px)`,
           willChange: "transform",
         }}
@@ -128,9 +185,9 @@ export default function Background() {
           sizes="100vw"
           className="object-cover object-top"
           aria-hidden="true"
-          quality={85}
+          quality={95}
         />
-        {/* Duplicate for seamless scrolling */}
+        {/* Duplicate bg */}
         <div
           style={{
             position: "absolute",
@@ -146,7 +203,7 @@ export default function Background() {
             sizes="100vw"
             className="object-cover object-top"
             aria-hidden="true"
-            quality={85}
+            quality={95}
           />
         </div>
       </div>
@@ -167,54 +224,11 @@ export default function Background() {
           inset: 0,
           transition: "opacity 300ms",
           opacity: isHovering ? 0.3 : 0.2,
-          background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, ${config.global.colors["color-2"]}26, transparent 40%)`,
+          background: `radial-gradient(600px circle at ${smoothMousePosition.x}px ${smoothMousePosition.y}px, ${config.global.colors["color-2"]}26, transparent 40%)`,
         }}
       />
 
-      {/* Floating orbs */}
-      <div
-        style={{
-          position: "absolute",
-          top: "25%",
-          left: "25%",
-          width: "18rem",
-          height: "18rem",
-          backgroundColor: `${config.global.colors["color-1"]}0D`,
-          borderRadius: "50%",
-          filter: "blur(48px)",
-          animation: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
-        }}
-      />
 
-      <div
-        style={{
-          position: "absolute",
-          top: "75%",
-          right: "25%",
-          width: "24rem",
-          height: "24rem",
-          backgroundColor: `${config.global.colors["color-1"]}0D`,
-          borderRadius: "50%",
-          filter: "blur(48px)",
-          animation: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
-          animationDelay: "1000ms",
-        }}
-      />
-
-      <div
-        style={{
-          position: "absolute",
-          top: "50%",
-          left: "50%",
-          width: "16rem",
-          height: "16rem",
-          backgroundColor: `${config.global.colors["color-4"]}0D`,
-          borderRadius: "50%",
-          filter: "blur(48px)",
-          animation: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
-          animationDelay: "500ms",
-        }}
-      />
 
       {/* Grid pattern */}
       <div
@@ -246,8 +260,8 @@ export default function Background() {
             inset: 0,
             pointerEvents: "none",
             transition: "opacity 200ms",
-            mask: `radial-gradient(250px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 30%, rgba(255,255,255,0.3) 60%, transparent 100%)`,
-            WebkitMask: `radial-gradient(250px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 30%, rgba(255,255,255,0.3) 60%, transparent 100%)`,
+            mask: `radial-gradient(250px circle at ${smoothMousePosition.x}px ${smoothMousePosition.y}px, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 30%, rgba(255,255,255,0.3) 60%, transparent 100%)`,
+            WebkitMask: `radial-gradient(250px circle at ${smoothMousePosition.x}px ${smoothMousePosition.y}px, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 30%, rgba(255,255,255,0.3) 60%, transparent 100%)`,
           }}
         >
           <div
@@ -273,7 +287,7 @@ export default function Background() {
             inset: 0,
             pointerEvents: "none",
             transition: "opacity 200ms",
-            background: `radial-gradient(200px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 40%, transparent 70%)`,
+            background: `radial-gradient(200px circle at ${smoothMousePosition.x}px ${smoothMousePosition.y}px, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 40%, transparent 70%)`,
           }}
         />
       )}

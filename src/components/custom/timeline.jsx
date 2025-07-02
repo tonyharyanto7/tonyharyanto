@@ -75,7 +75,7 @@ const TimelineItem = ({ experience, animationDelay, isInView }) => {
             position: "relative",
             border: "1px solid rgba(255, 255, 255, 0.1)",
             backgroundColor: "rgba(255, 255, 255, 0.05)",
-            backdropFilter: "blur(12px)",
+            backdropFilter: "blur(4px)",
             padding: isMobile ? "1rem" : "1.5rem",
             borderRadius: "0.5rem",
             transition: "all 500ms",

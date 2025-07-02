@@ -37,6 +37,7 @@ img {
 body {
   @apply font-sans bg-background text-foreground;
   cursor: url("/cursor/normal-32.png"), auto;
+  scroll-behavior: smooth !important;
 }
 
 /*Comment this out if you are using the custom javascript cursor*/
