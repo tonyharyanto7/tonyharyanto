@@ -12,7 +12,6 @@ import { cn } from "@/lib/utils";
 import { CardImage } from "@/components/custom/card/card_image";
 import { CardBadges } from "@/components/custom/card/card_badges";
 import Button from "../button";
-import { TextAnimate } from "@/components/magicui/text-animate";
 import { parseText } from "@/lib/parse_links";
 
 const Card = React.forwardRef(
@@ -60,7 +59,7 @@ const Card = React.forwardRef(
 
           {buttonText && buttonURL && (
             <div className="flex justify-center mt-[1rem]">
-              <Button href={buttonURL} variant="primary">
+              <Button href={buttonURL} variant="secondary">
                 {buttonText}
               </Button>
             </div>

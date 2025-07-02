@@ -13,10 +13,10 @@
       "home_route":"/home",
       "background_image": "/images/background.webp",
       "background_image_secondary": "/images/background-small.webp",
-      "gradient": "#5bbec1:#3f5a70",
+      "gradient": "#3f5a70:#5bbec1",
       "colors": {
-         "color-1": "#3f5a70",
-         "color-2": "#35959c",
+         "color-1": "#35959c",
+         "color-2": "#3f5a70",
          "color-3": "#8dd2d0",
          "color-4": "#c3da94",
          "color-5": "#F4C6A4",
@@ -446,7 +446,8 @@
          "buttonText":"View on GitHub",
          "buttonURL":"https://github.com/maximjsx/portfolio",
          "badges":[
-            
+            "https://img.shields.io/github/stars/maximjsx/portfolio.svg?style=flat&label=Stars",
+            "https://img.shields.io/github/forks/maximjsx/portfolio.svg?style=flat&label=Forks"
          ]
       },
       {
@@ -460,6 +461,27 @@
          ]
       },
       {
+         "title":"HologramLib",
+         "description":"Packet based text display hologram library with minimessage and emoji support",
+         "imageSRC":"/images/projects/hologramapi.webp",
+         "buttonText":"Learn More",
+         "buttonURL":"/projects/hologramlib",
+         "badges":[
+            "https://img.shields.io/github/stars/HologramLib/HologramLib.svg?style=flat&label=Stars",
+            "https://img.shields.io/github/forks/HologramLib/HologramLib.svg?style=flat&label=Forks"
+         ]
+      },
+      {
+         "title":"Community Discord",
+         "description":"My community Discord server. Connect with developers and share projects",
+         "imageSRC":"/images/projects/community.webp",
+         "buttonText":"Join Now",
+         "buttonURL":"https://discord.com/invite/sr8sQgX6mS",
+         "badges":[
+            "https://dcbadge.limes.pink/api/server/https://discord.gg/sr8sQgX6mS?style=flat"
+         ]
+      },
+      {
          "title":"Better Chat Bubbles",
          "description":"Packet based chat bubbles above players head, with an extensive API",
          "imageSRC":"/images/projects/betterchatbubbles.webp",
@@ -467,16 +489,6 @@
          "buttonURL":"https://www.spigotmc.org/resources/115811/",
          "badges":[
             "https://img.shields.io/spiget/downloads/115811?label=Sales"
-         ]
-      },
-      {
-         "title":"HologramLib",
-         "description":"Packet based text display hologram library with minimessage and emoji support",
-         "imageSRC":"/images/projects/hologramapi.webp",
-         "buttonText":"Learn More",
-         "buttonURL":"/projects/hologramlib",
-         "badges":[
-            "https://img.shields.io/github/stars/maximjsx/HologramLib.svg?style=flat&label=Stars"
          ]
       },
       {

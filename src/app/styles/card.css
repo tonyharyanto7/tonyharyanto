@@ -41,8 +41,8 @@
   height: 100%;
   background: linear-gradient(
     var(--rotate),
-    var(--color-1) 50%,
-    var(--color-2)
+    var(--color-2) 50%,
+    var(--color-1)
   );
   opacity: 0.8;
   border-radius: 0.5rem;
@@ -69,8 +69,8 @@
   height: 100%;
   background-image: linear-gradient(
     var(--rotate),
-    var(--color-1) 50%,
-    var(--color-2)
+    var(--color-2) 50%,
+    var(--color-1)
   );
   opacity: 0.18;
   transition: opacity 0.5s;
@@ -108,7 +108,7 @@
 
 .card-badges img {
   margin-right: 0.3125rem;
-  max-width: 10rem;
+  max-width: 20rem;
   height: 1.2rem;
   margin-bottom: 0.625rem;
 }
@@ -121,14 +121,6 @@
 .card-img-top:hover {
   -webkit-transform: scale(1);
   transform: scale(1);
-}
-
-.glow {
-  transition: text-shadow 1s;
-}
-
-.glow:hover {
-  text-shadow: 0.00625rem 0.00625rem 0.625rem var(--secondary);
 }
 
 @keyframes scroll {

@@ -160,8 +160,8 @@ export default function Navbar() {
                       "c-cursor-pointer flex items-center text-center font-medium transition-all duration-300 px-4 py-2 rounded-md",
                       "text-white",
                       isActive || openDropdown === pageName
-                        ? "text-secondary brightness-150"
-                        : "hover:text-secondary hover:bg-white/5",
+                        ? "text-primary brightness-150"
+                        : "hover:text-primary hover:bg-white/5",
                     )}
                   >
                     <motion.span
@@ -195,7 +195,7 @@ export default function Navbar() {
                       <motion.div
                         layoutId="navbar-underline"
                         initial={false}
-                        className="absolute bottom-0 left-0 right-0 bg-secondary"
+                        className="absolute bottom-0 left-0 right-0 bg-primary"
                         style={{ height: "2px" }}
                         transition={{
                           type: "spring",
@@ -265,7 +265,7 @@ export default function Navbar() {
                       <motion.div
                         layoutId="navbar-underline"
                         initial={false}
-                        className="absolute bottom-0 left-0 right-0 bg-secondary"
+                        className="absolute bottom-0 left-0 right-0 bg-primary"
                         style={{ height: "2px" }}
                         transition={{
                           type: "spring",
@@ -279,8 +279,8 @@ export default function Navbar() {
                     "c-cursor-pointer flex items-center text-center font-medium transition-all duration-300 px-4 py-2 rounded-md relative",
                     "text-white",
                     isActive
-                      ? "text-secondary brightness-150"
-                      : "hover:text-secondary hover:bg-white/5",
+                      ? "text-primary brightness-150"
+                      : "hover:text-primary hover:bg-white/5",
                   ),
                 )}
               </li>

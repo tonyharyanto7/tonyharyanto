@@ -71,11 +71,11 @@ const Button = React.forwardRef(function Button(
     primary:
       "text-white bg-primary hover:bg-primary relative overflow-hidden group",
     secondary:
-      "text-white bg-secondary hover:bg-secondary relative overflow-hidden group",
+      "text-white bg-secondary hover:brightness-[120%] relative overflow-hidden group",
   };
 
   const buttonClassName = cn(
-    "text-base c-cursor-pointer inline-block px-4 py-2 rounded-2xl transform active:scale-95 active:brightness-90 transition-all duration-200 ease-in-out",
+    "text-base c-cursor-pointer inline-block px-4 py-2 rounded-2xl transform active:scale-95 active:brightness-90 transition-all duration-400 ease-in-out",
     hoverEffect && "hover:brightness-110 hover:scale-[101.5%]",
     variants[variant],
     className,
