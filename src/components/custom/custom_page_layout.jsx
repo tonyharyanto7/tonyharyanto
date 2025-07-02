@@ -192,7 +192,7 @@ export default function CustomPageLayout({ page }) {
       activity: Activity,
       users: Users,
       members: Users,
-      clock: Clock
+      clock: Clock,
     };
 
     const IconComponent = iconName
@@ -348,19 +348,21 @@ export default function CustomPageLayout({ page }) {
                   className="p-6 rounded-lg bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300"
                 >
                   <div className="space-y-3">
-                    <h4 className="text-xl font-semibold text-white">
+                    <h4 className="c-cursor-text text-xl font-semibold text-white">
                       {post.title}
                     </h4>
-                    <p className="text-muted-foreground">{post.excerpt}</p>
+                    <p className="c-cursor-text text-muted-foreground">
+                      {parseText(post.excerpt)}
+                    </p>
                     <div className="flex items-center justify-between">
-                      <time className="text-sm text-muted-foreground">
+                      <time className="c-cursor-text text-sm text-muted-foreground">
                         {new Date(post.date).toLocaleDateString()}
                       </time>
                       <div className="flex gap-2">
                         {post.tags.map((tag, tagIdx) => (
                           <span
                             key={tagIdx}
-                            className="px-2 py-1 text-xs rounded-full bg-secondary/20 text-secondary"
+                            className="c-cursor-text px-2 py-1 text-xs rounded-full bg-secondary/20 text-secondary"
                           >
                             {tag}
                           </span>
@@ -394,7 +396,7 @@ export default function CustomPageLayout({ page }) {
               animation="blurInUp"
               by="character"
               duration={1.5}
-              className="c-cursor-text text-4xl font-bold text-center uppercase glow mb-[2.5rem]"
+              className="c-cursor-text text-4xl font-bold text-center uppercase mb-[2.5rem]"
             >
               {title}
             </TextAnimate>

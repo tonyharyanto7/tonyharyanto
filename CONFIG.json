@@ -297,8 +297,8 @@
          "name": "Contact",
          "header":"Socials",
          "route":"/contact",
-         "email":"forking@duck.com",
-         "direct_contact":"Reach Me Directly",
+         "contact":"maximde",
+         "direct_contact":"Add me on Discord",
          "legal":{
             "enabled":true,
             "name":"Maxim",
@@ -327,7 +327,7 @@
          ],
          "contact_form":{
             "enabled":true,
-            "send_button":"Send Message",
+            "send_button":"Send Message (Not implemented yet)",
             "success_message":"Message sent successfully!",
             "failure_message":"Failed to send message. Please try again.",
             "error_message":"An error occurred. Please try again.",

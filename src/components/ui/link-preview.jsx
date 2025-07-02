@@ -1,7 +1,7 @@
 /**
  * Portfolio
  * Copyright (C) 2025 Maxim (https://github.com/maximjsx/portfolio)
- * 
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published
  * by the Free Software Foundation.
@@ -97,7 +97,10 @@ export const LinkPreview = ({
             href={url}
             target={newTab ? "_blank" : "_self"}
             rel={newTab ? "noopener noreferrer" : undefined}
-            className={cn("text-black dark:text-white", className)}
+            className={cn(
+              "c-cursor-pointer text-black dark:text-white",
+              className,
+            )}
           >
             {children}
           </a>

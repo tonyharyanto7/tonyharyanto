@@ -8,6 +8,7 @@
  */
 
 import React from "react";
+import Link from "next/link";
 
 const Footer = ({ config }) => {
   return (
@@ -17,17 +18,36 @@ const Footer = ({ config }) => {
           <>
             {config.footer.links && (
               <div className="flex justify-center space-x-4 mt-[0.5rem] mb-[0.5rem]">
-                {config.footer.links.map((link, index) => (
-                  <a
-                    key={index}
-                    href={link.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-secondary hover:brightness-150 duration-200 hover:-translate-y-0.5 c-cursor-pointer"
-                  >
-                    {link.label}
-                  </a>
-                ))}
+                {config.footer.links.map((link, index) => {
+                  const isExternalLink =
+                    link.url.startsWith("http://") ||
+                    link.url.startsWith("https://") ||
+                    link.url.startsWith("mailto:");
+
+                  if (isExternalLink) {
+                    return (
+                      <a
+                        key={index}
+                        href={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-secondary hover:brightness-150 duration-200 hover:-translate-y-0.5 c-cursor-pointer"
+                      >
+                        {link.label}
+                      </a>
+                    );
+                  } else {
+                    return (
+                      <Link
+                        key={index}
+                        href={link.url}
+                        className="text-secondary hover:brightness-150 duration-200 hover:-translate-y-0.5 c-cursor-pointer"
+                      >
+                        {link.label}
+                      </Link>
+                    );
+                  }
+                })}
               </div>
             )}
             <p className="c-cursor-text text-sm">{config.footer.text}</p>

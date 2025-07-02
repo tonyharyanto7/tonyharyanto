@@ -10,7 +10,7 @@
 "use client";
 
 import config from "/CONFIG.json";
-import { FaEnvelope } from "react-icons/fa";
+import { FaCommentDots } from "react-icons/fa";
 import { SocialLinks } from "@/components/custom/social_links";
 import { ContactForm } from "@/components/custom/contact_form";
 import { LegalInfo } from "@/components/custom/legal_info";
@@ -39,7 +39,7 @@ export default function Contact() {
       <TextAnimate
         animation="blurInUp"
         by="character"
-        duration={1.5}
+        duration={1}
         className="c-cursor-text text-4xl uppercase font-bold text-center mb-10"
       >
         {contactConfig.header}
@@ -56,15 +56,18 @@ export default function Contact() {
 
       <LegalInfo legal={contactConfig.legal} />
 
-      <div className="mt-[3rem]  text-center">
-        <h2 className="c-cursor-text text-2xl font-semibold mb-4">
-          {contactConfig.direct_contact}
-        </h2>
-        <a className="c-cursor-text text-secondary flex items-center justify-center gap-2">
-          <FaEnvelope className="inline-block" />
-          {contactConfig.email}
-        </a>
-      </div>
+      {contactConfig.direct_contact &&
+        (contactConfig.contact || contactConfig.email) && (
+          <div className="mt-[3rem]  text-center">
+            <h2 className="c-cursor-text text-2xl font-semibold mb-4">
+              {contactConfig.direct_contact}
+            </h2>
+            <a className="c-cursor-text text-secondary flex items-center justify-center gap-2">
+              <FaCommentDots className="inline-block" />
+              {contactConfig.contact || contactConfig.email}
+            </a>
+          </div>
+        )}
     </div>
   );
 }

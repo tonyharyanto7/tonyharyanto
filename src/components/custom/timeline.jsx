@@ -70,7 +70,7 @@ const TimelineItem = ({ experience, animationDelay, isInView }) => {
         }}
       >
         <div
-          className="group"
+          className="group c-cursor-pointer"
           style={{
             position: "relative",
             border: "1px solid rgba(255, 255, 255, 0.1)",
@@ -79,7 +79,6 @@ const TimelineItem = ({ experience, animationDelay, isInView }) => {
             padding: isMobile ? "1rem" : "1.5rem",
             borderRadius: "0.5rem",
             transition: "all 500ms",
-            cursor: "pointer",
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
