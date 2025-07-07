@@ -395,7 +395,7 @@ export default function CustomPageLayout({ page }) {
             <TextAnimate
               animation="blurInUp"
               by="character"
-              duration={1.5}
+              duration={1}
               className="c-cursor-text text-4xl font-bold text-center uppercase mb-[2.5rem]"
             >
               {title}
