@@ -63,13 +63,13 @@ export const ContactForm = ({ config, onSubmit }) => {
     <>
       <form
         onSubmit={handleSubmit}
-        className="bg-black/50 shadow-md rounded-lg p-8 space-y-6"
+        className="bg-white/5 backdrop-blur-sm shadow-md rounded-lg p-8 space-y-6"
       >
         {config.fields.map((field) => (
           <div key={field.name}>
             <label
               htmlFor={field.name}
-              className="block text-gray-700 font-medium mb-2"
+              className="block text-white-700 font-medium mb-2"
             >
               {field.label}
             </label>

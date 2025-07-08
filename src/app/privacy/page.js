@@ -20,17 +20,17 @@ export default function Privacy() {
         {privacy.header}
       </h1>
 
-      <div className="bg-black/50 shadow-md rounded-lg p-8 space-y-6">
+      <div className="bg-white/5 backdrop-blur-sm shadow-md rounded-lg p-8 space-y-6">
         <p className="mb-[1.5rem]">{privacy.content.introduction}</p>
 
         {privacy.content.sections.map((section, index) => (
           <div key={index} className="mb-[1.5rem]">
-            <h2 className="text-2xl font-semibold mb-[1rem]">
+            <h2 className="text-2xl c-cursor-text font-semibold mb-[1rem]">
               {section.title}
             </h2>
-            <p>{section.description}</p>
+            <p className="c-cursor-text">{section.description}</p>
             {section.details && (
-              <ul className="list-disc list-inside text-gray-400 space-y-2">
+              <ul className="list-disc c-cursor-text list-inside text-gray-400 space-y-2">
                 {section.details.map((detail, detailIndex) => (
                   <li key={detailIndex}>{detail}</li>
                 ))}
@@ -40,10 +40,10 @@ export default function Privacy() {
         ))}
 
         <div className="mt-[2rem] pt-[1rem] border-t border-gray-700">
-          <h3 className="text-xl font-semibold mb-4">
+          <h3 className="c-cursor-text text-xl font-semibold mb-4">
             {privacy.content.contact_title}
           </h3>
-          <p>{privacy.content.contact}</p>
+          <p className="c-cursor-text">{privacy.content.contact}</p>
         </div>
       </div>
     </div>
