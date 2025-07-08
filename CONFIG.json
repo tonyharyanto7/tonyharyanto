@@ -106,7 +106,7 @@
                   "downloads": {
                      "title": "Downloads",
                      "description": "Total downloads across all platforms",
-                     "value":"4.000",
+                     "value":"4,000",
                      "color": "blue"
                   },
                   "servers": {
