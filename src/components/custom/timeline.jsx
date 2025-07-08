@@ -77,7 +77,7 @@ const TimelineItem = ({ experience, animationDelay, isInView }) => {
             backgroundColor: "rgba(255, 255, 255, 0.05)",
             backdropFilter: "blur(4px)",
             padding: isMobile ? "1rem" : "1.5rem",
-            borderRadius: "0.5rem",
+            borderRadius: "1rem",
             transition: "all 500ms",
           }}
           onMouseEnter={(e) => {
@@ -96,7 +96,7 @@ const TimelineItem = ({ experience, animationDelay, isInView }) => {
           }}
         >
           <div
-            className="hover-gradient"
+            className="hover-gradient rounded-lg"
             style={{
               position: "absolute",
               inset: 0,

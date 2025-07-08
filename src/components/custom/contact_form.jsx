@@ -80,7 +80,7 @@ export const ContactForm = ({ config, onSubmit }) => {
                 required={field.required}
                 value={formData[field.name]}
                 onChange={handleChange}
-                className="c-cursor-text w-full px-3 py-2 border bg-black/10 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                className="c-cursor-text w-full px-3 py-2 border bg-black/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 rows="4"
               />
             ) : (
@@ -91,7 +91,7 @@ export const ContactForm = ({ config, onSubmit }) => {
                 required={field.required}
                 value={formData[field.name]}
                 onChange={handleChange}
-                className="c-cursor-text w-full px-3 py-2 border bg-black/10 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                className="c-cursor-text w-full px-3 py-2 border bg-black/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               />
             )}
           </div>
@@ -99,7 +99,7 @@ export const ContactForm = ({ config, onSubmit }) => {
 
         <button
           type="submit"
-          className="c-cursor-pointer w-full bg-primary text-white py-3 rounded-md hover:bg-primary/90 transition-colors"
+          className="c-cursor-pointer w-full bg-primary text-white py-3 rounded-lg hover:bg-primary/90 transition-colors"
         >
           {config.send_button}
         </button>
