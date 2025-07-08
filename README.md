@@ -128,6 +128,11 @@ Font licenses available in [here](src/app/fonts/licenses/)
 - [Card Hover Effect](https://codepen.io/markmiro/pen/wbqMPa) by Mark Miro (MIT License)
 - [Infinity Scrolling](https://codepen.io/kevinpowell/pen/BavVLra) by Kevin (MIT License)
 
+## People Using My Template
+https://kawaii-portfolio.vercel.app/   
+https://portfolio-chi-five-98.vercel.app/  
+https://pratik-singh.vercel.app/  
+
 ---
 
 **Developed with ❤️ by Maxim**
