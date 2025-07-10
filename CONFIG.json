@@ -485,10 +485,10 @@
          "title":"Better Chat Bubbles",
          "description":"Packet based chat bubbles above players head, with an extensive API",
          "imageSRC":"/images/projects/betterchatbubbles.webp",
-         "buttonText":"Buy on SpigotMC",
-         "buttonURL":"https://www.spigotmc.org/resources/115811/",
+         "buttonText":"View on GitHub",
+         "buttonURL":"https://github.com/maximjsx/ChatBubblesAPI",
          "badges":[
-            "https://img.shields.io/spiget/downloads/115811?label=Sales"
+            "https://img.shields.io/github/stars/maximjsx/ChatBubblesAPI.svg?style=flat&label=Stars"
          ]
       },
       {
