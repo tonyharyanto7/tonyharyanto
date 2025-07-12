@@ -225,19 +225,14 @@
          "description":"I’ve spent a lot of time messing around in the Spigot modding scene, mostly making plugins and libraries like [HologramLib](https://github.com/HologramLib/HologramLib)",
          "tools_languages_title":"Tools & Languages",
          "languages":[
-            "Java",
-            "JavaScript",
-            "TypeScript",
-            "Python"
          ],
          "tools":[
-            "Next.js",
-            "MongoDB",
-            "Intellij",
-            "MariaDB",
-            "Pycharm",
-            "FIX",
-            "Git"
+            "Frontend",
+            "Backend",
+            "Plugin Development",
+            "Spigot & Paper",
+            "Custom Discord Integrations",
+            "Deployment & Hosting"
          ],
          "action_buttons":[
             {
