@@ -129,9 +129,9 @@ Font licenses available in [here](src/app/fonts/licenses/)
 - [Infinity Scrolling](https://codepen.io/kevinpowell/pen/BavVLra) by Kevin (MIT License)
 
 ## People Using My Template
-https://www.lvckyfelix.info/
-https://kawaii-portfolio.vercel.app/   
-https://pratik-singh.vercel.app/  
+https://www.lvckyfelix.info/  
+https://kawaii-portfolio.vercel.app/    
+https://pratik-singh.vercel.app/   
 
 
 ---
