@@ -9,13 +9,12 @@
 
 "use client";
 
-import { useMemo } from "react";
+import { useMemo, useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import config from "/CONFIG.json";
 import ActionButtons from "./action_buttons";
 import { parseText } from "@/lib/parse_links";
-
 
 export default function ProfileSection() {
   const {
@@ -28,6 +27,49 @@ export default function ProfileSection() {
   const aboutMeNodes = parseText(about_me);
   const descriptionNodes = useMemo(() => parseText(description), [description]);
 
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [targetPosition, setTargetPosition] = useState({ x: 0, y: 0 });
+  const [isHovered, setIsHovered] = useState(false);
+  const imageRef = useRef(null);
+  const animationFrameRef = useRef();
+
+  const handleMouseMove = (e) => {
+    if (!imageRef.current) return;
+    const rect = imageRef.current.getBoundingClientRect();
+    setTargetPosition({
+      x: e.clientX - rect.left,
+      y: e.clientY - rect.top,
+    });
+  };
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
+  useEffect(() => {
+    const animatePosition = () => {
+      setPosition((prevPos) => ({
+        x: prevPos.x + (targetPosition.x - prevPos.x) * 0.1,
+        y: prevPos.y + (targetPosition.y - prevPos.y) * 0.1,
+      }));
+      animationFrameRef.current = requestAnimationFrame(animatePosition);
+    };
+
+    if (isHovered) {
+      animationFrameRef.current = requestAnimationFrame(animatePosition);
+    }
+
+    return () => {
+      if (animationFrameRef.current) {
+        cancelAnimationFrame(animationFrameRef.current);
+      }
+    };
+  }, [isHovered, targetPosition]);
+
   return (
     <div className="flex flex-col items-center w-full gap-8">
       <div className="flex flex-col md:flex-row items-center lg:gap-8 gap-5 md:gap-16">
@@ -36,9 +78,13 @@ export default function ProfileSection() {
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
-            className="relative aspect-[5/7] w-32 md:w-60"
+            className="relative aspect-[5/7] w-32 md:w-60 group overflow-hidden"
+            ref={imageRef}
+            onMouseMove={handleMouseMove}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 to-transparent overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 to-transparent">
               <Image
                 src={imageSrc}
                 alt="Profile"
@@ -48,6 +94,23 @@ export default function ProfileSection() {
                 style={{ objectFit: "cover" }}
               />
             </div>
+
+            <div
+              className={`pointer-events-none absolute inset-0 transition-opacity duration-500 ease-in-out ${
+                isHovered ? "opacity-100" : "opacity-0"
+              }`}
+              style={{
+                background: `radial-gradient(120px circle at ${position.x}px ${position.y}px, rgba(255,255,255,0.3), rgba(255,255,255,0.12) 45%, transparent 75%)`,
+                maskImage: `url(${imageSrc})`,
+                WebkitMaskImage: `url(${imageSrc})`,
+                maskSize: "cover",
+                WebkitMaskSize: "cover",
+                maskPosition: "center",
+                WebkitMaskPosition: "center",
+                maskRepeat: "no-repeat",
+                WebkitMaskRepeat: "no-repeat",
+              }}
+            />
           </motion.div>
         )}
 
