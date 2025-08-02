@@ -353,7 +353,7 @@
          }
       },
       "tools":{
-         "enabled":true,
+         "enabled":false,
          "dropdown":true,
          "items":[
             {
