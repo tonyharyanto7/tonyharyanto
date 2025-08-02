@@ -9,6 +9,7 @@
 
 import React from "react";
 import Link from "next/link";
+import { parseText } from "@/lib/parse_links";
 
 const Footer = ({ config }) => {
   return (
@@ -50,7 +51,9 @@ const Footer = ({ config }) => {
                 })}
               </div>
             )}
-            <p className="c-cursor-text text-sm">{config.footer.text}</p>
+            <p className="c-cursor-text text-sm">
+              {parseText(config.footer.text)}
+            </p>
           </>
         )}
       </div>

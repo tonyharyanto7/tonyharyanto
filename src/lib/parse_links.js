@@ -11,6 +11,22 @@ import { LinkPreview } from "@/components/ui/link-preview";
 import config from "/CONFIG.json";
 
 export function parseText(text) {
+  let placeholders = {};
+
+  try {
+    placeholders = JSON.parse(process.env.NEXT_PUBLIC_PLACEHOLDERS || "{}");
+  } catch (e) {
+    console.error("Invalid JSON in PLACEHOLDERS env variable:", e);
+  }
+
+  Object.entries(placeholders).forEach(([key, value]) => {
+    const regex = new RegExp(
+      key.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&"),
+      "g",
+    );
+    text = text.replace(regex, value);
+  });
+
   const defaultGradient = config?.global?.gradient || "#a27aff:#ff73d7";
   const gradientColors = defaultGradient.split(":");
 
@@ -179,25 +195,4 @@ export function parseText(text) {
   };
 
   return parseSegment(text);
-}
-
-function parseAboutMe(text, gradientColors) {
-  const [start, end] = gradientColors;
-  return text.split("~~~").map((segment, idx) => {
-    if (idx % 2 === 1) {
-      return (
-        <span
-          key={idx}
-          style={{
-            background: `linear-gradient(to right, ${start}, ${end})`,
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-          }}
-        >
-          {segment}
-        </span>
-      );
-    }
-    return segment;
-  });
 }

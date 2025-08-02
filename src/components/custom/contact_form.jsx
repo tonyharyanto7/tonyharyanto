@@ -14,6 +14,7 @@ export const ContactForm = ({ config, onSubmit }) => {
     name: "",
     email: "",
     message: "",
+    consent: false,
   });
 
   const [submitStatus, setSubmitStatus] = useState({
@@ -22,10 +23,10 @@ export const ContactForm = ({ config, onSubmit }) => {
   });
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value, type, checked } = e.target;
     setFormData((prev) => ({
       ...prev,
-      [name]: value,
+      [name]: type === "checkbox" ? checked : value,
     }));
   };
 
@@ -43,7 +44,7 @@ export const ContactForm = ({ config, onSubmit }) => {
           message: result.message || config.success_message,
           type: "success",
         });
-        setFormData({ name: "", email: "", message: "" });
+        setFormData({ name: "", email: "", message: "", consent: false });
       } else {
         setSubmitStatus({
           message: result.message || config.failure_message,
@@ -96,6 +97,50 @@ export const ContactForm = ({ config, onSubmit }) => {
             )}
           </div>
         ))}
+
+        <div className="flex items-start space-x-3">
+          <div className="relative flex items-center">
+            <input
+              type="checkbox"
+              id="consent"
+              name="consent"
+              required
+              checked={formData.consent}
+              onChange={handleChange}
+              className="sr-only"
+            />
+            <label
+              htmlFor="consent"
+              className={`c-cursor-pointer w-5 h-5 rounded border-2 transition-all duration-200 flex items-center justify-center ${
+                formData.consent
+                  ? "bg-primary border-primary"
+                  : "bg-black/10 border-gray-400 hover:border-primary"
+              }`}
+            >
+              <svg
+                className={`w-3 h-3 text-white transition-opacity duration-200 ${
+                  formData.consent ? "opacity-100" : "opacity-0"
+                }`}
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </label>
+          </div>
+          <label
+            htmlFor="consent"
+            className="c-cursor-pointer text-white-700 text-sm flex-1"
+          >
+            I consent to the processing of my personal data for the purpose of
+            responding to my inquiry.
+          </label>
+        </div>
 
         <button
           type="submit"

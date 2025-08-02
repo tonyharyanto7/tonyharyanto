@@ -15,6 +15,7 @@ import { SocialLinks } from "@/components/custom/social_links";
 import { ContactForm } from "@/components/custom/contact_form";
 import { LegalInfo } from "@/components/custom/legal_info";
 import { TextAnimate } from "@/components/magicui/text-animate";
+import { parseText } from "@/lib/parse_links";
 
 export default function Contact() {
   const contactConfig = config.pages.contact;
@@ -64,7 +65,7 @@ export default function Contact() {
             </h2>
             <a className="c-cursor-text text-secondary flex items-center justify-center gap-2">
               <FaCommentDots className="inline-block" />
-              {contactConfig.contact || contactConfig.email}
+              {parseText(contactConfig.contact || contactConfig.email)}
             </a>
           </div>
         )}

@@ -58,6 +58,11 @@ Edit [CONFIG.json](CONFIG.json) to personalize:
 - Contact form settings
 - & More
 
+You can use placeholders in the config file which are defined in a `.env` file
+```env
+NEXT_PUBLIC_PLACEHOLDERS={"%full_name%":"Your Name","%email%":"info[at]your.domain"}
+```
+
 ### Fonts
 Change global font in [CONFIG.json](CONFIG.json):
 - `roboto`
@@ -83,11 +88,22 @@ Change global font in [CONFIG.json](CONFIG.json):
 
 ### Personal Information
 Remove or replace **(Please replace these before deployment)**:
-- **Email addresses** like `legal@maxim.cat` (Very important)
+- My personal data
 - Social media links
 - Profile image
 - Experience details
 - Projects
+- Generally everything that is not part of the base template and rather my personal info or assets
+
+**Warning:**
+
+Any attempt to impersonate me or misuse my personal information, including but not limited to my name, contact details, or any other data associated with me, is strictly prohibited. Such actions will lead to **legal consequences**, including but not limited to:
+
+* Reporting to relevant authorities
+* Civil claims for damages
+* Criminal prosecution under applicable identity theft, data protection, and privacy laws within the European Union and beyond
+
+Protecting my identity and personal information is a priority. Please respect this notice.
 
 ### Legal Disclaimer
 

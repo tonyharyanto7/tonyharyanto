@@ -9,6 +9,7 @@
 
 "use client";
 
+import { parseText } from "@/lib/parse_links";
 import config from "/CONFIG.json";
 
 export default function Privacy() {
@@ -21,6 +22,12 @@ export default function Privacy() {
       </h1>
 
       <div className="bg-white/5 backdrop-blur-sm shadow-md rounded-lg p-8 space-y-6">
+        {privacy.updated && (
+          <p className="text-sm text-gray-300 text-center mt-4">
+            {privacy.updated}
+          </p>
+        )}
+
         <p className="mb-[1.5rem]">{privacy.content.introduction}</p>
 
         {privacy.content.sections.map((section, index) => (
@@ -28,11 +35,13 @@ export default function Privacy() {
             <h2 className="text-2xl c-cursor-text font-semibold mb-[1rem]">
               {section.title}
             </h2>
-            <p className="c-cursor-text">{section.description}</p>
+            <p className="c-cursor-text mb-[0.5rem]">
+              {parseText(section.description)}
+            </p>
             {section.details && (
               <ul className="list-disc c-cursor-text list-inside text-gray-400 space-y-2">
                 {section.details.map((detail, detailIndex) => (
-                  <li key={detailIndex}>{detail}</li>
+                  <li key={detailIndex}>{parseText(detail)}</li>
                 ))}
               </ul>
             )}
@@ -43,7 +52,7 @@ export default function Privacy() {
           <h3 className="c-cursor-text text-xl font-semibold mb-4">
             {privacy.content.contact_title}
           </h3>
-          <p className="c-cursor-text">{privacy.content.contact}</p>
+          <p className="c-cursor-text">{parseText(privacy.content.contact)}</p>
         </div>
       </div>
     </div>

@@ -35,7 +35,7 @@
       }
    },
    "footer":{
-      "text":"© 2025 Maxim - All rights reserved.",
+      "text":"© 2025 %full_name% - All rights reserved.",
       "links":[
          {
             "label":"GitHub",
@@ -44,10 +44,14 @@
          {
             "label":"Contact",
             "url":"/contact"
-         },
+                     },
          {
             "label":"Privacy",
             "url":"/privacy"
+         },
+         {
+            "label":"Legal",
+            "url":"https://legal.maxim.cat"
          }
       ]
    },
@@ -296,12 +300,12 @@
          "direct_contact":"Add me on Discord",
          "legal":{
             "enabled":true,
-            "name":"Maxim",
-            "address":"[REDACTED]",
-            "email":"legal@maxim.cat",
-            "phone":"[REDACTED]",
-            "tax_id":"Not Applicable",
-            "legal_disclaimer":"This is a personal portfolio website for demonstration purposes."
+            "name":"%full_name%",
+            "address":"",
+            "email":"%email%",
+            "phone":"",
+            "tax_id":"",
+            "legal_disclaimer":"More information required under applicable law can be found [here](https://legal.maxim.cat)"
          },
          "social_links":[
             {
@@ -370,62 +374,124 @@
             }
          ]
       },
-      "privacy":{
-         "enabled":false,
-         "header":"Privacy Policy",
-         "route":"/privacy",
-         "content":{
-            "contact_title":"Contact",
-            "contact":"legal@maxim.cat",
-            "introduction":"This portfolio website is designed with minimal data collection and maximum user privacy in mind.",
-            "sections":[
-               {
-                  "title":"Information Collection",
-                  "description":"We collect the following types of information:",
-                  "details":[
-                     "Name, email, and message content submitted through the contact form",
-                     "IP address for rate limiting and security purposes",
-                     "Potential tracking of client-side interactions for website functionality"
-                  ]
-               },
-               {
-                  "title":"Data Processing and Storage",
-                  "description":"Data collection and processing details:",
-                  "details":[
-                     "Contact form submissions are processed in-memory and not permanently stored",
-                     "IP addresses are temporarily tracked for rate limiting (maximum 30 minutes)",
-                     "No persistent user data is saved or stored long-term"
-                  ]
-               },
-               {
-                  "title":"Third-Party Services",
-                  "description":"Potential data collection by third-party services:",
-                  "details":[
-                     "Image hosting services (e.g., shields.io) may collect IP address during image requests",
-                     "Standard browser and server logs may capture additional metadata"
-                  ]
-               },
-               {
-                  "title":"Data Protection",
-                  "description":"We implement the following protection measures:",
-                  "details":[
-                     "Rate limiting to prevent abuse of contact form",
-                     "Validation of submitted form data",
-                     "No storage of sensitive personal information"
-                  ]
-               },
-               {
-                  "title":"User Rights",
-                  "description":"Users have the right to:",
-                  "details":[
-                     "Request information about data collection",
-                     "Request deletion of any potential stored information",
-                     "Opt-out of non-essential data collection"
-                  ]
-               }
-            ]
-         }
-      }
+
+  "privacy": {
+    "enabled": false,
+    "header": "Privacy Policy",
+    "updated": "Last updated 8/2/2025",
+    "route": "/privacy",
+    "content": {
+      "contact_title": "Contact",
+      "contact": "%email%",
+      "introduction": "This portfolio website is designed with minimal data collection and maximum user privacy in mind. We are committed to protecting your personal data in accordance with the General Data Protection Regulation (GDPR).",
+      "sections": [
+         {
+  "title": "Glossary",
+  "description": "This section provides clear explanations of important legal and technical terms used throughout this Privacy Policy. It’s here to help you better understand how your data is handled and protected.",
+  "details": [
+    "**Personal Data**: Any information that can identify you, such as your name, email address, or IP address.",
+    "**Data Controller**: The person or organization responsible for deciding how and why your data is processed.",
+    "**Processing**: Any action performed on personal data (e.g., collecting, storing, deleting).",
+    "**IP Address**: A number assigned to your device when you go online. Often used to deliver content and prevent abuse.",
+    "**Rate Limiting**: A technique used to limit the number of requests made to a service within a specific time to prevent abuse.",
+    "**In-Memory Processing**: Data is handled temporarily in server memory and is not saved or logged.",
+    "**HTTPS**: A secure way your browser connects to websites. It encrypts the data you send and receive.",
+    "**Form Validation**: A check that ensures data you submit through forms is correct and safe.",
+    "**Client-Side Interactions**: Your activity in the browser (like clicks or scrolls).",
+    "**Third-Party Services**: External services integrated into the website (like badge providers or hosting platforms) that may collect limited user data.",
+    "**Cookies**: Small data files saved in your browser. This website doesn’t use first-party cookies.",
+    "**Standard Contractual Clauses (SCCs)**: Legal contracts that protect your data when it’s transferred outside the EU.",
+    "**Metadata**: Technical details like browser type, screen size, or visit time that are sometimes collected automatically."
+  ]
+},
+        {
+          "title": "Data Controller",
+          "description": "The data controller is the individual or organization responsible for determining the purposes and means of processing personal data on this website.<br>The data controller is %full_name%. For full legal details and business registration information, please see our legal notice at __[https://legal.maxim.cat](https://legal.maxim.cat)__."
+        },
+        {
+          "title": "Information Collection",
+          "description": "We collect the following types of information:",
+          "details": [
+            "Name, email, and message content submitted through the contact form",
+            "IP address for rate limiting and security purposes",
+            "Potential temporary collection and processing of client-side interaction data solely for the purpose of enabling and enhancing website functionality, including visual effects, without the use of any analytics tools"
+          ]
+        },
+        {
+          "title": "Purposes and Legal Basis",
+          "description": "We process your personal data for the following purposes and based on the following legal grounds:",
+          "details": ["**Contact form submissions**: When you submit a message via the contact form, your input is validated and immediately discarded. We do not process, store, or respond to your messages. This means we do not retain or use your personal data submitted via the form.",
+            "IP addresses: For rate limiting and security purposes, based on our legitimate interest in protecting the website (Art. 6(1)(f) GDPR)",
+            "Client-side interactions: To ensure the proper functioning of the website, based on our legitimate interest (Art. 6(1)(f) GDPR)"
+          ]
+        },
+        {
+          "title": "Data Processing and Storage",
+          "description": "Your personal data is processed and stored as follows:",
+          "details": [
+            "Contact form submissions are processed in-memory and not permanently stored. The data is only used to respond to your inquiry and is deleted immediately thereafter.",
+            "IP addresses are temporarily tracked for rate limiting and security purposes, with a maximum retention period of 30 minutes.",
+            "No persistent user data is saved or stored long-term on our servers."
+          ]
+        },
+        {
+          "title": "Third-Party Services",
+          "description": "This website uses the following third-party services, which may collect and process your personal data:",
+          "details": [
+            "Hosting provider: Vercel ([Privacy Policy](https://vercel.com/legal/privacy-policy)) - May collect IP addresses, geographic information, system configuration data, and use cookies for technical purposes such as load balancing and maintaining website stability.",
+            "**Badge services**: shields.io ([Privacy Policy](https://shields.io/privacy)) and dcbadge (no dedicated privacy policy available).  ",
+            "dcbadge is hosted on Vercel ([Privacy Policy](https://vercel.com/legal/privacy-policy)) and its source code is publicly available at [https://github.com/gitlimes/dcbadge](https://github.com/gitlimes/dcbadge).",
+            "These services may collect your IP address and other metadata when loading badges on the website.",
+            "Link preview service: Microlink ([Privacy Policy](https://microlink.io/privacy)) - When you interact with links that use the LinkPreview feature (e.g., by hovering over them), your IP address and other metadata may be sent to Microlink to generate a screenshot of the linked website. This data is processed by Microlink in accordance with their privacy policy to provide the preview functionality.",
+            "These services may collect your IP address and other metadata when you visit the website or interact with specific features. For details on their data handling practices, please refer to their respective privacy policies."
+          ]
+        },
+        {
+          "title": "Cookies and Tracking Technologies",
+          "description": "This website does not set any first-party cookies. However, third-party services used by the website may set cookies or use other tracking technologies for technical purposes. These cookies are governed by the privacy policies of the respective third-party services. You can manage your cookie preferences through your browser settings."
+        },
+        {
+          "title": "International Data Transfers",
+          "description": "When you visit this website, your browser may send requests to third-party services located outside the European Union, such as the United States. These services are responsible for implementing appropriate safeguards for the transfer of your personal data as required by GDPR. Please refer to their privacy policies for more information.",
+          "details": ["These third-party services claim to implement GDPR-compliant safeguards, such as Standard Contractual Clauses (SCCs) or other appropriate mechanisms as required under Chapter V of the GDPR."]
+         },
+        {
+          "title": "Data Protection Measures",
+          "description": "We implement the following measures to protect your personal data:",
+          "details": [
+            "All data transmissions between your browser and the website are encrypted using HTTPS.",
+            "Rate limiting to prevent abuse of the contact form",
+            "Validation of submitted form data to ensure integrity",
+            "No storage of sensitive personal information"
+          ]
+        },
+        {
+          "title": "Changes to This Privacy Policy",
+          "description": "We may update this Privacy Policy from time to time to reflect changes in our practices or for legal reasons. We encourage users to check this page periodically. The date of the latest update will always be indicated at the top of the policy."
+        },
+        {
+          "title": "Your Rights",
+          "description": "Under GDPR, you have the following rights regarding your personal data:",
+          "details": [
+            "Right to access (Art. 15 GDPR)",
+            "Right to rectification (Art. 16 GDPR)",
+            "Right to erasure (Art. 17 GDPR)",
+            "Right to restriction of processing (Art. 18 GDPR)",
+            "Right to data portability (Art. 20 GDPR)",
+            "Right to object (Art. 21 GDPR)",
+            "Right to withdraw consent at any time (Art. 7(3) GDPR)",
+            "Right to lodge a complaint with a supervisory authority, such as the Commission for Personal Data Protection in Bulgaria (Art. 77 GDPR)"
+          ],
+          "note": "Since we do not store personal data long-term, requests for access, rectification, or erasure may be limited to confirming that no data is held. However, you can still exercise your rights by contacting us at the email address provided below."
+        },
+        {
+          "title": "",
+          "description": "To exercise your rights, please send an email to %email% with the subject line \"GDPR Request\" and include a brief description of your request.<br>We respond to all data requests within one month, as required under Article 12(3) GDPR."
+        }
+      ]
+    }
+  }
+
    },
    "card":{
       "pop_in":true,

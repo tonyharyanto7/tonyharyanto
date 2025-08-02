@@ -7,6 +7,7 @@
  * by the Free Software Foundation.
  */
 
+import { parseText } from "@/lib/parse_links";
 import { FaMapMarkerAlt, FaUserAlt, FaEnvelope, FaPhone } from "react-icons/fa";
 
 export const LegalInfo = ({ legal }) => {
@@ -21,30 +22,30 @@ export const LegalInfo = ({ legal }) => {
         {legal.name && (
           <p className="c-cursor-text flex items-center justify-center gap-2">
             <FaUserAlt className="inline-block" />
-            {legal.name}
+            {parseText(legal.name)}
           </p>
         )}
         {legal.address && (
           <p className="c-cursor-text flex items-center justify-center gap-2">
             <FaMapMarkerAlt className="inline-block" />
-            {legal.address}
+            {parseText(legal.address)}
           </p>
         )}
         {legal.email && (
           <p className="c-cursor-text flex items-center justify-center gap-2">
             <FaEnvelope className="inline-block" />
-            {legal.email}
+            {parseText(legal.email)}
           </p>
         )}
         {legal.phone && (
           <p className="c-cursor-text flex items-center justify-center gap-2">
             <FaPhone className="inline-block" />
-            {legal.phone}
+            {parseText(legal.phone)}
           </p>
         )}
         {legal.legal_disclaimer && (
           <p className="c-cursor-text text-sm text-gray-400 mt-[1rem]">
-            {legal.legal_disclaimer}
+            {parseText(legal.legal_disclaimer)}
           </p>
         )}
       </div>
