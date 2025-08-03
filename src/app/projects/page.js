@@ -1,7 +1,7 @@
 /**
  * Portfolio
  * Copyright (C) 2025 Maxim (https://github.com/maximjsx/portfolio)
- * 
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published
  * by the Free Software Foundation.
@@ -35,7 +35,7 @@ export default function Projects() {
         {headerText}
       </TextAnimate>
 
-      <div className="flex flex-wrap justify-center items-start gap-5 mb-[2.5rem]">
+      <div className="flex flex-wrap justify-center items-start gap-6 mb-[2.5rem]">
         {cards.map(
           (
             { title, description, imageSRC, buttonText, buttonURL, badges },
@@ -43,8 +43,8 @@ export default function Projects() {
           ) => (
             <div
               key={title ?? index}
-              className={`backdrop-blur-[1px] opacity-0 ${
-                isMounted ? "animate-pop_in" : ""
+              className={`opacity-0 ${
+                isMounted ? "animate-pop_in backdrop-blur-[1px]" : ""
               }`}
               style={{
                 animationDelay: `${index * 200}ms`,

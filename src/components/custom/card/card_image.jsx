@@ -38,7 +38,7 @@ export const CardImage = React.forwardRef(
     }, [imageSRC]);
 
     const imageStyle = {
-      filter: loaded ? "none" : "blur(10px)",
+      filter: loaded ? "none" : "blur(1px)",
       transition: "filter 1s ease",
     };
 
@@ -55,7 +55,7 @@ export const CardImage = React.forwardRef(
                 loading="lazy"
                 className={cn(
                   "absolute top-0 left-0 w-full h-full card-img-top rounded-t-xl z-2 transition-filter duration-1000 ease",
-                  loaded ? "filter-none animate-move_in" : "filter blur-sm",
+                  loaded ? "filter-none animate-move_in" : "",
                 )}
                 style={imageStyle}
                 alt="banner"

@@ -378,7 +378,7 @@
   "privacy": {
     "enabled": false,
     "header": "Privacy Policy",
-    "updated": "Last updated 8/2/2025",
+    "updated": "Last updated 8/3/2025",
     "route": "/privacy",
     "content": {
       "contact_title": "Contact",
@@ -392,9 +392,10 @@
     "**Personal Data**: Any information that can identify you, such as your name, email address, or IP address.",
     "**Data Controller**: The person or organization responsible for deciding how and why your data is processed.",
     "**Processing**: Any action performed on personal data (e.g., collecting, storing, deleting).",
-    "**IP Address**: A number assigned to your device when you go online. Often used to deliver content and prevent abuse.",
+    "**IP Address**: A numerical label assigned to your internet connection, usually identifying your network. It can sometimes reveal your approximate geographic location.",
     "**Rate Limiting**: A technique used to limit the number of requests made to a service within a specific time to prevent abuse.",
-    "**In-Memory Processing**: Data is handled temporarily in server memory and is not saved or logged.",
+    "**RAM (Random Access Memory)**: A type of fast, temporary computer memory used to store data that the system or applications are actively using. Data in RAM is lost when the device is turned off.",
+    "**In-Memory Processing**: Data is stored temporarily in the server’s RAM and is not written to permanent storage or logs.",
     "**HTTPS**: A secure way your browser connects to websites. It encrypts the data you send and receive.",
     "**Form Validation**: A check that ensures data you submit through forms is correct and safe.",
     "**Client-Side Interactions**: Your activity in the browser (like clicks or scrolls).",
@@ -431,7 +432,7 @@
           "details": [
             "Contact form submissions are processed in-memory and not permanently stored. The data is only used to respond to your inquiry and is deleted immediately thereafter.",
             "IP addresses are temporarily tracked for rate limiting and security purposes, with a maximum retention period of 30 minutes.",
-            "No persistent user data is saved or stored long-term on our servers."
+            "No persistent user data is saved or stored long-term on our own systems. Any temporary data handling is done in-memory or via third-party infrastructure (e.g., Vercel ([Privacy Policy](https://vercel.com/legal/privacy-policy))), which may apply their own storage and processing policies."
           ]
         },
         {

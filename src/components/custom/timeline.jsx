@@ -107,6 +107,16 @@ const TimelineItem = ({ experience, animationDelay, isInView }) => {
           />
 
           <div style={{ position: "relative", zIndex: 10 }}>
+            <h4
+              className="c-cursor-text"
+              style={{
+                fontSize: isMobile ? "1rem" : "1.125rem",
+                color: "rgb(209 213 219)",
+                marginBottom: "0.5rem",
+              }}
+            >
+              {parseText(experience.company)}
+            </h4>
             <p
               className="c-cursor-text"
               style={{
@@ -119,16 +129,6 @@ const TimelineItem = ({ experience, animationDelay, isInView }) => {
             >
               {experience.date}
             </p>
-            <h4
-              className="c-cursor-text"
-              style={{
-                fontSize: isMobile ? "1rem" : "1.125rem",
-                color: "rgb(209 213 219)",
-                marginBottom: "0.5rem",
-              }}
-            >
-              {parseText(experience.company)}
-            </h4>
             <h3
               className="c-cursor-text g"
               style={{
