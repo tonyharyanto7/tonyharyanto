@@ -225,8 +225,8 @@
          "route":"/home",
          "name": "Home",
          "profile_image":"/images/avatar_3.png",
-         "about_me":"<gradient>Hi, I'm Maxim!</gradient>",
-         "description":"I’ve spent a lot of time messing around in the Spigot modding scene, mostly making plugins and libraries like [HologramLib](https://github.com/HologramLib/HologramLib)",
+         "about_me":"<gradient>Хей, I'm Maxim!</gradient>",
+         "description":"I specialize in building Spigot plugins like [HologramLib](https://github.com/HologramLib/HologramLib). \"That can't be done\" is my favorite starting point.",
          "tools_languages_title":"Tools & Languages",
          "languages":[
          ],
