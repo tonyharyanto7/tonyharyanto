@@ -21,7 +21,7 @@ export default function Privacy() {
         {privacy.header}
       </h1>
 
-      <div className="bg-white/5 backdrop-blur-sm shadow-md rounded-lg p-8 space-y-6">
+      <div className="bg-white/5 backdrop-blur-[1px] rounded-lg p-8 space-y-6 border-2 border-white/5">
         {privacy.updated && (
           <p className="text-sm text-gray-300 text-center mt-4">
             {privacy.updated}

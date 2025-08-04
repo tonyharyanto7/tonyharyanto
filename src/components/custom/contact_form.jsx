@@ -64,7 +64,7 @@ export const ContactForm = ({ config, onSubmit }) => {
     <>
       <form
         onSubmit={handleSubmit}
-        className="bg-white/5 backdrop-blur-sm shadow-md rounded-lg p-8 space-y-6"
+        className="bg-white/5 backdrop-blur-sm border-2 border-white/5 rounded-lg p-8 space-y-6"
       >
         {config.fields.map((field) => (
           <div key={field.name}>
@@ -81,7 +81,7 @@ export const ContactForm = ({ config, onSubmit }) => {
                 required={field.required}
                 value={formData[field.name]}
                 onChange={handleChange}
-                className="c-cursor-text w-full px-3 py-2 border bg-black/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                className="c-cursor-text w-full px-3 py-2 border-2 bg-black/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 rows="4"
               />
             ) : (
@@ -92,7 +92,7 @@ export const ContactForm = ({ config, onSubmit }) => {
                 required={field.required}
                 value={formData[field.name]}
                 onChange={handleChange}
-                className="c-cursor-text w-full px-3 py-2 border bg-black/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                className="c-cursor-text w-full px-3 py-2 border-2 bg-black/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               />
             )}
           </div>

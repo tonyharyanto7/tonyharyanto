@@ -73,7 +73,7 @@ const TimelineItem = ({ experience, animationDelay, isInView }) => {
           className="group c-cursor-pointer"
           style={{
             position: "relative",
-            border: "1px solid rgba(255, 255, 255, 0.1)",
+            border: "2px solid rgba(255, 255, 255, 0.05)",
             backgroundColor: "rgba(255, 255, 255, 0.05)",
             backdropFilter: "blur(4px)",
             padding: isMobile ? "1rem" : "1.5rem",

@@ -157,7 +157,7 @@ export default function Navbar() {
                 >
                   <button
                     className={cn(
-                      "c-cursor-pointer flex items-center text-center font-medium transition-all duration-300 px-4 py-2 rounded-lg",
+                      "border-2 border-white/5 c-cursor-pointer flex items-center text-center font-medium transition-all duration-300 px-4 py-2 rounded-lg",
                       "text-white",
                       isActive || openDropdown === pageName
                         ? "text-primary brightness-150"
@@ -213,7 +213,7 @@ export default function Navbar() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -10 }}
                         transition={{ duration: 0.2 }}
-                        className="absolute top-full left-0 mt-2 w-56 dropdown-menu rounded-lg border border-white/10 shadow-lg overflow-hidden"
+                        className="absolute top-full left-0 mt-2 w-56 dropdown-menu rounded-lg border border-white/5 shadow-lg overflow-hidden"
                         onMouseEnter={handleDropdownMouseEnter}
                         onMouseLeave={handleDropdownMouseLeave}
                       >
@@ -336,7 +336,7 @@ export default function Navbar() {
                           <div className="space-y-2">
                             <div
                               className={cn(
-                                "px-4 py-2 rounded-lg border border-white/10 bg-white/5 backdrop-blur-sm",
+                                "px-4 py-2 rounded-lg border border-white/5 bg-white/5 backdrop-blur-sm",
                                 "text-white font-medium text-center w-60 text-lg",
                                 isActive ? "brightness-150" : "",
                               )}
@@ -350,7 +350,7 @@ export default function Navbar() {
                                   item.route,
                                   item.name,
                                   cn(
-                                    "flex items-center justify-center px-4 py-2 rounded-lg border border-white/10 bg-white/5 backdrop-blur-sm transition-all duration-300",
+                                    "flex items-center justify-center px-4 py-2 rounded-lg border border-white/5 bg-white/5 backdrop-blur-sm transition-all duration-300",
                                     "text-white/80 text-center w-60 text-base ml-4 font-medium",
                                     pathname === item.route
                                       ? "brightness-150 bg-white/10"
@@ -373,7 +373,7 @@ export default function Navbar() {
                             : pageName.charAt(0).toUpperCase() +
                                 pageName.slice(1),
                           cn(
-                            "c-cursor-pointer flex items-center justify-center px-4 py-2 rounded-lg border border-white/10 bg-white/5 backdrop-blur-sm transition-all duration-300",
+                            "c-cursor-pointer flex items-center justify-center px-4 py-2 rounded-lg border border-white/5 bg-white/5 backdrop-blur-sm transition-all duration-300",
                             "text-white font-medium text-center w-60 mb-2 text-lg",
                             isActive ? "brightness-150" : "hover:bg-white/10",
                           ),

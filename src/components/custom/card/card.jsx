@@ -37,7 +37,7 @@ const Card = React.forwardRef(
         style={{ width: "18rem" }}
         {...props}
       >
-        <div className="hover-glow absolute inset-0 pointer-events-none"></div>
+        <div className="hover-glow absolute inset-0 pointer-events-none border-2 border-white/5"></div>
         <div className="rotating-glow absolute inset-0 pointer-events-none"></div>
 
         {imageSRC && <CardImage imageSRC={imageSRC} title={title} />}

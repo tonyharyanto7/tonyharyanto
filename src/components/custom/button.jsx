@@ -75,7 +75,7 @@ const Button = React.forwardRef(function Button(
   };
 
   const buttonClassName = cn(
-    "text-base c-cursor-pointer inline-block px-4 py-2 rounded-2xl transform active:scale-95 active:brightness-90 transition-all duration-400 ease-in-out",
+    "border-2 border-white/5 text-base c-cursor-pointer inline-block px-4 py-2 rounded-2xl transform active:scale-95 active:brightness-90 transition-all duration-400 ease-in-out",
     hoverEffect && "hover:brightness-110 hover:scale-[101.5%]",
     variants[variant],
     className,

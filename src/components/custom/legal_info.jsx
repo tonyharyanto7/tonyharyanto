@@ -14,7 +14,7 @@ export const LegalInfo = ({ legal }) => {
   if (!legal.enabled) return null;
 
   return (
-    <div className="mt-[3rem] bg-white/5 backdrop-blur-sm rounded-lg p-6">
+    <div className="mt-[3rem] bg-white/5 backdrop-blur-sm border-2 border-white/5 rounded-lg p-6">
       <h2 className="c-cursor-text text-2xl font-semibold mb-4 text-center">
         Legal Disclosure
       </h2>

@@ -238,7 +238,7 @@ export default function CustomPageLayout({ page }) {
                   key={key}
                   custom={index}
                   variants={statisticVariants}
-                  className="group relative overflow-hidden p-4 rounded-xl bg-gradient-to-br from-white/8 to-white/4 border border-white/10 backdrop-blur-sm hover:from-white/12 hover:to-white/6 hover:border-white/20 transition-all duration-300"
+                  className="group relative overflow-hidden p-4 rounded-xl bg-gradient-to-br from-white/8 to-white/4 border border-white/5 backdrop-blur-sm hover:from-white/12 hover:to-white/6 hover:border-white/20 transition-all duration-300"
                 >
                   <div className="flex items-start justify-between mb-3">
                     <div
@@ -327,7 +327,7 @@ export default function CustomPageLayout({ page }) {
                 <motion.div
                   key={idx}
                   whileHover={{ scale: 1.02 }}
-                  className="c-cursor-text p-4 rounded-lg bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/8 transition-all duration-300"
+                  className="c-cursor-text p-4 rounded-lg bg-white/5 border border-white/5 backdrop-blur-sm hover:bg-white/8 transition-all duration-300"
                 >
                   <p className="text-white font-medium">{item}</p>
                 </motion.div>
@@ -345,7 +345,7 @@ export default function CustomPageLayout({ page }) {
                 <motion.article
                   key={idx}
                   whileHover={{ scale: 1.01 }}
-                  className="p-6 rounded-lg bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300"
+                  className="p-6 rounded-lg bg-white/5 border border-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300"
                 >
                   <div className="space-y-3">
                     <h4 className="c-cursor-text text-xl font-semibold text-white">
@@ -425,7 +425,7 @@ export default function CustomPageLayout({ page }) {
                     key={index}
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="relative aspect-video rounded-lg overflow-hidden border border-white/10 bg-white/5 c-cursor-pointer group"
+                    className="relative aspect-video rounded-lg overflow-hidden border border-white/5 bg-white/5 c-cursor-pointer group"
                     onClick={() => openImagePreview(image, index)}
                   >
                     <Image
