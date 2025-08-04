@@ -11,21 +11,21 @@
    "global":{
       "font":"geist",
       "home_route":"/home",
-      "background_image": "/images/background.webp",
-      "background_image_secondary": "/images/background-small.webp",
-      "gradient": "#3f5a70:#378765",
-      "colors": {
-         "color-1": "#378765",
-         "color-2": "#3f5a70",
-         "color-3": "#8dd2d0",
-         "color-4": "#c3da94",
-         "color-5": "#F4C6A4",
-         "muted": "240 3.7% 15.9%",
-         "muted-foreground": "240 5% 64.9%",
-         "accent": "240 3.7% 15.9%",
-         "accent-foreground": "0 0% 98%",
-         "destructive": "0 62.8% 50.6%",
-         "destructive-foreground": "210 20% 98%" 
+      "background_image":"/images/background.webp",
+      "background_image_secondary":"/images/background-small.webp",
+      "gradient":"#3f5a70:#378765",
+      "colors":{
+         "color-1":"#378765",
+         "color-2":"#3f5a70",
+         "color-3":"#8dd2d0",
+         "color-4":"#c3da94",
+         "color-5":"#F4C6A4",
+         "muted":"240 3.7% 15.9%",
+         "muted-foreground":"240 5% 64.9%",
+         "accent":"240 3.7% 15.9%",
+         "accent-foreground":"0 0% 98%",
+         "destructive":"0 62.8% 50.6%",
+         "destructive-foreground":"210 20% 98%"
       },
       "custom_cursor":{
          "enabled":false,
@@ -44,7 +44,7 @@
          {
             "label":"Contact",
             "url":"/contact"
-                     },
+         },
          {
             "label":"Privacy",
             "url":"/privacy"
@@ -62,8 +62,8 @@
             "route":"/projects/hologramlib",
             "navbar":false,
             "title":"HologramLib",
-            "meta_title": "HologramLib",
-            "meta_description": "Minecraft hologram library with text, item & block displays, leaderboards, and extensive customization. packet-based, modern & easy to use", 
+            "meta_title":"HologramLib",
+            "meta_description":"Minecraft hologram library with text, item & block displays, leaderboards, and extensive customization. packet-based, modern & easy to use",
             "description":"A powerful **<gradient>packet-based</gradient>** text display hologram library for Minecraft servers with MiniMessage support, emoji rendering, and extensive customization options.",
             "images":[
                "/images/projects/pages/hologramlib/1.png",
@@ -71,79 +71,79 @@
                "/images/projects/pages/hologramlib/3.png"
             ],
             "content":[
-                  {
-                     "type":"text",
-                     "content":"**HologramLib** is a display entity-based hologram library for modern Minecraft servers (**1.19.4** to **1.21.5**).<br>It allows developers to create dynamic, customizable holograms using packets, with support for MiniMessage formatting, animations, and per-player visibility.<br><br>It works with Paper, Purpur, Spigot, and Folia servers, and requires PacketEvents as a dependency.<br>It __does not__ support **Bedrock** or older Minecraft versions (~~1.8 to 1.19.3~~).<br><br><white>**The library supports multiple hologram types:**</white><br> · Text with styling, scaling, background colors<br> · Blocks and Items displayed as holograms<br> · Leaderboards with live updates<br><br><white>**Advanced features include:**</white><br> · Animation support<br> · Entity attachment (e.g. hologram on a mob)<br> · View distance control<br> · Per-player visibility and interactivity (planned)<br><br>Integration is simple with a [JitPack](https://jitpack.io/#HologramLib/HologramLib) dependency and a few lines of code. Full usage examples are provided in the [Wiki](https://github.com/maximjsx/HologramLib/wiki)"
-                  },
-                  {
-                     "type":"features",
-                     "title":"Key Features",
-                     "items":[
-                        "Packet-based",
-                        "MiniMessage support",
-                        "Custom emoji and Unicode character support",
-                        "Multi-line",
-                        "Per-player visibility",
-                        "Easy to use API",
-                        "Animations",
-                        "Text, blocks, items, and leaderboards",
-                        "Entity attachment"
-                     ]
-                  },
-                  {
-                     "type":"text",
-                     "content":"<white>**__Contributors__</white>**<br>[maximjsx](https://github.com/maximjsx), [misieur](https://github.com/misieur), [WhyZerVellasskx](https://github.com/WhyZerVellasskx), [RootException](https://github.com/RootException) &  [matt11matthew](https://github.com/matt11matthew)"
-                  }
-               ],
-               "tags":[
-                  "Spigot",
-                  "Paper",
-                  "Purpur",
-                  "Folia",
-                  "Library",
-                  "Holograms",
-                  "MiniMessage",
-                  "Animations",
-                  "Leaderboards"
-               ],
-               "statistics":{
-                  "downloads": {
-                     "title": "Downloads",
-                     "description": "Total downloads across all platforms",
-                     "value":"4,000",
-                     "color": "blue"
-                  },
-                  "servers": {
-                     "title": "Servers Using",
-                     "description": "Servers currently running this plugin",
-                     "value":"70+",
-                     "color": "green"
-                  }
+               {
+                  "type":"text",
+                  "content":"**HologramLib** is a display entity-based hologram library for modern Minecraft servers (**1.19.4** to **1.21.5**).<br>It allows developers to create dynamic, customizable holograms using packets, with support for MiniMessage formatting, animations, and per-player visibility.<br><br>It works with Paper, Purpur, Spigot, and Folia servers, and requires PacketEvents as a dependency.<br>It __does not__ support **Bedrock** or older Minecraft versions (~~1.8 to 1.19.3~~).<br><br><white>**The library supports multiple hologram types:**</white><br> · Text with styling, scaling, background colors<br> · Blocks and Items displayed as holograms<br> · Leaderboards with live updates<br><br><white>**Advanced features include:**</white><br> · Animation support<br> · Entity attachment (e.g. hologram on a mob)<br> · View distance control<br> · Per-player visibility and interactivity (planned)<br><br>Integration is simple with a [JitPack](https://jitpack.io/#HologramLib/HologramLib) dependency and a few lines of code. Full usage examples are provided in the [Wiki](https://github.com/maximjsx/HologramLib/wiki)"
                },
-               "buttons": [
-                  {
-                     "label": "Download",
-                     "route": "https://github.com/HologramLib/HologramLib/releases/download/1.7.4/HologramLib-1.7.4.jar",
-                     "style": "primary"
-                   },
-                  {
-                    "label": "View on GitHub",
-                    "route": "https://github.com/maximjsx/HologramLib",
-                    "style": "secondary"
-                  },
-                  {
-                    "label": "Wiki",
-                    "route": "https://github.com/HologramLib/HologramLib/wiki",
-                    "style": "secondary"
-                  }
-                ]
+               {
+                  "type":"features",
+                  "title":"Key Features",
+                  "items":[
+                     "Packet-based",
+                     "MiniMessage support",
+                     "Custom emoji and Unicode character support",
+                     "Multi-line",
+                     "Per-player visibility",
+                     "Easy to use API",
+                     "Animations",
+                     "Text, blocks, items, and leaderboards",
+                     "Entity attachment"
+                  ]
+               },
+               {
+                  "type":"text",
+                  "content":"<white>**__Contributors__</white>**<br>[maximjsx](https://github.com/maximjsx), [misieur](https://github.com/misieur), [WhyZerVellasskx](https://github.com/WhyZerVellasskx), [RootException](https://github.com/RootException) &  [matt11matthew](https://github.com/matt11matthew)"
+               }
+            ],
+            "tags":[
+               "Spigot",
+               "Paper",
+               "Purpur",
+               "Folia",
+               "Library",
+               "Holograms",
+               "MiniMessage",
+               "Animations",
+               "Leaderboards"
+            ],
+            "statistics":{
+               "downloads":{
+                  "title":"Downloads",
+                  "description":"Total downloads across all platforms",
+                  "value":"4,000",
+                  "color":"blue"
+               },
+               "servers":{
+                  "title":"Servers Using",
+                  "description":"Servers currently running this plugin",
+                  "value":"70+",
+                  "color":"green"
+               }
+            },
+            "buttons":[
+               {
+                  "label":"Download",
+                  "route":"https://github.com/HologramLib/HologramLib/releases/download/1.7.4/HologramLib-1.7.4.jar",
+                  "style":"primary"
+               },
+               {
+                  "label":"View on GitHub",
+                  "route":"https://github.com/maximjsx/HologramLib",
+                  "style":"secondary"
+               },
+               {
+                  "label":"Wiki",
+                  "route":"https://github.com/HologramLib/HologramLib/wiki",
+                  "style":"secondary"
+               }
+            ]
          },
          "NextFight":{
             "enabled":true,
             "route":"/projects/nextfight",
             "navbar":false,
-            "meta_title": "NextFight",
-            "meta_description": "Minecraft Minigames & Battle Royale", 
+            "meta_title":"NextFight",
+            "meta_description":"Minecraft Minigames & Battle Royale",
             "title":"NextFight",
             "description":"Your <gradient>**#1**</gradient> Server For <gradient:#fcad03:#ffeb85>**Battle Royale**</gradient> since 2022",
             "images":[
@@ -169,13 +169,15 @@
                   "content":"**Notable Collaborations:** The server attracted attention from major Minecraft content creators including [Copeat](https://www.twitch.tv/copeat), [Brostastic](https://www.youtube.com/@BrostasticTV), and [SimplyFuse](https://www.twitch.tv/simplyfuse). We also had the honor of hosting special guests such as [GommeHD](https://www.youtube.com/user/GommeHD), [Wichtiger](https://www.youtube.com/wichtiger), [Fuxelbau](https://www.twitch.tv/fuxelbau), and even a Mojang employee, showcasing the server's reputation in the community."
                },
                {
-                  "type": "posts",
-                  "posts": [
+                  "type":"posts",
+                  "posts":[
                      {
-                        "title": "The end?",
-                        "excerpt": "For now, further development of the network has been paused",
-                        "date": "2025-06-28",
-                        "tags": ["NextFight"]
+                        "title":"The end?",
+                        "excerpt":"For now, further development of the network has been paused",
+                        "date":"2025-06-28",
+                        "tags":[
+                           "NextFight"
+                        ]
                      }
                   ]
                },
@@ -185,23 +187,23 @@
                }
             ],
             "statistics":{
-               "registered": {
-                  "title": "Registered Players",
-                  "description": "Total amount of unique players who joined nextfight.net",
+               "registered":{
+                  "title":"Registered Players",
+                  "description":"Total amount of unique players who joined nextfight.net",
                   "value":"2k+",
-                  "color": "orange"
+                  "color":"orange"
                },
-               "peak": {
-                  "title": "Most",
-                  "description": "Highest recorded concurrent players count",
+               "peak":{
+                  "title":"Most",
+                  "description":"Highest recorded concurrent players count",
                   "value":"60",
-                  "color": "green"
+                  "color":"green"
                },
-               "discord": {
-                  "title": "Discord Members",
-                  "description": "Current amount of Discord members",
+               "discord":{
+                  "title":"Discord Members",
+                  "description":"Current amount of Discord members",
                   "value":"~800",
-                  "color": "purple"
+                  "color":"purple"
                }
             },
             "tags":[
@@ -211,24 +213,25 @@
                "Cookie Clicker",
                "Copeat Prime"
             ],
-            "buttons": [
+            "buttons":[
                {
-                  "label": "Join the Discord server",
-                  "route": "https://discord.gg/sB4nh3eHGB",
-                  "style": "primary"
-                }
-             ]
+                  "label":"Join the Discord server",
+                  "route":"https://discord.gg/sB4nh3eHGB",
+                  "style":"primary"
+               }
+            ]
          }
       },
       "home":{
          "enabled":true,
          "route":"/home",
-         "name": "Home",
+         "name":"Home",
          "profile_image":"/images/avatar_3.png",
          "about_me":"<gradient>Хей, I'm Maxim!</gradient>",
          "description":"I specialize in building Spigot plugins like [HologramLib](https://github.com/HologramLib/HologramLib). \"That can't be done\" is my favorite starting point.",
          "tools_languages_title":"Tools & Languages",
          "languages":[
+            
          ],
          "tools":[
             "Frontend",
@@ -287,13 +290,13 @@
       },
       "projects":{
          "enabled":true,
-         "name": "Projects",
+         "name":"Projects",
          "header":"My projects",
          "route":"/projects"
       },
       "contact":{
          "enabled":true,
-         "name": "Contact",
+         "name":"Contact",
          "header":"Socials",
          "route":"/contact",
          "contact":"maximde",
@@ -374,125 +377,126 @@
             }
          ]
       },
-
-  "privacy": {
-    "enabled": false,
-    "header": "Privacy Policy",
-    "updated": "Last updated 8/3/2025",
-    "route": "/privacy",
-    "content": {
-      "contact_title": "Contact",
-      "contact": "%email%",
-      "introduction": "This portfolio website is designed with minimal data collection and maximum user privacy in mind. We are committed to protecting your personal data in accordance with the General Data Protection Regulation (GDPR).",
-      "sections": [
-         {
-  "title": "Glossary",
-  "description": "This section provides clear explanations of important legal and technical terms used throughout this Privacy Policy. It’s here to help you better understand how your data is handled and protected.",
-  "details": [
-    "**Personal Data**: Any information that can identify you, such as your name, email address, or IP address.",
-    "**Data Controller**: The person or organization responsible for deciding how and why your data is processed.",
-    "**Processing**: Any action performed on personal data (e.g., collecting, storing, deleting).",
-    "**IP Address**: A numerical label assigned to your internet connection, usually identifying your network. It can sometimes reveal your approximate geographic location.",
-    "**Rate Limiting**: A technique used to limit the number of requests made to a service within a specific time to prevent abuse.",
-    "**RAM (Random Access Memory)**: A type of fast, temporary computer memory used to store data that the system or applications are actively using. Data in RAM is lost when the device is turned off.",
-    "**In-Memory Processing**: Data is stored temporarily in the server’s RAM and is not written to permanent storage or logs.",
-    "**HTTPS**: A secure way your browser connects to websites. It encrypts the data you send and receive.",
-    "**Form Validation**: A check that ensures data you submit through forms is correct and safe.",
-    "**Client-Side Interactions**: Your activity in the browser (like clicks or scrolls).",
-    "**Third-Party Services**: External services integrated into the website (like badge providers or hosting platforms) that may collect limited user data.",
-    "**Cookies**: Small data files saved in your browser. This website doesn’t use first-party cookies.",
-    "**Standard Contractual Clauses (SCCs)**: Legal contracts that protect your data when it’s transferred outside the EU.",
-    "**Metadata**: Technical details like browser type, screen size, or visit time that are sometimes collected automatically."
-  ]
-},
-        {
-          "title": "Data Controller",
-          "description": "The data controller is the individual or organization responsible for determining the purposes and means of processing personal data on this website.<br>The data controller is %full_name%. For full legal details and business registration information, please see our legal notice at __[https://legal.maxim.cat](https://legal.maxim.cat)__."
-        },
-        {
-          "title": "Information Collection",
-          "description": "We collect the following types of information:",
-          "details": [
-            "Name, email, and message content submitted through the contact form",
-            "IP address for rate limiting and security purposes",
-            "Potential temporary collection and processing of client-side interaction data solely for the purpose of enabling and enhancing website functionality, including visual effects, without the use of any analytics tools"
-          ]
-        },
-        {
-          "title": "Purposes and Legal Basis",
-          "description": "We process your personal data for the following purposes and based on the following legal grounds:",
-          "details": ["**Contact form submissions**: When you submit a message via the contact form, your input is validated and immediately discarded. We do not process, store, or respond to your messages. This means we do not retain or use your personal data submitted via the form.",
-            "IP addresses: For rate limiting and security purposes, based on our legitimate interest in protecting the website (Art. 6(1)(f) GDPR)",
-            "Client-side interactions: To ensure the proper functioning of the website, based on our legitimate interest (Art. 6(1)(f) GDPR)"
-          ]
-        },
-        {
-          "title": "Data Processing and Storage",
-          "description": "Your personal data is processed and stored as follows:",
-          "details": [
-            "Contact form submissions are processed in-memory and not permanently stored. The data is only used to respond to your inquiry and is deleted immediately thereafter.",
-            "IP addresses are temporarily tracked for rate limiting and security purposes, with a maximum retention period of 30 minutes.",
-            "No persistent user data is saved or stored long-term on our own systems. Any temporary data handling is done in-memory or via third-party infrastructure (e.g., Vercel ([Privacy Policy](https://vercel.com/legal/privacy-policy))), which may apply their own storage and processing policies."
-          ]
-        },
-        {
-          "title": "Third-Party Services",
-          "description": "This website uses the following third-party services, which may collect and process your personal data:",
-          "details": [
-            "Hosting provider: Vercel ([Privacy Policy](https://vercel.com/legal/privacy-policy)) - May collect IP addresses, geographic information, system configuration data, and use cookies for technical purposes such as load balancing and maintaining website stability.",
-            "**Badge services**: shields.io ([Privacy Policy](https://shields.io/privacy)) and dcbadge (no dedicated privacy policy available).  ",
-            "dcbadge is hosted on Vercel ([Privacy Policy](https://vercel.com/legal/privacy-policy)) and its source code is publicly available at [https://github.com/gitlimes/dcbadge](https://github.com/gitlimes/dcbadge).",
-            "These services may collect your IP address and other metadata when loading badges on the website.",
-            "Link preview service: Microlink ([Privacy Policy](https://microlink.io/privacy)) - When you interact with links that use the LinkPreview feature (e.g., by hovering over them), your IP address and other metadata may be sent to Microlink to generate a screenshot of the linked website. This data is processed by Microlink in accordance with their privacy policy to provide the preview functionality.",
-            "These services may collect your IP address and other metadata when you visit the website or interact with specific features. For details on their data handling practices, please refer to their respective privacy policies."
-          ]
-        },
-        {
-          "title": "Cookies and Tracking Technologies",
-          "description": "This website does not set any first-party cookies. However, third-party services used by the website may set cookies or use other tracking technologies for technical purposes. These cookies are governed by the privacy policies of the respective third-party services. You can manage your cookie preferences through your browser settings."
-        },
-        {
-          "title": "International Data Transfers",
-          "description": "When you visit this website, your browser may send requests to third-party services located outside the European Union, such as the United States. These services are responsible for implementing appropriate safeguards for the transfer of your personal data as required by GDPR. Please refer to their privacy policies for more information.",
-          "details": ["These third-party services claim to implement GDPR-compliant safeguards, such as Standard Contractual Clauses (SCCs) or other appropriate mechanisms as required under Chapter V of the GDPR."]
-         },
-        {
-          "title": "Data Protection Measures",
-          "description": "We implement the following measures to protect your personal data:",
-          "details": [
-            "All data transmissions between your browser and the website are encrypted using HTTPS.",
-            "Rate limiting to prevent abuse of the contact form",
-            "Validation of submitted form data to ensure integrity",
-            "No storage of sensitive personal information"
-          ]
-        },
-        {
-          "title": "Changes to This Privacy Policy",
-          "description": "We may update this Privacy Policy from time to time to reflect changes in our practices or for legal reasons. We encourage users to check this page periodically. The date of the latest update will always be indicated at the top of the policy."
-        },
-        {
-          "title": "Your Rights",
-          "description": "Under GDPR, you have the following rights regarding your personal data:",
-          "details": [
-            "Right to access (Art. 15 GDPR)",
-            "Right to rectification (Art. 16 GDPR)",
-            "Right to erasure (Art. 17 GDPR)",
-            "Right to restriction of processing (Art. 18 GDPR)",
-            "Right to data portability (Art. 20 GDPR)",
-            "Right to object (Art. 21 GDPR)",
-            "Right to withdraw consent at any time (Art. 7(3) GDPR)",
-            "Right to lodge a complaint with a supervisory authority, such as the Commission for Personal Data Protection in Bulgaria (Art. 77 GDPR)"
-          ],
-          "note": "Since we do not store personal data long-term, requests for access, rectification, or erasure may be limited to confirming that no data is held. However, you can still exercise your rights by contacting us at the email address provided below."
-        },
-        {
-          "title": "",
-          "description": "To exercise your rights, please send an email to %email% with the subject line \"GDPR Request\" and include a brief description of your request.<br>We respond to all data requests within one month, as required under Article 12(3) GDPR."
-        }
-      ]
-    }
-  }
-
+      "privacy":{
+         "enabled":false,
+         "header":"Privacy Policy",
+         "updated":"Last updated 8/3/2025",
+         "route":"/privacy",
+         "content":{
+            "contact_title":"Contact",
+            "contact":"%email%",
+            "introduction":"This portfolio website is designed with minimal data collection and maximum user privacy in mind. We are committed to protecting your personal data in accordance with the General Data Protection Regulation (GDPR).",
+            "sections":[
+               {
+                  "title":"Glossary",
+                  "description":"This section provides clear explanations of important legal and technical terms used throughout this Privacy Policy. It’s here to help you better understand how your data is handled and protected.",
+                  "details":[
+                     "**Personal Data**: Any information that can identify you, such as your name, email address, or IP address.",
+                     "**Data Controller**: The person or organization responsible for deciding how and why your data is processed.",
+                     "**Processing**: Any action performed on personal data (e.g., collecting, storing, deleting).",
+                     "**IP Address**: A numerical label assigned to your internet connection, usually identifying your network. It can sometimes reveal your approximate geographic location.",
+                     "**Rate Limiting**: A technique used to limit the number of requests made to a service within a specific time to prevent abuse.",
+                     "**RAM (Random Access Memory)**: A type of fast, temporary computer memory used to store data that the system or applications are actively using. Data in RAM is lost when the device is turned off.",
+                     "**In-Memory Processing**: Data is stored temporarily in the server’s RAM and is not written to permanent storage or logs.",
+                     "**HTTPS**: A secure way your browser connects to websites. It encrypts the data you send and receive.",
+                     "**Form Validation**: A check that ensures data you submit through forms is correct and safe.",
+                     "**Client-Side Interactions**: Your activity in the browser (like clicks or scrolls).",
+                     "**Third-Party Services**: External services integrated into the website (like badge providers or hosting platforms) that may collect limited user data.",
+                     "**Cookies**: Small data files saved in your browser. This website doesn’t use first-party cookies.",
+                     "**Standard Contractual Clauses (SCCs)**: Legal contracts that protect your data when it’s transferred outside the EU.",
+                     "**Metadata**: Technical details like browser type, screen size, or visit time that are sometimes collected automatically."
+                  ]
+               },
+               {
+                  "title":"Data Controller",
+                  "description":"The data controller is the individual or organization responsible for determining the purposes and means of processing personal data on this website.<br>The data controller is %full_name%. For full legal details and business registration information, please see our legal notice at __[https://legal.maxim.cat](https://legal.maxim.cat)__."
+               },
+               {
+                  "title":"Information Collection",
+                  "description":"We collect the following types of information:",
+                  "details":[
+                     "Name, email, and message content submitted through the contact form",
+                     "IP address for rate limiting and security purposes",
+                     "Potential temporary collection and processing of client-side interaction data solely for the purpose of enabling and enhancing website functionality, including visual effects, without the use of any analytics tools"
+                  ]
+               },
+               {
+                  "title":"Purposes and Legal Basis",
+                  "description":"We process your personal data for the following purposes and based on the following legal grounds:",
+                  "details":[
+                     "**Contact form submissions**: When you submit a message via the contact form, your input is validated and immediately discarded. We do not process, store, or respond to your messages. This means we do not retain or use your personal data submitted via the form.",
+                     "IP addresses: For rate limiting and security purposes, based on our legitimate interest in protecting the website (Art. 6(1)(f) GDPR)",
+                     "Client-side interactions: To ensure the proper functioning of the website, based on our legitimate interest (Art. 6(1)(f) GDPR)"
+                  ]
+               },
+               {
+                  "title":"Data Processing and Storage",
+                  "description":"Your personal data is processed and stored as follows:",
+                  "details":[
+                     "Contact form submissions are processed in-memory and not permanently stored. The data is only used to respond to your inquiry and is deleted immediately thereafter.",
+                     "IP addresses are temporarily tracked for rate limiting and security purposes, with a maximum retention period of 30 minutes.",
+                     "No persistent user data is saved or stored long-term on our own systems. Any temporary data handling is done in-memory or via third-party infrastructure (e.g., Vercel ([Privacy Policy](https://vercel.com/legal/privacy-policy))), which may apply their own storage and processing policies."
+                  ]
+               },
+               {
+                  "title":"Third-Party Services",
+                  "description":"This website uses the following third-party services, which may collect and process your personal data:",
+                  "details":[
+                     "Hosting provider: Vercel ([Privacy Policy](https://vercel.com/legal/privacy-policy)) - May collect IP addresses, geographic information, system configuration data, and use cookies for technical purposes such as load balancing and maintaining website stability.",
+                     "**Badge services**: shields.io ([Privacy Policy](https://shields.io/privacy)) and dcbadge (no dedicated privacy policy available).  ",
+                     "dcbadge is hosted on Vercel ([Privacy Policy](https://vercel.com/legal/privacy-policy)) and its source code is publicly available at [https://github.com/gitlimes/dcbadge](https://github.com/gitlimes/dcbadge).",
+                     "These services may collect your IP address and other metadata when loading badges on the website.",
+                     "Link preview service: Microlink ([Privacy Policy](https://microlink.io/privacy)) - When you interact with links that use the LinkPreview feature (e.g., by hovering over them), your IP address and other metadata may be sent to Microlink to generate a screenshot of the linked website. This data is processed by Microlink in accordance with their privacy policy to provide the preview functionality.",
+                     "These services may collect your IP address and other metadata when you visit the website or interact with specific features. For details on their data handling practices, please refer to their respective privacy policies."
+                  ]
+               },
+               {
+                  "title":"Cookies and Tracking Technologies",
+                  "description":"This website does not set any first-party cookies. However, third-party services used by the website may set cookies or use other tracking technologies for technical purposes. These cookies are governed by the privacy policies of the respective third-party services. You can manage your cookie preferences through your browser settings."
+               },
+               {
+                  "title":"International Data Transfers",
+                  "description":"When you visit this website, your browser may send requests to third-party services located outside the European Union, such as the United States. These services are responsible for implementing appropriate safeguards for the transfer of your personal data as required by GDPR. Please refer to their privacy policies for more information.",
+                  "details":[
+                     "These third-party services claim to implement GDPR-compliant safeguards, such as Standard Contractual Clauses (SCCs) or other appropriate mechanisms as required under Chapter V of the GDPR."
+                  ]
+               },
+               {
+                  "title":"Data Protection Measures",
+                  "description":"We implement the following measures to protect your personal data:",
+                  "details":[
+                     "All data transmissions between your browser and the website are encrypted using HTTPS.",
+                     "Rate limiting to prevent abuse of the contact form",
+                     "Validation of submitted form data to ensure integrity",
+                     "No storage of sensitive personal information"
+                  ]
+               },
+               {
+                  "title":"Changes to This Privacy Policy",
+                  "description":"We may update this Privacy Policy from time to time to reflect changes in our practices or for legal reasons. We encourage users to check this page periodically. The date of the latest update will always be indicated at the top of the policy."
+               },
+               {
+                  "title":"Your Rights",
+                  "description":"Under GDPR, you have the following rights regarding your personal data:",
+                  "details":[
+                     "Right to access (Art. 15 GDPR)",
+                     "Right to rectification (Art. 16 GDPR)",
+                     "Right to erasure (Art. 17 GDPR)",
+                     "Right to restriction of processing (Art. 18 GDPR)",
+                     "Right to data portability (Art. 20 GDPR)",
+                     "Right to object (Art. 21 GDPR)",
+                     "Right to withdraw consent at any time (Art. 7(3) GDPR)",
+                     "Right to lodge a complaint with a supervisory authority, such as the Commission for Personal Data Protection in Bulgaria (Art. 77 GDPR)"
+                  ],
+                  "note":"Since we do not store personal data long-term, requests for access, rectification, or erasure may be limited to confirming that no data is held. However, you can still exercise your rights by contacting us at the email address provided below."
+               },
+               {
+                  "title":"",
+                  "description":"To exercise your rights, please send an email to %email% with the subject line \"GDPR Request\" and include a brief description of your request.<br>We respond to all data requests within one month, as required under Article 12(3) GDPR."
+               }
+            ]
+         }
+      }
    },
    "card":{
       "pop_in":true,
@@ -502,7 +506,7 @@
    },
    "cards":[
       {
-         "title":"Por2tfolio (This website)",
+         "title":"Portfolio (This website)",
          "description":"Customizable, responsive, portfolio website built with Next.js",
          "imageSRC":"/images/projects/portfolio.webp",
          "buttonText":"View on GitHub",
@@ -513,7 +517,7 @@
          ]
       },
       {
-         "title":"Fan2cy Physics",
+         "title":"Fancy Physics",
          "description":"Tree fall animation, hit particles, realistic explosions, 3D particles & more",
          "imageSRC":"/images/projects/fancyphysics.webp",
          "buttonText":"View on SpigotMC",
@@ -523,7 +527,7 @@
          ]
       },
       {
-         "title":"Holo2gramLib",
+         "title":"HologramLib",
          "description":"Packet based text display hologram library with minimessage and emoji support",
          "imageSRC":"/images/projects/hologramapi.webp",
          "buttonText":"Learn More",
@@ -534,7 +538,7 @@
          ]
       },
       {
-         "title":"Commun2ity Discord",
+         "title":"Community Discord",
          "description":"My community Discord server. Connect with developers and share projects",
          "imageSRC":"/images/projects/community.webp",
          "buttonText":"Join Now",
@@ -544,7 +548,7 @@
          ]
       },
       {
-         "title":"Bett2er Chat Bubbles",
+         "title":"Better Chat Bubbles",
          "description":"Packet based chat bubbles above players head, with an extensive API",
          "imageSRC":"/images/projects/betterchatbubbles.webp",
          "buttonText":"View on GitHub",
@@ -554,7 +558,7 @@
          ]
       },
       {
-         "title":"Fanc2y Readme Stats",
+         "title":"Fancy Readme Stats",
          "description":"Animated Readme Cards - For your GitHub profile or repository readme",
          "imageSRC":"/images/projects/readmestats.webp",
          "buttonText":"View on GitHub",
@@ -564,7 +568,7 @@
          ]
       },
       {
-         "title":"Nex2tfight",
+         "title":"Nextfight",
          "description":"Nextfight is a Minecraft minigame network focused on a Battle Royale like gamemode",
          "imageSRC":"/images/projects/nextfight.webp",
          "buttonText":"Learn More",
@@ -574,7 +578,7 @@
          ]
       },
       {
-         "title":"EntityS22ize",
+         "title":"EntitySize",
          "description":"Change the size/scale of any living entity or player with an optional transition!",
          "imageSRC":"/images/projects/entitysize.webp",
          "buttonText":"View on SpigotMC",
@@ -584,7 +588,7 @@
          ]
       },
       {
-         "title":"Dis2cord Embed Builder",
+         "title":"Discord Embed Builder",
          "description":"A Discord embed builder for users. No bot, webhook, mod or selfbot required!",
          "imageSRC":"/images/projects/embedbuilder.webp",
          "buttonText":"View on GitHub",
@@ -594,7 +598,7 @@
          ]
       },
       {
-         "title":"Maxi2mClient",
+         "title":"MaximClient",
          "description":"MaximClient was a 1.8 PVP client with many mods and free online cosmetics",
          "imageSRC":"/images/projects/maximclient.webp",
          "buttonText":"Join the Discord",
@@ -604,7 +608,7 @@
          ]
       },
       {
-         "title":"FI2X2",
+         "title":"FIX",
          "description":"A Windows tool for AI text correction and translation with hotkeys & voice control",
          "imageSRC":"/images/projects/fix.webp",
          "buttonText":"View on GitHub",
@@ -614,7 +618,7 @@
          ]
       },
       {
-         "title":"World B2order Bypass",
+         "title":"World Border Bypass",
          "description":"Bypass the vanilla worldborder building & combat limitations",
          "imageSRC":"/images/projects/border.webp",
          "buttonText":"View on GitHub",
@@ -624,7 +628,7 @@
          ]
       },
       {
-         "title":"Next.2js Template",
+         "title":"Next.js Template",
          "description":"A powerful Next.js template combining the best UI component libraries",
          "imageSRC":"/images/projects/template.webp",
          "buttonText":"View on GitHub",
@@ -634,7 +638,7 @@
          ]
       },
       {
-         "title":"Passen2gerAPI",
+         "title":"PassengerAPI",
          "description":"Fix passenger compatibility issues | Manage your own entity passengers",
          "imageSRC":"/images/projects/entitysize.webp",
          "buttonText":"View on SpigotMC",
@@ -644,7 +648,7 @@
          ]
       },
       {
-         "title":"Custom 2Score Numbers",
+         "title":"Custom Score Numbers",
          "description":"Remove/hide the red numbers in the scoreboard or change the color",
          "imageSRC":"/images/projects/scorenumbers.webp",
          "buttonText":"View on SpigotMC",
@@ -654,169 +658,7 @@
          ]
       },
       {
-         "title":"Skin Ov2erlay Generator",
-         "description":"Festive overlays for your Minecraft skin",
-         "imageSRC":"/images/projects/skinoverlay.webp",
-         "buttonText":"View on GitHub",
-         "buttonURL":"https://github.com/ToiletDevelopment/Skin-Overlay-Generator",
-         "badges":[
-            "https://img.shields.io/github/stars/ToiletDevelopment/Skin-Overlay-Generator.svg?style=flat&label=Stars"
-         ]
-      },
-      {
-         "title":"Portf2olio (This website)",
-         "description":"Customizable, responsive, portfolio website built with Next.js",
-         "imageSRC":"/images/projects/portfolio.webp",
-         "buttonText":"View on GitHub",
-         "buttonURL":"https://github.com/maximjsx/portfolio",
-         "badges":[
-            "https://img.shields.io/github/stars/maximjsx/portfolio.svg?style=flat&label=Stars",
-            "https://img.shields.io/github/forks/maximjsx/portfolio.svg?style=flat&label=Forks"
-         ]
-      },
-      {
-         "title":"Fancy2 Physics",
-         "description":"Tree fall animation, hit particles, realistic explosions, 3D particles & more",
-         "imageSRC":"/images/projects/fancyphysics.webp",
-         "buttonText":"View on SpigotMC",
-         "buttonURL":"https://www.spigotmc.org/resources/110500/",
-         "badges":[
-            "https://img.shields.io/spiget/downloads/110500?label=Downloads"
-         ]
-      },
-      {
-         "title":"Hologr2amLib",
-         "description":"Packet based text display hologram library with minimessage and emoji support",
-         "imageSRC":"/images/projects/hologramapi.webp",
-         "buttonText":"Learn More",
-         "buttonURL":"/projects/hologramlib",
-         "badges":[
-            "https://img.shields.io/github/stars/HologramLib/HologramLib.svg?style=flat&label=Stars",
-            "https://img.shields.io/github/forks/HologramLib/HologramLib.svg?style=flat&label=Forks"
-         ]
-      },
-      {
-         "title":"Comm2unity Discord",
-         "description":"My community Discord server. Connect with developers and share projects",
-         "imageSRC":"/images/projects/community.webp",
-         "buttonText":"Join Now",
-         "buttonURL":"https://discord.com/invite/sr8sQgX6mS",
-         "badges":[
-            "https://dcbadge.limes.pink/api/server/https://discord.gg/sr8sQgX6mS?style=flat"
-         ]
-      },
-      {
-         "title":"Better 2Chat Bubbles",
-         "description":"Packet based chat bubbles above players head, with an extensive API",
-         "imageSRC":"/images/projects/betterchatbubbles.webp",
-         "buttonText":"View on GitHub",
-         "buttonURL":"https://github.com/maximjsx/ChatBubblesAPI",
-         "badges":[
-            "https://img.shields.io/github/stars/maximjsx/ChatBubblesAPI.svg?style=flat&label=Stars"
-         ]
-      },
-      {
-         "title":"Fancy R2eadme Stats",
-         "description":"Animated Readme Cards - For your GitHub profile or repository readme",
-         "imageSRC":"/images/projects/readmestats.webp",
-         "buttonText":"View on GitHub",
-         "buttonURL":"https://github.com/maximjsx/fancy-readme-stats",
-         "badges":[
-            "https://img.shields.io/github/stars/maximjsx/fancy-readme-stats.svg?style=flat&label=Stars"
-         ]
-      },
-      {
-         "title":"Nextfig2ht",
-         "description":"Nextfight is a Minecraft minigame network focused on a Battle Royale like gamemode",
-         "imageSRC":"/images/projects/nextfight.webp",
-         "buttonText":"Learn More",
-         "buttonURL":"/projects/nextfight",
-         "badges":[
-            "https://dcbadge.limes.pink/api/server/https://discord.gg/sB4nh3eHGB?style=flat"
-         ]
-      },
-      {
-         "title":"EntityS2ize",
-         "description":"Change the size/scale of any living entity or player with an optional transition!",
-         "imageSRC":"/images/projects/entitysize.webp",
-         "buttonText":"View on SpigotMC",
-         "buttonURL":"https://www.spigotmc.org/resources/116497/",
-         "badges":[
-            "https://img.shields.io/spiget/downloads/116497?label=Downloads"
-         ]
-      },
-      {
-         "title":"Discord2 Embed Builder",
-         "description":"A Discord embed builder for users. No bot, webhook, mod or selfbot required!",
-         "imageSRC":"/images/projects/embedbuilder.webp",
-         "buttonText":"View on GitHub",
-         "buttonURL":"https://github.com/maximjsx/discord-embed-builder",
-         "badges":[
-            "https://img.shields.io/github/stars/maximjsx/discord-embed-builder.svg?style=flat&label=Stars"
-         ]
-      },
-      {
-         "title":"Maxim2Client",
-         "description":"MaximClient was a 1.8 PVP client with many mods and free online cosmetics",
-         "imageSRC":"/images/projects/maximclient.webp",
-         "buttonText":"Join the Discord",
-         "buttonURL":"https://discord.gg/eCn8VWEGbZ",
-         "badges":[
-            "https://dcbadge.limes.pink/api/server/https://discord.gg/eCn8VWEGbZ?style=flat"
-         ]
-      },
-      {
-         "title":"FIX2",
-         "description":"A Windows tool for AI text correction and translation with hotkeys & voice control",
-         "imageSRC":"/images/projects/fix.webp",
-         "buttonText":"View on GitHub",
-         "buttonURL":"https://github.com/maximjsx/FIX",
-         "badges":[
-            "https://img.shields.io/github/stars/maximjsx/FIX.svg?style=flat&label=Stars"
-         ]
-      },
-      {
-         "title":"World Border2 Bypass",
-         "description":"Bypass the vanilla worldborder building & combat limitations",
-         "imageSRC":"/images/projects/border.webp",
-         "buttonText":"View on GitHub",
-         "buttonURL":"https://github.com/maximjsx/BeyondBorderUnlocked",
-         "badges":[
-            "https://img.shields.io/github/stars/maximjsx/BeyondBorderUnlocked.svg?style=flat&label=Stars"
-         ]
-      },
-      {
-         "title":"Next.js Templat2e",
-         "description":"A powerful Next.js template combining the best UI component libraries",
-         "imageSRC":"/images/projects/template.webp",
-         "buttonText":"View on GitHub",
-         "buttonURL":"https://github.com/maximjsx/template",
-         "badges":[
-            "https://img.shields.io/github/stars/maximjsx/template.svg?style=flat&label=Stars"
-         ]
-      },
-      {
-         "title":"PassengerAPI2",
-         "description":"Fix passenger compatibility issues | Manage your own entity passengers",
-         "imageSRC":"/images/projects/entitysize.webp",
-         "buttonText":"View on SpigotMC",
-         "buttonURL":"https://www.spigotmc.org/resources/117017/",
-         "badges":[
-            "https://img.shields.io/spiget/downloads/117017?label=Downloads"
-         ]
-      },
-      {
-         "title":"Custom Score Numbers2",
-         "description":"Remove/hide the red numbers in the scoreboard or change the color",
-         "imageSRC":"/images/projects/scorenumbers.webp",
-         "buttonText":"View on SpigotMC",
-         "buttonURL":"https://www.spigotmc.org/resources/115955/",
-         "badges":[
-            "https://img.shields.io/spiget/downloads/115955?label=Downloads"
-         ]
-      },
-      {
-         "title":"Skin Overlay Generator2",
+         "title":"Skin Overlay Generator",
          "description":"Festive overlays for your Minecraft skin",
          "imageSRC":"/images/projects/skinoverlay.webp",
          "buttonText":"View on GitHub",
