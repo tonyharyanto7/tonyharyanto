@@ -380,119 +380,223 @@
       "privacy":{
          "enabled":false,
          "header":"Privacy Policy",
-         "updated":"Last updated 8/3/2025",
+         "updated":"Last updated August 08, 2025",
          "route":"/privacy",
          "content":{
             "contact_title":"Contact",
             "contact":"%email%",
-            "introduction":"This portfolio website is designed with minimal data collection and maximum user privacy in mind. We are committed to protecting your personal data in accordance with the General Data Protection Regulation (GDPR).",
+            "introduction":"This Privacy Notice for Maxim.jsx (%full_name%) (\"we,\" \"us,\" or \"our\") outlines how and why we might collect, retain, utilize, and/or distribute (\"process\") your personal information when you engage with our services (\"Services\"). This includes visiting our website at https://maxim.cat or any site of ours linking to this Privacy Notice, or interacting with us in other similar ways. Got questions or concerns? Reviewing this Privacy Notice will assist you in grasping your privacy rights and options. We hold the duty of deciding how your personal information is processed. If our policies and practices don’t suit you, please avoid using our Services. For any further inquiries or worries, reach out to us at %email%.",
+            "summary":{
+               "title":"Overview of Main Points",
+               "description":"This overview presents the primary points from our Privacy Notice. For more specifics on any topic, check the sections below or use the table of contents to locate what you’re seeking.",
+               "points":[
+                  "**What personal information do we process?** As you explore, use, or move through our Services, we may process personal information based on your engagement with us and the Services, your preferences, and the features or products you utilize.",
+                  "**Do we process any sensitive personal information?** We refrain from processing sensitive personal details like racial or ethnic origins, sexual orientation, religious views, or health records.",
+                  "**Do we collect any information from third parties?** We don’t actively gather information from third parties.",
+                  "**How do we process your information?** We process your information to deliver, enhance, and manage our Services, to connect with you, for security and fraud prevention, and to meet legal obligations. We only process your information when we possess a valid legal basis.",
+                  "**In what cases and with whom do we share personal information?** We may share information in certain cases and with specific third parties as described in this policy.",
+                  "**How do we keep your information secure?** We maintain suitable organizational and technical measures to safeguard your personal information. Still, no online transmission or storage method can be promised as fully secure.",
+                  "**What are your rights?** Depending on your location, applicable privacy laws might grant you certain rights over your personal information.",
+                  "**How do you exercise your rights?** The simplest way to use your rights is by submitting a data subject access request or contacting us. We’ll review and address any request per relevant data protection laws."
+               ]
+            },
+            "tableOfContents":[
+               "1. WHAT DATA DO WE COLLECT?",
+               "2. COOKIES AND TRACKING METHODS",
+               "3. HOW DO WE HANDLE YOUR INFORMATION?",
+               "4. WHAT LEGAL GROUNDS SUPPORT OUR PROCESSING OF YOUR PERSONAL INFORMATION?",
+               "5. WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?",
+               "6. DOES YOUR INFORMATION CROSS INTERNATIONAL BORDERS?",
+               "7. HOW LONG DO WE RETAIN YOUR INFORMATION?",
+               "8. HOW DO WE PROTECT YOUR INFORMATION?",
+               "9. WHAT PRIVACY RIGHTS DO YOU HAVE?",
+               "10. OPTIONS FOR DO-NOT-TRACK FEATURES",
+               "11. DO U.S. RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?",
+               "12. DO WE ALTER THIS NOTICE?",
+               "13. HOW CAN YOU REACH US ABOUT THIS NOTICE?",
+               "14. HOW CAN YOU VIEW, CHANGE, OR ERASE THE DATA WE COLLECT FROM YOU?"
+            ],
             "sections":[
                {
-                  "title":"Glossary",
-                  "description":"This section provides clear explanations of important legal and technical terms used throughout this Privacy Policy. It’s here to help you better understand how your data is handled and protected.",
+                  "title":"1. What Data Do We Collect?",
+                  "subtitle":"Personal information you reveal to us",
+                  "description":"**In Short:** We collect personal information you give us.",
                   "details":[
-                     "**Personal Data**: Any information that can identify you, such as your name, email address, or IP address.",
-                     "**Data Controller**: The person or organization responsible for deciding how and why your data is processed.",
-                     "**Processing**: Any action performed on personal data (e.g., collecting, storing, deleting).",
-                     "**IP Address**: A numerical label assigned to your internet connection, usually identifying your network. It can sometimes reveal your approximate geographic location.",
-                     "**Rate Limiting**: A technique used to limit the number of requests made to a service within a specific time to prevent abuse.",
-                     "**RAM (Random Access Memory)**: A type of fast, temporary computer memory used to store data that the system or applications are actively using. Data in RAM is lost when the device is turned off.",
-                     "**In-Memory Processing**: Data is stored temporarily in the server’s RAM and is not written to permanent storage or logs.",
-                     "**HTTPS**: A secure way your browser connects to websites. It encrypts the data you send and receive.",
-                     "**Form Validation**: A check that ensures data you submit through forms is correct and safe.",
-                     "**Client-Side Interactions**: Your activity in the browser (like clicks or scrolls).",
-                     "**Third-Party Services**: External services integrated into the website (like badge providers or hosting platforms) that may collect limited user data.",
-                     "**Cookies**: Small data files saved in your browser. This website doesn’t use first-party cookies.",
-                     "**Standard Contractual Clauses (SCCs)**: Legal contracts that protect your data when it’s transferred outside the EU.",
-                     "**Metadata**: Technical details like browser type, screen size, or visit time that are sometimes collected automatically."
+                     "We gather personal information you willingly provide when you show interest in learning about us, our products, or Services, when you take part in activities on the Services, or when you contact us otherwise.",
+                     "**Personal Information You Provide.** What we collect depends on how you interact with us and the Services, the choices you make, and the products or features you use. This may include:",
+                     "- Email addresses",
+                     "- Names",
+                     "- Messages submitted via contact forms",
+                     "**Technical Information.** We might automatically collect certain details when you visit our website:",
+                     "- IP addresses (for rate limiting and security reasons)",
+                     "- Browser and device data needed for website operation",
+                     "**Sensitive Information.** We don’t process sensitive information.",
+                     "**Third-Party Service Data.** Our website uses external services that might collect data per their own privacy policies:",
+                     "- Vercel (hosting provider) - may collect IP addresses and technical details",
+                     "- shields.io and dcbadge (badge services) - may collect IP addresses when badges load",
+                     "- Microlink (link preview service) - may collect IP addresses and metadata when creating previews",
+                     "All personal information you supply must be true, complete, and correct, and you should inform us of any updates to it."
                   ]
                },
                {
-                  "title":"Data Controller",
-                  "description":"The data controller is the individual or organization responsible for determining the purposes and means of processing personal data on this website.<br>The data controller is %full_name%. For full legal details and business registration information, please see our legal notice at __[https://legal.maxim.cat](https://legal.maxim.cat)__."
-               },
-               {
-                  "title":"Information Collection",
-                  "description":"We collect the following types of information:",
+                  "title":"2. Cookies and Tracking Methods",
+                  "subtitle":"",
+                  "description":"**In Short:** This website doesn’t use first-party cookies, but third-party services may gather limited technical data.",
                   "details":[
-                     "Name, email, and message content submitted through the contact form",
-                     "IP address for rate limiting and security purposes",
-                     "Potential temporary collection and processing of client-side interaction data solely for the purpose of enabling and enhancing website functionality, including visual effects, without the use of any analytics tools"
+                     "This site doesn’t set first-party cookies or employ analytics tools. However, third-party services embedded in our website might collect minimal technical data, like IP addresses, or use cookies for technical needs.",
+                     "**Third-party services that may gather data:**",
+                     "- Vercel (hosting provider) - may collect IP addresses and technical data for load balancing and site stability",
+                     "- shields.io and dcbadge (badge services) - may collect IP addresses when badges are loaded",
+                     "- Microlink (link preview service) - may collect IP addresses and metadata when generating previews",
+                     "These services follow their own privacy policies, which we do not control. You can adjust cookie preferences in your browser settings."
                   ]
                },
                {
-                  "title":"Purposes and Legal Basis",
-                  "description":"We process your personal data for the following purposes and based on the following legal grounds:",
+                  "title":"3. How Do We Handle Your Information?",
+                  "description":"**In Short:** We process your information to provide, improve, and administer our Services, communicate with you, ensure security and fraud prevention, and comply with laws.",
                   "details":[
-                     "**Contact form submissions**: When you submit a message via the contact form, your input is validated and immediately discarded. We do not process, store, or respond to your messages. This means we do not retain or use your personal data submitted via the form.",
-                     "IP addresses: For rate limiting and security purposes, based on our legitimate interest in protecting the website (Art. 6(1)(f) GDPR)",
-                     "Client-side interactions: To ensure the proper functioning of the website, based on our legitimate interest (Art. 6(1)(f) GDPR)"
+                     "We process your personal information for various purposes, depending on your interaction with our Services, such as:",
+                     "**To answer user questions and offer support.** We may process your information to reply to inquiries and address any issues you might face with the requested service.",
+                     "**To secure our Services.** We may process your information to maintain the safety and security of our Services, including monitoring and preventing fraud.",
+                     "**To uphold our terms, conditions, and policies for business needs, meet legal and regulatory duties, or fulfill our contract.**",
+                     "**To address legal requests and avoid harm.** If we get a subpoena or other legal demand, we might need to review the data we hold to decide how to respond.",
+                     "**To protect an individual’s vital interest.** We may process your information when it’s needed to safeguard someone’s critical interest, like preventing harm."
                   ]
                },
                {
-                  "title":"Data Processing and Storage",
-                  "description":"Your personal data is processed and stored as follows:",
+                  "title":"4. What Legal Grounds Support Our Processing of Your Personal Information?",
+                  "description":"**In Short:** We only process your personal information when we deem it necessary and have a valid legal reason (i.e., legal basis) under applicable law, such as your consent, legal compliance, service provision, contract fulfillment, rights protection, or our legitimate business interests.",
                   "details":[
-                     "Contact form submissions are processed in-memory and not permanently stored. The data is only used to respond to your inquiry and is deleted immediately thereafter.",
-                     "IP addresses are temporarily tracked for rate limiting and security purposes, with a maximum retention period of 30 minutes.",
-                     "No persistent user data is saved or stored long-term on our own systems. Any temporary data handling is done in-memory or via third-party infrastructure (e.g., Vercel ([Privacy Policy](https://vercel.com/legal/privacy-policy))), which may apply their own storage and processing policies."
+                     "**If you’re in the EU or UK, this applies to you.**",
+                     "The GDPR and UK GDPR require us to outline the legal bases we rely on to process your personal information. Thus, we may use these legal bases:",
+                     "- **Consent.** We may process your information if you’ve permitted us (i.e., given consent) to use it for a specific purpose. You can retract your consent anytime.",
+                     "- **Legitimate Interests.** We may process your information when it’s reasonably needed for our legitimate business interests, provided it doesn’t override your rights and freedoms. For instance, we might process it to:",
+                     "  - Deliver marketing and promotional messages to you",
+                     "  - Study how our Services are used to improve them for users",
+                     "  - Handle administrative and business tasks",
+                     "  - Detect issues and/or prevent fraud",
+                     "  - Learn how users engage with our products and services to enhance their experience",
+                     "- **Legal Obligations.** We may process your information when we believe it’s needed to meet legal duties, like cooperating with law enforcement, defending our rights, or disclosing it as evidence in litigation we’re involved in.",
+                     "- **Vital Interests.** We may process your information when we think it’s necessary to protect your vital interests or those of another person, such as in cases of potential safety threats."
                   ]
                },
                {
-                  "title":"Third-Party Services",
-                  "description":"This website uses the following third-party services, which may collect and process your personal data:",
+                  "title":"5. When and With Whom Do We Share Your Personal Information?",
+                  "description":"**In Short:** We might share information in specific scenarios noted here and/or with the third parties listed below.",
                   "details":[
-                     "Hosting provider: Vercel ([Privacy Policy](https://vercel.com/legal/privacy-policy)) - May collect IP addresses, geographic information, system configuration data, and use cookies for technical purposes such as load balancing and maintaining website stability.",
-                     "**Badge services**: shields.io ([Privacy Policy](https://shields.io/privacy)) and dcbadge (no dedicated privacy policy available).  ",
-                     "dcbadge is hosted on Vercel ([Privacy Policy](https://vercel.com/legal/privacy-policy)) and its source code is publicly available at [https://github.com/gitlimes/dcbadge](https://github.com/gitlimes/dcbadge).",
-                     "These services may collect your IP address and other metadata when loading badges on the website.",
-                     "Link preview service: Microlink ([Privacy Policy](https://microlink.io/privacy)) - When you interact with links that use the LinkPreview feature (e.g., by hovering over them), your IP address and other metadata may be sent to Microlink to generate a screenshot of the linked website. This data is processed by Microlink in accordance with their privacy policy to provide the preview functionality.",
-                     "These services may collect your IP address and other metadata when you visit the website or interact with specific features. For details on their data handling practices, please refer to their respective privacy policies."
+                     "We may need to share your personal information in these situations:",
+                     "**Business Transfers.** We might share or transfer your information during negotiations or in connection with any merger, asset sale, financing, or acquisition of part or all of our business by another entity.",
+                     "**Third-Party Service Providers.** We may share your data with third-party vendors, contractors, or agents (\"third parties\") who perform tasks for us or on our behalf and need that information for their work. Contracts with these third parties aim to protect your personal information, meaning they can’t use it unless we direct them to, nor share it with others beyond us. They also promise to secure the data they hold for us and keep it as long as we specify.",
+                     "The third parties we may share personal information with include:",
+                     "- **Web Analytics:** None currently in use",
+                     "- **Website Hosting:** Vercel ([Privacy Policy](https://vercel.com/legal/privacy-policy))",
+                     "- **Content Optimization:** Microlink ([Privacy Policy](https://microlink.io/privacy)) for link previews",
+                     "- **Badge Services:** shields.io ([Privacy Policy](https://shields.io/privacy)) and dcbadge (hosted on Vercel, source code: [https://github.com/gitlimes/dcbadge](https://github.com/gitlimes/dcbadge))"
                   ]
                },
                {
-                  "title":"Cookies and Tracking Technologies",
-                  "description":"This website does not set any first-party cookies. However, third-party services used by the website may set cookies or use other tracking technologies for technical purposes. These cookies are governed by the privacy policies of the respective third-party services. You can manage your cookie preferences through your browser settings."
-               },
-               {
-                  "title":"International Data Transfers",
-                  "description":"When you visit this website, your browser may send requests to third-party services located outside the European Union, such as the United States. These services are responsible for implementing appropriate safeguards for the transfer of your personal data as required by GDPR. Please refer to their privacy policies for more information.",
+                  "title":"6. Does Your Information Cross International Borders?",
+                  "description":"**In Short:** We may transfer, store, and process your information in countries other than yours.",
                   "details":[
-                     "These third-party services claim to implement GDPR-compliant safeguards, such as Standard Contractual Clauses (SCCs) or other appropriate mechanisms as required under Chapter V of the GDPR."
+                     "Our servers are based in the United States and elsewhere. If you access our Services from outside the U.S., know that your information might be transferred, stored, and processed by us in our facilities and by third parties we share it with (see \"WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?\" above), in the U.S. and other nations.",
+                     "If you live in the European Economic Area (EEA), UK, or Switzerland, these countries might not have data protection laws as strong as yours. Still, we’ll take all needed steps to protect your personal information per this Privacy Notice and applicable law.",
+                     "**European Commission’s Standard Contractual Clauses:**",
+                     "We’ve set measures to safeguard your personal information, including using the European Commission’s Standard Contractual Clauses for transfers between our group companies and third-party providers. These clauses mandate recipients to protect personal information from the EEA or UK per European data protection laws. You can request our clauses. Similar safeguards are in place with our third-party providers and partners, with details available on request."
                   ]
                },
                {
-                  "title":"Data Protection Measures",
-                  "description":"We implement the following measures to protect your personal data:",
+                  "title":"7. How Long Do We Retain Your Information?",
+                  "description":"**In Short:** We hold your information as long as needed for the purposes in this Privacy Notice, unless law requires otherwise.",
                   "details":[
-                     "All data transmissions between your browser and the website are encrypted using HTTPS.",
-                     "Rate limiting to prevent abuse of the contact form",
-                     "Validation of submitted form data to ensure integrity",
-                     "No storage of sensitive personal information"
+                     "We’ll keep your personal information only as long as necessary for the aims outlined in this Privacy Notice, unless law mandates or allows a longer period (e.g., for tax, accounting, or legal needs).",
+                     "**Contact form submissions:** We keep contact form data up to 1 year for follow-up and accountability, then securely delete it.",
+                     "**Technical data:** IP addresses for rate limiting are held for up to 30 minutes.",
+                     "**Legal requirements:** We may retain information longer if required by applicable laws or rules.",
+                     "When there’s no ongoing legitimate business need to process your personal information, we’ll delete or anonymize it. If that’s not possible (e.g., due to backup archives), we’ll securely store it and isolate it from further processing until deletion is feasible."
                   ]
                },
                {
-                  "title":"Changes to This Privacy Policy",
-                  "description":"We may update this Privacy Policy from time to time to reflect changes in our practices or for legal reasons. We encourage users to check this page periodically. The date of the latest update will always be indicated at the top of the policy."
-               },
-               {
-                  "title":"Your Rights",
-                  "description":"Under GDPR, you have the following rights regarding your personal data:",
+                  "title":"8. How Do We Protect Your Information?",
+                  "description":"**In Short:** We work to shield your personal information with a mix of organizational and technical security steps.",
                   "details":[
-                     "Right to access (Art. 15 GDPR)",
-                     "Right to rectification (Art. 16 GDPR)",
-                     "Right to erasure (Art. 17 GDPR)",
-                     "Right to restriction of processing (Art. 18 GDPR)",
-                     "Right to data portability (Art. 20 GDPR)",
-                     "Right to object (Art. 21 GDPR)",
-                     "Right to withdraw consent at any time (Art. 7(3) GDPR)",
-                     "Right to lodge a complaint with a supervisory authority, such as the Commission for Personal Data Protection in Bulgaria (Art. 77 GDPR)"
-                  ],
-                  "note":"Since we do not store personal data long-term, requests for access, rectification, or erasure may be limited to confirming that no data is held. However, you can still exercise your rights by contacting us at the email address provided below."
+                     "We’ve put in place reasonable technical and organizational security measures to protect any personal information we process. Yet, despite our efforts, no internet transmission or storage tech can be guaranteed 100% secure, so we can’t ensure hackers, cybercriminals, or unauthorized parties won’t breach our security to improperly collect, access, steal, or alter your information. We’ll do our utmost to protect it, but sending personal information to and from our Services is at your own risk. Access the Services only in a secure setting.",
+                     "**Security measures include:**",
+                     "- **Encryption:** All data transmission uses HTTPS encryption",
+                     "- **Access Controls:** Personal information access is restricted to a need-to-know basis",
+                     "- **Rate Limiting:** Guards against abuse and automated attacks",
+                     "- **Data Validation:** Proper checking of submitted form data",
+                     "- **In-Memory Processing:** Contact form data is processed briefly and not stored long-term"
+                  ]
                },
                {
-                  "title":"",
-                  "description":"To exercise your rights, please send an email to %email% with the subject line \"GDPR Request\" and include a brief description of your request.<br>We respond to all data requests within one month, as required under Article 12(3) GDPR."
+                  "title":"9. What Privacy Rights Do You Have?",
+                  "description":"**In Short:** Based on your U.S. state or regions like the EEA, UK, Switzerland, and Canada, you may have rights giving you more access to and control over your personal information.",
+                  "details":[
+                     "In some areas (e.g., EEA, UK, Switzerland, Canada), applicable data protection laws grant you rights like: (i) requesting access and a copy of your personal information, (ii) seeking correction or deletion, (iii) restricting its processing, (iv) data portability if relevant, and (v) avoiding automated decision-making. In some cases, you can also object to its processing. Contact us using the details in \"HOW CAN YOU REACH US ABOUT THIS NOTICE?\" below to make a request.",
+                     "We’ll review and act on any request per applicable data protection laws.",
+                     "If you’re in the EEA or UK and feel we’re unlawfully processing your personal information, you can complain to your local or UK data protection authority.",
+                     "If you’re in Switzerland, reach out to the Federal Data Protection and Information Commissioner.",
+                     "**Withdrawing your consent:** If we process your personal information with your consent (express or implied, per applicable law), you can withdraw it anytime by contacting us via the details in \"HOW CAN YOU REACH US ABOUT THIS NOTICE?\" below.",
+                     "Note this won’t affect processing done legally before withdrawal, nor, where law allows, processing based on other lawful grounds besides consent.",
+                     "For questions or comments on your privacy rights, email us at %email%."
+                  ]
+               },
+               {
+                  "title":"10. Options for Do-Not-Track Features",
+                  "description":"",
+                  "details":[
+                     "Many web browsers, some mobile systems, and apps offer a Do-Not-Track (\"DNT\") setting you can enable to signal your wish not to have online browsing data tracked and collected. No uniform standard for handling DNT signals exists yet, so we don’t currently respond to them or other automatic no-tracking signals. If a tracking standard we must follow is set later, we’ll update you in a revised Privacy Notice."
+                  ]
+               },
+               {
+                  "title":"11. Do U.S. Residents Have Specific Privacy Rights?",
+                  "description":"**In Short:** If you live in California, Colorado, Connecticut, Delaware, Florida, Indiana, Iowa, Kentucky, Maryland, Minnesota, Montana, Nebraska, New Hampshire, New Jersey, Oregon, Rhode Island, Tennessee, Texas, Utah, or Virginia, you may have rights to request access to, learn about, correct, copy, or delete the personal information we hold about you and how we’ve processed it.",
+                  "details":[
+                     "**Categories of Personal Information We Collect**",
+                     "In the past twelve (12) months, we’ve collected these personal information types:",
+                     "**Category A: Identifiers**",
+                     "Contact info like real name, email address, and IP address - **YES**",
+                     "**Category B: Personal information per the California Customer Records statute**",
+                     "Name, contact details - **YES**",
+                     "**All other categories (C through L):** **NO**",
+                     "**Sources of Personal Information**",
+                     "See more about what we collect in \"WHAT DATA DO WE COLLECT?\"",
+                     "**How We Use and Share Personal Information**",
+                     "Learn how we use it in \"HOW DO WE HANDLE YOUR INFORMATION?\"",
+                     "**We haven’t disclosed, sold, or shared personal information with third parties for business or commercial purposes in the last twelve (12) months. We won’t sell or share it from website visitors, users, or other consumers moving forward.**",
+                     "**Your Rights**",
+                     "Certain U.S. state laws give you rights, though not absolute, and we may deny requests as allowed by law. These include:",
+                     "- Right to know if we’re processing your personal data",
+                     "- Right to access your personal data",
+                     "- Right to fix errors in your personal data",
+                     "- Right to request deletion of your personal data",
+                     "- Right to get a copy of personal data you’ve shared with us",
+                     "- Right to non-discrimination for using your rights",
+                     "**How to Exercise Your Rights**",
+                     "To use these rights, email us at %email%, visit https://maxim.cat/contact, or see contact details at this document’s end."
+                  ]
+               },
+               {
+                  "title":"12. Do We Alter This Notice?",
+                  "description":"**In Short:** Yes, we’ll revise this notice as needed to comply with relevant laws.",
+                  "details":[
+                     "We may adjust this Privacy Notice occasionally. Updates will show a new \"Last updated\" date at the top. For major changes, we might notify you by posting a clear notice or sending you a direct message. We suggest reviewing this Privacy Notice often to stay informed on how we protect your information."
+                  ]
+               },
+               {
+                  "title":"13. How Can You Reach Us About This Notice?",
+                  "description":"",
+                  "details":[
+                     "For questions or feedback about this notice, email us at %email% or write to us at:",
+                     "%full_name%  <br>For full address info, visit: https://legal.maxim.cat  <br>Bulgaria"
+                  ]
+               },
+               {
+                  "title":"14. How Can You View, Change, or Erase the Data We Collect From You?",
+                  "description":"",
+                  "details":[
+                     "Depending on your country or state’s laws, you might have the right to request access to the personal information we collect from you, details on its processing, to correct errors, or delete it. You may also withdraw consent to our processing. These rights might be limited by law in some cases. To request to view, update, or erase your personal information, contact us using the details in section 12 above."
+                  ]
                }
             ]
          }
