@@ -606,8 +606,8 @@
                   "title":"13. How Can You Reach Us About This Notice?",
                   "description":"",
                   "details":[
-                     "For questions or feedback about this notice, email us at %email% or write to us at:",
-                     "%full_name%  <br>For full address info, visit: https://legal.maxim.cat  <br>Bulgaria"
+                     "For questions or feedback about this notice, email us at %email%",
+                     "For full legal info, visit: https://legal.maxim.cat"
                   ]
                },
                {
