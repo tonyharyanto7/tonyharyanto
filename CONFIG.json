@@ -607,7 +607,7 @@
                   "description":"",
                   "details":[
                      "For questions or feedback about this notice, email us at %email%",
-                     "For full legal info, visit: https://legal.maxim.cat"
+                     "For full legal info, visit: [https://legal.maxim.cat](https://legal.maxim.cat)"
                   ]
                },
                {
