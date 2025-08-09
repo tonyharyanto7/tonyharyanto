@@ -58,7 +58,7 @@ export default function Projects() {
             <button
               key={page}
               onClick={() => goToPage(page)}
-              className={`w-8 h-8 rounded-md transition-all duration-200 text-sm font-medium ${
+              className={`c-cursor-pointer w-8 h-8 rounded-md transition-all duration-200 text-sm font-medium ${
                 currentPage === page
                   ? "bg-white/20 text-white"
                   : "hover:bg-white/10 text-white/70 hover:text-white"

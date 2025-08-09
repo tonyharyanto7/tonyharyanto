@@ -384,8 +384,8 @@
          "route":"/privacy",
          "content":{
             "contact_title":"Contact",
-            "contact":"%email%",
-            "introduction": "Welcome!<br> <br>This Privacy Notice for Maxim.jsx (%full_name%) (\"we,\" \"us,\" or \"our\"), describes how and why we may collect, store, use, and/or share (\"process\") your personal information when you engage with our services (\"Services\"). This includes, without limitation, visiting our website at https://maxim.cat, any subpage thereof linking to this Privacy Notice, or otherwise interacting with us in a similar context.<br><br>This portfolio website has been designed with minimal data collection and maximum respect for user privacy. We determine the purposes and means by which your personal information is processed and take responsibility for those decisions.<br><br>Please review this Privacy Notice carefully to understand your rights and our obligations with respect to your personal information. If you do not agree with our policies and practices, you should refrain from accessing or using our Services. For any questions or concerns, you may contact us at %email%.",
+            "contact":"%legal_email%",
+            "introduction": "Welcome!<br> <br>This Privacy Notice for Maxim.jsx (%full_name%) (\"we,\" \"us,\" or \"our\"), describes how and why we may collect, store, use, and/or share (\"process\") your personal information when you engage with our services (\"Services\"). This includes, without limitation, visiting our website at https://maxim.cat, any subpage thereof linking to this Privacy Notice, or otherwise interacting with us in a similar context.<br><br>This portfolio website has been designed with minimal data collection and maximum respect for user privacy. We determine the purposes and means by which your personal information is processed and take responsibility for those decisions.<br><br>Please review this Privacy Notice carefully to understand your rights and our obligations with respect to your personal information. If you do not agree with our policies and practices, you should refrain from accessing or using our Services. For any questions or concerns, you may contact us at %legal_email%.",
             "summary":{
                "title":"Overview of Main Points",
                "description":"This overview presents the primary points from our Privacy Notice. For more specifics on any topic, check the sections below or use the table of contents to locate what you’re seeking.",
@@ -397,7 +397,7 @@
                   "**In what cases and with whom do we share personal information?** We may share information in certain cases and with specific third parties as described in this policy.",
                   "**How do we keep your information secure?** We maintain suitable organizational and technical measures to safeguard your personal information. Still, no online transmission or storage method can be promised as fully secure.",
                   "**What are your rights?** Depending on your location, applicable privacy laws might grant you certain rights over your personal information.",
-                  "**How do you exercise your rights?** The simplest way to use your rights is by sending us an email to %email%. We’ll review and address any request per relevant data protection laws."
+                  "**How do you exercise your rights?** The simplest way to use your rights is by sending us an email to %legal_email%. We’ll review and address any request per relevant data protection laws."
                ]
             },
             "tableOfContents":[
@@ -538,7 +538,7 @@
                      "If you’re in Switzerland, reach out to the Federal Data Protection and Information Commissioner.",
                      "**Withdrawing your consent:** If we process your personal information with your consent (express or implied, per applicable law), you can withdraw it anytime by contacting us via the details in \"HOW CAN YOU REACH US ABOUT THIS NOTICE?\" below.",
                      "Note this won’t affect processing done legally before withdrawal, nor, where law allows, processing based on other lawful grounds besides consent.",
-                     "For questions or comments on your privacy rights, email us at %email%."
+                     "For questions or comments on your privacy rights, email us at %legal_email%."
                   ]
                },
                {
@@ -591,7 +591,7 @@
                      "- Right to get a copy of personal data you’ve shared with us",
                      "- Right to non-discrimination for using your rights",
                      "**How to Exercise Your Rights**",
-                     "To use these rights, email us at %email%, visit https://maxim.cat/contact, or see contact details at this document’s end."
+                     "To use these rights, email us at %legal_email%, visit https://maxim.cat/contact, or see contact details at this document’s end."
                   ]
                },
                {
@@ -605,7 +605,7 @@
                   "title":"13. How Can You Reach Us About This Notice?",
                   "description":"",
                   "details":[
-                     "For questions or feedback about this notice, email us at %email%",
+                     "For questions or feedback about this notice, email us at %legal_email%",
                      "For full legal info, visit: [https://legal.maxim.cat](https://legal.maxim.cat)"
                   ]
                },

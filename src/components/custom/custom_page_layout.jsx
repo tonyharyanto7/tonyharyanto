@@ -524,7 +524,7 @@ export default function CustomPageLayout({ page }) {
             {/* Close Button */}
             <button
               onClick={closeImagePreview}
-              className="absolute top-4 right-4 z-10 p-2 rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors duration-200"
+              className="c-cursor-pointer absolute top-4 right-4 z-10 p-2 rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors duration-200"
             >
               <X className="w-6 h-6" />
             </button>
