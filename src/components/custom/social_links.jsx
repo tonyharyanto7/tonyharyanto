@@ -21,6 +21,8 @@ import {
   FaFacebook,
 } from "react-icons/fa";
 
+import {FaXTwitter} from 'react-icons/fa6'
+
 export const SocialIcon = ({ name }) => {
   const iconMap = {
     github: FaGithub,
@@ -34,6 +36,7 @@ export const SocialIcon = ({ name }) => {
     spotify: FaSpotify,
     xbox: FaXbox,
     facebook: FaFacebook,
+    x: FaXTwitter,
   };
 
   const Icon = iconMap[name.toLowerCase()] || FaEnvelope;

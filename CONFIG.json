@@ -317,13 +317,18 @@
                "icon":"github"
             },
             {
+               "name":"X",
+               "url":"https://x.com/maximjsx",
+               "icon":"x"
+            },
+            {
                "name":"TikTok",
-               "url":"https://tiktok.com/@maximde",
+               "url":"https://tiktok.com/@maximjsx",
                "icon":"tiktok"
             },
             {
                "name":"YouTube",
-               "url":"https://www.youtube.com/@max1mde",
+               "url":"https://www.youtube.com/@maximjsx",
                "icon":"youtube"
             }
          ],
