@@ -330,6 +330,11 @@
                "name":"YouTube",
                "url":"https://www.youtube.com/@maximjsx",
                "icon":"youtube"
+            },
+            {
+               "name":"Instagram",
+               "url":"https://www.instagram.com/maximjsx/",
+               "icon":"instagram"
             }
          ],
          "contact_form":{
