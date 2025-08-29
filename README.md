@@ -23,6 +23,11 @@ Or deploy with one click
   </a>
 </div>
 
+> [!NOTE]
+> Some content on https://maximjsx.com/  
+> isn’t included in this template because development was split from it
+> on August 14, 2025.
+
 ## 📋 Table of Contents
 
 - [Quick Setup](#-quick-setup-5-minutes)  
